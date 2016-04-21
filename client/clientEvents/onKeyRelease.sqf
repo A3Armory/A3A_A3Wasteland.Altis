@@ -17,7 +17,8 @@ _handled = false;
 // Left & Right Windows keys
 if (_key in [219,220]) then
 {
-	showPlayerNames = false;
+	showPlayerNames = true;
+	brightPlayerIcons = true;
 };
 */
 

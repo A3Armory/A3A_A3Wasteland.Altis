@@ -37,6 +37,7 @@ switch (true) do
 	case (_key in A3W_customKeys_playerNames):
 	{
 		showPlayerNames = if (isNil "showPlayerNames") then { true } else { !showPlayerNames };
+		brightPlayerIcons = if (isNil "brightPlayerIcons") then { true } else { !brightPlayerIcons };
 	};
 
 	// Earplugs - End Key

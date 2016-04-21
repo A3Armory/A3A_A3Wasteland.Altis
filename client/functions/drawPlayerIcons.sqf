@@ -18,7 +18,8 @@ if (!hasInterface) exitWith {};
 #define UAV_UNIT_POS(UNIT) (((vehicle UNIT) modelToWorldVisual [0, 0, 0]) vectorAdd [0, 0, 0.5])
 #define CENTER_POS(OBJ) (OBJ modelToWorldVisual [0,0,0])
 
-if (isNil "showPlayerNames") then { showPlayerNames = false };
+if (isNil "showPlayerNames") then { showPlayerNames = true };
+if (isNil "brightPlayerIcons") then { brightPlayerIcons = true };
 
 hudPlayerIcon_uiScale = (0.55 / (getResolution select 5)) * ICON_sizeScale; // 0.55 = Interface size "Small"
 drawPlayerIcons_array = [];
@@ -107,7 +108,7 @@ drawPlayerIcons_thread = [] spawn
 						if !(_bluforOpfor || {group _unit == group player || // exclude enemy indie groups
 						     (_isUavUnit && {((objectParent _unit) getVariable ["ownerUID","0"]) in ((units player) apply {getPlayerUID _x})})}) exitWith {}; // but allow friendly indie UAVs
 
-						_alpha = (ICON_limitDistance - _dist) / (ICON_limitDistance - ICON_fadeDistance);
+						_alpha = if (brightPlayerIcons) then {(ICON_limitDistance - _dist) / (ICON_limitDistance - ICON_fadeDistance)} else {.2};
 						_color = [1,1,1,_alpha];
 						_icon = _teamIcon;
 						_size = 0;
