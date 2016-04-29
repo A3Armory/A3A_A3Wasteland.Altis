@@ -131,7 +131,7 @@ if (!isNil "_itemEntry") then
 						_weapon = configFile >> "CfgVehicles" >> _uavType;
 
 						//_name = getText (_weapon >> "displayName") + " UAV";
-						_description = "Remote-controlled quadcopter to spy on your neighbors, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+";
+						_description = "Remote-controlled quadcopter to spy on your neighbors, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+<br/><t color='#FF8000'>NO THERMAL VISION</t>";
 					};
 					case (["_Static_Designator_", _itemType] call fn_findString != -1):
 					{
