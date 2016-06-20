@@ -4,10 +4,11 @@
 //	@file Name: FAR_lastResort.sqf
 //	@file Author: AgentRev
 
-private ["_hasCharge", "_hasSatchel", "_mineType", "_mine"];
+private ["_hasCharge", "_hasSatchel", "_mineType", "_mine", "_randomSound"];
 
 _hasCharge = "DemoCharge_Remote_Mag" in magazines player;
 _hasSatchel = "SatchelCharge_Remote_Mag" in magazines player;
+_randomSound = ["johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "predator.ogg"] call BIS_fnc_selectRandom;
 
 if !(player getVariable ["performingDuty", false]) then
 {
@@ -16,7 +17,7 @@ if !(player getVariable ["performingDuty", false]) then
 		if (["Perform your duty?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
 		{
 			player setVariable ["performingDuty", true];
-			playSound3D [call currMissionDir + "client\sounds\lastresort.wss", vehicle player, false, getPosASL player, 0.7, 1, 1000];
+			playSound3D [call currMissionDir + "client\sounds\" + _randomSound, vehicle player, false, getPosASL player, 0.7, 1, 1000];
 
 			if (_hasSatchel) then
 			{
