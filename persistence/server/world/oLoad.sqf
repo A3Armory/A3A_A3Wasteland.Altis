@@ -129,6 +129,7 @@ _exclObjectIDs = [];
 			case (_obj call _isBeacon):
 			{
 				pvar_spawn_beacons pushBack _obj;
+				_obj setVariable ["groupOnly", true, true];
 				publicVariable "pvar_spawn_beacons";
 				true
 			};

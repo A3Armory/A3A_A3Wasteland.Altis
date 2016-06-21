@@ -163,6 +163,7 @@ inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 	{
 		_x setVariable ["ownerName", name player, true];
 		_x setVariable ["side", playerSide, true];
+		_x setVariable ["groupOnly", true, true];
 	};
 } forEach pvar_spawn_beacons;
 
