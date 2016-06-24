@@ -6,11 +6,14 @@
 
 if (!isServer) exitWith {};
 
-private ["_UID", "_bank", "_moneySaving", "_crossMap", "_environment", "_result", "_data", "_location", "_dataTemp", "_ghostingTimer", "_secs", "_columns", "_pvar", "_pvarG"];
+private ["_UID", "_bank", "_moneySaving", "_bounty", "_bountyKills", "_bountyEnabled", "_crossMap", "_environment", "_result", "_data", "_location", "_dataTemp", "_ghostingTimer", "_secs", "_columns", "_pvar", "_pvarG"];
 _UID = _this;
 
 _bank = 0;
+_bounty = 0;
+_bountyKills = [];
 _moneySaving = ["A3W_moneySaving"] call isConfigOn;
+_bountyEnabled = ["A3W_bountyMax", 0] call getPublicVar > 0;
 _crossMap = ["A3W_extDB_playerSaveCrossMap"] call isConfigOn;
 _environment = ["A3W_extDB_Environment", "normal"] call getPublicVar;
 
@@ -21,6 +24,19 @@ if (_moneySaving) then
 	if (count _result > 0) then
 	{
 		_bank = _result select 0;
+	};
+};
+
+if (_bountyEnabled) then
+{
+	_result = ["getPlayerBounty:" + _UID, 2] call extDB_Database_async;
+	if (count _result > 0) then	{
+		_bounty = _result select 0;
+	};
+
+	_result = ["getPlayerBountyKills:" + _UID, 2] call extDB_Database_async;
+	if (count _result > 0) then	{
+		_bountyKills = _result select 0;
 	};
 };
 
@@ -38,7 +54,9 @@ if (!_result) then
 	_data =
 	[
 		["PlayerSaveValid", false],
-		["BankMoney", _bank]
+		["BankMoney", _bank],
+		["Bounty", _bounty],
+		["BountyKills", _bountyKills]
 	];
 }
 else
@@ -155,6 +173,8 @@ else
 
 	_data append _dataTemp;
 	_data pushBack ["BankMoney", _bank];
+	_data pushBack ["Bounty", _bounty];
+	_data pushBack ["BountyKills", _bountyKills];
 };
 
 // before returning player data, restore global player stats if applicable

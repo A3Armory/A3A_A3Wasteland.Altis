@@ -66,6 +66,14 @@ if !(_unit getVariable ["A3W_killScoreRegistered", false]) then
 
 		[_killer, _scoreColumn, _scoreValue] call fn_addScore;
 
+		//Pay bounty to killer
+		if(!_friendlyFire)then{
+			_bountyAmount = _unit getVariable ["bounty", 0];
+			if(_bountyAmount > 0)then{
+				[_unit, _killer, _bountyAmount] call bountyRedeem;
+			};
+		};
+
 		if (isPlayer _presumedKiller && _presumedKiller != _unit) then
 		{
 			[_presumedKiller, "playerKills", 0] call fn_addScore; // sync Steam score

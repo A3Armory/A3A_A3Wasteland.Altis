@@ -55,11 +55,16 @@ A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
 A3W_atmRemoveIfDisabled = 1;       // Remove all ATMs from map if A3W_atmEnabled is set to 0 (0 = no, 1 = yes)
 
+A3W_bountyMax = 120000;            // Maximum amount of money that can be set as a bounty on someone
+A3W_bountyMinStart = 2000;         // Minimum amount of money to start a bounty on someone
+A3W_bountyRewardPerc = 40;         // Percentage of cost that goes to bounty reward
+A3W_bountyLifetime = 3*24;         // Maximum lifetime in hours for bounty kills to store in DB (storing bounty kills is to prevent from forming groups with someone you collected bounty on)
+
 // Persistence settings
 A3W_savingMethod = "profile";      // Method used for saving data ("profile", "iniDB", "extDB")
 A3W_playerSaving = 1;              // Save player data like position, health, inventory, etc. (0 = no, 1 = yes)
 A3W_moneySaving = 1;               // If playerSaving = 1, save player money amount (0 = no, 1 = yes)
-A3W_playerStatsGlobal = 0;         // If playerSaving = 1 and savingMethod = "extDB", players' stats on the scoreboard will be their all-time global values from all servers of your database (0 = no, 1 = yes)
+A3W_playerStatsGlobal = 1;         // If playerSaving = 1 and savingMethod = "extDB", players' stats on the scoreboard will be their all-time global values from all servers of your database (0 = no, 1 = yes)
 A3W_timeSaving = 1;                // Save and restore in-game clock time between server restarts (0 = no, 1 = yes)
 A3W_weatherSaving = 1;             // Save and restore weather settings between server restarts (0 = no, 1 = yes)
 A3W_combatAbortDelay = 60;         // If playerSaving = 1, delay in seconds for which to disable abort and respawn buttons after firing or being shot (0 = none)

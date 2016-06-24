@@ -11,7 +11,7 @@ disableSerialization;
 
 _code =
 {
-	private ["_bluforColor", "_opforColor", "_indieColor", "_civColor", "_defColor", "_allPlayers", "_i", "_scoreOrdering", "_players", "_playerCount", "_playerIndex", "_iStart", "_id", "_index", "_entry", "_player", "_isPlayer", "_bgColor", "_entryBG", "_entryTColor", "_textColor", "_entryRank", "_entryName", "_entryPKills", "_entryAIKills", "_entryDeaths", "_entryRevives", "_entryCaptures", "_teams", "_grp", "_side", "_teamCount", "_playerTeam", "_playerTeamIndex", "_team", "_isPlayerTeam", "_isGroup", "_teamName", "_entryTerritories"];
+	private ["_bluforColor", "_opforColor", "_indieColor", "_civColor", "_defColor", "_allPlayers", "_i", "_scoreOrdering", "_bountyLabel", "_players", "_playerCount", "_playerIndex", "_iStart", "_id", "_index", "_entry", "_player", "_isPlayer", "_bgColor", "_entryBG", "_entryTColor", "_textColor", "_textHexColor", "_entryRank", "_bounty", "_entryName", "_entryPKills", "_entryAIKills", "_entryDeaths", "_entryRevives", "_entryCaptures", "_entryAllKills", "_entryAllDeaths", "_entryKillDeath", "_teams", "_grp", "_side", "_teamCount", "_playerTeam", "_playerTeamIndex", "_team", "_isPlayerTeam", "_isGroup", "_teamName", "_entryTerritories"];
 
 	if (!alive player) then
 	{
@@ -37,13 +37,16 @@ _code =
 			};
 		};
 
-		_scoreOrdering = { ((([_x, "playerKills"] call fn_getScore) - ([_x, "teamKills"] call fn_getScore)) * 1000) + ([_x, "aiKills"] call fn_getScore) };
+		_scoreOrdering = { ((([_x, "playerKills", false] call fn_getScore) - ([_x, "teamKills"] call fn_getScore)) * 100) + ([_x, "aiKills", false] call fn_getScore) + ((_x getVariable ["bounty", 0]) * 10) };
 		_players = [_allPlayers, [], _scoreOrdering, "DESCEND"] call BIS_fnc_sortBy;
 		_playerCount = count _players;
 		_playerIndex = _players find player;
 
 		_iStart = A3W_scoreboard_pScrollIndex min (_playerCount - scoreGUI_PList_Length) max 0;
 		A3W_scoreboard_pScrollIndex = _iStart;
+
+		_bountyLabel = _display displayCtrl scoreGUI_BountyLabel;
+		_bountyLabel ctrlShow false;
 
 		for "_i" from 1 to scoreGUI_PList_Length do
 		{
@@ -80,11 +83,20 @@ _code =
 					default           { _defColor };
 				});
 
-				_textColor = switch (true) do
+				switch (true) do
 				{
-					case (_isPlayer):                     { [1, 0.85, 0, 1] }; // Yellow player color
-					case (group _player == group player): { [0.45, 0.85, 0.35, 1] }; // Green group color
-					default                               { [1, 1, 1, 1] };
+					case (_isPlayer): { // Yellow player color
+							_textColor = [1, 0.85, 0, 1];
+							_textHexColor = "#FFD800";
+					};
+					case (group _player == group player): { // Green group color
+							_textColor = [0.45, 0.85, 0.35, 1];
+							_textHexColor = "#72D85A";
+						};
+					default {
+							_textColor = [1, 1, 1, 1];
+							_textHexColor = "#FFFFFF";
+					};
 				};
 
 				_entryRank = _display displayCtrl scoreGUI_PListEntry_Rank(_id);
@@ -92,28 +104,49 @@ _code =
 				_entryRank ctrlSetTextColor _textColor;
 
 				_entryName = _display displayCtrl scoreGUI_PListEntry_Name(_id);
-				_entryName ctrlSetText name _player;
-				_entryName ctrlSetTextColor _textColor;
+				_bounty = _player getVariable ["bounty", 0];
+				if(_bounty > 0 && ["A3W_bountyMax", 0] call getPublicVar > 0) then{
+					_entryName ctrlSetStructuredText parseText format["<t shadow='0' size='0.85' color='%2'>%1 </t><t shadow='0' size='0.75' color='#ff5f4a'>- $%3</t>", name _player, _textHexColor, [_bounty] call fn_numbersText];
+					_bountyLabel ctrlShow true;
+				}else{
+					_entryName ctrlSetStructuredText parseText format["<t shadow='0' size='0.85' color='%2'>%1</t>", name _player, _textHexColor];
+				};
 
 				_entryPKills = _display displayCtrl scoreGUI_PListEntry_PKills(_id);
-				_entryPKills ctrlSetText str (([_player, "playerKills"] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
+				_entryPKills ctrlSetText str (([_player, "playerKills", false] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
 				_entryPKills ctrlSetTextColor _textColor;
 
 				_entryAIKills = _display displayCtrl scoreGUI_PListEntry_AIKills(_id);
-				_entryAIKills ctrlSetText str ([_player, "aiKills"] call fn_getScore);
+				_entryAIKills ctrlSetText str ([_player, "aiKills", false] call fn_getScore);
 				_entryAIKills ctrlSetTextColor _textColor;
 
 				_entryDeaths = _display displayCtrl scoreGUI_PListEntry_Deaths(_id);
-				_entryDeaths ctrlSetText str ([_player, "deathCount"] call fn_getScore);
+				_entryDeaths ctrlSetText str ([_player, "deathCount", false] call fn_getScore);
 				_entryDeaths ctrlSetTextColor _textColor;
 
 				_entryRevives = _display displayCtrl scoreGUI_PListEntry_Revives(_id);
-				_entryRevives ctrlSetText str ([_player, "reviveCount"] call fn_getScore);
+				_entryRevives ctrlSetText str ([_player, "reviveCount", false] call fn_getScore);
 				_entryRevives ctrlSetTextColor _textColor;
 
 				_entryCaptures = _display displayCtrl scoreGUI_PListEntry_Captures(_id);
-				_entryCaptures ctrlSetText str ([_player, "captureCount"] call fn_getScore);
+				_entryCaptures ctrlSetText str ([_player, "captureCount", false] call fn_getScore);
 				_entryCaptures ctrlSetTextColor _textColor;
+
+				_entryAllKills = _display displayCtrl scoreGUI_PListEntry_AllKills(_id);
+				_entryAllKills ctrlSetText str (([_player, "playerKills"] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
+				_entryAllKills ctrlSetTextColor _textColor;
+
+				_entryAllDeaths = _display displayCtrl scoreGUI_PListEntry_AllDeaths(_id);
+				_entryAllDeaths ctrlSetText str ([_player, "deathCount"] call fn_getScore);
+				_entryAllDeaths ctrlSetTextColor _textColor;
+
+				_entryKillDeath = _display displayCtrl scoreGUI_PListEntry_KillDeath(_id);
+				if(([_player, "playerKills"] call fn_getScore) == 0 || ([_player, "deathCount"] call fn_getScore) == 0)then{
+					_entryKillDeath ctrlSetText str (0);
+				}else{
+					_entryKillDeath ctrlSetText str ((floor (((([_player, "playerKills"] call fn_getScore) - ([_player, "teamKills"] call fn_getScore)) / ([_player, "deathCount"] call fn_getScore)) * 100)) / 100);
+				};
+				_entryKillDeath ctrlSetTextColor _textColor;
 
 				_entry ctrlShow true;
 			}
@@ -195,14 +228,16 @@ _code =
 
 				_teamName = if (_isGroup) then
 				{
-					format ["%1's group", name leader _team]
+					_teamCnt = count units _team;
+					format ["%1's group - ( %2 )", name leader _team, _teamCnt]
 				}
 				else
 				{
+					_teamCnt = _team countSide _allPlayers;
 					switch (_team) do
 					{
-						case BLUFOR: { "BLUFOR" };
-						case OPFOR:  { "OPFOR" };
+						case BLUFOR: { format ["BLUFOR - ( %1 )", _teamCnt] };
+						case OPFOR:  { format ["OPFOR - ( %1 )", _teamCnt] };
 						default      { "Aliens" };
 					};
 				};

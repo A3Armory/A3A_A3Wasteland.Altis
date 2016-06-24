@@ -18,6 +18,9 @@ mf_items_atm_deposit = [_path, "deposit.sqf"] call mf_compile;
 mf_items_atm_withdraw = [_path, "withdraw.sqf"] call mf_compile;
 mf_items_atm_transfer = [_path, "transfer.sqf"] call mf_compile;
 
+mf_items_atm_add_bounty = [_path, "add_bounty.sqf"] call mf_compile;
+mf_items_atm_select_bounty = [_path, "select_bounty.sqf"] call mf_compile;
+
 mf_items_atm_nearest =
 {
 	private _target = cursorObject;

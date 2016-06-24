@@ -151,7 +151,11 @@ if (isServer) then
 		"A3W_disableBuiltInThermal",
 		"A3W_customDeathMessages",
 		"A3W_headshotNoRevive",
-		"A3W_maxSpawnBeacons"
+		"A3W_maxSpawnBeacons",
+		"A3W_bountyMax",
+		"A3W_bountyMinStart",
+		"A3W_bountyRewardPerc",
+		"A3W_bountyLifetime"
 	];
 
 	addMissionEventHandler ["PlayerConnected", fn_onPlayerConnected];

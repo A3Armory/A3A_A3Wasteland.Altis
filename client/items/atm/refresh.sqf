@@ -8,7 +8,7 @@
 #include "gui_defines.hpp"
 disableSerialization;
 
-private ["_nonScheduled", "_dialog", "_accDropdown", "_players", "_oldPlayers", "_strPlayers", "_callFSM", "_amount", "_fee", "_feeAmount", "_selAcc"];
+private ["_nonScheduled", "_dialog", "_accDropdown", "_bountyCheckbox", "_bountyChecked", "_players", "_oldPlayers", "_strPlayers", "_callFSM", "_amount", "_fee", "_feeAmount", "_selAcc"];
 _nonScheduled = _this; // bool
 
 _dialog = findDisplay AtmGUI_IDD;
@@ -16,12 +16,17 @@ _dialog = findDisplay AtmGUI_IDD;
 if (isNull _dialog) exitWith {};
 
 _accDropdown = _dialog displayCtrl AtmAccountDropdown_IDC;
+_bountyCheckbox = _dialog displayCtrl AtmBountyCheckbox_IDC;
+_bountyChecked = cbChecked _bountyCheckbox;
 
 _players = allPlayers;
 
-if !(["A3W_atmTransferAllTeams"] call isConfigOn) then
-{
+if !(["A3W_atmTransferAllTeams"] call isConfigOn) then{
 	_players = [_players, { [_x, player] call A3W_fnc_isFriendly }] call BIS_fnc_conditionalSelect;
+};
+if(_bountyChecked) then{
+	_players = [allPlayers, { !([_x, player] call A3W_fnc_isFriendly) }] call BIS_fnc_conditionalSelect;
+	_players = _players - entities "HeadlessClient_F";
 };
 
 _oldPlayers = uiNamespace getVariable ["A3W_AtmGUI_players", ""];

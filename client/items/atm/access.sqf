@@ -24,6 +24,14 @@
 	[_accDropdown, lbCurSel _accDropdown] call mf_items_atm_select_account;
 	_accDropdown ctrlAddEventHandler ["LBSelChanged", mf_items_atm_select_account];
 
+	_bountyCheckbox = _dialog displayCtrl AtmBountyCheckbox_IDC;
+	_bountyLabel = _dialog displayCtrl AtmBountyLabel_IDC;
+	_bountyCheckbox ctrlAddEventHandler ["CheckedChanged", mf_items_atm_select_bounty];
+	if (["A3W_bountyMax", 0] call getPublicVar == 0) then {
+		_bountyCheckbox ctrlShow false;
+		_bountyLabel ctrlShow false;
+	};
+
 	_input = _dialog displayCtrl AtmAmountInput_IDC;
 	_input ctrlAddEventHandler ["KeyUp", mf_items_atm_refresh_amounts];
 	ctrlSetFocus _input;

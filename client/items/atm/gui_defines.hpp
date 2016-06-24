@@ -7,8 +7,12 @@
 #define AtmGUI_IDD 63211
 #define AtmBalanceText_IDC 1010
 #define AtmAmountInput_IDC 1020
+#define AtmBountyCheckbox_IDC 1025
+#define AtmBountyLabel_IDC 1026
 #define AtmAccountDropdown_IDC 1030
+#define AtmFeeLabel_IDC 1035
 #define AtmFeeText_IDC 1040
+#define AtmTotalLabel_IDC 1045
 #define AtmTotalText_IDC 1050
 #define AtmDepositButton_IDC 2010
 #define AtmWithdrawButton_IDC 2020
