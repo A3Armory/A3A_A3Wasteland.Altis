@@ -29,6 +29,9 @@ doCancelAction = false;
 playerCompiledScripts = false;
 playerSetupComplete = false;
 
+//AJ Beacondetector
+BeaconScanInProgress = false;
+
 waitUntil {!isNull player && time > 0};
 
 removeAllWeapons player;
