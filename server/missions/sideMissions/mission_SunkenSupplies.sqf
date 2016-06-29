@@ -37,7 +37,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos] call createSmallDivers;
 
-	_missionHintText = "Sunken supplies have been spotted in the ocean near the marker, and are heavily guarded. Diving gear and an underwater weapon are recommended.";
+	_missionHintText = "Sunken supplies have been spotted in the ocean near the marker and are heavily guarded. Diving gear and an underwater weapon are recommended.";
 };
 
 _waitUntilMarkerPos = nil;
@@ -55,7 +55,7 @@ _successExec =
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 
-	_successHintMessage = "The sunken supplies have been collected, well done.";
+	_successHintMessage = "The sunken supplies have been collected. Well done.";
 };
 
 _this call sideMissionProcessor;

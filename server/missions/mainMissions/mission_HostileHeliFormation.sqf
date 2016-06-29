@@ -164,7 +164,7 @@ _successExec =
 
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2, _box3];	
 	
-	_successHintMessage = "The sky is clear again, the enemy patrol was taken out! Ammo crates have fallen near the wreck.";
+	_successHintMessage = "The sky is clear again. The enemy patrol was taken out! Ammo crates have fallen near the wreck.";
 };
 
 _this call mainMissionProcessor;

@@ -233,7 +233,7 @@ _successExec =
 		_cash setVariable ["owner", "world", true];
 	};
 
-	_successHintMessage = "The convoy has been stopped, the money and vehicles are now yours to take.";
+	_successHintMessage = "The convoy has been stopped. The money and vehicles are now yours to take.";
 };
 
 _this call moneyMissionProcessor;

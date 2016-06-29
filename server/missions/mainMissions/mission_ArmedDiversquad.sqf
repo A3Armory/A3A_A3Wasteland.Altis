@@ -59,7 +59,7 @@ _setupObjects =
 	[_vehicle, _aiGroup] spawn checkMissionVehicleLock;
 
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "picture");
-	_missionHintText = "An armed expedition is trying to recover sunken ammo crates.<br/>If you want to capture them, you will need diving gear and an underwater weapon.";
+	_missionHintText = "An armed expedition is trying to recover sunken ammo crates.<br/>You will need diving gear and an underwater weapon to complete the mission.";
 };
 
 _waitUntilMarkerPos = nil;
@@ -80,7 +80,7 @@ _successExec =
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	_vehicle lockDriver false;
 
-	_successHintMessage = "The sunken crates have been captured, well done.";
+	_successHintMessage = "The sunken crates have been captured. Well done.";
 };
 
 _this call mainMissionProcessor;

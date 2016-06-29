@@ -172,7 +172,7 @@ _successExec =
 		_cash1 setVariable ["owner", "world", true];
 	};
 
-	_successHintMessage = "You have stopped the drug runners! The drugs and money are yours to take!";
+	_successHintMessage = "You have stopped the drug runners. The drugs and money are yours to take!";
 };
 
 _this call moneyMissionProcessor;

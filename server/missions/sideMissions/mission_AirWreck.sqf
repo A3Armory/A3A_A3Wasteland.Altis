@@ -61,7 +61,7 @@ _successExec =
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	deleteVehicle _wreck;
 
-	_successHintMessage = "The airwreck supplies have been collected, well done.";
+	_successHintMessage = "The airwreck supplies have been collected. Well done.";
 };
 
 _this call sideMissionProcessor;

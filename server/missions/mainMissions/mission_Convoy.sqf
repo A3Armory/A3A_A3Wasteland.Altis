@@ -138,7 +138,7 @@ _successExec =
 	_box2 setDir random 360;
 	[_box2, _randomBox2] call fn_refillbox;
 
-	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
+	_successHintMessage = "The convoy has been stopped. The weapon crates and vehicles are now yours to take.";
 };
 
 _this call mainMissionProcessor;

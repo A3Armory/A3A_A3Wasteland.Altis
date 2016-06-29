@@ -52,7 +52,7 @@ _successExec =
 
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	
-	_successHintMessage = format ["The snipers are dead! Well Done!"];
+	_successHintMessage = format ["The snipers are dead. Well Done."];
 };
 
 _this call sideMissionProcessor;
