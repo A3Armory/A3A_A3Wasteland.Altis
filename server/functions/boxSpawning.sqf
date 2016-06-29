@@ -60,7 +60,7 @@ _boxList =
 						[
 							["wep", "arifle_Katiba_F", 5, 4],
 							["wep", "LMG_Zafir_F", 2, 4],
-							["wep", "SMG_02_F", 1, 5] // Sting
+							["wep", "hgun_PDW2000_F", 1, 5]
 						]
 					};
 					case (_box isKindOf "Box_IND_Wps_F"):
@@ -105,16 +105,16 @@ _boxList =
 					{
 						_boxItems =
 						[
-							["wep", "srifle_DMR_01_DMS_F", 1, 8],
-							["wep", "srifle_GM6_LRPS_F", 1, 8]
+							["wep", "srifle_DMR_01_F", 1, 8],
+							["wep", "srifle_GM6_F", 1, 8]
 						];
 					};
 					case (_box isKindOf "Box_IND_WpsSpecial_F"):
 					{
 						_boxItems =
 						[
-							["wep", "srifle_EBR_DMS_F", 1, 8],
-							["wep", "srifle_GM6_LRPS_F", 1, 8]
+							["wep", "srifle_EBR_F", 1, 8],
+							["wep", "srifle_GM6_F", 1, 8]
 						];
 					};
 					default { _boxItems = [] };

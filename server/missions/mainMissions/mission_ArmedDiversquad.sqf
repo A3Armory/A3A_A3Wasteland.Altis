@@ -8,7 +8,7 @@
 if (!isServer) exitwith {};
 #include "mainMissionDefines.sqf";
 
-private ["_box1", "_box2", "_boxPos", "_vehicleClass", "_vehicle"];
+private ["_box1", "_box2", "_boxPos", "_vehicleClass", "_vehicle", "_randomBox", "_randomBox2"];
 
 _setupVars =
 {
@@ -19,14 +19,15 @@ _setupVars =
 _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
-
+	_randomBox = ["mission_USLaunchers","mission_DLCRifles","mission_HVSniper"] call BIS_fnc_selectRandom;
+	_randomBox2 = ["mission_USSpecial","mission_HVLaunchers","mission_DLCLMGs"] call BIS_fnc_selectRandom;
 	_box1 = createVehicle ["Box_IND_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
-	[_box1, "mission_Main_A3snipers"] call fn_refillbox;
+	[_box1, _randomBox] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
-	[_box2, "mission_USSpecial2"] call fn_refillbox;
+	[_box2, _randomBox2] call fn_refillbox;
 
 	{
 		_boxPos = getPosASL _x;

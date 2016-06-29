@@ -128,14 +128,15 @@ _failedExec = nil;
 _successExec =
 {
 	// Mission completed
-
+	_randomBox = ["mission_USLaunchers","mission_HVLaunchers","mission_HVSniper"] call BIS_fnc_selectRandom;
+	_randomBox2 = ["mission_USSpecial","mission_Main_A3snipers","mission_DLCLMGs"] call BIS_fnc_selectRandom;
 	_box1 = createVehicle ["Box_NATO_Wps_F", _lastPos, [], 2, "None"];
 	_box1 setDir random 360;
-	[_box1, "mission_USSpecial"] call fn_refillbox;
+	[_box1, _randomBox] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
 	_box2 setDir random 360;
-	[_box2, "mission_USLaunchers"] call fn_refillbox;
+	[_box2, _randomBox2] call fn_refillbox;
 
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };

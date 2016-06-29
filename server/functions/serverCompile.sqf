@@ -35,6 +35,9 @@ removeDisabledMissions = [_path, "removeDisabledMissions.sqf"] call mf_compile;
 setLocationObjects = [_path, "setLocationObjects.sqf"] call mf_compile;
 setLocationState = [_path, "setLocationState.sqf"] call mf_compile;
 setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
+createsniperGroup = [_path, "createUnits\sniperGroup.sqf"] call mf_compile;
+createCustomGroup3 = [_path, "createUnits\customGroup3.sqf"] call mf_compile;
+addDefensiveMines = [_path, "createUnits\addDefensiveMines.sqf"] call mf_compile;
 
 //Function Compiles
 _path = "server\functions";
@@ -67,7 +70,8 @@ processTransaction = [_path, "processTransaction.sqf"] call mf_compile;
 punishTeamKiller = [_path, "punishTeamKiller.sqf"] call mf_compile;
 refillPrimaryAmmo = [_path, "refillPrimaryAmmo.sqf"] call mf_compile;
 respawnEventServer = [_path, "respawnEventServer.sqf"] call mf_compile;
-setMissionSkill = [_path, "setMissionSkill.sqf"] call mf_compile;
+setMissionSkill = [_path, "setMissionSkill.sqf"] call mf_compile;\
+setMissionSkillConvoy = [_path, "setMissionSkillConvoy.sqf"] call mf_compile;
 spawnStoreObject = [_path, "spawnStoreObject.sqf"] call mf_compile;
 teamKillUnlock = [_path, "teamKillUnlock.sqf"] call mf_compile;
 teamSwitchLock = [_path, "teamSwitchLock.sqf"] call mf_compile;

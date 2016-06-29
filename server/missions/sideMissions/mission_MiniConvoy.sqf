@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_box1", "_box2"];
+private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_box1", "_box2", "_randomBox", "_randomBox2"];
 
 _setupVars =
 {
@@ -129,14 +129,18 @@ _failedExec = nil;
 _successExec =
 {
 	// Mission completed
+	_randomBox = ["mission_Uniform","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
+	_randomBox2 = ["mission_USSpecial","mission_DLCRifles"] call BIS_fnc_selectRandom;
 	_box1 = createVehicle ["Box_NATO_Wps_F", _lastPos, [], 2, "None"];
 	_box1 setDir random 360;
-	[_box1, "mission_USSpecial2"] call fn_refillbox;
+	[_box1, _randomBox] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
 	_box2 setDir random 360;
-	[_box2, "mission_USLaunchers"] call fn_refillbox;
+	[_box2, _randomBox2] call fn_refillbox;
 
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];	
+	
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };
 

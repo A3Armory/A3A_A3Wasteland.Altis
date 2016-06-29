@@ -14,26 +14,19 @@ _unit = _this;
 
 if (["A3W_missionsDifficulty"] call isConfigOn) then
 {
-	_skill = 1; // Default skill for ARMA3 is 0.5
-	_accuracy = 1; // Relative multiplier; absolute default accuracy for ARMA3 is 0.25
+	_skill = 0.8; // Default skill for ARMA3 is 0.5
+	_accuracy = 0.8; // Relative multiplier; absolute default accuracy for ARMA3 is 0.25
 }
 else
 {
 	_skill = 0.7;
-	_accuracy = 1;
+	_accuracy = 0.4;
 };
 
 _unit allowFleeing 0;
 _unit setSkill _skill;
-_unit setSkill ["general", 0.7];
 _unit setSkill ["aimingAccuracy", (_unit skill "aimingAccuracy") * _accuracy];
+_unit setSkill ["courage", 1];
 
 // Available skills are explained here: http://community.bistudio.com/wiki/AI_Sub-skills
 // Skill values are between 0 and 1
-_unit setSkill ["aimingShake", 1];
-_unit setSkill ["aimingSpeed", 1];
-_unit setSkill ["commanding", 1];
-_unit setSkill ["courage", 1];
-_unit setSkill ["reloadSpeed", 1];
-_unit setSkill ["spotDistance", 0.7];
-_unit setSkill ["spotTime", 0.7];
