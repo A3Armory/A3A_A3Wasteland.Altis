@@ -151,9 +151,7 @@ staticHeliList =
 //Object List - Random Planes.
 staticPlaneList =
 [
-	"B_Plane_CAS_01_F",
-	"O_Plane_CAS_02_F",
-	"I_Plane_Fighter_03_CAS_F"
+	"I_Plane_Fighter_03_AA_F"
 ];
 
 //Random Weapon List - Change this to what you want to spawn in cars.
@@ -162,10 +160,9 @@ vehicleWeapons =
 //	"hgun_P07_F",
 //	"hgun_Rook40_F",
 //	"hgun_ACPC2_F",
-//	"arifle_SDAR_F",
 	"SMG_01_F",	// Vermin .45 ACP
-	"SMG_02_F",	// Sting 9mm
 	"hgun_PDW2000_F",
+	"arifle_SDAR_F",
 	"arifle_TRG20_F",
 	"arifle_TRG21_F",
 	"arifle_TRG21_GL_F",
@@ -204,15 +201,14 @@ vehicleAddition =
 	"acc_flashlight",
 	"acc_pointer_IR",
 	"Medikit",
-	"Medikit",
 	"FirstAidKit",
 	"ToolKit"
 ];
 
 vehicleAddition2 =
 [
-	"Chemlight_blue",
-	"Chemlight_green",
 	"Chemlight_yellow",
-	"Chemlight_red"
+	"SmokeShellPurple",
+	"SmokeShellYellow",
+	"SmokeShellOrange"
 ];

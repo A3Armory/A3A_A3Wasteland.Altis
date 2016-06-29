@@ -35,29 +35,53 @@ _player linkItem "NVGoggles";
 
 _player addBackpack "B_AssaultPack_rgr";
 
+_player addMagazine "30Rnd_9x21_Mag";
+_player addWeapon "SMG_02_F";
+_player addPrimaryWeaponItem "acc_flashlight";
 _player addMagazine "9Rnd_45ACP_Mag";
 _player addWeapon "hgun_ACPC2_F";
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addMagazine "9Rnd_45ACP_Mag";
+_player addWeaponItem ["hgun_ACPC2_F", "muzzle_snds_acp"];
+_player addMagazine "30Rnd_9x21_Mag";
 _player addItem "FirstAidKit";
-_player selectWeapon "hgun_ACPC2_F";
+_player selectWeapon "SMG_02_F";
 
 switch (true) do
 {
-	case (["_medic_", typeOf _player] call fn_findString != -1):
+	case (["Combat Life Saver", roleDescription _player] call fn_findString != -1):
 	{
 		_player removeItem "FirstAidKit";
 		_player addItem "Medikit";
 	};
-	case (["_engineer_", typeOf _player] call fn_findString != -1):
+	case (["Engineer", roleDescription _player] call fn_findString != -1):
 	{
 		_player addItem "MineDetector";
 		_player addItem "Toolkit";
 	};
-	case (["_sniper_", typeOf _player] call fn_findString != -1):
+	case (["Sniper", roleDescription _player] call fn_findString != -1):
 	{
 		_player addWeapon "Rangefinder";
+		_player removeItem "Medikit";
+	};
+	case (["Diver", roleDescription _player] call fn_findString != -1):
+	{
+		_player addGoggles "G_Diving";
+		_player removeItem "Medikit";
+	};
+};
+
+switch (side _player) do
+{
+	case west:
+	{
+		_player addItem "Chemlight_blue";
+	};
+	case east:
+	{
+		_player addItem "Chemlight_red";
+	};
+	case resistance:
+	{
+		_player addItem "Chemlight_green";
 	};
 };
 

@@ -17,11 +17,11 @@ _additionArray = vehicleAddition;
 _nightTime = (date select 3 >= 18 || date select 3 < 5); // spawn night items between 18:00 and 05:00 (sunlight is completely gone by 20:00)
 
 // If night is falling, add flashlight, IR pointers, and NV goggles to loot possibilities
-if (_nightTime) then
+/*if (_nightTime) then
 {
 	{ _additionArray pushBack _x} forEach ["acc_flashlight", "acc_pointer_IR"];
 	if (random 1 < 0.15) then { _car addItemCargoGlobal ["NVGoggles", 1]};
-};
+};*/
 
 if (random 1 < 0.45) then { _car addWeaponCargoGlobal ["Binocular", 1]};
 
