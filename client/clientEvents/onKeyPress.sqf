@@ -122,10 +122,10 @@ if (!_handled && _key in actionKeys "NetworkStats") then
 };
 
 // Push-to-talk
-if (!_handled && _key in call A3W_allVoiceChatKeys) then
+/*if (!_handled && _key in call A3W_allVoiceChatKeys) then
 {
 	[true] call fn_voiceChatControl;
-};
+};*/
 
 // UAV feed
 if (!_handled && _key in (actionKeys "UavView" + actionKeys "UavViewToggle")) then

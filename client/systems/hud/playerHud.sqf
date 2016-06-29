@@ -286,7 +286,7 @@ while {true} do
 	if (!isNil "BIS_fnc_feedback_fatigueBlur" && {ppEffectCommitted BIS_fnc_feedback_fatigueBlur}) then { ppEffectDestroy BIS_fnc_feedback_fatigueBlur };
 
 	// Voice monitoring
-	[false] call fn_voiceChatControl;
+	//[false] call fn_voiceChatControl;
 
 	if (isNil "_mapCtrls") then
 	{

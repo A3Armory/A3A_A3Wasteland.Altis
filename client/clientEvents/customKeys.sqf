@@ -26,7 +26,7 @@ forEach
 	["A3W_customKeys_earPlugs", [207]] // 207 = End
 ];
 
-_voiceKeys = [];
+/*_voiceKeys = [];
 { _voiceKeys append actionKeys _x } forEach
 [
 	"NextChannel",
@@ -40,4 +40,4 @@ _voiceKeys = [];
 	"PushToTalkVehicle"
 ];
 
-A3W_allVoiceChatKeys = compileFinal str _voiceKeys;
+A3W_allVoiceChatKeys = compileFinal str _voiceKeys;*/
