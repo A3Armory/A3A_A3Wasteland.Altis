@@ -89,6 +89,11 @@ switch(_switch) do
 	};
 };
 
+//Remove donator items for non donators
+if (!(getPlayerUID player call isdonor))then{
+	_itemsArray = _itemsArray select {!((_x select 1) in (call donatorGunItems))};
+};
+
 if (_showAmmo) then
 {
 	_ammoBtn ctrlShow true;
@@ -122,7 +127,7 @@ else
 
 		_gunlistIndex = _gunlist lbAdd format ["%1", [_x select 0, getText (_weapon >> "displayName")] select (_x select 0 == "")];
 		_gunlist lbSetData [_gunlistIndex, _weaponClass];
-	
+
 		// Show scope on sniper rifle pictures
 		if ([["_SOS_F", "_LRPS_F"], _weaponClass] call fn_findString != -1) then
 		{

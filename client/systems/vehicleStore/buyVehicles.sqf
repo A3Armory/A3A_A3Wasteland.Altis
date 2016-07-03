@@ -49,6 +49,15 @@ storePurchaseHandle = _this spawn
 	_colorText = _colorlist lbText _colorIndex;
 	_colorData = call compile (_colorlist lbData _colorIndex);
 
+	//Error for non donators selecting donor items
+	_showInsufficientDonatorError =
+	{
+		_itemText = _this select 0;
+		hint parseText format ["<t color='#ffff00'>The purchase of custom vehicle paint available only for community supporters. Purchase without custom vehicle paint.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		playSound "FD_CP_Not_Clear_F";
+		_price = -1;
+	};
+
 	_showInsufficientFundsError =
 	{
 		_itemText = _this select 0;
@@ -124,6 +133,12 @@ storePurchaseHandle = _this spawn
 			if (_price > _playerMoney) exitWith
 			{
 				[_itemText] call _showInsufficientFundsError;
+			};
+			
+			//Check donor status
+			if (!((getPlayerUID player) call isdonor) && (!isNil "_colorData")) exitWith
+			{
+				[_itemText] call _showInsufficientDonatorError;
 			};
 
 			_requestKey = call A3W_fnc_generateKey;

@@ -1050,6 +1050,83 @@ customPlayerItems = compileFinal str
 	["Heroin", "heroin", localize "STR_WL_ShopDescriptions_Heroin", "client\icons\heroin.paa", 3500, 3000]
 ];
 
+donatorGenItems = compileFinal str
+[
+"V_PlateCarrierGL_blk",
+"V_PlateCarrierGL_mtp",
+"V_PlateCarrierSpec_blk",
+"V_PlateCarrierSpec_mtp",
+"B_Carryall_mcamo",
+"B_Carryall_oli",
+"B_Carryall_oucamo",
+"Chemlight_yellow",
+"G_Goggles_VR",
+"G_Balaclava_blk",
+"G_Balaclava_combat",
+"G_Balaclava_lowprofile",
+"G_Balaclava_oli",
+"G_Bandanna_aviator",
+"G_Bandanna_beast",
+"G_Bandanna_blk",
+"G_Bandanna_khk",
+"G_Bandanna_oli",
+"G_Bandanna_shades",
+"G_Bandanna_sport",
+"G_Bandanna_tan",
+"G_Aviator",
+"G_Lady_Blue",
+"G_Lady_Red",
+"G_Lady_Mirror",
+"G_Lady_Dark",
+"G_Lowprofile",
+"G_Shades_Black",
+"G_Shades_Blue",
+"G_Shades_Green",
+"G_Shades_Red",
+"G_Spectacles",
+"G_Sport_Red",
+"G_Sport_Blackyellow",
+"G_Sport_BlackWhite",
+"G_Sport_Checkered",
+"G_Sport_Blackred",
+"G_Sport_Greenblack",
+"G_Squares_Tinted",
+"G_Squares",
+"G_Tactical_Clear",
+"G_Tactical_Black",
+"G_Spectacles_Tinted"
+];
+
+donatorGunItems = compileFinal str
+[
+"arifle_Mk20C_F",
+"arifle_Mk20_F",
+"arifle_Mk20_GL_F",
+"arifle_MXC_Black_F",
+"arifle_MX_Black_F",
+"arifle_MX_GL_Black_F",
+"arifle_MXM_Black_F",
+"srifle_DMR_06_camo_F",
+"srifle_DMR_03_multicam_F",
+"srifle_DMR_03_khaki_F",
+"srifle_DMR_03_tan_F",
+"srifle_DMR_03_woodland_F",
+"srifle_DMR_02_camo_F",
+"srifle_DMR_02_sniper_F",
+"srifle_DMR_05_hex_F",
+"srifle_DMR_05_tan_f",
+"srifle_LRR_camo_F",
+"srifle_GM6_camo_F",
+"srifle_DMR_04_tan_F",
+"launch_O_Titan_short_F",
+"launch_I_Titan_short_F",
+"launch_O_Titan_F",
+"launch_I_Titan_F",
+"SmokeShellPurple",
+"SmokeShellYellow",
+"SmokeShellOrange"
+];
+
 call compile preprocessFileLineNumbers "mapConfig\storeOwners.sqf";
 
 storeConfigDone = compileFinal "true";

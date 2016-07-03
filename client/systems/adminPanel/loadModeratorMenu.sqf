@@ -19,7 +19,7 @@ if ([_uid, 1] call isAdmin) then {
 	_adminSelect = _displayAdmin displayCtrl adminMenu_option;
 
 	_panelOptions = ["Player Management",
-					"Vehicle Management",
+					"Show Server FPS",
 					"Map Markers Log"
 	];
 

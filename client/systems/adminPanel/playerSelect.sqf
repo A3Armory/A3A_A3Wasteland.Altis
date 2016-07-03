@@ -101,6 +101,7 @@ if (_uid call isAdmin) then
 				if(getPlayerUID _x == _targetUID) exitWith
 				{
 					_x setVariable["cmoney",0,true];
+					if (!isNil "notifyAdminMenu") then { ["removemoney", (name _target) + (getPlayerUID _target)] spawn notifyAdminMenu };
 				};
 			}forEach playableUnits;
 			["PlayerMgmt_RemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;

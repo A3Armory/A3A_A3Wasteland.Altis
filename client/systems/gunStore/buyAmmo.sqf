@@ -10,7 +10,6 @@
 if (!isNil "storePurchaseHandle" && {typeName storePurchaseHandle == "SCRIPT"} && {!scriptDone storePurchaseHandle}) exitWith {hint "Please wait, your previous purchase is being processed"};
 
 #include "dialog\gunstoreDefines.sqf";
-//#include "addons\proving_ground\defs.hpp"
 #define GET_DISPLAY (findDisplay balca_debug_VC_IDD)
 #define GET_CTRL(a) (GET_DISPLAY displayCtrl ##a)
 #define GET_SELECTED_DATA(a) ([##a] call {_idc = _this select 0;_selection = (lbSelection GET_CTRL(_idc) select 0);if (isNil {_selection}) then {_selection = 0};(GET_CTRL(_idc) lbData _selection)})

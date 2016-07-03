@@ -86,6 +86,11 @@ switch(_switch) do
 	};
 };
 
+//Remove donator items for non donators
+if (!(getPlayerUID player call isdonor))then{
+	_itemsArray = _itemsArray select {!((_x select 1) in (call donatorGenItems))};
+};
+
 _playerSideNum = switch (playerSide) do
 {
 	case BLUFOR:      { 1 };
