@@ -88,14 +88,6 @@ class playerSettings {
 			w = 0.3; h = 0.05;
 		};
 
-		class distanceText : w_RscText {
-			idc = view_range_text;
-			text = "View range:";
-			sizeEx = 0.025;
-			x = 0.03; y = 0.40;
-			w = 0.3; h = 0.02;
-		};
-
 		class uptimeText : w_RscText {
 			idc = uptime_text;
 			text = "";
@@ -159,35 +151,44 @@ class playerSettings {
 			w = 0.225; h = 0.033 * safezoneH;
 		};
 
-		class btnDistanceNear : w_RscButton {
-			idc = -1;
-			text = "Near";
-			onButtonClick = "setViewDistance 1100;";
-			x = 0.02; y = 0.43;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceMedium : w_RscButton {
-			idc = -1;
-			text = "Medium";
-			onButtonClick = "setViewDistance 2200;";
-			x = 0.02; y = 0.5;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
 		class btnDistanceFar : w_RscButton {
 			idc = -1;
-			text = "Far";
-			onButtonClick = "setViewDistance 3300;";
+			text = "Messages";
+			onButtonClick = "[] execVM 'addons\JTS_PM\JTS_PM.sqf'";
 			x = 0.02; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 
-		class btnDistanceInsane : w_RscButton {
-			text = "Insane";
-			onButtonClick = "setViewDistance 5000;";
-			x = 0.02; y = 0.60;
+		class btnDistanceEffects : w_RscButton {
+			idc = -1;
+			text = "Effects";
+			onButtonClick = "[] execVM 'addons\disableEnvironment\disableEnvironment.sqf'";
+			x = 0.02; y = 0.48;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
+		
+		class TOParmaInfoButton : w_RscButton {
+			idc = -1;
+			text = "A3Armory Info";
+			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
+			x = 0.228; y = 0.254;
+			w = 0.225; h = 0.033 * safezoneH;
+		};
+		
+		class airdrop : w_RscButton {
+			idc = -1;
+			text = "Airdrop Menu";
+			onButtonClick = "[] execVM 'addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf'";
+			x = 0.158; y = 0.48;
+			w = 0.225; h = 0.033 * safezoneH;
+		};
+		
+		/*class vdistance : w_RscButton {
+			idc = -1;
+			text = "View Distance";
+			onButtonClick = "[] spawn CHVD_fnc_openDialog;";
+			x = 0.158; y = 0.57;
+			w = 0.225; h = 0.033 * safezoneH;
+		};*/
 	};
 };

@@ -67,6 +67,9 @@ briefing = 0; // if 0, skip Continue button
 #include "addons\proving_ground\PG_config.hpp"
 #include "addons\outlw_magrepack\config.hpp"
 
+#include "addons\JTS_PM\PM_Compact.hpp"
+#include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
+
 class RscTitles
 {
 	#include "addons\proving_ground\PG_rsctitles.hpp"
