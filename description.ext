@@ -69,6 +69,16 @@ briefing = 0; // if 0, skip Continue button
 #include "addons\JTS_PM\PM_Compact.hpp"
 #include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 
+class CfgDebriefing
+{
+	class TeamBalance
+	{
+		title = "You can't do that!";
+		subtitle = "You are being team balanced.";
+		description = "The side you are trying to join has too many players. Please choose another side.";
+	};
+};
+
 class RscTitles
 {
 	#include "addons\lsd_nvg\RscTitles.hpp"
