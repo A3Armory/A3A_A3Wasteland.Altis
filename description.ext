@@ -71,6 +71,12 @@ briefing = 0; // if 0, skip Continue button
 
 class CfgDebriefing
 {
+	class Reboot
+	{
+		title = "Restarting";
+		subtitle = "Thank you for playing @ A3Armory";
+		description = "Server will save the database and restart to increase performance. The server will remain locked until done.";
+	};
 	class TeamBalance
 	{
 		title = "You can't do that!";
