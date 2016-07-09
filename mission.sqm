@@ -8,7 +8,11 @@ class EditorData
 	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=469;
+		nextID=487;
+	};
+	class LayerIndexProvider
+	{
+		nextID=2;
 	};
 	class Camera
 	{
@@ -53,14 +57,14 @@ class AddonsMetaData
 		class Item2
 		{
 			className="A3_Structures_F";
-			name="Arma 3 Alpha - Buildings and structures";
+			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Structures_F_Households";
-			name="Arma 3 Alpha - Houses";
+			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -74,7 +78,7 @@ class AddonsMetaData
 		class Item5
 		{
 			className="A3_Structures_F_EPC";
-			name="Arma 3 Win Episode - Buildings and structures";
+			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -89,7 +93,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="A3Wasteland Altis v1.3";
+		briefingName="A3Wasteland Altis v1.3b";
 		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
@@ -108,7 +112,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=309;
+		items=311;
 		class Item0
 		{
 			dataType="Group";
@@ -3279,26 +3283,26 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14509.5,4.8439064,5828};
+				position[]={14509.5,6.8896165,5834.5};
 			};
 			name="A3W_HC1";
 			isPlayable=1;
-			description="DO NOT RENAME";
 			id=185;
 			type="HeadlessClient_F";
+			atlOffset=-0.31699991;
 		};
 		class Item42
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14511,4.4540014,5828};
+				position[]={14511,6.4996667,5834.5};
 			};
 			name="A3W_HC2";
 			isPlayable=1;
-			description="DO NOT RENAME";
 			id=186;
 			type="HeadlessClient_F";
+			atlOffset=-0.50099993;
 		};
 		class Item43
 		{
@@ -4515,7 +4519,7 @@ class Mission
 			type="Empty";
 			colorName="ColorKhaki";
 			id=296;
-			atlOffset=0.0032997131;
+			atlOffset=7.3523617;
 		};
 		class Item137
 		{
@@ -6479,6 +6483,178 @@ class Mission
 			colorName="ColorEAST";
 			id=468;
 			atlOffset=-20.693958;
+		};
+		class Item309
+		{
+			dataType="Layer";
+			name="VanillaLayer";
+			class Entities
+			{
+				items=16;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={3988,23.598007,17544};
+					name="Parking1";
+					type="Empty";
+					colorName="ColorBlack";
+					id=470;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={3958.5,21.754091,17514};
+					name="Parking1_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=36.060287;
+					id=471;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={23152,13.819998,19962.5};
+					name="Parking2";
+					type="Empty";
+					colorName="ColorBlack";
+					id=472;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={23175.5,14.064692,19976};
+					name="Parking2_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=315.77444;
+					id=473;
+					atlOffset=-9.5367432e-007;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={20232.5,43.929989,8853.5};
+					name="Parking3";
+					type="Empty";
+					colorName="ColorBlack";
+					id=474;
+					atlOffset=-0.0099983215;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={20254,41.514606,8830};
+					name="Parking3_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=231.83937;
+					id=475;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={12432.5,20.201994,15837};
+					name="Parking4";
+					type="Empty";
+					colorName="ColorBlack";
+					id=476;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={12465,19.079954,15853.5};
+					name="Parking4_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=172.21471;
+					id=477;
+				};
+				class Item8
+				{
+					dataType="Marker";
+					position[]={4161.5,26.992002,14042.5};
+					name="Parking5";
+					type="Empty";
+					colorName="ColorBlack";
+					id=478;
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={4163.5,26.408016,14010};
+					name="Parking5_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=47.329494;
+					id=479;
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={10743.5,20.083309,12136};
+					name="Parking6";
+					type="Empty";
+					colorName="ColorBlack";
+					id=480;
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={10787.5,18.213291,12150};
+					name="Parking6_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=215.59123;
+					id=481;
+				};
+				class Item12
+				{
+					dataType="Marker";
+					position[]={4911.5,30.574015,11129};
+					name="Parking7";
+					type="Empty";
+					colorName="ColorBlack";
+					id=482;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={4912,34.192051,11187};
+					name="Parking7_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=180.06848;
+					id=483;
+				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={8559.5,184.55066,18168};
+					name="Parking8";
+					type="Empty";
+					colorName="ColorBlack";
+					id=484;
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={8548,181.9939,18187.5};
+					name="Parking8_spawn";
+					type="Empty";
+					colorName="ColorBlack";
+					angle=200.78293;
+					id=485;
+				};
+			};
+			id=469;
+			atlOffset=-51.881287;
+		};
+		class Item310
+		{
+			dataType="Layer";
+			name="CustomLayer";
+			id=486;
+			atlOffset=185.97;
 		};
 	};
 };
