@@ -183,12 +183,12 @@ class playerSettings {
 			w = 0.225; h = 0.033 * safezoneH;
 		};
 		
-		/*class vdistance : w_RscButton {
+		class vdistance : w_RscButton {
 			idc = -1;
 			text = "View Distance";
-			onButtonClick = "[] spawn CHVD_fnc_openDialog;";
+			onButtonClick = "call CHVD_fnc_openDialog";
 			x = 0.158; y = 0.57;
 			w = 0.225; h = 0.033 * safezoneH;
-		};*/
+		};
 	};
 };
