@@ -25,11 +25,11 @@ while {true} do
 
 			// Check if vehicle is not being towed or moved
 			if (isNull (_veh getVariable ["R3F_LOG_est_transporte_par", objNull]) &&
-				isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull])) then
+			    isNull (_veh getVariable ["R3F_LOG_est_deplace_par", objNull])) then
 			{
 				_settings = _x;
 
-				private ["_vehSave", "_vehClass", "_startPos", "_lastSeenAlive", "_respawnPos", "_respawnTimer", "_minDistance", "_desertedTimer", "_proxyTimer", "_proxyDistance", "_desertedTimeout", "_brokenTimeout"];
+				private ["_vehClass", "_startPos", "_lastSeenAlive", "_respawnPos", "_respawnTimer", "_minDistance", "_desertedTimer", "_proxyTimer", "_proxyDistance", "_desertedTimeout", "_brokenTimeout"];
 				{
 					_key = _x select 0;
 					_value = _x select 1;
@@ -57,7 +57,6 @@ while {true} do
 
 				_alive = alive _veh;
 				_canMove = canMove _veh;
-				_vehSave = _veh getvariable ["ownerUID", ""];
 
 				// Is the vehicle still alive?
 				if (_alive) then
@@ -211,7 +210,7 @@ while {true} do
 
 					sleep 0.1;
 
-					if (_vehSave == "") then
+					if (_veh getVariable ["ownerUID",""] isEqualTo "") then
 					{
 						deleteVehicle _veh;
 					};

@@ -9,7 +9,7 @@ if (!isServer) exitwith {};
 #define MISSION_LOCATION_COOLDOWN (10*60)
 #define MISSION_TIMER_EXTENSION (15*60)
 
-private ["_controllerSuffix", "_missionTimeout", "_availableLocations", "_missionLocation", "_leader", "_marker", "_failed", "_complete", "_startTime", "_oldAiCount", "_leaderTemp", "_newAiCount", "_adjustTime", "_lastPos", "_floorHeight", "_defMines"];
+private ["_controllerSuffix", "_missionTimeout", "_availableLocations", "_missionLocation", "_leader", "_marker", "_failed", "_complete", "_startTime", "_oldAiCount", "_leaderTemp", "_newAiCount", "_adjustTime", "_lastPos", "_floorHeight"];
 
 // Variables that can be defined in the mission script :
 private ["_missionType", "_locationsArray", "_aiGroup", "_missionPos", "_missionPicture", "_missionHintText", "_successHintMessage", "_failedHintMessage"];
@@ -164,11 +164,12 @@ else
 	{
 		_vehicle setVariable ["R3F_LOG_disabled", false, true];
 		_vehicle setVariable ["A3W_missionVehicle", true, true];
+		_vehicle setVariable ["A3W_lockpickDisabled", nil, true];
 
-		/*if (!isNil "fn_manualVehicleSave") then
+		if (!isNil "fn_manualVehicleSave" && !(_vehicle getVariable ["A3W_skipAutoSave", false])) then
 		{
 			_vehicle call fn_manualVehicleSave;
-		};*/
+		};
 	};
 
 	if (!isNil "_vehicles" && {typeName _vehicles == "ARRAY"}) then
@@ -178,8 +179,9 @@ else
 			{
 				_x setVariable ["R3F_LOG_disabled", false, true];
 				_x setVariable ["A3W_missionVehicle", true, true];
+				_x setVariable ["A3W_lockpickDisabled", nil, true];
 
-				if (!isNil "fn_manualVehicleSave") then
+				if (!isNil "fn_manualVehicleSave" && !(_x getVariable ["A3W_skipAutoSave", false])) then
 				{
 					_x call fn_manualVehicleSave;
 				};
