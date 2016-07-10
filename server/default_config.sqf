@@ -22,7 +22,7 @@ A3W_timeMultiplierNight = 4.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
-A3W_startingMoney = 2500;           // Amount of money that players start with
+A3W_startingMoney = 2500;          // Amount of money that players start with
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 60;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
@@ -32,8 +32,8 @@ A3W_customDeathMessages = 1;       // If difficulty option deathMessages=0, disp
 // Spawn settings
 A3W_townSpawnCooldown = 15*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
 A3W_spawnBeaconCooldown = 15*60;    // Number of seconds to wait between each use of a specific spawn beacon (0 = disabled)
-A3W_spawnBeaconSpawnHeight = 1250; // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
-A3W_maxSpawnBeacons = 3;           // Maxmimum number of spawn beacons (0 = disabled)
+A3W_spawnBeaconSpawnHeight = 1250;  // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
+A3W_maxSpawnBeacons = 3;            // Maxmimum number of spawn beacons (0 = disabled)
 
 // Antihack settings
 A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
@@ -42,22 +42,22 @@ A3W_antiHackMinRecoil = 1.0;       // Mininum recoil coefficient enforced by the
 // Store settings
 A3W_showGunStoreStatus = 1;        // Show enemy and friendly presence at gunstores on map (0 = no, 1 = yes)
 A3W_gunStoreIntruderWarning = 1;   // Warn players in gunstore areas of enemy intruders (0 = no, 1 = yes)
-A3W_remoteBombStoreRadius = 100;    // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
+A3W_remoteBombStoreRadius = 100;   // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
 A3W_poiObjLockDistance = 100;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
 A3W_vehiclePurchaseCooldown = 60;  // Number of seconds to wait before allowing someone to purchase another vehicle, don't bother setting it too high because it can be bypassed by rejoining
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
-A3W_atmMaxBalance = 300000;       // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
+A3W_atmMaxBalance = 300000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
 A3W_atmTransferFee = 5;            // Fee in percent charged to players for money transfers to other players (0 to 50)
 A3W_atmTransferAllTeams = 0;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
 A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the mission editor (0 = all ATMs from towns & editor allowed, 1 = ATMs from editor only) Note: Stratis has no town ATMs, only editor ones.
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
 A3W_atmRemoveIfDisabled = 0;       // Remove all ATMs from map if A3W_atmEnabled is set to 0 (0 = no, 1 = yes)
 
-A3W_bountyMax = 210000;            // Maximum amount of money that can be set as a bounty on someone
+A3W_bountyMax = 150000;            // Maximum amount of money that can be set as a bounty on someone
 A3W_bountyMinStart = 2500;         // Minimum amount of money to start a bounty on someone
-A3W_bountyRewardPerc = 70;         // Percentage of cost that goes to bounty reward
+A3W_bountyRewardPerc = 50;         // Percentage of cost that goes to bounty reward
 A3W_bountyLifetime = 4*24;         // Maximum lifetime in hours for bounty kills to store in DB (storing bounty kills is to prevent from forming groups with someone you collected bounty on)
 
 // Not currently implemented, soon
@@ -102,7 +102,7 @@ PDB_ObjectFileID = "A3W_";         // Object savefile prefix (if you run multipl
 A3W_extDB_ServerID = 1;            // Server ID to use in the database for the particular server running off this config file; if you have multiple servers, they all need different IDs
 A3W_extDB_Environment = "normal";  // Value used to separate player & object data from multiple environments running on the same map (e.g. "normal", "hardcore", "dev", etc. can be whatever you want)
 A3W_extDB_playerSaveCrossMap = 1;  // Player saves are shared across maps in same environment, with player location saved separately for each map; death resets save on all maps (0 = no, 1 = yes)
-A3W_extDB_GhostingTimer = 10*60;    // Number of seconds a player has to wait when switching between servers running the same map (0 = disabled)
+A3W_extDB_GhostingTimer = 10*60;   // Number of seconds a player has to wait when switching between servers running the same map (0 = disabled)
 A3W_extDB_GhostingAdmins = 0;      // Apply ghosting restriction to server admins (0 = no, 1 = yes)
 A3W_extDB_SaveUnlockedObjects = 0; // Save and restore unlocked baseparts that were purchased or locked at least once during their lifetime (0 = no, 1 = yes)
 A3W_extDB_ConfigName = "A3W";      // Name of the connection config from extdb-conf.ini to be used (the one within [brackets])
@@ -111,7 +111,7 @@ A3W_extDB_Misc = 0;                // Enable extDB Misc Protocol (0 = no, 1 = ye
 A3W_extDB_Steam = 0;               // Enable extDB Steam Protocol (0 = no, 1 = yes) - no associated features implemented in vanilla A3W
 A3W_extDB_Rcon = 0;                // Enable extDB Rcon Protocol (0 = no, 1 = yes) - no associated features implemented in vanilla A3W
 A3W_extDB_RconName = "RCON";       // Name of the Rcon config from extdb-conf.ini to be used (the one within [brackets])
-A3W_extDB_RconCommands = "KICK-ADDBAN";	// List of dash-separated RCON commands allowed via extDB_Rcon
+A3W_extDB_RconCommands = "KICK-ADDBAN"; // List of dash-separated RCON commands allowed via extDB_Rcon
 
 // Headless client settings
 A3W_hcPrefix = "A3W_HC";           // Prefix of the headless client unit names in mission.sqm
@@ -143,7 +143,7 @@ A3W_essentialsSpawning = 1;        // If serverSpawning = 1, spawn essential ite
 // Loot settings
 A3W_buildingLootWeapons = 0;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
 A3W_buildingLootSupplies = 0;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
-A3W_buildingLootChances = 0;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
+A3W_buildingLootChances = 0;       // Chance percentage that loot will spawn at each spot in a building (0 to 100)
 A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 
 // Territory settings
@@ -159,7 +159,7 @@ A3W_missionFarAiDrawLines = 1;     // Draw small red lines on the map from missi
 A3W_missionsQuantity = 4;          // Number of missions running at the same time (0 to 6)
 A3W_heliPatrolMissions = 1;        // Enable missions involving flying helicopters piloted by AI (0 = no, 1 = yes)
 A3W_underWaterMissions = 1;        // Enable underwater missions which require diving gear (0 = no, 1 = yes)
-A3W_mainMissionDelay = 5*60;      // Time in seconds between Main Missions
+A3W_mainMissionDelay = 5*60;       // Time in seconds between Main Missions
 A3W_mainMissionTimeout = 60*60;    // Time in seconds that a Main Mission will run for, unless completed
 A3W_sideMissionDelay = 5*60;       // Time in seconds between Side Missions
 A3W_sideMissionTimeout = 60*60;    // Time in seconds that a Side Mission will run for, unless completed
