@@ -52,8 +52,8 @@ SniperMissionMarkers = (allMapMarkers select {["Sniper_", _x] call fn_startsWith
 {
 	SideMissions append
 	[
-		["mission_AirWreck", 1.5],
-		["mission_WepCache", 1.5]
+		["mission_AirWreck", 3],
+		["mission_WepCache", 3]
 	];
 };*/
 
