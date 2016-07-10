@@ -80,14 +80,15 @@ _object = switch (_type) do {
 		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
 		_object = createVehicle [_selectionClass, _objectSpawnPos, [], 0, "None"];
 		diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
-		//_object setVariable ["A3W_purchasedStoreObject", true];
-		//_object setVariable ["A3W_purchasedVehicle", true, true];
-		//_object setVariable ["ownerUID", getPlayerUID _player, true];
+		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["A3W_purchasedVehicle", true, true];
+		_object setVariable ["ownerUID", getPlayerUID _player, true];
+		_object setVariable ["ownerName", name _player, true];
 		[_object, false] call vehicleSetup;
-		//if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
-		//{
-			//_object call fn_manualVehicleSave;
-		//};
+		if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
+		{
+			_object call fn_manualVehicleSave;
+		};
 		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
 		_object
 	};
