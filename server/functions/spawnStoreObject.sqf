@@ -182,7 +182,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				// _object spawn cleanVehicleWreck;
 				_object setVariable ["A3W_purchasedVehicle", true, true];
 
-				if (["A3W_vehicleLocking"] call isConfigOn) then
+				if (["A3W_vehicleLocking"] call isConfigOn && !(_skipSave) && !({_object isKindOf _x} count ["UAV_02_base_F", "UAV_03_base_F", "UGV_01_base_F"] > 0)) then
 				{
 					[_object, 2] call A3W_fnc_setLockState; // Lock
 				};
@@ -202,17 +202,24 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			{
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
 				{
-					_object setAmmoCargo 5;
+					_object setAmmoCargo 0;
 				};
 
 				case (_object isKindOf "O_Heli_Transport_04_ammo_F"):
 				{
-					_object setAmmoCargo 10;
+					_object setAmmoCargo 0;
 				};
 
 				case ({_object isKindOf _x} count ["B_Truck_01_ammo_F", "O_Truck_02_Ammo_F", "O_Truck_03_ammo_F", "I_Truck_02_ammo_F"] > 0):
 				{
-					_object setAmmoCargo 25;
+					_object setAmmoCargo 0;
+				};
+
+				case (_object isKindOf "B_APC_Tracked_01_CRV_F"):
+				{
+					_object setAmmoCargo 0;
+					_object setFuelCargo 0;
+					_object setRepairCargo 0;
 				};
 
 				case ({_object isKindOf _x} count ["C_Van_01_fuel_F", "I_G_Van_01_fuel_F", "O_Heli_Transport_04_fuel_F"] > 0):

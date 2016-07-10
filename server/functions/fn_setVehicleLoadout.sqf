@@ -19,7 +19,7 @@ if (!local _veh) exitWith
 private _class = typeOf _veh;
 private ["_mags", "_weapons", "_customCode"];
 
-/*switch (true) do
+switch (true) do
 {
 	case (_class isKindOf "UAV_02_base_F" && !(_class isKindOf "UAV_02_CAS_base_F")):
 	{
@@ -68,6 +68,7 @@ private ["_mags", "_weapons", "_customCode"];
 		_mags =
 		[
 			["500Rnd_Cannon_30mm_Plane_CAS_02_F", [-1]],
+			["500Rnd_Cannon_30mm_Plane_CAS_02_F", [-1]],
 			["20Rnd_Rocket_03_HE_F", [-1]],
 			["2Rnd_Missile_AA_03_F", [-1]],
 			["2Rnd_Bomb_03_F", [-1]],
@@ -88,7 +89,7 @@ private ["_mags", "_weapons", "_customCode"];
 		_mags =
 		[
 			["300Rnd_20mm_shells", [-1]],
-			//["300Rnd_20mm_shells", [-1]],
+			["300Rnd_20mm_shells", [-1]],
 			["2Rnd_AAA_missiles", [-1]],
 			["2Rnd_GBU12_LGB_MI10", [-1]],
 			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
@@ -138,7 +139,7 @@ private ["_mags", "_weapons", "_customCode"];
 		];
 	};
 
-	case ({_class isKindOf _x} count ["Heli_Attack_02_base_F", "VTOL_02_base_F"] > 0):
+	case (_class isKindOf "Heli_Attack_02_base_F"):
 	{
 		_mags =
 		[
@@ -172,7 +173,7 @@ private ["_mags", "_weapons", "_customCode"];
 			["mortar_82mm", [0]]
 		];
 	};
-};*/
+};
 
 if (isNil "_mags" && isNil "_weapons" && isNil "_customCode") exitWith {};
 

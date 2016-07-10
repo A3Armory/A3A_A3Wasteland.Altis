@@ -26,5 +26,5 @@ cfg_va_lock_sound_play = true;
 cfg_va_lock_from_inside = true;
 
 //List of classes for vehicles that can locked/unlocked (empty means all)
-cfg_va_lock_actions_classes_list = ["LandVehicle", "Air", "Ship"];
+cfg_va_lock_actions_classes_list = ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F", "Truck_01_base_F", "Truck_02_base_F", "Truck_03_base_F", "Wheeled_APC_F", "Tank_F", "Helicopter_Base_F", "Plane", "UGV_01_base_F"];
 cfg_va_lock_actions_classes_list_excl = ["StaticWeapon", "UAV_01_base_F"];
