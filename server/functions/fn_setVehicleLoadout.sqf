@@ -160,6 +160,27 @@ switch (true) do
 		];
 	};
 
+	case (_class isKindOf "O_T_VTOL_02_infantry_F"):
+	{
+		_mags =
+		[
+			["192Rnd_CMFlare_Chaff_Magazine", [-1]],
+			["96Rnd_CMFlare_Chaff_Magazine", [0]],
+			["250Rnd_30mm_HE_shells", [0]],
+			["250Rnd_30mm_APDS_shells", [0]],
+			["6Rnd_LG_scalpel", [0]],
+			["14Rnd_80mm_rockets", [0]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]],
+			["CMFlareLauncher", [0]],
+			["gatling_30mm", [0]],
+			["missiles_SCALPEL", [0]],
+			["rockets_Skyfire", [0]]
+		];
+	};
+
 	case (_class isKindOf "Mortar_01_base_F"):
 	{
 		_mags =

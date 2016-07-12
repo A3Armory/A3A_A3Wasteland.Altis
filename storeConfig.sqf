@@ -969,7 +969,7 @@ planesArray = compileFinal str
 	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 80000, "vehicle"],
 
 	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 20000, "vehicle"],
-	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 60000, "vehicle"],
+	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 65000, "vehicle"],
 	["Y-32 Xi'an", "O_T_VTOL_02_infantry_F", 60000, "vehicle"],
 
 	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 25000, "vehicle"],
