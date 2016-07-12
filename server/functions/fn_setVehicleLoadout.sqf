@@ -160,7 +160,7 @@ switch (true) do
 		];
 	};
 
-	case (_class isKindOf "O_T_VTOL_02_infantry_F"):
+	/*case (_class isKindOf "O_T_VTOL_02_infantry_F"):
 	{
 		_mags =
 		[
@@ -179,7 +179,7 @@ switch (true) do
 			["missiles_SCALPEL", [0]],
 			["rockets_Skyfire", [0]]
 		];
-	};
+	};*/
 
 	case (_class isKindOf "Mortar_01_base_F"):
 	{
