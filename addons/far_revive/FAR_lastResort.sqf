@@ -6,7 +6,7 @@
 
 private ["_randomSound"];
 
-_randomSound = selectRandom ["johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "predator.ogg"];
+_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "predator.ogg"];
 
 if !(player getVariable ["performingDuty", false]) then
 {
