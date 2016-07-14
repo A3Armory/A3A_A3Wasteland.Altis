@@ -182,7 +182,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				// _object spawn cleanVehicleWreck;
 				_object setVariable ["A3W_purchasedVehicle", true, true];
 
-				if (["A3W_vehicleLocking"] call isConfigOn && !(_skipSave) && !({_object isKindOf _x} count ["UAV_02_base_F", "UAV_03_base_F", "UGV_01_base_F", "O_T_UAV_04_CAS_F"] > 0)) then
+				if (["A3W_vehicleLocking"] call isConfigOn && !_isUAV) then
 				{
 					[_object, 2] call A3W_fnc_setLockState; // Lock
 				};
@@ -198,16 +198,17 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 
 			clearBackpackCargoGlobal _object;
 
-			switch (true) do
+			// don't need this anymore at all
+			/*switch (true) do
 			{
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
 				{
-					_object setAmmoCargo 0;
+					_object setAmmoCargo 5;
 				};
 
 				case (_object isKindOf "O_Heli_Transport_04_ammo_F"):
 				{
-					_object setAmmoCargo 0;
+					_object setAmmoCargo 10;
 				};
 
 				case ({_object isKindOf _x} count ["B_Truck_01_ammo_F", "O_Truck_02_Ammo_F", "O_Truck_03_ammo_F", "I_Truck_02_ammo_F"] > 0):
@@ -246,7 +247,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setRepairCargo 25;
 				};
-			};
+			};*/
 
 			if (_skipSave) then
 			{
