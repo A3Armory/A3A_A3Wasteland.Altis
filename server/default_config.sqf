@@ -45,6 +45,7 @@ A3W_gunStoreIntruderWarning = 1;   // Warn players in gunstore areas of enemy in
 A3W_remoteBombStoreRadius = 100;   // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
 A3W_poiObjLockDistance = 100;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
 A3W_vehiclePurchaseCooldown = 60;  // Number of seconds to wait before allowing someone to purchase another vehicle, don't bother setting it too high because it can be bypassed by rejoining
+A3W_lockVehicles = ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F", "Truck_01_base_F", "Truck_02_base_F", "Truck_03_base_F", "Wheeled_APC_F", "Tank_F", "Helicopter_Base_F", "Plane", "UGV_01_base_F", "LSV_01_base_F", "LSV_02_base_F"];		// List of class names for vehicles that should be automatically locked and saved when bought
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
@@ -102,7 +103,7 @@ PDB_ObjectFileID = "A3W_";         // Object savefile prefix (if you run multipl
 A3W_extDB_ServerID = 1;            // Server ID to use in the database for the particular server running off this config file; if you have multiple servers, they all need different IDs
 A3W_extDB_Environment = "normal";  // Value used to separate player & object data from multiple environments running on the same map (e.g. "normal", "hardcore", "dev", etc. can be whatever you want)
 A3W_extDB_playerSaveCrossMap = 1;  // Player saves are shared across maps in same environment, with player location saved separately for each map; death resets save on all maps (0 = no, 1 = yes)
-A3W_extDB_GhostingTimer = 10*60;   // Number of seconds a player has to wait when switching between servers running the same map (0 = disabled)
+A3W_extDB_GhostingTimer = 0;   // Number of seconds a player has to wait when switching between servers running the same map (0 = disabled)
 A3W_extDB_GhostingAdmins = 0;      // Apply ghosting restriction to server admins (0 = no, 1 = yes)
 A3W_extDB_SaveUnlockedObjects = 0; // Save and restore unlocked baseparts that were purchased or locked at least once during their lifetime (0 = no, 1 = yes)
 A3W_extDB_ConfigName = "A3W";      // Name of the connection config from extdb-conf.ini to be used (the one within [brackets])

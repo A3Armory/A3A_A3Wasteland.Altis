@@ -182,7 +182,12 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				// _object spawn cleanVehicleWreck;
 				_object setVariable ["A3W_purchasedVehicle", true, true];
 
-				if (["A3W_vehicleLocking"] call isConfigOn && !_isUAV) then
+				/*if (["A3W_vehicleLocking"] call isConfigOn && !_isUAV) then
+				{
+					[_object, 2] call A3W_fnc_setLockState; // Lock
+				};*/
+
+				if ({_object isKindOf _x} count A3W_lockVehicles > 0 && !_isUAV) then
 				{
 					[_object, 2] call A3W_fnc_setLockState; // Lock
 				};

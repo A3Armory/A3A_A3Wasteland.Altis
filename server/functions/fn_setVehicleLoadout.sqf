@@ -36,7 +36,6 @@ switch (true) do
 			["missiles_SCALPEL", [0]]
 		];
 	};
-
 	case (_class isKindOf "O_T_UAV_04_CAS_F"):
 	{
 		_customCode =
@@ -44,7 +43,6 @@ switch (true) do
 			_veh setMagazineTurretAmmo ["4Rnd_LG_Jian", 2, [0]];
 		};
 	};
-
 	case (_class isKindOf "B_Plane_CAS_01_F"):
 	{
 		_mags =
@@ -62,7 +60,6 @@ switch (true) do
 			["CMFlareLauncher", [-1]]
 		];
 	};
-
 	case (_class isKindOf "O_Plane_CAS_02_F"):
 	{
 		_mags =
@@ -83,7 +80,6 @@ switch (true) do
 			["CMFlareLauncher", [-1]]
 		];
 	};
-
 	case (_class isKindOf "I_Plane_Fighter_03_CAS_F"):
 	{
 		_mags =
@@ -102,7 +98,6 @@ switch (true) do
 			["CMFlareLauncher", [-1]]
 		];
 	};
-
 	case (_class isKindOf "O_Heli_Light_02_F"):
 	{
 		_mags =
@@ -118,7 +113,6 @@ switch (true) do
 			["CMFlareLauncher", [-1]]
 		];
 	};
-
 	case (_class isKindOf "Heli_Attack_01_base_F"):
 	{
 		_mags =
@@ -136,8 +130,7 @@ switch (true) do
 			["missiles_ASRAAM", [0]]
 		];
 	};
-
-	case (_class isKindOf "Heli_Attack_02_base_F"):
+	case ({_class isKindOf _x} count ["Heli_Attack_02_base_F", "VTOL_02_base_F"] > 0):
 	{
 		_mags =
 		[
@@ -155,28 +148,6 @@ switch (true) do
 			["rockets_Skyfire", [0]]
 		];
 	};
-
-	/*case (_class isKindOf "O_T_VTOL_02_infantry_F"):
-	{
-		_mags =
-		[
-			["192Rnd_CMFlare_Chaff_Magazine", [-1]],
-			["96Rnd_CMFlare_Chaff_Magazine", [0]],
-			["250Rnd_30mm_HE_shells", [0]],
-			["250Rnd_30mm_APDS_shells", [0]],
-			["6Rnd_LG_scalpel", [0]],
-			["14Rnd_80mm_rockets", [0]]
-		];
-		_weapons =
-		[
-			["CMFlareLauncher", [-1]],
-			["CMFlareLauncher", [0]],
-			["gatling_30mm", [0]],
-			["missiles_SCALPEL", [0]],
-			["rockets_Skyfire", [0]]
-		];
-	};*/
-
 	case (_class isKindOf "Mortar_01_base_F"):
 	{
 		_mags =
