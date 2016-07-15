@@ -13,7 +13,7 @@ if (!mineActive _mine) exitWith {nil};
 
 _mineID = _dummy getVariable "A3W_mineID";
 
-systemChat format ["_mineID = %1", _dummy getVariable ["A3W_mineID", "nil"]];
+//systemChat format ["_mineID = %1", _dummy getVariable ["A3W_mineID", "nil"]];
 
 if (isNil "_mineID") then
 {
