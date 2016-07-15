@@ -14,7 +14,6 @@ for "_i" from 1 to _nbRings do {
   _mineGap = _mineGap + ((_i*(_maxRadius/_nbRings))*2)*pi;
 };
 _mineGap = _mineGap/_nbMines;
-_missionMines = missionNamespace getVariable ["mission_mines",[]];
 for "_i" from 1 to _nbRings do {
   _distance = _i*(_maxRadius/_nbRings);
   _mineCnt = ceil (((_distance*2)*pi) / _mineGap);
@@ -23,7 +22,5 @@ for "_i" from 1 to _nbRings do {
      _minePos = _missionPos vectorAdd ([[_distance, 0, 0], _deg] call BIS_fnc_rotateVector2D);
      _mine = createMine ["SLAMDirectionalMine", _minePos, [], 0];
      _defMines pushBack _mine;
-     _missionMines pushBack _mine;
   };
 };
-missionNamespace setVariable ["mission_mines", _missionMines];
