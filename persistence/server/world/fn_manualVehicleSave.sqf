@@ -4,7 +4,7 @@
 //	@file Name: fn_manualVehicleSave.sqf
 //	@file Author: AgentRev
 
-#define MANUAL_VEH_SAVE_COOLDOWN 5
+#define MANUAL_VEH_SAVE_COOLDOWN 60
 
 params ["_veh", ["_wait",false,[false]]];
 

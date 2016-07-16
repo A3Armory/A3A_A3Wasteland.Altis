@@ -4,7 +4,7 @@
 //	@file Name: fn_manualObjectSave.sqf
 //	@file Author: AgentRev
 
-#define MANUAL_OBJ_SAVE_COOLDOWN 5
+#define MANUAL_OBJ_SAVE_COOLDOWN 60
 
 private "_obj";
 _obj = _this;
