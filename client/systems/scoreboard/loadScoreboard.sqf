@@ -113,7 +113,8 @@ _code =
 				};
 
 				_entryPKills = _display displayCtrl scoreGUI_PListEntry_PKills(_id);
-				_entryPKills ctrlSetText str (([_player, "playerKills", false] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
+				_pKills = (([_player, "playerKills", false] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
+				_entryPKills ctrlSetText str ( [0, _pKills] select (_pKills > 0) );
 				_entryPKills ctrlSetTextColor _textColor;
 
 				_entryAIKills = _display displayCtrl scoreGUI_PListEntry_AIKills(_id);
@@ -133,7 +134,8 @@ _code =
 				_entryCaptures ctrlSetTextColor _textColor;
 
 				_entryAllKills = _display displayCtrl scoreGUI_PListEntry_AllKills(_id);
-				_entryAllKills ctrlSetText str (([_player, "playerKills"] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
+				_allKills = (([_player, "playerKills"] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
+				_entryAllKills ctrlSetText str ( [0, _allKills] select (_allKills > 0) );
 				_entryAllKills ctrlSetTextColor _textColor;
 
 				_entryAllDeaths = _display displayCtrl scoreGUI_PListEntry_AllDeaths(_id);
@@ -141,7 +143,7 @@ _code =
 				_entryAllDeaths ctrlSetTextColor _textColor;
 
 				_entryKillDeath = _display displayCtrl scoreGUI_PListEntry_KillDeath(_id);
-				if(([_player, "playerKills"] call fn_getScore) == 0 || ([_player, "deathCount"] call fn_getScore) == 0)then{
+				if(([_player, "playerKills"] call fn_getScore) <= 0 || ([_player, "deathCount"] call fn_getScore) <= 0)then{
 					_entryKillDeath ctrlSetText str (0);
 				}else{
 					_entryKillDeath ctrlSetText str ((floor (((([_player, "playerKills"] call fn_getScore) - ([_player, "teamKills"] call fn_getScore)) / ([_player, "deathCount"] call fn_getScore)) * 100)) / 100);
