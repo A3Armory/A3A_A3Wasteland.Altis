@@ -113,8 +113,7 @@ _code =
 				};
 
 				_entryPKills = _display displayCtrl scoreGUI_PListEntry_PKills(_id);
-				_pKills = (([_player, "playerKills", false] call fn_getScore) - ([_player, "teamKills"] call fn_getScore));
-				_entryPKills ctrlSetText str ( [0, _pKills] select (_pKills > 0) );
+				_entryPKills ctrlSetText str (([_player, "playerKills", false] call fn_getScore) - ([_player, "teamKills", false] call fn_getScore));
 				_entryPKills ctrlSetTextColor _textColor;
 
 				_entryAIKills = _display displayCtrl scoreGUI_PListEntry_AIKills(_id);
