@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=2;
+	toggles=6;
 	class ItemIDProvider
 	{
 		nextID=487;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={14139.151,57.787155,14669.221};
-		dir[]={-0.2511586,0.10660953,0.96206409};
-		up[]={0.026930662,0.99430341,-0.10315674};
-		aside[]={0.96757895,2.2747554e-007,0.252597};
+		pos[]={14525.827,52.837849,5748.2998};
+		dir[]={-0.029113516,-0.33855194,0.94050032};
+		up[]={-0.01047504,0.94094759,0.33839113};
+		aside[]={0.99952447,4.7344656e-008,0.030940793};
 	};
 };
 binarizationWanted=0;
@@ -84,7 +84,7 @@ class AddonsMetaData
 		};
 	};
 };
-randomSeed=3333663;
+randomSeed=3783014;
 class ScenarioData
 {
 	author="AgentRev";
@@ -125,80 +125,80 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.228,9.1839705,5863.8672};
+						position[]={14502.5,9.1837912,5863.0498};
 						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayer=1;
 						isPlayable=1;
 					};
 					id=1;
 					type="B_medic_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.728,8.5761185,5863.8672};
+						position[]={14504,8.5755682,5863.0498};
 						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=2;
-					type="B_medic_F";
+					type="B_sniper_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14505.228,8.0135565,5863.8672};
+						position[]={14505.5,8.0672102,5863.0498};
 						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=3;
 					type="B_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14506.728,7.6517439,5863.8672};
+						position[]={14507,7.7571974,5863.0498};
 						angles[]={0.22543514,0,5.9905062};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=4;
 					type="B_engineer_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=-1.4305115e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=0;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item1
 		{
@@ -212,14 +212,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.728,9.6562872,5861.8672};
+						position[]={14502,9.6557379,5861.0498};
 						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=6;
@@ -230,54 +229,54 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.228,9.0480642,5861.8672};
+						position[]={14503.5,9.0478888,5861.0498};
 						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=7;
-					type="B_medic_F";
+					type="B_diver_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.728,8.4402132,5861.8672};
-						angles[]={0.13386136,0,5.8980899};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=8;
-					type="B_medic_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14506.228,8.0760803,5861.8672};
+						position[]={14505,8.4398489,5861.0498};
 						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
+						isPlayable=1;
+					};
+					id=8;
+					type="B_medic_F";
+					atlOffset=1.9073486e-006;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14506.5,8.1299238,5861.0498};
+						angles[]={0.13386136,0,6.0793881};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
 						isPlayable=1;
 					};
 					id=9;
 					type="B_engineer_F";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
@@ -297,78 +296,78 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.228,9.8936043,5859.8672};
+						position[]={14501.5,9.805232,5859.0498};
 						angles[]={6.256525,0,6.0438619};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=11;
 					type="B_medic_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.728,9.5200109,5859.8672};
-						angles[]={0.13386136,0,5.8980899};
+						position[]={14503,9.4393225,5859.0498};
+						angles[]={6.256525,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=12;
-					type="B_medic_F";
+					type="B_sniper_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.228,8.9121599,5859.8672};
+						position[]={14504.5,8.9116735,5859.0498};
 						angles[]={0.13386136,0,5.8980899};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=13;
 					type="B_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14505.728,8.4489069,5859.8672};
+						position[]={14506,8.5026236,5859.0498};
 						angles[]={0.13386136,0,6.0793881};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=14;
 					type="B_engineer_F";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=10;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item3
 		{
@@ -382,14 +381,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.728,9.9622421,5857.8672};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14501,9.8598738,5857.0498};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=16;
@@ -400,32 +398,31 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.228,9.5961084,5857.8672};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14502.5,9.4939642,5857.0498};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=17;
-					type="B_medic_F";
+					type="B_diver_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.728,9.230197,5857.8672};
-						angles[]={6.256525,0,6.0438619};
+						position[]={14504,9.1278296,5857.0498};
+						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=18;
@@ -436,18 +433,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14505.228,8.8215437,5857.8672};
-						angles[]={0.13386136,0,6.0793881};
+						position[]={14505.5,8.8006086,5857.0498};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=19;
 					type="B_engineer_F";
+					atlOffset=-9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -467,14 +464,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.228,9.9837761,5855.8672};
+						position[]={14500.5,9.8725119,5855.0498};
 						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=21;
@@ -485,54 +481,54 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.728,9.6178656,5855.8672};
+						position[]={14502,9.5066023,5855.0498};
 						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=22;
-					type="B_medic_F";
+					type="B_sniper_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.228,9.2517309,5855.8672};
+						position[]={14503.5,9.1406927,5855.0498};
 						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=23;
 					type="B_medic_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.728,8.8858204,5855.8672};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14505,8.7746267,5855.0498};
+						angles[]={6.2285728,0,6.1180367};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=24;
 					type="B_engineer_F";
+					atlOffset=-9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -552,14 +548,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.728,9.9615211,5853.8672};
+						position[]={14500,9.8373861,5853.0498};
 						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=26;
@@ -570,50 +565,49 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.228,9.6305046,5853.8672};
-						angles[]={6.2285728,0,6.0438619};
+						position[]={14501.5,9.507266,5853.0498};
+						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=27;
-					type="B_medic_F";
+					type="B_diver_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.728,9.26437,5853.8672};
+						position[]={14503,9.1533308,5853.0498};
 						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=28;
 					type="B_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14504.228,8.8984594,5853.8672};
+						position[]={14504.5,8.7871962,5853.0498};
 						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=29;
@@ -637,50 +631,49 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.228,9.9141645,5851.8672};
+						position[]={14499.5,9.7900305,5851.0498};
 						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=31;
 					type="B_medic_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.728,9.5842447,5851.8672};
+						position[]={14501,9.4599066,5851.0498};
 						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=32;
-					type="B_medic_F";
+					type="B_sniper_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.228,9.2541237,5851.8672};
+						position[]={14502.5,9.1299887,5851.0498};
 						angles[]={6.2046804,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=33;
@@ -691,14 +684,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.728,8.9110975,5851.8672};
+						position[]={14504,8.7998343,5851.0498};
 						angles[]={6.2285728,0,6.0438619};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=34;
@@ -709,6 +701,7 @@ class Mission
 			{
 			};
 			id=30;
+			atlOffset=1.9073486e-006;
 		};
 		class Item7
 		{
@@ -722,50 +715,49 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14498.728,9.8677778,5849.8672};
+						position[]={14499,9.748004,5849.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=36;
 					type="B_medic_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.228,9.537858,5849.8672};
+						position[]={14500.5,9.4178839,5849.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=37;
-					type="B_medic_F";
+					type="B_diver_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.728,9.2079391,5849.8672};
+						position[]={14502,9.0879622,5849.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=38;
@@ -776,24 +768,25 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14503.228,8.8778181,5849.8672};
+						position[]={14503.5,8.7580442,5849.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=39;
 					type="B_engineer_F";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=35;
+			atlOffset=1.9073486e-006;
 		};
 		class Item8
 		{
@@ -807,14 +800,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14498.228,9.9999886,5847.8672};
+						position[]={14498.5,9.943202,5847.0498};
 						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=41;
@@ -825,54 +817,54 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.728,9.5011673,5847.8672};
-						angles[]={6.2099833,0,6.0666351};
+						position[]={14500,9.4393263,5847.0498};
+						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=42;
-					type="B_medic_F";
+					type="B_sniper_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.228,9.1712484,5847.8672};
+						position[]={14501.5,9.0512724,5847.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=43;
 					type="B_medic_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.728,8.8411274,5847.8672};
+						position[]={14503,8.7213507,5847.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=44;
 					type="B_engineer_F";
+					atlOffset=-9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -892,83 +884,84 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.728,10.253281,5845.8672};
+						position[]={14498,10.196494,5845.0498};
 						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=46;
 					type="B_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.228,9.7490959,5845.8672};
+						position[]={14499.5,9.6926146,5845.0498};
 						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=47;
-					type="B_medic_F";
+					type="B_diver_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.728,9.2452183,5845.8672};
+						position[]={14501,9.1884298,5845.0498};
 						angles[]={0.042641956,0,5.9590368};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=48;
 					type="B_medic_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14502.228,8.8044357,5845.8672};
+						position[]={14502.5,8.6846609,5845.0498};
 						angles[]={6.2099833,0,6.0666351};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=49;
 					type="B_engineer_F";
+					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=45;
+			atlOffset=9.5367432e-007;
 		};
 		class Item10
 		{
 			dataType="Group";
-			side="Independent";
+			side="East";
 			class Entities
 			{
 				items=4;
@@ -977,83 +970,84 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14497.228,10.428986,5843.8672};
-						angles[]={0.042641956,0,6.2325621};
+						position[]={14513.5,5.7851171,5863.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
-					side="Independent";
+					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=51;
-					type="I_medic_F";
+					type="O_medic_F";
+					atlOffset=1.4305115e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14498.728,10.002386,5843.8672};
-						angles[]={0.042641956,0,5.9590368};
+						position[]={14515,5.3786683,5863.0498};
+						angles[]={0.09834861,0,6.1012206};
 					};
-					side="Independent";
+					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=52;
-					type="I_medic_F";
+					type="O_sniper_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14500.228,9.4985094,5843.8672};
-						angles[]={0.042641956,0,5.9590368};
+						position[]={14516.5,5.1025681,5863.0498};
+						angles[]={0.09834861,0,6.1012206};
 					};
-					side="Independent";
+					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=53;
-					type="I_medic_F";
+					type="O_medic_F";
+					atlOffset=1.4305115e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.728,8.9946327,5843.8672};
-						angles[]={0.042641956,0,5.9590368};
+						position[]={14518,4.8266363,5863.0498};
+						angles[]={0.09834861,0,6.1012206};
 					};
-					side="Independent";
+					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=54;
-					type="I_engineer_F";
+					type="O_engineer_F";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=50;
+			atlOffset=1.4305115e-006;
 		};
 		class Item11
 		{
 			dataType="Group";
-			side="Independent";
+			side="East";
 			class Entities
 			{
 				items=4;
@@ -1062,78 +1056,79 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14496.728,10.355329,5841.8672};
-						angles[]={5.8686786,0,6.0489016};
+						position[]={14513,6.4010687,5861.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
-					side="Independent";
+					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=56;
-					type="I_medic_F";
+					type="O_medic_F";
+					atlOffset=-1.4305115e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14498.228,10.234164,5841.8672};
-						angles[]={0.010669862,0,5.9590368};
+						position[]={14514.5,5.9291868,5861.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
-					side="Independent";
+					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=57;
-					type="I_medic_F";
+					type="O_diver_F";
+					atlOffset=1.4305115e-006;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14499.728,9.7299795,5841.8672};
-						angles[]={0.010669862,0,5.9590368};
+						position[]={14516,5.4570112,5861.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
-					side="Independent";
+					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=58;
-					type="I_medic_F";
+					type="O_medic_F";
+					atlOffset=-1.4305115e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14501.228,9.2261019,5841.8672};
-						angles[]={0.010669862,0,5.9590368};
+						position[]={14517.5,5.1159425,5861.0498};
+						angles[]={0.09834861,0,6.1012206};
 					};
-					side="Independent";
+					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=59;
-					type="I_engineer_F";
+					type="O_engineer_F";
+					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=55;
+			atlOffset=-1.4305115e-006;
 		};
 		class Item12
 		{
@@ -1147,69 +1142,67 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14513.228,5.6835752,5863.8672};
+						position[]={14512.5,7.0171304,5859.0498};
 						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=61;
 					type="O_medic_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14514.728,5.3480787,5863.8672};
-						angles[]={0.09834861,0,6.1012206};
+						position[]={14514,6.5452447,5859.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=62;
-					type="O_medic_F";
-					atlOffset=4.7683716e-007;
+					type="O_sniper_F";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14516.228,5.0721459,5863.8672};
-						angles[]={0.09834861,0,6.1012206};
+						position[]={14515.5,6.0730734,5859.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=63;
 					type="O_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14517.728,4.7960448,5863.8672};
-						angles[]={0.09834861,0,6.1012206};
+						position[]={14517,5.6011877,5859.0498};
+						angles[]={0.22543514,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=64;
@@ -1220,6 +1213,7 @@ class Mission
 			{
 			};
 			id=60;
+			atlOffset=4.7683716e-007;
 		};
 		class Item13
 		{
@@ -1233,36 +1227,35 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14512.728,6.29953,5861.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14512,7.4572263,5857.0498};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=66;
 					type="O_medic_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14514.228,5.8273568,5861.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14513.5,7.0965486,5857.0498};
+						angles[]={0.09966857,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=67;
-					type="O_medic_F";
+					type="O_diver_F";
 					atlOffset=-4.7683716e-007;
 				};
 				class Item2
@@ -1270,43 +1263,43 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14515.728,5.3614531,5861.8672};
-						angles[]={0.09834861,0,6.1012206};
+						position[]={14515,6.6246648,5857.0498};
+						angles[]={0.09966857,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=68;
 					type="O_medic_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14517.228,5.0853524,5861.8672};
-						angles[]={0.09834861,0,6.1012206};
+						position[]={14516.5,6.1524911,5857.0498};
+						angles[]={0.09966857,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=69;
 					type="O_engineer_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=-4.7683716e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=65;
+			atlOffset=4.7683716e-007;
 		};
 		class Item14
 		{
@@ -1320,14 +1313,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14512.228,6.9118595,5859.8672};
-						angles[]={0.22543514,0,5.9905062};
+						position[]={14511.5,7.5312009,5855.0498};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=71;
@@ -1338,57 +1330,51 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14513.728,6.4433112,5859.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14513,7.2246156,5855.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=72;
-					type="O_medic_F";
-					atlOffset=-4.7683716e-007;
+					type="O_sniper_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14515.228,5.9714265,5859.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14516,6.5097837,5855.0498};
+						angles[]={0.09966857,0,5.9783278};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=73;
 					type="O_medic_F";
-					atlOffset=-4.7683716e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14516.728,5.4995418,5859.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14514.5,6.9246888,5855.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=74;
 					type="O_engineer_F";
-					atlOffset=-4.7683716e-007;
 				};
 			};
 			class Attributes
@@ -1408,50 +1394,48 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14511.728,7.4781599,5857.8672};
-						angles[]={0.13386136,0,6.0793881};
+						position[]={14511,7.6053648,5853.0498};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=76;
 					type="O_medic_F";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14513.228,7.0595541,5857.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14512.5,7.295258,5853.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=77;
-					type="O_medic_F";
+					type="O_diver_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14514.728,6.5873814,5857.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14514,6.9953313,5853.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=78;
@@ -1462,25 +1446,24 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14516.228,6.1154962,5857.8672};
-						angles[]={0.22543514,0,5.9783278};
+						position[]={14515.5,6.6952214,5853.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=79;
 					type="O_engineer_F";
-					atlOffset=-4.7683716e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=75;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item16
 		{
@@ -1494,14 +1477,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14511.228,7.5995765,5855.8672};
-						angles[]={6.2685208,0,6.0793877};
+						position[]={14510.5,7.639369,5851.0498};
+						angles[]={6.2285728,0,6.1180367};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=81;
@@ -1512,33 +1494,30 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14512.728,7.291172,5855.8672};
-						angles[]={6.2685208,0,6.0857902};
+						position[]={14512,7.3692269,5851.0498};
+						angles[]={6.2685208,0,6.0793877};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=82;
-					type="O_medic_F";
-					atlOffset=-4.7683716e-007;
+					type="O_sniper_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14515.728,6.5138764,5855.8672};
-						angles[]={0.09966857,0,5.9783278};
+						position[]={14513.5,7.0659742,5851.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=83;
@@ -1550,14 +1529,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14514.228,6.9857612,5855.8672};
-						angles[]={0.09966857,0,5.9783278};
+						position[]={14515,6.7660475,5851.0498};
+						angles[]={6.2685208,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=84;
@@ -1582,80 +1560,79 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14510.728,7.6735511,5853.8672};
-						angles[]={6.2685208,0,6.0793877};
+						position[]={14510,7.5893583,5849.0498};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=86;
 					type="O_medic_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14512.228,7.363627,5853.8672};
-						angles[]={6.2685208,0,6.0793877};
+						position[]={14511.5,7.3392668,5849.0498};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=87;
-					type="O_medic_F";
+					type="O_diver_F";
+					atlOffset=1.9073486e-006;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14513.728,7.0617046,5853.8672};
-						angles[]={6.2685208,0,6.0857902};
+						position[]={14513,7.0559416,5849.0498};
+						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=88;
 					type="O_medic_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=1.9073486e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14515.228,6.7617779,5853.8672};
-						angles[]={6.2685208,0,6.0857902};
+						position[]={14514.5,6.7393827,5849.0498};
+						angles[]={6.1716504,0,6.0857902};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=89;
 					type="O_engineer_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=85;
+			atlOffset=1.9073486e-006;
 		};
 		class Item18
 		{
@@ -1669,81 +1646,79 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14510.228,7.729382,5851.8672};
-						angles[]={6.2285728,0,6.1180367};
+						position[]={14509.5,7.5153375,5847.0498};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=91;
 					type="O_medic_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14511.728,7.4376025,5851.8672};
-						angles[]={6.2685208,0,6.0793877};
+						position[]={14511,7.2653985,5847.0498};
+						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=92;
-					type="O_medic_F";
-					atlOffset=4.7683716e-007;
+					type="O_sniper_F";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14513.228,7.1325312,5851.8672};
-						angles[]={6.2685208,0,6.0857902};
+						position[]={14512.5,7.0152459,5847.0498};
+						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=93;
 					type="O_medic_F";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14514.728,6.8324213,5851.8672};
-						angles[]={6.2685208,0,6.0857902};
+						position[]={14514,6.6653314,5847.0498};
+						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=94;
 					type="O_engineer_F";
+					atlOffset=-4.7683716e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=90;
-			atlOffset=4.7683716e-007;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item19
 		{
@@ -1757,250 +1732,248 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14509.728,7.6989899,5849.8672};
-						angles[]={6.2046804,0,6.1180367};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=96;
-					type="O_medic_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14511.228,7.4490509,5849.8672};
-						angles[]={6.2046804,0,6.1180367};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						description="Diver";
-						isPlayable=1;
-					};
-					id=97;
-					type="O_medic_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14512.728,7.1854401,5849.8672};
-						angles[]={6.1716504,0,6.0857902};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=98;
-					type="O_medic_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14514.228,6.8853302,5849.8672};
-						angles[]={6.1716504,0,6.0857902};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						description="Engineer";
-						isPlayable=1;
-					};
-					id=99;
-					type="O_engineer_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=95;
-		};
-		class Item20
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14509.228,7.6251249,5847.8672};
-						angles[]={6.2046804,0,6.1180367};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=101;
-					type="O_medic_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14510.728,7.3750334,5847.8672};
-						angles[]={6.2046804,0,6.1180367};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						description="Sniper";
-						isPlayable=1;
-					};
-					id=102;
-					type="O_medic_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14512.228,7.1250944,5847.8672};
-						angles[]={6.2046804,0,6.1180367};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=103;
-					type="O_medic_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14513.728,6.7930937,5847.8672};
-						angles[]={6.2046804,0,6.0539536};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						description="Engineer";
-						isPlayable=1;
-					};
-					id=104;
-					type="O_engineer_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=100;
-		};
-		class Item21
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14508.728,7.5535293,5845.8672};
+						position[]={14509,7.4466462,5845.0498};
 						angles[]={6.2099833,0,6.1128521};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
-					id=106;
+					id=96;
 					type="O_medic_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14510.228,7.3010149,5845.8672};
+						position[]={14510.5,7.1913824,5845.0498};
 						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
-					id=107;
-					type="O_medic_F";
+					id=97;
+					type="O_diver_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14511.728,7.0510759,5845.8672};
+						position[]={14512,6.9412909,5845.0498};
 						angles[]={6.2046804,0,6.1180367};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
-					id=108;
+					id=98;
 					type="O_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14513.228,6.752614,5845.8672};
+						position[]={14513.5,6.6246405,5845.0498};
 						angles[]={6.2046804,0,6.0539536};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
+						isPlayable=1;
+					};
+					id=99;
+					type="O_engineer_F";
+					atlOffset=9.5367432e-007;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=95;
+			atlOffset=-4.7683716e-007;
+		};
+		class Item20
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14524.5,3.9159706,5863.0498};
+						angles[]={0.097027972,0,6.1637564};
+					};
+					side="Independent";
+					flags=6;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=101;
+					type="I_medic_F";
+					atlOffset=2.3841858e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14526,3.7360141,5863.0498};
+						angles[]={0.097027972,0,6.1637564};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=102;
+					type="I_Sniper_F";
+					atlOffset=-2.3841858e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14527.5,3.5558784,5863.0498};
+						angles[]={0.097027354,0,6.0883555};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=103;
+					type="I_medic_F";
+					atlOffset=1.1920929e-006;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14529,3.2599494,5863.0498};
+						angles[]={0.097027354,0,6.0883555};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=104;
+					type="I_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=100;
+			atlOffset=2.3841858e-007;
+		};
+		class Item21
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14524,4.1706204,5861.0498};
+						angles[]={0.097027972,0,6.1637564};
+					};
+					side="Independent";
+					flags=6;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=106;
+					type="I_medic_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14525.5,3.9906642,5861.0498};
+						angles[]={0.097027972,0,6.1637564};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=107;
+					type="I_diver_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14527,3.8105972,5861.0498};
+						angles[]={0.097027972,0,6.1637564};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=108;
+					type="I_medic_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14528.5,3.5532558,5861.0498};
+						angles[]={0.097027354,0,6.0883555};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
 						isPlayable=1;
 					};
 					id=109;
-					type="O_engineer_F";
+					type="I_engineer_F";
 				};
 			};
 			class Attributes
 			{
 			};
 			id=105;
-			atlOffset=4.7683716e-007;
+			atlOffset=9.5367432e-007;
 		};
 		class Item22
 		{
@@ -2014,81 +1987,75 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14508.228,7.4928432,5843.8672};
-						angles[]={6.2099833,0,6.1128521};
+						position[]={14523.5,4.4286447,5859.0498};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=111;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14509.728,7.2347488,5843.8672};
-						angles[]={6.2099833,0,6.1128521};
+						position[]={14525,4.2466893,5859.0498};
+						angles[]={0.09834861,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=112;
-					type="I_medic_F";
+					type="I_Sniper_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14511.228,6.9770579,5843.8672};
-						angles[]={6.2046804,0,6.1180367};
+						position[]={14526.5,4.0652909,5859.0498};
+						angles[]={0.097027972,0,6.1637564};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=113;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14512.728,6.7119217,5843.8672};
-						angles[]={6.2046804,0,6.0539536};
+						position[]={14528,3.8466079,5859.0498};
+						angles[]={0.097027354,0,6.0883555};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=114;
 					type="I_engineer_F";
+					atlOffset=1.1920929e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=110;
-			atlOffset=-4.7683716e-007;
 		};
 		class Item23
 		{
@@ -2102,81 +2069,78 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14507.728,7.5131168,5841.8672};
-						angles[]={0.045303639,0,6.1128521};
+						position[]={14523,4.6912947,5857.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=116;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=1.9073486e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14509.228,7.2551804,5841.8672};
-						angles[]={0.045303639,0,6.1128521};
+						position[]={14524.5,4.5093374,5857.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=117;
-					type="I_medic_F";
-					atlOffset=4.7683716e-007;
+					type="I_diver_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14510.728,6.9970851,5841.8672};
-						angles[]={0.045303639,0,6.1128521};
+						position[]={14526,4.3273816,5857.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=118;
 					type="I_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14512.228,6.7391486,5841.8672};
-						angles[]={0.045303639,0,6.1128521};
+						position[]={14527.5,4.145081,5857.0498};
+						angles[]={0.10758245,0,5.9223709};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=119;
 					type="I_engineer_F";
+					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=115;
-			atlOffset=-4.7683716e-007;
+			atlOffset=1.9073486e-006;
 		};
 		class Item24
 		{
@@ -2190,80 +2154,79 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14524.228,3.8691781,5863.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14522.5,4.9680524,5855.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=121;
 					type="I_medic_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14525.728,3.6891119,5863.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14524,4.7859869,5855.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=122;
-					type="I_medic_F";
+					type="I_Sniper_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14527.228,3.5091555,5863.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14525.5,4.6040297,5855.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=123;
 					type="I_medic_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14528.728,3.2387598,5863.8672};
-						angles[]={6.2791739,0,6.187479};
+						position[]={14527,4.4219656,5855.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=124;
 					type="I_engineer_F";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=120;
-			atlOffset=4.7683716e-007;
+			atlOffset=9.5367432e-007;
 		};
 		class Item25
 		{
@@ -2277,82 +2240,79 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14523.728,4.123827,5861.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14522,5.2247076,5853.0498};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=126;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=1.9073486e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14525.228,3.9437611,5861.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14523.5,5.0546446,5853.0498};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=127;
-					type="I_medic_F";
-					atlOffset=2.3841858e-007;
+					type="I_diver_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14526.728,3.7638047,5861.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14525,4.8806791,5853.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=128;
 					type="I_medic_F";
-					atlOffset=-2.3841858e-007;
+					atlOffset=4.7683716e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14528.228,3.5275619,5861.8672};
-						angles[]={0.097027354,0,6.0883555};
+						position[]={14526.5,4.6986113,5853.0498};
+						angles[]={0.107583,0,6.1624427};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=129;
 					type="I_engineer_F";
+					atlOffset=-4.7683716e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=125;
-			atlOffset=-4.7683716e-007;
+			atlOffset=1.9073486e-006;
 		};
 		class Item26
 		{
@@ -2366,80 +2326,79 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14523.228,4.3810811,5859.8672};
-						angles[]={0.09834861,0,6.1624427};
+						position[]={14521.5,5.4813566,5851.0498};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=131;
 					type="I_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14524.728,4.1990151,5859.8672};
-						angles[]={0.09834861,0,6.1624427};
+						position[]={14523,5.3112931,5851.0498};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=132;
-					type="I_medic_F";
+					type="I_Sniper_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14526.228,4.0184536,5859.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14524.5,5.1413336,5851.0498};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=133;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=-9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14527.728,3.8208678,5859.8672};
-						angles[]={0.097027354,0,6.0883555};
+						position[]={14526,4.9713774,5851.0498};
+						angles[]={0.09966857,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=134;
 					type="I_engineer_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=130;
+			atlOffset=9.5367432e-007;
 		};
 		class Item27
 		{
@@ -2453,78 +2412,78 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14522.728,4.6390629,5857.8672};
-						angles[]={0.09834861,0,6.1624427};
+						position[]={14521,5.5100617,5849.0498};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=136;
 					type="I_medic_F";
+					atlOffset=1.4305115e-006;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14524.228,4.4571075,5857.8672};
-						angles[]={0.09834861,0,6.1624427};
+						position[]={14522.5,5.3401022,5849.0498};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=137;
-					type="I_medic_F";
+					type="I_diver_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14525.728,4.2750416,5857.8672};
-						angles[]={0.09834861,0,6.1624427};
+						position[]={14524,5.1700392,5849.0498};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=138;
 					type="I_medic_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14527.228,4.0931468,5857.8672};
-						angles[]={0.097027972,0,6.1637564};
+						position[]={14525.5,5.0000825,5849.0498};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=139;
 					type="I_engineer_F";
+					atlOffset=1.4305115e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=135;
+			atlOffset=1.4305115e-006;
 		};
 		class Item28
 		{
@@ -2538,83 +2497,78 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14522.228,4.9127464,5855.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14520.5,5.3506994,5847.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=141;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=-9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14523.728,4.7307911,5855.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14522,5.1567488,5847.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=142;
-					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					type="I_Sniper_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14525.228,4.5487251,5855.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14523.5,4.9706979,5847.0498};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=143;
 					type="I_medic_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=1.4305115e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14526.728,4.3667688,5855.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14525,4.8007383,5847.0498};
+						angles[]={6.1558776,0,6.1703339};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=144;
 					type="I_engineer_F";
-					atlOffset=-4.7683716e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=140;
-			atlOffset=-4.7683716e-007;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item29
 		{
@@ -2628,69 +2582,67 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14521.728,5.1737657,5853.8672};
-						angles[]={0.09966857,0,6.1703339};
+						position[]={14520,5.1913557,5845.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=146;
 					type="I_medic_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=9.5367432e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14523.228,5.0038071,5853.8672};
-						angles[]={0.09966857,0,6.1703339};
+						position[]={14521.5,4.9974012,5845.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=147;
-					type="I_medic_F";
+					type="I_diver_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14524.728,4.8253732,5853.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14523,4.8033319,5845.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=148;
 					type="I_medic_F";
+					atlOffset=1.4305115e-006;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14526.228,4.6434174,5853.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14524.5,4.6093774,5845.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=149;
@@ -2702,7 +2654,7 @@ class Mission
 			{
 			};
 			id=145;
-			atlOffset=4.7683716e-007;
+			atlOffset=9.5367432e-007;
 		};
 		class Item30
 		{
@@ -2716,14 +2668,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14521.228,5.4304156,5851.8672};
-						angles[]={0.09966857,0,6.1703339};
+						position[]={14519.5,5.0672688,5843.0498};
+						angles[]={6.1716504,0,6.0857902};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=151;
@@ -2735,54 +2686,54 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14522.728,5.260457,5851.8672};
-						angles[]={0.09966857,0,6.1703339};
+						position[]={14521,4.838057,5843.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Sniper";
 						isPlayable=1;
 					};
 					id=152;
-					type="I_medic_F";
+					type="I_Sniper_F";
+					atlOffset=1.4305115e-006;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14524.228,5.090498,5851.8672};
-						angles[]={0.09966857,0,6.1703339};
+						position[]={14522.5,4.6441026,5843.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=153;
 					type="I_medic_F";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14525.728,4.9200664,5851.8672};
-						angles[]={0.107583,0,6.1624427};
+						position[]={14524,4.4500337,5843.0498};
+						angles[]={6.1716504,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=154;
 					type="I_engineer_F";
+					atlOffset=1.4305115e-006;
 				};
 			};
 			class Attributes
@@ -2803,52 +2754,48 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14520.728,5.6456294,5849.8672};
-						angles[]={6.1558776,0,6.1703339};
+						position[]={14519,5.0625219,5841.0498};
+						angles[]={6.2285728,0,6.0539536};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=156;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14522.228,5.4755673,5849.8672};
-						angles[]={6.1558776,0,6.1703339};
+						position[]={14520.5,4.7927351,5841.0498};
+						angles[]={6.2285728,0,6.2099824};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Diver";
 						isPlayable=1;
 					};
 					id=157;
-					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					type="I_diver_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14523.728,5.3056092,5849.8672};
-						angles[]={6.1558776,0,6.1703339};
+						position[]={14522,4.654717,5841.0498};
+						angles[]={0.0013372133,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Combat Life Saver";
 						isPlayable=1;
 					};
 					id=158;
@@ -2860,449 +2807,441 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14525.228,5.1355467,5849.8672};
-						angles[]={6.1558776,0,6.1703339};
+						position[]={14523.5,4.4606466,5841.0498};
+						angles[]={0.0013372133,0,6.1545663};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						description="Engineer";
 						isPlayable=1;
 					};
 					id=159;
 					type="I_engineer_F";
+					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=155;
-			atlOffset=-4.7683716e-007;
 		};
 		class Item32
 		{
-			dataType="Group";
-			side="Independent";
-			class Entities
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14520.228,5.4775534,5847.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=6;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=161;
-					type="I_medic_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14521.728,5.2834826,5847.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Sniper";
-						isPlayable=1;
-					};
-					id=162;
-					type="I_medic_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14523.228,5.1062655,5847.8672};
-						angles[]={6.1558776,0,6.1703339};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=163;
-					type="I_medic_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14524.728,4.9362035,5847.8672};
-						angles[]={6.1558776,0,6.1703339};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Engineer";
-						isPlayable=1;
-					};
-					id=164;
-					type="I_engineer_F";
-				};
+				position[]={14509.5,6.889616,5834.5};
+				angles[]={5.8935175,0,6.1467061};
 			};
-			class Attributes
-			{
-			};
+			name="A3W_HC1";
+			isPlayable=1;
 			id=160;
+			type="HeadlessClient_F";
+			atlOffset=-0.31700039;
 		};
 		class Item33
 		{
-			dataType="Group";
-			side="Independent";
-			class Entities
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14519.728,5.3374224,5845.8672};
-						angles[]={6.1716504,0,6.0857902};
-					};
-					side="Independent";
-					flags=6;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=166;
-					type="I_medic_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14521.228,5.1241369,5845.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Diver";
-						isPlayable=1;
-					};
-					id=167;
-					type="I_medic_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14522.728,4.9301839,5845.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=168;
-					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14524.228,4.7369633,5845.8672};
-						angles[]={6.1558776,0,6.1703339};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Engineer";
-						isPlayable=1;
-					};
-					id=169;
-					type="I_engineer_F";
-					atlOffset=-4.7683716e-007;
-				};
+				position[]={14511,6.4996662,5834.5};
+				angles[]={5.8935175,0,6.1467061};
 			};
-			class Attributes
-			{
-			};
-			id=165;
+			name="A3W_HC2";
+			isPlayable=1;
+			id=161;
+			type="HeadlessClient_F";
+			atlOffset=-0.5010004;
 		};
 		class Item34
 		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14519.228,5.2134018,5843.8672};
-						angles[]={6.1716504,0,6.0857902};
-					};
-					side="Independent";
-					flags=6;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=171;
-					type="I_medic_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14520.728,4.9649096,5843.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Sniper";
-						isPlayable=1;
-					};
-					id=172;
-					type="I_medic_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14522.228,4.7708378,5843.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=173;
-					type="I_medic_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14523.728,4.5768852,5843.8672};
-						angles[]={6.1716504,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Engineer";
-						isPlayable=1;
-					};
-					id=174;
-					type="I_engineer_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=170;
-		};
-		class Item35
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14518.728,5.1708493,5841.8672};
-						angles[]={6.2285728,0,6.0539536};
-					};
-					side="Independent";
-					flags=6;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=176;
-					type="I_medic_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14520.228,4.8574095,5841.8672};
-						angles[]={6.2285728,0,6.2099824};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Diver";
-						isPlayable=1;
-					};
-					id=177;
-					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14521.728,4.6887946,5841.8672};
-						angles[]={0.0013372133,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Combat Life Saver";
-						isPlayable=1;
-					};
-					id=178;
-					type="I_medic_F";
-					atlOffset=4.7683716e-007;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14523.228,4.4948421,5841.8672};
-						angles[]={0.0013372133,0,6.1545663};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						description="Engineer";
-						isPlayable=1;
-					};
-					id=179;
-					type="I_engineer_F";
-					atlOffset=4.7683716e-007;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=175;
-		};
-		class Item36
-		{
 			dataType="Marker";
-			position[]={14498.5,8.8249712,5838.5};
+			position[]={14498.5,8.8249722,5838.5};
 			name="respawn_west";
 			type="Empty";
 			colorName="ColorWEST";
-			id=180;
+			id=162;
+			atlOffset=9.5367432e-007;
 		};
-		class Item37
+		class Item35
 		{
 			dataType="Marker";
 			position[]={14509.5,7.3571835,5838.5};
 			name="respawn_east";
 			type="Empty";
 			colorName="ColorEAST";
-			id=181;
+			id=163;
 		};
-		class Item38
+		class Item36
 		{
 			dataType="Marker";
-			position[]={14520.5,4.6546364,5838.5};
+			position[]={14518,4.5005322,5830.5};
 			name="respawn_guerrila";
 			type="Empty";
 			colorName="ColorGUER";
-			id=182;
+			id=164;
+			atlOffset=9.5367432e-007;
 		};
-		class Item39
+		class Item37
 		{
 			dataType="Marker";
-			position[]={14510,4.4858618,5826};
+			position[]={14510,6.5318604,5832.5};
 			name="respawn_civilian";
 			type="Empty";
 			colorName="ColorCIV";
-			id=183;
+			id=165;
+			atlOffset=0.21521473;
 		};
-		class Item40
+		class Item38
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14512.313,11.502197,5847.876};
+				position[]={14513.5,-8.7501202,5849.5};
+				angles[]={6.1716504,0,6.0857902};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, true] call A3W_fnc_setupMissionObject";
+				init="[this] call A3W_fnc_setupMissionObject";
 			};
-			id=184;
+			id=166;
 			type="ProtectionZone_Invisible_F";
-			atlOffset=-0.36172438;
+			atlOffset=-20.493999;
+		};
+		class Item39
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14518.5,5.5014386,5839.0498};
+						angles[]={6.2285728,0,6.0539536};
+					};
+					side="Independent";
+					flags=2;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=168;
+					type="I_medic_F";
+					atlOffset=0.43139696;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14520,5.2722273,5839.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=169;
+					type="I_Sniper_F";
+					atlOffset=0.55216694;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14521.5,5.0782728,5839.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=170;
+					type="I_medic_F";
+					atlOffset=0.46818542;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14523,4.8842034,5839.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=171;
+					type="I_engineer_F";
+					atlOffset=0.3841567;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=167;
+			atlOffset=0.43139696;
+		};
+		class Item40
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14518,5.4966917,5837.0498};
+						angles[]={6.2285728,0,6.0539536};
+					};
+					side="Independent";
+					flags=2;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=173;
+					type="I_medic_F";
+					atlOffset=0.41934299;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14519.5,5.2269049,5837.0498};
+						angles[]={6.2285728,0,6.0539536};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=174;
+					type="I_diver_F";
+					atlOffset=0.49968433;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14521,5.0888853,5837.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=175;
+					type="I_medic_F";
+					atlOffset=0.55147171;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14522.5,4.8948159,5837.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=176;
+					type="I_engineer_F";
+					atlOffset=0.46737623;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=172;
+			atlOffset=0.41934299;
 		};
 		class Item41
 		{
-			dataType="Logic";
-			class PositionInfo
+			dataType="Group";
+			side="Independent";
+			class Entities
 			{
-				position[]={14509.5,6.8896165,5834.5};
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14517.5,5.9246054,5835.0498};
+						angles[]={0.045303639,0,5.9614348};
+					};
+					side="Independent";
+					flags=2;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=178;
+					type="I_medic_F";
+					atlOffset=0.59005737;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14519,5.6953917,5835.0498};
+						angles[]={0.045303639,0,5.9614348};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=179;
+					type="I_Sniper_F";
+					atlOffset=0.86102676;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14520.5,5.5014372,5835.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=180;
+					type="I_medic_F";
+					atlOffset=1.0366983;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14522,5.3073683,5835.0498};
+						angles[]={6.2285728,0,6.2099824};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=181;
+					type="I_engineer_F";
+					atlOffset=0.95260239;
+				};
 			};
-			name="A3W_HC1";
-			isPlayable=1;
-			id=185;
-			type="HeadlessClient_F";
-			atlOffset=-0.31699991;
+			class Attributes
+			{
+			};
+			id=177;
+			atlOffset=0.59005737;
 		};
 		class Item42
 		{
-			dataType="Logic";
-			class PositionInfo
+			dataType="Group";
+			side="Independent";
+			class Entities
 			{
-				position[]={14511,6.4996667,5834.5};
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14517,5.9198561,5833.0498};
+						angles[]={6.1362524,0,5.9614348};
+					};
+					side="Independent";
+					flags=2;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=183;
+					type="I_medic_F";
+					atlOffset=0.71458864;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14518.5,5.6500692,5833.0498};
+						angles[]={6.1362524,0,5.9614348};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=184;
+					type="I_diver_F";
+					atlOffset=0.94467974;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14520,5.512053,5833.0498};
+						angles[]={6.1362524,0,6.1795578};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=185;
+					type="I_medic_F";
+					atlOffset=1.3066373;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14521.5,5.3179822,5833.0498};
+						angles[]={6.1362524,0,6.1795578};
+					};
+					side="Independent";
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=186;
+					type="I_engineer_F";
+					atlOffset=1.2685285;
+				};
 			};
-			name="A3W_HC2";
-			isPlayable=1;
-			id=186;
-			type="HeadlessClient_F";
-			atlOffset=-0.50099993;
+			class Attributes
+			{
+			};
+			id=182;
+			atlOffset=0.71458864;
 		};
 		class Item43
 		{
@@ -6604,7 +6543,7 @@ class Mission
 					name="Parking6_spawn";
 					type="Empty";
 					colorName="ColorBlack";
-					angle=215.59123;
+					angle=215.59119;
 					id=481;
 				};
 				class Item12

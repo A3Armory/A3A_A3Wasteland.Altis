@@ -23,6 +23,11 @@ if (["A3W_unlimitedStamina"] call isConfigOn) then
 	_player setCustomAimCoef 0.1;
 };
 
+if !(_player getUnitTrait "engineer") then
+{
+	_player setUnitTrait ["medic",true];
+};
+
 enableSentences false;
 
 removeAllWeapons _player;
