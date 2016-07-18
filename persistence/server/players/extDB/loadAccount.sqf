@@ -130,6 +130,7 @@ else
 private _bank = 0;
 private _bounty = 0;
 private _bountyKills = [];
+private _maxMoney = ["A3W_atmMaxBalance", 1000000] call getPublicVar;
 
 if (_moneySaving) then
 {
@@ -144,6 +145,11 @@ if (["A3W_atmBounties"] call isConfigOn) then
 
 	_bounty = _result param [0,0];
 	_bountyKills = _result param [1,[]];
+};
+
+if (_bank > _maxMoney) then
+{
+	_bank = _maxMoney;
 };
 
 _data append

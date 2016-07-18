@@ -22,13 +22,15 @@ _objects = call compile preprocessFileLineNumbers format ["%1\getObjects.sqf", _
 _exclObjectIDs = [];
 
 {
-	private ["_allowed", "_obj", "_objectID", "_class", "_pos", "_dir", "_locked", "_damage", "_allowDamage", "_owner", "_variables", "_weapons", "_magazines", "_items", "_backpacks", "_turretMags", "_ammoCargo", "_fuelCargo", "_repairCargo", "_hoursAlive", "_valid"];
+	private ["_allowed", "_obj", "_objectID", "_class", "_pos", "_dir", "_locked", "_damage", "_allowDamage", "_owner", "_variables", "_weapons", "_magazines", "_items", "_backpacks", "_turretMags", "_ammoCargo", "_fuelCargo", "_repairCargo", "_hoursAlive", "_valid", "_maxMoney"];
 
 	{ (_x select 1) call compile format ["%1 = _this", _x select 0]	} forEach _x;
 
 	if (isNil "_locked") then { _locked = 1 };
 	if (isNil "_hoursAlive") then { _hoursAlive = 0 };
 	_valid = false;
+
+	_maxMoney = ["A3W_maxMoney", 1000000] call getPublicVar;
 
 	if (!isNil "_class" && !isNil "_pos" && {_maxLifetime <= 0 || _hoursAlive < _maxLifetime}) then
 	{
@@ -96,6 +98,13 @@ _exclObjectIDs = [];
 
 			switch (_var) do
 			{
+				case "cmoney": 
+				{
+					if (_value > _maxMoney) then 
+					{
+						_value = _maxMoney; 
+					};
+				};
 				case "side": { _value = _value call _strToSide };
 				case "R3F_Side": { _value = _value call _strToSide };
 				case "ownerName":

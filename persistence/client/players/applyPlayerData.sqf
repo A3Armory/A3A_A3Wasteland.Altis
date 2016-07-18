@@ -6,9 +6,10 @@
 
 // This is where you load player status & inventory data which will be wiped upon death, for persistent variables use c_applyPlayerInfo.sqf instead
 
-private ["_data", "_removal", "_name", "_value"];
+private ["_data", "_removal", "_name", "_value", "_maxMoney"];
 
 _data = _this;
+_maxMoney = ["A3W_maxMoney", 1000000] call getPublicVar;
 _removal = param [1, true];
 
 if (_removal isEqualTo false) then
@@ -40,7 +41,17 @@ else
 		};
 		case "Hunger": { hungerLevel = _value };
 		case "Thirst": { thirstLevel = _value };
-		case "Money": { player setVariable ["cmoney", _value, true] };
+		case "Money":
+		{
+			if (_value > _maxMoney) then
+			{
+				player setVariable ["cmoney", _maxMoney, true];
+			}
+			else
+			{
+				player setVariable ["cmoney", _value, true];
+			};
+		};
 		/*case "Position":
 		{
 			if (count _value == 3) then
