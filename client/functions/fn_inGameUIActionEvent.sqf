@@ -35,6 +35,24 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 				[format ["You are not allowed to place explosives within %1m of a mission spawn.", _minDist], 5] call mf_notify_client;
 				_handled = true;
 			};
+
+			_nearbyParking = allMapMarkers select {markerType _x == "Empty" && {[["Parking"], _x] call fn_startsWith && {player distance markerPos _x < _minDist}}};
+
+			if !(_nearbyParking isEqualTo []) exitWith
+			{
+				playSound "FD_CP_Not_Clear_F";
+				[format ["You are not allowed to place explosives within %1m of a parking location.", _minDist], 5] call mf_notify_client;
+				_handled = true;
+			};
+
+			_nearbyStorage = nearestObjects [player, ["Land_PaperBox_open_full_F", "Land_Pallet_MilBoxes_F", "Land_PaperBox_open_empty_F", "Land_PaperBox_closed_F"], _minDist] select {_x getVariable ["is_storage", false]};
+
+			if !(_nearbyStorage isEqualTo []) exitWith
+			{
+				playSound "FD_CP_Not_Clear_F";
+				[format ["You are not allowed to place explosives within %1m of a storage location.", _minDist], 5] call mf_notify_client;
+				_handled = true;
+			};
 		};
 
 		case (_action == "DisAssemble"):
