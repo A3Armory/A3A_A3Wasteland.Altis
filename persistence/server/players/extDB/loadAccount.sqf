@@ -139,7 +139,7 @@ if (_moneySaving) then
 	_bank = _result param [0,0];
 };
 
-if (["A3W_atmBounties"] call isConfigOn) then
+if (["A3W_bountyMax", 0] call getPublicVar > 0) then
 {
 	_result = ["getPlayerBounty:" + _UID, 2] call extDB_Database_async;
 
