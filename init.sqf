@@ -28,7 +28,8 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 
-CHVD_allowTerrain = false;
+CHVD_allowNoGrass = false;
+CHVD_allowTerrain = true;
 CHVD_maxView = 3000; // Set maximum view distance (default: 12000)
 CHVD_maxObj = 3000; // Set maximimum object view distance (default: 12000)
 
