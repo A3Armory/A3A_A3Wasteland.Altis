@@ -137,13 +137,12 @@ lmgArray = compileFinal str
 	["SPAR-16S LMG (Khaki)", "arifle_SPAR_02_khk_F", 300],
 	["SPAR-16S LMG (Sand)", "arifle_SPAR_02_snd_F", 300],
 	["CAR-95-1 LMG", "arifle_CTARS_blk_F", 300],
-	["LIM-85 LMG", "LMG_03_F", 350]
-
-	//["SPMG MMG (Sand)", "MMG_02_sand_F", 750],
-	//["SPMG MMG (MTP)", "MMG_02_camo_F", 750],
-	//["SPMG MMG (Black)", "MMG_02_black_F", 750],
-	//["Navid MMG (Tan)", "MMG_01_tan_F", 1000],
-	//["Navid MMG (Hex)", "MMG_01_hex_F", 1000]
+	["LIM-85 LMG", "LMG_03_F", 350],
+	["SPMG MMG (Sand)", "MMG_02_sand_F", 750],
+	["SPMG MMG (MTP)", "MMG_02_camo_F", 750],
+	["SPMG MMG (Black)", "MMG_02_black_F", 750],
+	["Navid MMG (Tan)", "MMG_01_tan_F", 1000],
+	["Navid MMG (Hex)", "MMG_01_hex_F", 1000]
 ];
 
 launcherArray = compileFinal str
@@ -280,8 +279,8 @@ ammoArray = compileFinal str
 	["RPG-42 Anti-Tank Rocket", "RPG32_F", 250],              // Direct damage: high      | Splash damage: low    | Guidance: none
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 250],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	["PCML Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
-	//["Titan Anti-Tank Missile", "Titan_AT", 350],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	//["Titan Anti-Personnel Missile", "Titan_AP", 350],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	["Titan Anti-Tank Missile", "Titan_AT", 350],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
+	["Titan Anti-Personnel Missile", "Titan_AP", 350],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA", 350],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
@@ -720,9 +719,9 @@ genItemArray = compileFinal str
 	["Compact NVG (Urban)", "O_NVGoggles_urb_F", 150, "nvg"],
 	["Binoculars", "Binocular", 50, "binoc"],
 	["Rangefinder", "Rangefinder", 150, "binoc"],
-	//["Laser Designator (Sand)", "Laserdesignator", 2500, "binoc", "noDLC"], // Increase price to 2500 if A3W_disableBuiltInThermal = 0
-	//["Laser Designator (Hex)", "Laserdesignator_02", 2500, "binoc", "noDLC"],
-	//["Laser Designator (Olive)", "Laserdesignator_03", 2500, "binoc", "noDLC"],
+	["Laser Designator (Sand)", "Laserdesignator", 2500, "binoc", "noDLC"], // Increase price to 2500 if A3W_disableBuiltInThermal = 0
+	["Laser Designator (Hex)", "Laserdesignator_02", 2500, "binoc", "noDLC"],
+	["Laser Designator (Olive)", "Laserdesignator_03", 2500, "binoc", "noDLC"],
 	["IR Grenade", "B_IR_Grenade", 50, "mag", "WEST"],
 	["IR Grenade", "O_IR_Grenade", 50, "mag", "EAST"],
 	["IR Grenade", "I_IR_Grenade", 50, "mag", "GUER"],
@@ -1159,7 +1158,7 @@ colorsArray = compileFinal str
 			]]
 		]
 	],
-	[ // Ghost Hawk camo 
+	[ // Ghost Hawk camo
 		"Heli_Transport_01_base_F",
 		[
 			//["Black (Ghost Hawk)", ["Black"]], // default
@@ -1367,6 +1366,21 @@ donatorGunItems = compileFinal str
 "SmokeShellPurple",
 "SmokeShellYellow",
 "SmokeShellOrange"
+];
+
+//Put all gun, ammo, or general item classes in this list if you only want them only accessible through missions (this list will not add these items to mission crates, do that manually)
+missionOnlyItems = compileFinal str
+[
+"MMG_02_sand_F",
+"MMG_02_camo_F",
+"MMG_02_black_F",
+"MMG_01_tan_F",
+"MMG_01_hex_F",
+"Titan_AT",
+"Titan_AP",
+"Laserdesignator",
+"Laserdesignator_02",
+"Laserdesignator_03"
 ];
 
 call compile preprocessFileLineNumbers "mapConfig\storeOwners.sqf";

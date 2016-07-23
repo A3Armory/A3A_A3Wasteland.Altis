@@ -117,8 +117,22 @@ storePurchaseHandle = _this spawn
 		[parseText _itemText, "Error"] call BIS_fnc_guiMessage
 	};
 
+	//Error for mission only items
+	_showMissionOnlyError =
+	{
+		_itemText = _this select 0;
+		hint parseText format ["<t color='#ffff00'>This item is only available through<br/>completing a mission.</t><br/>Find a mission on the map<br/>and collect the rewards.", _itemText];
+		playSound "FD_CP_Not_Clear_F";
+		_price = -1;
+	};
+
 	if (isNil "_price") then
 	{
+		//Check for mission only items
+		if (_itemData in call missionOnlyItems) exitWith
+		{
+			[_itemText] call _showMissionOnlyError;
+		};
 		{
 			if (_itemData == _x select 1) exitWith
 			{

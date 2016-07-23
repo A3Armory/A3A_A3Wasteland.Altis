@@ -210,6 +210,11 @@ _playerSideNum = switch (playerSide) do
 		};
 
 		_itemlist lbSetData [_listIndex, _weaponClass];
+
+		//Disabled look for items only obtainable through missions
+		if (_weaponClass in call missionOnlyItems) then {
+			_itemlist lbSetColor [_listIndex, [1, 1, 1, .5]];
+		};
 	};
 } forEach _itemsArray;
 
