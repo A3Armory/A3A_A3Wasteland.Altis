@@ -58,12 +58,25 @@ storePurchaseHandle = _this spawn
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};
+	//Error for donator only items
+	_showDonatorOnlyError =
+	{
+		_itemText = _this select 0;
+		hint parseText format ["<t color='#ffff00'>This item is only available<br/>to community support members.</t><br/>Learn how to become a member by visiting a3armory.com and click the 'Supporter Info' link at the top of the page.", _itemText];
+		playSound "FD_CP_Not_Clear_F";
+		_price = -1;
+	};
 
 	switch(_switch) do
 	{
 		//Buy To Player
 		case 0:
 		{
+			//Check for donator only items
+			if (_itemData in call donatorItems) exitWith
+			{
+				[_itemText] call _showDonatorOnlyError;
+			};
 			//Check for mission only items
 			if (_itemData in call missionOnlyItems) exitWith
 			{

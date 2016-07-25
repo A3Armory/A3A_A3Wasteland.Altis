@@ -86,11 +86,6 @@ switch(_switch) do
 	};
 };
 
-//Remove donator items for non donators
-if (!(getPlayerUID player call isdonor))then{
-	_itemsArray = _itemsArray select {!((_x select 1) in (call donatorGenItems))};
-};
-
 _playerSideNum = switch (playerSide) do
 {
 	case BLUFOR:      { 1 };
@@ -213,7 +208,11 @@ _playerSideNum = switch (playerSide) do
 
 		//Disabled look for items only obtainable through missions
 		if (_weaponClass in call missionOnlyItems) then {
-			_itemlist lbSetColor [_listIndex, [1, 1, 1, .5]];
+			_itemlist lbSetColor [_listIndex, [0, 255, 0, .25]];
+		};
+		//Disabled look for donator only items
+		if (_weaponClass in call donatorItems) then {
+			_itemlist lbSetColor [_listIndex, [255, 255, 0, .25]];
 		};
 	};
 } forEach _itemsArray;

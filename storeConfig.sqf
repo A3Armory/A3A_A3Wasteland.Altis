@@ -1291,7 +1291,7 @@ customPlayerItems = compileFinal str
 	["Heroin", "heroin", localize "STR_WL_ShopDescriptions_Heroin", "client\icons\heroin.paa", 3500, 3000]
 ];
 
-donatorGenItems = compileFinal str
+donatorItems = compileFinal str
 [
 "V_PlateCarrierGL_blk",
 "V_PlateCarrierGL_mtp",
@@ -1335,11 +1335,7 @@ donatorGenItems = compileFinal str
 "G_Squares",
 "G_Tactical_Clear",
 "G_Tactical_Black",
-"G_Spectacles_Tinted"
-];
-
-donatorGunItems = compileFinal str
-[
+"G_Spectacles_Tinted",
 "arifle_Mk20C_F",
 "arifle_Mk20_F",
 "arifle_Mk20_GL_F",

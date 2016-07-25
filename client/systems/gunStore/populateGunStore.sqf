@@ -89,11 +89,6 @@ switch(_switch) do
 	};
 };
 
-//Remove donator items for non donators
-if (!(getPlayerUID player call isdonor))then{
-	_itemsArray = _itemsArray select {!((_x select 1) in (call donatorGunItems))};
-};
-
 if (_showAmmo) then
 {
 	_ammoBtn ctrlShow true;
@@ -130,7 +125,11 @@ else
 
 		//Disabled look for items only obtainable through missions
 		if (_weaponClass in call missionOnlyItems) then {
-			_gunlist lbSetColor [_gunlistIndex, [1, 1, 1, .5]];
+			_gunlist lbSetColor [_gunlistIndex, [0, 255, 0, .25]];
+		};
+		//Disabled look for donator only items
+		if (_weaponClass in call donatorItems) then {
+			_gunlist lbSetColor [_gunlistIndex, [255, 255, 0, .25]];
 		};
 
 		// Show scope on sniper rifle pictures

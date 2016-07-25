@@ -74,7 +74,11 @@ if (_showAmmo) then
 
 				//Disabled look for items only obtainable through missions
 				if (_shopMagClass in call missionOnlyItems) then {
-					_ammolist lbSetColor [_ammolistIndex, [1, 1, 1, .5]];
+					_ammolist lbSetColor [_ammolistIndex, [0, 255, 0, .25]];
+				};
+				//Disabled look for donator only items
+				if (_shopMagClass in call donatorItems) then {
+					_ammolist lbSetColor [_ammolistIndex, [255, 255, 0, .25]];
 				};
 			};
 		} forEach (call ammoArray);
