@@ -128,7 +128,7 @@ else
 			_gunlist lbSetColor [_gunlistIndex, [0, 255, 0, .25]];
 		};
 		//Disabled look for donator only items
-		if (_weaponClass in call donatorItems) then {
+		if (!(getPlayerUID player call isdonor) && _weaponClass in call donatorItems) then {
 			_gunlist lbSetColor [_gunlistIndex, [255, 255, 0, .25]];
 		};
 

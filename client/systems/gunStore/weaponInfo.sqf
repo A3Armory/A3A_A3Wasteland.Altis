@@ -77,7 +77,7 @@ if (_showAmmo) then
 					_ammolist lbSetColor [_ammolistIndex, [0, 255, 0, .25]];
 				};
 				//Disabled look for donator only items
-				if (_shopMagClass in call donatorItems) then {
+				if (!(getPlayerUID player call isdonor) && _shopMagClass in call donatorItems) then {
 					_ammolist lbSetColor [_ammolistIndex, [255, 255, 0, .25]];
 				};
 			};

@@ -104,5 +104,10 @@ reverse _cfgColors;
 		_colorlistIndex = _colorlist lbAdd _texName;
 		_colorlist lbSetPicture [_colorlistIndex, _tex];
 		_colorlist lbSetData [_colorlistIndex, str _texData];
+		
+		//Disabled look for donator only colors
+		if (!(getPlayerUID player call isdonor)) then{
+			_colorlist lbSetColor [_colorlistIndex, [255, 255, 0, .25]];
+		};
 	};
 } forEach _colorsArray;
