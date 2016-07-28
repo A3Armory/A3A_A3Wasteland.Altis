@@ -107,7 +107,7 @@ reverse _cfgColors;
 		
 		//Disabled look for donator only colors
 		if (!(getPlayerUID player call isdonor)) then{
-			_colorlist lbSetColor [_colorlistIndex, [255, 255, 0, .25]];
+			_colorlist lbSetColor [_colorlistIndex, [0, 255, 0, .25]];
 		};
 	};
 } forEach _colorsArray;

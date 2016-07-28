@@ -53,7 +53,7 @@ storePurchaseHandle = _this spawn
 	_showInsufficientDonatorError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["<t color='#ffff00'>The purchase of custom vehicle paint available only for community supporters. Purchase without custom vehicle paint.</t><br/>The purchase of ""%1"" has been cancelled.", _itemText];
+		hint parseText format ["<t color='#ffff00'>The purchase of custom vehicle paint available only for community support members.</t><br/>Purchase ""%1"" without custom vehicle paint.", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};

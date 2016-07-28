@@ -129,7 +129,7 @@ storePurchaseHandle = _this spawn
 	_showDonatorOnlyError =
 	{
 		_itemText = _this select 0;
-		hint parseText format ["<t color='#ffff00'>This item is only available<br/>to community support members.</t><br/>Learn how to become a member by visiting a3armory.com and click the 'Supporter Info' link at the top of the page.", _itemText];
+		hint parseText format ["<t color='#ffff00'>The purchase of this skin is only<br/>available to community support members.</t><br/>Learn how to become a support member by visiting the forum at A3Armory.com", _itemText];
 		playSound "FD_CP_Not_Clear_F";
 		_price = -1;
 	};

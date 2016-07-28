@@ -125,11 +125,11 @@ else
 
 		//Disabled look for items only obtainable through missions
 		if (_weaponClass in call missionOnlyItems) then {
-			_gunlist lbSetColor [_gunlistIndex, [0, 255, 0, .25]];
+			_gunlist lbSetColor [_gunlistIndex, [1, 1, 1, .5]];
 		};
 		//Disabled look for donator only items
 		if (!(getPlayerUID player call isdonor) && _weaponClass in call donatorItems) then {
-			_gunlist lbSetColor [_gunlistIndex, [255, 255, 0, .25]];
+			_gunlist lbSetColor [_gunlistIndex, [0, 255, 0, .25]];
 		};
 
 		// Show scope on sniper rifle pictures
