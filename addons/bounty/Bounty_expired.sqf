@@ -2,7 +2,8 @@
 //Author: Tyler
 //@file Name: Bounty_expired.sqf
 
-_bountyKills = player getVariable ["bountyKills", []];
+params ["_player"];
+_bountyKills = _player getVariable ["bountyKills", []];
 _newBounty = [];
 _floatDateStamp = missionStart;
 _floatDateStamp resize 5;
@@ -17,4 +18,4 @@ if(_floatDateStamp > 0) then{
     };
   } forEach _bountyKills;
 }else{_newBounty = _bountyKills};
-player setVariable ["bountyKills", _newBounty, true];
+_player setVariable ["bountyKills", _newBounty, true];

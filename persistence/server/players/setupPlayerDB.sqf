@@ -36,7 +36,7 @@ A3W_fnc_checkPlayerFlag =
 			[
 				["BankMoney", _player getVariable ["bmoney", 0]],
 				["Bounty", _player getVariable ["bounty", 0]],
-				["BountyKills", _player getVariable ["bountyKills", 0]]
+				["BountyKills", _player getVariable ["bountyKills", []]]
 			];
 
 			[_UID, _info, _data] call fn_saveAccount;
@@ -75,6 +75,8 @@ A3W_fnc_checkPlayerFlag =
 					case "BountyKills":  { _player setVariable ["bountyKills", _val, true] };
 				};
 			} forEach _data;
+
+			[_player] call bountyKillsExpired;
 
 			diag_log format ["pvar_requestPlayerData: %1", [owner _player, _player, objectFromNetId _pNetId]];
 		}] execFSM "call.fsm";
