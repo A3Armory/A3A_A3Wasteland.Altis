@@ -6,10 +6,10 @@
 //	@file Author: [404] Deadbeat
 //	@file Created: 20/11/2012 05:19
 
-if (_this < 2) exitWith
+/*if (_this < 2) exitWith
 {
 	call teamkillMessage;
-};
+};*/
 
 pvar_teamSwitchUnlock = getPlayerUID player;
 publicVariableServer "pvar_teamSwitchUnlock";
