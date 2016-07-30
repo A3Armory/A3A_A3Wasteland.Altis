@@ -11,6 +11,9 @@ if (_UID in ["","0"]) exitWith {};
 private _nbTKs = ([pvar_teamKillList, _UID, 0] call fn_getFromPairs) + 1;
 [pvar_teamKillList, _UID, _nbTKs] call fn_setToPairs;
 publicVariable "pvar_teamKillList";
+//Remove team unlock when a player has TKed and is forced to play on indie
+[pvar_teamSwitchList, _UID] call fn_removeFromPairs;
+publicVariable "pvar_teamSwitchList";
 
 if (getPlayerUID _player != _UID) then
 {
