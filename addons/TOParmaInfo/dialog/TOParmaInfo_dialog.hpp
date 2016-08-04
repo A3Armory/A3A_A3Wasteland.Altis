@@ -103,7 +103,7 @@ class TOParmaInfoD
 		class TAStatsTiTleBackground: RscText
 		{
 			idc = TOParmaInfo_Stats_Title_BG;
-			text = "A3Armory Scoreboard and Player Stats";
+			text = "A3Armory GitHub and Server Stats";
 			x = "15.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "9.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "14.9 * (((safezoneW / safezoneH) min 1.2) / 40)";
