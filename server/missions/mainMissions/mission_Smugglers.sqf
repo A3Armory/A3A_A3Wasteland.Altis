@@ -33,17 +33,15 @@ _setupObjects =
 	_vehicle2 setVehicleLock "UNLOCKED";
 	_vehicle2 setVariable ["R3F_LOG_disabled", false, true];
 	
-	_boxes1 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
-	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
+	_boxes1 = selectRandom ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
 	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
-	_box1 = createVehicle [_currBox1,[(_missionPos select 0), (_missionPos select 1),0],[], 0, "NONE"];
+	_box1 = createVehicle [_boxes1,[(_missionPos select 0), (_missionPos select 1),0],[], 0, "NONE"];
 	[_box1, _randomBox] call fn_refillbox;
 	_box1 setVariable ["R3F_LOG_disabled", true, true];
 	
-	_boxes2 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
-	_currBox2 = _boxes2 call BIS_fnc_selectRandom;
+	_boxes2 = selectRandom ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
 	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
-	_box2 = createVehicle [_currBox2,[(_missionPos select 0) - 5, (_missionPos select 1) - 8,0],[], 0, "NONE"];
+	_box2 = createVehicle [_boxes2,[(_missionPos select 0) - 5, (_missionPos select 1) - 8,0],[], 0, "NONE"];
 	[_box2, _randomBox2] call fn_refillbox;
 	_box2 setVariable ["R3F_LOG_disabled", true, true];
 	
