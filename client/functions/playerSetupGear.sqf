@@ -35,8 +35,6 @@ _player linkItem "NVGoggles";
 
 _player addBackpack "B_AssaultPack_rgr";
 
-_player addItem "FirstAidKit";
-
 switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
@@ -48,6 +46,8 @@ switch (true) do
 		_player addWeapon "hgun_Pistol_heavy_01_F";
 		_player addMagazine "30Rnd_9x21_Mag";
 		_player addItem "Medikit";
+		_player addItem "FirstAidKit";
+		_player addItem "FirstAidKit";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
