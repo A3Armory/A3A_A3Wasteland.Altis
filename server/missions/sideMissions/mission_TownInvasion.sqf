@@ -36,8 +36,8 @@ _setupVars =
 _setupObjects =
 {
 	// spawn some crates in the middle of town (Town marker position)
-	_randomBox = ["mission_USLaunchers","mission_Uniform","mission_HVSniper"] call BIS_fnc_selectRandom;
-	_randomBox2 = ["mission_USSpecial","mission_DLCRifles","mission_DLCLMGs"] call BIS_fnc_selectRandom;
+	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
+	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
 	_box1 = createVehicle ["Box_NATO_Wps_F", _missionPos, [], 2, "None"];
 	_box1 setDir random 360;
 	[_box1, _randomBox] call fn_refillbox;
@@ -102,7 +102,7 @@ _successExec =
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 
-	for "_i" from 4 to 16 do {
+	for "_i" from 8 to 16 do {
 	  private["_item"];
 	  _item = [
 	          ["lsd", "Land_WaterPurificationTablets_F"],

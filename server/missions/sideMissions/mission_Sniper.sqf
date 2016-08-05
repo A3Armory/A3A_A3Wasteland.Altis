@@ -40,8 +40,8 @@ _failedExec =
 _successExec =
 {
 	// Mission completed
-	_randomBox = ["mission_USLaunchers","mission_HVLaunchers","mission_HVSniper"] call BIS_fnc_selectRandom;
-	_randomBox2 = ["mission_USSpecial","mission_Main_A3snipers","mission_DLCLMGs"] call BIS_fnc_selectRandom;
+	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
+	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
 	_box1 = createVehicle ["Box_East_WpsSpecial_F", _missionPos, [], 2, "None"];
 	_box1 setDir random 360;
 	[_box1, _randomBox] call fn_refillbox;

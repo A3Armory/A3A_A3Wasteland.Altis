@@ -143,8 +143,8 @@ _successExec =
 			(isTouchingGround _veh || _pos select 2 < 5) && {vectorMagnitude velocity _veh < [1,5] select surfaceIsWater _pos}
 		};
 
-		_randomBox = ["mission_USSpecial","mission_Main_A3snipers","mission_DLCLMGs"] call BIS_fnc_selectRandom;
-		_randomBox2 = ["mission_Uniform","mission_USLaunchers","mission_DLCRifles"] call BIS_fnc_selectRandom;
+		_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
+		_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
 		_box1 = createVehicle ["Box_NATO_Wps_F", (getPosATL _veh) vectorAdd ([[_veh call fn_vehSafeDistance, 0, 0], random 360] call BIS_fnc_rotateVector2D), [], 5, "None"];
 		_box1 setDir random 360;
 		[_box1, _randomBox] call fn_refillbox;
