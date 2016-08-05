@@ -469,11 +469,14 @@ if (_timeSavingOn || _weatherSavingOn) then
 	execVM "persistence\server\world\tLoad.sqf";
 };
 
-if ((isNil "A3W_buildingLoot" && {["A3W_buildingLootWeapons"] call isConfigOn || {["A3W_buildingLootSupplies"] call isConfigOn}}) || {["A3W_buildingLoot"] call isConfigOn}) then
+// Simple loot spawn
+execVM "addons\simple_lootspawner\lootInit.sqf";
+
+/*if ((isNil "A3W_buildingLoot" && {["A3W_buildingLootWeapons"] call isConfigOn || {["A3W_buildingLootSupplies"] call isConfigOn}}) || {["A3W_buildingLoot"] call isConfigOn}) then
 {
 	diag_log "[INFO] A3W loot spawning is ENABLED";
 	execVM "addons\Lootspawner\Lootspawner.sqf";
-};
+};*/
 
 [] execVM "server\functions\serverTimeSync.sqf";
 

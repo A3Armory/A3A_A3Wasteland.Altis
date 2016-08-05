@@ -8,11 +8,11 @@ class EditorData
 	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=487;
+		nextID=488;
 	};
 	class LayerIndexProvider
 	{
-		nextID=3;
+		nextID=5;
 	};
 	class Camera
 	{
@@ -112,7 +112,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=311;
+		items=312;
 		class Item0
 		{
 			dataType="Group";
@@ -6543,7 +6543,7 @@ class Mission
 					name="Parking6_spawn";
 					type="Empty";
 					colorName="ColorBlack";
-					angle=215.59119;
+					angle=215.59117;
 					id=481;
 				};
 				class Item12
@@ -6594,6 +6594,16 @@ class Mission
 			name="CustomLayer";
 			id=486;
 			atlOffset=185.97;
+		};
+		class Item311
+		{
+			dataType="Marker";
+			position[]={15383.5,-76.5,14970.5};
+			name="center_mrk";
+			type="Empty";
+			colorName="ColorBlack";
+			id=487;
+			atlOffset=-10.693153;
 		};
 	};
 };
