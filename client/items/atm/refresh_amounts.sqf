@@ -33,7 +33,7 @@ _amount = 0 max floor parseNumber ctrlText _amountInput;
 if (!finite _amount) then { _amount = 0 };
 
 _fee = (["A3W_atmTransferFee", 5] call getPublicVar) max 0 min 50;
-_reward = (["A3W_bountyRewardPerc", 10] call getPublicVar) max 0 min 50;
+_reward = (["A3W_bountyRewardPerc", 10] call getPublicVar) max 0 min 100;
 _feeAmount = 0;
 _rewardAmount = 0;
 _selAcc = call compile (_accDropdown lbData lbCurSel _accDropdown);

@@ -37,7 +37,7 @@ _code =
 			};
 		};
 
-		_scoreOrdering = { ((([_x, "playerKills", false] call fn_getScore) - ([_x, "teamKills"] call fn_getScore)) * 100) + ([_x, "aiKills", false] call fn_getScore) + ((_x getVariable ["bounty", 0]) * 10) };
+		_scoreOrdering = { ((([_x, "playerKills", false] call fn_getScore) - ([_x, "teamKills", false] call fn_getScore)) * 100) + ([_x, "aiKills", false] call fn_getScore) + ((_x getVariable ["bounty", 0]) * 10) };
 		_players = [_allPlayers, [], _scoreOrdering, "DESCEND"] call BIS_fnc_sortBy;
 		_playerCount = count _players;
 		_playerIndex = _players find player;
