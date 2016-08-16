@@ -696,12 +696,12 @@ backpackArray = compileFinal str
 
 genItemArray = compileFinal str
 [
-	["UAV Terminal (NATO)", "B_UavTerminal", 150, "gps"],
-	["UAV Terminal (CSAT)", "O_UavTerminal", 150, "gps"],
-	["UAV Terminal (AAF)", "I_UavTerminal", 150, "gps"],
-	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 1000, "backpack"],
-	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 1000, "backpack"],
-	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 1000, "backpack"],
+	["UAV Terminal (NATO)", "B_UavTerminal", 500, "gps"],
+	["UAV Terminal (CSAT)", "O_UavTerminal", 500, "gps"],
+	["UAV Terminal (AAF)", "I_UavTerminal", 500, "gps"],
+	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 8000, "backpack"],
+	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 8000, "backpack"],
+	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 8000, "backpack"],
 	["Remote Designator (Sand)", "B_Static_Designator_01_weapon_F", 750, "backpack"],
 	["Remote Designator (Hex)", "O_Static_Designator_02_weapon_F", 750, "backpack"],
 	["GPS", "ItemGPS", 100, "gps"],
@@ -1577,7 +1577,10 @@ missionOnlyItems = compileFinal str
 "Laserdesignator_03",
 "optic_tws",
 "optic_tws_mg",
-"optic_Nightstalker"
+"optic_Nightstalker",
+"B_UAV_01_backpack_F",
+"O_UAV_01_backpack_F",
+"I_UAV_01_backpack_F"
 ];
 
 call compile preprocessFileLineNumbers "mapConfig\storeOwners.sqf";

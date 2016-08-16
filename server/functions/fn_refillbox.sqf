@@ -102,11 +102,13 @@ switch (_boxType) do
 		_boxItems =
 		[
 			// Item type, Item class(es), # of items, # of magazines per weapon
-			["itm", ["V_RebreatherIA", "V_RebreatherIR", "V_RebreatherB"], RANDOM_BETWEEN(1,4)],
-			["itm", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(1,5)],
-			["itm", ["H_HelmetSpecB_paint2","H_HelmetO_oucamo","H_HelmetLeaderO_oucamo","H_HelmetSpecO_blk"], RANDOM_BETWEEN(1,5)],
-			["itm", "Medikit", RANDOM_BETWEEN(1,3)],
-			["itm", "Toolkit", RANDOM_BETWEEN(1,2)]
+			["itm", ["V_RebreatherIA", "V_RebreatherIR", "V_RebreatherB"], RANDOM_BETWEEN(1,3)],
+			["itm", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(1,3)],
+			["itm", ["H_HelmetSpecB_paint2","H_HelmetO_oucamo","H_HelmetLeaderO_oucamo","H_HelmetSpecO_blk"], RANDOM_BETWEEN(1,3)],
+			["itm", "Medikit", RANDOM_BETWEEN(1,2)],
+			["itm", "Toolkit", RANDOM_BETWEEN(1,2)],
+			["itm", ["B_UavTerminal", "O_UavTerminal", "I_UavTerminal"], RANDOM_BETWEEN(1,3)],
+			["itm", ["B_UAV_01_backpack_F", "O_UAV_01_backpack_F", "I_UAV_01_backpack_F"], RANDOM_BETWEEN(1,2)]
 		];
 	};
 	case "mission_DLCRifles":

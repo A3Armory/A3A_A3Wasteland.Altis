@@ -90,11 +90,6 @@ player addEventHandler ["WeaponAssembled",
 			_obj setAutonomous false; // disable autonomous mode by default on static designators so they stay on target after releasing controls
 		};
 
-		if (_obj isKindOf "UAV_01_base_F") then
-		{
-			_obj disableTIEquipment true; // disable thermal
-		};
-
 		{
 			[_x, ["UAV","",""]] remoteExec ["A3W_fnc_setName", 0, _x]; 
 		} forEach crew _obj;
