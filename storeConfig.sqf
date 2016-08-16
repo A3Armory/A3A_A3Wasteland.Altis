@@ -1325,8 +1325,6 @@ donatorItems = compileFinal str
 "srifle_DMR_05_hex_F",
 "srifle_LRR_camo_F",
 "srifle_LRR_tna_F",
-"srifle_GM6_camo_F",
-"srifle_GM6_ghex_F",
 "srifle_DMR_04_tan_F",
 "arifle_MX_SW_Black_F",
 "arifle_MX_SW_khk_F",
@@ -1566,6 +1564,9 @@ donatorItems = compileFinal str
 //Put all gun, ammo, or general item classes in this list if you only want them only accessible through missions (this list will not add these items to mission crates, do that manually)
 missionOnlyItems = compileFinal str
 [
+"srifle_GM6_F",
+"srifle_GM6_camo_F",
+"srifle_GM6_ghex_F",
 "MMG_02_sand_F",
 "MMG_02_camo_F",
 "MMG_02_black_F",
