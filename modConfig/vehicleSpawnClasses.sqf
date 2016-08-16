@@ -74,32 +74,38 @@ A3W_planeSpawnOdds = 0.25; // 0.0 to 1.0
 //Random Weapon List - Change this to what you want to spawn in cars.
 vehicleWeapons =
 [
-	["SMG_01_F" /*Vermin*/, "SMG_02_F" /*Sting*/, "hgun_PDW2000_F"],
-	["arifle_TRG20_F", "arifle_TRG21_F", "arifle_TRG21_GL_F"],
-	["arifle_Mk20C_F", "arifle_Mk20_F", "arifle_Mk20_GL_F"],
-	["arifle_Katiba_F", "arifle_Katiba_C_F", "arifle_Katiba_GL_F"],
-	["arifle_MXC_F", "arifle_MX_F", "arifle_MX_GL_F", "arifle_MXM_F"],
-	["srifle_EBR_F", "srifle_DMR_01_F"],
-	["arifle_MX_SW_F", "LMG_Mk200_F", "LMG_Zafir_F"]
+	["SMG_01_F", "SMG_05_F", "hgun_PDW2000_F"],
+	["arifle_SDAR_F", "arifle_Mk20C_plain_F", "arifle_TRG20_F"],
+	["arifle_Katiba_C_F", "arifle_MXC_F", "arifle_SPAR_01_blk_F"],
+	["arifle_CTAR_blk_F", "arifle_AKS_F", "arifle_MX_GL_F"],
+	["arifle_MXM_F", "srifle_DMR_01_F", "srifle_EBR_F"],
+	["srifle_DMR_07_blk_F", "arifle_SPAR_03_blk_F", "srifle_DMR_06_olive_F"],
+	["arifle_MX_SW_F", "LMG_Mk200_F", "LMG_Zafir_F", "LMG_03_F"],
+	["launch_RPG7_F", "launch_NLAW_F", "launch_Titan_F"]
 ];
 
 vehicleAddition =
 [
 	"muzzle_snds_L", // 9mm
+	"muzzle_snds_acp", // .45 ACP
 	"muzzle_snds_M", // 5.56mm
+	"muzzle_snds_58_blk_F", // 5.8mm
 	"muzzle_snds_H", // 6.5mm
 	"muzzle_snds_H_MG", // 6.5mm LMG
+	"muzzle_snds_65_TI_blk_F", // Type 115
 	"muzzle_snds_B", // 7.62mm
-	"muzzle_snds_acp", // .45 ACP
+	"muzzle_snds_338_black", // .338
+	"muzzle_snds_93mmg", // 9.3mm
 	"optic_Arco",
 	"optic_SOS",
+	"optic_LRPS",
 	"optic_Hamr",
+	"optic_DMS",
 	"optic_Aco",
 	"optic_ACO_grn",
 	"optic_aco_smg",
 	"optic_Holosight",
 	"optic_Holosight_smg",
-	"acc_flashlight",
 	"acc_pointer_IR",
 	"Medikit",
 	"FirstAidKit",
