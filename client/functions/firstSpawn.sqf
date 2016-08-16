@@ -219,7 +219,7 @@ _uid = getPlayerUID player;
 if (playerSide in [BLUFOR,OPFOR,INDEPENDENT] && {{_x select 0 == _uid} count pvar_teamSwitchList == 0}) then
 {
 	_startTime = diag_tickTime;
-	waitUntil {sleep 1; diag_tickTime - _startTime >= 180};
+	waitUntil {sleep 1; diag_tickTime - _startTime >= 600};
 
 	pvar_teamSwitchLock = [_uid, playerSide];
 	publicVariableServer "pvar_teamSwitchLock";
