@@ -62,7 +62,7 @@ A3W_atmRemoveIfDisabled = 0;       // Remove all ATMs from map if A3W_atmEnabled
 
 A3W_bountyMax = 294000;            // Maximum amount of money that can be set as a bounty on someone
 A3W_bountyMinStart = 2500;         // Minimum amount of money to start a bounty on someone
-A3W_bountyRewardPerc = 30;         // Percentage of cost that goes to bounty reward
+A3W_bountyRewardPerc = 70;         // Percentage of cost that goes to bounty reward
 A3W_bountyLifetime = 4*24;         // Maximum lifetime in hours for bounty kills to store in DB (storing bounty kills is to prevent from forming groups with someone you collected bounty on)
 
 // Not currently implemented, soon
