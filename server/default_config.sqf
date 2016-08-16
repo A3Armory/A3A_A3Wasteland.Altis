@@ -23,15 +23,15 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
 A3W_startingMoney = 2500;          // Amount of money that players start with
-A3W_maxMoney = 600000;             // Maximum amount of money that will save on players and crates
+A3W_maxMoney = 1000000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 60;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
 A3W_headshotNoRevive = 1;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
 A3W_customDeathMessages = 1;       // If difficulty option deathMessages=0, display custom messages related to causes of death, as defined in fn_deathMessage.sqf (0 = no, 1 = yes)
 A3W_healthTime = 7*60;             // Seconds till death once starving or dehydrated
-A3W_hungerTime = 80*60;            // 2x Seconds till starving
-A3W_thirstTime = 60*60;            // 2x Seconds till dehydrated
+A3W_hungerTime = 160*60;           // Seconds till starving
+A3W_thirstTime = 120*60;           // Seconds till dehydrated
 
 // Spawn settings
 A3W_townSpawnCooldown = 15*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
@@ -53,16 +53,16 @@ A3W_lockVehicles = ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F", "Truck
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
-A3W_atmMaxBalance = 300000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
+A3W_atmMaxBalance = 420000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
 A3W_atmTransferFee = 5;            // Fee in percent charged to players for money transfers to other players (0 to 50)
 A3W_atmTransferAllTeams = 0;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
 A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the mission editor (0 = all ATMs from towns & editor allowed, 1 = ATMs from editor only) Note: Stratis has no town ATMs, only editor ones.
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
 A3W_atmRemoveIfDisabled = 0;       // Remove all ATMs from map if A3W_atmEnabled is set to 0 (0 = no, 1 = yes)
 
-A3W_bountyMax = 150000;            // Maximum amount of money that can be set as a bounty on someone
+A3W_bountyMax = 294000;            // Maximum amount of money that can be set as a bounty on someone
 A3W_bountyMinStart = 2500;         // Minimum amount of money to start a bounty on someone
-A3W_bountyRewardPerc = 50;         // Percentage of cost that goes to bounty reward
+A3W_bountyRewardPerc = 30;         // Percentage of cost that goes to bounty reward
 A3W_bountyLifetime = 4*24;         // Maximum lifetime in hours for bounty kills to store in DB (storing bounty kills is to prevent from forming groups with someone you collected bounty on)
 
 // Not currently implemented, soon
