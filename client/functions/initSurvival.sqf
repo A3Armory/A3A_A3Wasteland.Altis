@@ -8,12 +8,12 @@
 //	@file Args:
 
 #define TIME_DELTA 1 //seconds between each "check"
-#define HEALTH_TIME (60*5) //seconds till death
-#define HUNGER_TIME (60*60) //seconds till starving
-#define THIRST_TIME (60*50) //seconds till dehydrated
+#define HEALTH_TIME (["A3W_healthTime", 60*5] call getPublicVar) //seconds till death
+#define HUNGER_TIME (["A3W_hungerTime", 60*60] call getPublicVar) //seconds till starving
+#define THIRST_TIME (["A3W_thirstTime", 60*50] call getPublicVar) //seconds till dehydrated
 #define HEALTH_DELTA TIME_DELTA*(100/HEALTH_TIME)/100
-#define HUNGER_DELTA TIME_DELTA*(100/HUNGER_TIME)
-#define THIRST_DELTA TIME_DELTA*(100/THIRST_TIME)
+#define HUNGER_DELTA TIME_DELTA*(200/HUNGER_TIME)
+#define THIRST_DELTA TIME_DELTA*(200/THIRST_TIME)
 #define STARVATION "<t size='2' color='#ffff00'> R.I.P.</t><br/><br/>You have died from: <br/><t size='2' color='#ff0000'>starvation</t><br/><br/>You need to eat to survive here!<br/>"
 #define DEHYDRATION "<t size='2' color='#ffff00'> R.I.P.</t><br/><br/>You have died from: <br/><t size='2' color='#ff0000'>dehydration</t><br/><br/>You need to drink to survive here!<br/>"
 
