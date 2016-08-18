@@ -5,7 +5,7 @@
 if(isServer)then
 {
 // Set probability of loot spawning 1-100%
-_probability= 1;
+_probability= 2;
 
 // Show loot position and type on map (Debugging)
 _showLoot= false;
