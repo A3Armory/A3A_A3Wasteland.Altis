@@ -22,7 +22,7 @@ _serverInfoString = format ["<t color='#A0FFFF'>A3Armory A3Wasteland Altis</t>"]
 _serverInfoText ctrlSetStructuredText parseText _serverInfoString;
 
 _generalInfoText = _display displayCtrl TOParmaInfo_General_Info_BG;
-_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.a3armory.com/'>A3Armory</a></t> Forums: <t color='#0091CD'><a href='http://a3armory.com/forum/'>A3Armory Forum</a></t> TeamSpeak: ts.a3armory.com";
+_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.a3armory.com/'>A3Armory</a></t> Forums: <t color='#0091CD'><a href='http://a3armory.com/forum/'>A3Armory Forum</a></t> Discord: discord.a3armory.com";
 _generalInfoText ctrlSetStructuredText parseText _generalInfoString;
 
 

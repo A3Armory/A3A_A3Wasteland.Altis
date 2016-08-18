@@ -45,8 +45,8 @@ _role2 = "Server restarts every @";
 _role2names = ["5, 10, 15, 20, 24 EST"];
 _role3 = "Player stats, and support @";
 _role3names = ["A3Armory.com"];
-_role4 = "TS3 Server @";
-_role4names = ["TS.A3Armory.com"];
+_role4 = "Discord Server @";
+_role4names = ["Discord.A3Armory.com"];
  
 {
 	sleep 2;
