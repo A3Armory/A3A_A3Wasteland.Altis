@@ -171,9 +171,9 @@ staticGunsArray = compileFinal str
 	["Static Titan AT 4Rnd", "B_static_AT_F", 3000], // Static launchers only have 4 ammo, hence the low price
 	["Static Titan AT 4Rnd", "O_static_AT_F", 3000],
 	["Static Titan AT 4Rnd", "I_static_AT_F", 3000],
-	["Static Titan AA 4Rnd", "B_static_AA_F", 3000],
-	["Static Titan AA 4Rnd", "O_static_AA_F", 3000],
-	["Static Titan AA 4Rnd", "I_static_AA_F", 3000],
+	["Static Titan AA 4Rnd", "B_static_AA_F", 5000],
+	["Static Titan AA 4Rnd", "O_static_AA_F", 5000],
+	["Static Titan AA 4Rnd", "I_static_AA_F", 5000],
 	["Mk30 HMG .50 Low tripod", "B_HMG_01_F", 2000],
 	["Mk30 HMG .50 Low tripod", "O_HMG_01_F", 2000],
 	["Mk30 HMG .50 Low tripod", "I_HMG_01_F", 2000],
@@ -282,7 +282,7 @@ ammoArray = compileFinal str
 	["PCML Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
 	["Titan Anti-Tank Missile", "Titan_AT", 350],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
 	["Titan Anti-Personnel Missile", "Titan_AP", 350],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
-	["Titan Anti-Air Missile", "Titan_AA", 350],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
+	["Titan Anti-Air Missile", "Titan_AA", 600],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
 	["40mm Smoke Round (White)", "1Rnd_Smoke_Grenade_shell", 50],
