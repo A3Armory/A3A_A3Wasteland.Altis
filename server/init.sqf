@@ -473,7 +473,7 @@ if (_timeSavingOn || _weatherSavingOn) then
 };
 
 // Simple loot spawn
-if ((isNil "A3W_simpleLoot" call isConfigOn) || {["A3W_simpleLoot"] call isConfigOn}) then
+if (["A3W_simpleLoot"] call isConfigOn) then
 {
 	diag_log "[INFO] Simple loot spawning is ENABLED";
 	execVM "addons\simple_lootspawner\lootInit.sqf";
