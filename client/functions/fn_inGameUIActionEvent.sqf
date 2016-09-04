@@ -55,6 +55,13 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 			};
 		};
 
+		case (_action == "DisAssemble"):
+		{
+			playSound "FD_CP_Not_Clear_F";
+			[format ['You are not allowed to disassemble weapons.\nUse the "%1" option instead.', ["STR_R3F_LOG_action_deplacer_objet", "Move"] call getPublicVar], 5] call mf_notify_client;
+			_handled = true;
+		};
+
 		case (_action == "ManualFire"): // use UAV AI to re-align attack heli turret with pilot crosshair when manual fire is enabled with no gunner (thx KK xoxoxo)
 		{
 			private _veh = vehicle player;
