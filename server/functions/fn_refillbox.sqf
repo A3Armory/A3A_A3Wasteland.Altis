@@ -107,12 +107,12 @@ switch (_boxType) do
 			["itm", ["H_HelmetSpecB_paint2","H_HelmetO_oucamo","H_HelmetLeaderO_oucamo","H_HelmetSpecO_blk"], RANDOM_BETWEEN(1,3)],
 			["itm", "Medikit", RANDOM_BETWEEN(1,2)],
 			["itm", "Toolkit", RANDOM_BETWEEN(1,2)],
-			["itm", ["B_UavTerminal"], RANDOM_BETWEEN(1,1)],
-			["itm", ["O_UavTerminal"], RANDOM_BETWEEN(1,1)],
-			["itm", ["I_UavTerminal"], RANDOM_BETWEEN(1,1)],
-			["bac", ["B_UAV_01_backpack_F"], RANDOM_BETWEEN(1,1)],
-			["bac", ["O_UAV_01_backpack_F"], RANDOM_BETWEEN(1,1)],
-			["bac", ["I_UAV_01_backpack_F"], RANDOM_BETWEEN(1,1)]
+			["itm", "B_UavTerminal", 1],
+			["itm", "O_UavTerminal", 1],
+			["itm", "I_UavTerminal", 1],
+			["bac", "B_UAV_01_backpack_F", 1],
+			["bac", "O_UAV_01_backpack_F", 1],
+			["bac", "I_UAV_01_backpack_F", 1]
 		];
 	};
 	case "mission_DLCRifles":
