@@ -104,9 +104,11 @@ if (hasInterface || isServer) then
 	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
-	[] execVM "addons\scripts\servercredits.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
+	[] execVM "addons\scripts\servercredits.sqf";
 	[] execVM "addons\bounty\init.sqf";
+	[] execVM "addons\AdvancedRappelling\AR_AdvancedRappelling\functions\fn_advancedRappellingInit.sqf";
+	[] execVM "addons\AdvancedRappelling\AUR_AdvancedUrbanRappelling\functions\fn_advancedUrbanRappellingInit.sqf";
 };
 
 // Server restart message
