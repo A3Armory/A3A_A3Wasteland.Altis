@@ -66,6 +66,9 @@ else
 		"BackpackMagazines",
 
 		"WastelandItems",
+		
+		"UniformTexture",
+		"BackpackTexture",
 
 		"Hunger",
 		"Thirst"

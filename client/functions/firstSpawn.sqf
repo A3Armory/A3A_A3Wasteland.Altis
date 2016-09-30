@@ -19,7 +19,14 @@ player addEventHandler ["Take",
 	{
 		_vehicle setVariable ["itemTakenFromVehicle", true, true];
 	};
-}];
+
+	// Persistent player textures addition
+	([uniformContainer player getVariable "uniformTexture"])
+	params ["_texCustom"];
+	if (isNil "_texCustom") exitWith {};
+	player setObjectTextureGlobal [0, _texCustom];
+	false
+}];	
 
 player addEventHandler ["Put",
 {

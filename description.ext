@@ -72,6 +72,8 @@ briefing = 0; // if 0, skip Continue button
 #include "addons\JTS_PM\PM_Compact.hpp"
 #include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 #include "addons\taw_vd\dialog.hpp"
+#include "addons\UniformPainter\dialog\UniformPainter_mainMenu.hpp"
+#include "addons\VehiclePainter\dialog\VehiclePainter_mainMenu.hpp"
 
 class CfgDebriefing
 {
