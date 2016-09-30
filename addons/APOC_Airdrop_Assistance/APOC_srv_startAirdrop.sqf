@@ -206,18 +206,18 @@ WaitUntil {(((position _object) select 2) < (_flyHeight-20))};
 		_para = createVehicle ["B_Parachute_02_F", _objectPosDrop, [], 0, ""];
 		_object attachTo [_para,[0,0,-1.5]];
 
-		_smoke1= "SmokeShellGreen" createVehicle getPos _object;
+		_smoke1= "SmokeShellYellow" createVehicle getPos _object;
 		_smoke1 attachto [_object,[0,0,-0.5]];
-		_flare1= "F_40mm_Green" createVehicle getPos _object;
+		_flare1= "F_40mm_Yellow" createVehicle getPos _object;
 		_flare1 attachto [_object,[0,0,-0.5]];
 
 		if (_type == "vehicle") then {_object allowDamage true;}; //Turn on damage for vehicles once they're in the 'chute.  Could move this until they hit the ground.  Admins choice.
 
 WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
 		detach _object;
-		_smoke2= "SmokeShellGreen" createVehicle getPos _object;
+		_smoke2= "SmokeShellYellow" createVehicle getPos _object;
 		//_smoke2 attachto [_object,[0,0,-0.5]];
-		_flare2= "F_40mm_Green" createVehicle getPos _object;
+		_flare2= "F_40mm_Yellow" createVehicle getPos _object;
 		//_flare2 attachto [_object,[0,0,-0.5]];
 		sleep 2;
 		if (_type == "picnic") then {  //So let's go ahead and delete that ugly ammo pallet and create a wonderful picnic basket/barrel
