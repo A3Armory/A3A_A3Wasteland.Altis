@@ -7,12 +7,13 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf"
 
-private ["_camonet", "_hostage", "_obj1", "_obj2", "_obj3", "_chair", "_randomBox", "_randomBox2", "_box1", "_box2"];
+private ["_nbUnits", "_camonet", "_hostage", "_obj1", "_obj2", "_obj3", "_chair", "_randomBox", "_randomBox2", "_box1", "_box2"];
 
 _setupVars =
 {
 	_missionType = "Rescue Arms Dealer";
-	_locationsArray = MissionSpawnMarkers;
+	_locationsArray = [ForestMissionMarkers, MissionSpawnMarkers] select (ForestMissionMarkers isEqualTo []);
+	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
 
 _setupObjects =
@@ -62,7 +63,7 @@ _setupObjects =
 	{ _x setVariable ["R3F_LOG_disabled", true, true] } forEach [_box1, _box2];
 
 	_aiGroup = createGroup CIVILIAN;
-	[_aiGroup,_missionPos,13,30] spawn createCustomGroup4;
+	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup4;
 
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";
