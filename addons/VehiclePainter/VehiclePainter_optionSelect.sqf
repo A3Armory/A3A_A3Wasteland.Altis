@@ -40,26 +40,34 @@ storePurchaseHandle = player spawn
 		_playerMoney = player getVariable "cmoney";
 
 		if (_price > _playerMoney) exitWith
-			{
-				_text = format ["Not enough money! You need $%1 to repaint your vehicle.",_price];
-				[_text, 10] call mf_notify_client;
-				playSound "FD_CP_Not_Clear_F";
-			};
+		{
+			_text = format ["Not enough money! You need $%1 to repaint your vehicle.",_price];
+			[_text, 10] call mf_notify_client;
+			playSound "FD_CP_Not_Clear_F";
+		};
 
-		if (_price < _playerMoney) then	
-			{
-				player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
-				_text = format ["You paid $%1 to repaint your vehicle.",_price];
-				[_text, 10] call mf_notify_client;		
-				[] spawn fn_savePlayerData;
-			};
+		if (_price < _playerMoney) then
+		{
+			player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
+			_text = format ["You paid $%1 to repaint your vehicle.",_price];
+			[_text, 10] call mf_notify_client;
+			[] spawn fn_savePlayerData;
+		};
+
+		//Check donor status
+		if !((getPlayerUID player) call isdonor) exitWith
+		{
+			_text = format ["The purchase of custom vehicle paint available only for community supporters.",_price];
+			[_text, 10] call mf_notify_client;
+			playSound "FD_CP_Not_Clear_F";
+		};
 
 		if (count _colorData > 0) then
 		{
 			[_vehicle, _colorData] call applyVehicleTexture;
 		};
 	};
-	
+
 	_applyTexProperties =
 	{
 		_vehicle = objectFromNetId (player getVariable ["lastVehicleRidden", ""]);
@@ -72,7 +80,7 @@ storePurchaseHandle = player spawn
 			[_vehicle, _colorData] call _vehiclePainter;
 		};
 	};
-	
+
 	_player = player;
 	if (!isNil "_player" && {!isNull _player}) then
 	{

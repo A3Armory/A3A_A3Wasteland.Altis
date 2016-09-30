@@ -29,7 +29,7 @@ storePurchaseHandle = player spawn
 	_colorIndex = lbCurSel Paint_Menu_option;
 	_colorText = _colorlist lbText _colorIndex;
 	_colorData = call compile (_colorlist lbData _colorIndex);
-	
+
 	_uniformPainter =
 	{
 		_textureDir = "client\images\vehicleTextures";
@@ -39,26 +39,34 @@ storePurchaseHandle = player spawn
 		_playerMoney = player getVariable "cmoney";
 
 		if (_price > _playerMoney) exitWith
-			{
-				_text = format ["Not enough money! You need $%1 to paint your clothes.",_price];
-				[_text, 10] call mf_notify_client;
-				playSound "FD_CP_Not_Clear_F";
-			};
+		{
+			_text = format ["Not enough money! You need $%1 to paint your clothes.",_price];
+			[_text, 10] call mf_notify_client;
+			playSound "FD_CP_Not_Clear_F";
+		};
 
-		if (_price < _playerMoney) then	
-			{
-				player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
-				_text = format ["You paid $%1 to paint your clothes.",_price];
-				[_text, 10] call mf_notify_client;		
-				[] spawn fn_savePlayerData;
-			};
+		if (_price < _playerMoney) then
+		{
+			player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
+			_text = format ["You paid $%1 to paint your clothes.",_price];
+			[_text, 10] call mf_notify_client;
+			[] spawn fn_savePlayerData;
+		};
 
-		if (!isNil "_paint") then {
-		
-		player setObjectTextureGlobal [0, _paint]; // set it on player
-		backpackContainer player setObjectTextureGlobal  [0, _paint]; // set it on backpack
-		uniformContainer player setVariable ["uniformTexture", _paint, true]; //store it on uniform
-		backpackContainer player setVariable ["backpackTexture", _paint, true]; //store it on backpack
+		//Check donor status
+		if !((getPlayerUID player) call isdonor) exitWith
+		{
+			_text = format ["The purchase of custom uniform paint available only for community supporters.",_price];
+			[_text, 10] call mf_notify_client;
+			playSound "FD_CP_Not_Clear_F";
+		};
+
+		if (!isNil "_paint") then 
+		{
+			player setObjectTextureGlobal [0, _paint]; // set it on player
+			backpackContainer player setObjectTextureGlobal  [0, _paint]; // set it on backpack
+			uniformContainer player setVariable ["uniformTexture", _paint, true]; //store it on uniform
+			backpackContainer player setVariable ["backpackTexture", _paint, true]; //store it on backpack
 		};
 	};
 
@@ -75,7 +83,7 @@ storePurchaseHandle = player spawn
 			[_player, _colorData] call _uniformPainter;
 		};
 	};
-	
+
 	_player = player;
 	if (!isNil "_player" && {!isNull _player}) then
 	{
