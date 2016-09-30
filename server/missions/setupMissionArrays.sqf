@@ -43,6 +43,14 @@ MoneyMissions =
 	["mission_Roadblock", 0.4]
 ];
 
+missionType_water =
+[
+	"mission_ArmedDiversquad",
+	"mission_Coastal_Convoy",
+	"mission_SunkenSupplies",
+	"mission_SunkenTreasure"
+];
+
 MissionSpawnMarkers = (allMapMarkers select {["Mission_", _x] call fn_startsWith}) apply {[_x, false]};
 ForestMissionMarkers = (allMapMarkers select {["ForestMission_", _x] call fn_startsWith}) apply {[_x, false]};
 SunkenMissionMarkers = (allMapMarkers select {["SunkenMission_", _x] call fn_startsWith}) apply {[_x, false]};
