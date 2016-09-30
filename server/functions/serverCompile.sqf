@@ -38,6 +38,7 @@ setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
 createsniperGroup = [_path, "createUnits\sniperGroup.sqf"] call mf_compile;
 createCustomGroup3 = [_path, "createUnits\customGroup3.sqf"] call mf_compile;
 addDefensiveMines = [_path, "createUnits\addDefensiveMines.sqf"] call mf_compile;
+createCustomGroup4 = [_path, "createUnits\customGroup4.sqf"] call mf_compile;
 
 //Function Compiles
 _path = "server\functions";
