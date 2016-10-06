@@ -68,7 +68,7 @@ if (!_handled && _key in actionKeys "GetOver") then
 	if (_veh == player) exitWith
 	{
 		// allow opening parachute only above 2.5m
-		if ((getPos player) select 2 > 2.5) then
+		if ((getPos player) select 2 > 10) then
 		{
 			true call A3W_fnc_openParachute;
 			_handled = true;
