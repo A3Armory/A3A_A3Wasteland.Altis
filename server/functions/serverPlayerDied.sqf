@@ -41,4 +41,15 @@ if (vehicle _unit != _unit) then
 	};
 };
 
+if (!isPlayer _unit && _unit getVariable ["AI_MoneyDrop", false]) then
+{
+	_itemtype = ["Item","Land_Money_F"];
+	_item = createVehicle [_itemtype select 1, getpos _unit, [], 5, "None"];
+	_item setPos ([getPos _unit, 1, 3, 0, 0, 2000, 0] call BIS_fnc_findSafePos);
+	_item setDir random 360;
+	_cash = round(random 4200);
+	_item setVariable ["cmoney", _cash, true];
+	_item setVariable ["owner", "world", true];
+};
+
 //if !(["G_Diving", goggles _unit] call fn_startsWith) then { removeGoggles _unit };

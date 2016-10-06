@@ -25,7 +25,6 @@ SideMissions =
 	["mission_HostileHelicopter", 0.1],
 	["mission_MiniConvoy", 1],
 	["mission_SunkenSupplies", 0.1],
-	["mission_TownInvasion", 1],
 	//["mission_AirWreck", 1.5],
 	//["mission_WepCache", 1.5],
 	["mission_Outpost", 1],
@@ -39,8 +38,9 @@ MoneyMissions =
 [
 	["mission_MoneyShipment", 1],
 	["mission_SunkenTreasure", 1],
-	["mission_drugsRunners", 0.5],
-	["mission_Roadblock", 0.5]
+	["mission_drugsRunners", 1],
+	["mission_Roadblock", 0.5],
+	["mission_TownInvasion", 1]
 ];
 
 missionType_water =

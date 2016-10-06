@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_drop_item", "_drugpilerandomizer", "_drugpile"];
+private ["_convoyVeh", "_veh1", "_createVehicle", "_vehicles", "_leader", "_waypoint", "_vehicleName", "_numWaypoints", "_drop_item", "_drugpile", "_cashamount", "_cashpile", "_cash"];
 
 _setupVars =
 {
@@ -23,14 +23,7 @@ _setupObjects =
 	_missionPos = markerPos (_town select 0);
 	
 	// pick the vehicles for the convoy
-	_convoyVeh = if (missionDifficultyHard) then
-	{
-		["C_Hatchback_01_sport_F"]
-	}
-	else
-	{
-		["C_Hatchback_01_sport_F"]
-	};
+	_convoyVeh = ["C_Hatchback_01_sport_F"];
 
 	_veh1 = _convoyVeh select 0;
 
@@ -85,11 +78,8 @@ _setupObjects =
 	_aiGroup setCombatMode "GREEN"; // units will never fire
 	_aiGroup setBehaviour "CARELESS"; // nits will try to stay on roads, not caring about finding any cover
 	_aiGroup setFormation "STAG COLUMN";
+	_aiGroup setSpeedMode "FULL";
 
-	_speedMode = if (missionDifficultyHard) then { "FULL" } else { "FULL" };
-	
-	_aiGroup setSpeedMode _speedMode;
-	
 	// behaviour on waypoints
 	{
 		_waypoint = _aiGroup addWaypoint [markerPos (_x select 0), 0];
@@ -98,7 +88,7 @@ _setupObjects =
 		_waypoint setWaypointCombatMode "GREEN";
 		_waypoint setWaypointBehaviour "CARELESS";
 		_waypoint setWaypointFormation "STAG COLUMN";
-		_waypoint setWaypointSpeed _speedMode;
+		_waypoint setWaypointSpeed "FULL";
 	} forEach ((call cityList) call BIS_fnc_arrayShuffle);
 
 	_missionPos = getPosATL leader _aiGroup;
@@ -141,35 +131,25 @@ _drop_item =
 _successExec =
 {
 	// Mission completed
-	_drugpilerandomizer = [2,4,8];
-	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
-	
-	for "_i" from 1 to _drugpile do 
+	_drugpile = selectRandom [2,4,8];
+
+	for "_i" from 1 to _drugpile do
 	{
-	  private["_item"];
-	  _item = [
-	          ["lsd", "Land_WaterPurificationTablets_F"],
-	          ["marijuana", "Land_VitaminBottle_F"],
-	          ["cocaine","Land_PowderedMilk_F"],
-	          ["heroin", "Land_PainKillers_F"]
-	        ] call BIS_fnc_selectRandom;
-	  [_item, _lastPos] call _drop_item;
+		private["_item"];
+		_item = selectRandom [["lsd", "Land_WaterPurificationTablets_F"],["marijuana", "Land_VitaminBottle_F"],["cocaine","Land_PowderedMilk_F"],["heroin", "Land_PainKillers_F"]];
+		[_item, _lastPos] call _drop_item;
 	};
-	
-	_cashamountrandomizer = [2000,3000,5000,6500];
-	_cashpilerandomizer = [3,5];
-		
-	_cash = "cmoney";
-	_cashamount = _cashamountrandomizer call BIS_fnc_SelectRandom;
-	_cashpile = _cashpilerandomizer call BIS_fnc_SelectRandom;
-	
+
+	_cashamount = selectRandom [2000,3000,5000,6500];
+	_cashpile = selectRandom [3,5];
+
 	for "_i" from 1 to _cashpile do
 	{
-		_cash1 = createVehicle ["Land_Money_F",[(_lastPos select 0), (_lastPos select 1) - 5,0],[], 0, "NONE"];
-		_cash1 setPos ([_lastPos, [[2 + random 3,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
-		_cash1 setDir random 360;
-		_cash1 setVariable [_cash, _cashamount, true];
-		_cash1 setVariable ["owner", "world", true];
+		_cash = createVehicle ["Land_Money_F",[(_lastPos select 0), (_lastPos select 1) - 5,0],[], 0, "NONE"];
+		_cash setPos ([_lastPos, [[2 + random 3,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_cash setDir random 360;
+		_cash setVariable ["cmoney", _cashamount, true];
+		_cash setVariable ["owner", "world", true];
 	};
 
 	_successHintMessage = "You have stopped the drug runners. The drugs and money are yours to take!";

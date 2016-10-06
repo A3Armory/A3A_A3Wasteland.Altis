@@ -18,6 +18,7 @@ switch (true) do
 	case (isNull _crate): {};
 	case (!alive player): {};
 	case (_crate getVariable ["A3W_storeSellBox", false]): {};
+	case (_crate getVariable ["R3F_LOG_disabled", true]): {};
 
 	case (player distance _crate > 3): {_error = ERR_TOO_FAR};
 	case (vehicle player != player): {_error = ERR_IN_VEHICLE};

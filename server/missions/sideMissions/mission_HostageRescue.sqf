@@ -68,7 +68,7 @@ _setupObjects =
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";
 
-	_missionHintText = format ["<br/>An arms dealer has been kidnapped by bandits!<br/> Free him and get some of his high value gear!", sideMissionColor];
+	_missionHintText = format ["<br/>An arms dealer has been kidnapped by bandits. Free him and get some of his high value gear.", sideMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -79,7 +79,7 @@ _failedExec =
 {
 	// Mission failed
 	{ deleteVehicle _x } forEach [_camonet, _obj1, _obj2, _obj3, _hostage, _chair, _box1, _box2];
-	_failedHintMessage = format ["<br/>The arms dealer is dead! Bandits now have the gear."];
+	_failedHintMessage = format ["<br/>The arms dealer is dead. Bandits now have the gear."];
 };
 
 _successExec =

@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "mainMissionDefines.sqf";
 
-private ["_nbUnits", "_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_currBox1", "_randomBox", "_randomBox2", "_box1", "_boxes2", "_currBox2", "_box2", "_cashrandomizera", "_cashamountrandomizera", "_cashpilerandomizera", "_casha", "_cashamounta", "_cashpilea", "_cashrandomizerb", "_cashamountrandomizerb", "_cashpilerandomizerb", "_cashb", "_cashamountb", "_cashpileb", "_cash1", "_cash2", "_drop_item", "_drugpilerandomizer", "_drugpile"];
+private ["_nbUnits", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_randomBox", "_randomBox2", "_box1", "_boxes2", "_box2", "_drop_item", "_drugpile"];
 
 _setupVars =
 {
@@ -90,22 +90,16 @@ _successExec =
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	{ _x setVariable ["A3W_missionVehicle", true] } forEach [_vehicle1, _vehicle2];
-	
-	_drugpilerandomizer = [4,8];
-	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
-	
-	for "_i" from 1 to _drugpile do 
+
+	_drugpile = selectRandom [3,5];
+
+	for "_i" from 1 to _drugpile do
 	{
-	  private["_item"];
-	  _item = [
-	          ["lsd", "Land_WaterPurificationTablets_F"],
-	          ["marijuana", "Land_VitaminBottle_F"],
-	          ["cocaine","Land_PowderedMilk_F"],
-	          ["heroin", "Land_PainKillers_F"]
-	  ] call BIS_fnc_selectRandom;
-	  [_item, _lastPos] call _drop_item;
+		private["_item"];
+		_item = selectRandom [["lsd", "Land_WaterPurificationTablets_F"],["marijuana", "Land_VitaminBottle_F"],["cocaine","Land_PowderedMilk_F"],["heroin", "Land_PainKillers_F"]];
+		[_item, _lastPos] call _drop_item;
 	};
-	
+
 	_successHintMessage = format ["The smugglers are dead. The weapons and drugs are yours!"];
 };
 
