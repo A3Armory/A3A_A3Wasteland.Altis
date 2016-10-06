@@ -9,7 +9,7 @@ if (!isServer) exitwith {};
 
 #include "moneyMissionDefines.sqf"
 
-private ["_nbUnits", "_box1", "_box2", "_townName", "_missionPos", "_cashamount", "_townInvasionDrugPos", "_buildingRadius", "_putOnRoof", "_fillEvenly", "_tent1", "_chair1", "_chair2", "_cFire1", "_randomBox", "_randomBox2"];
+private ["_nbUnits", "_box1", "_box2", "_townName", "_missionPos", "_cashamount", "_buildingRadius", "_putOnRoof", "_fillEvenly", "_tent1", "_chair1", "_chair2", "_randomBox", "_randomBox2"];
 
 _setupVars =
 {
@@ -22,7 +22,6 @@ _setupVars =
 	_buildingRadius = _locArray select 1;
 	_townName = _locArray select 2;
 	_cashamount = round(random 25000);
-	_townInvasionDrugPos = getPos _cFire1;
 
 	//randomize amount of units
 	_nbUnits = _nbUnits + round(random (_nbUnits*0.5));
@@ -56,7 +55,6 @@ _setupObjects =
 	_chair1 setDir random 90;
 	_chair2 = createVehicle ["Land_CampingChair_V2_F", _missionPos, [], 2, "None"];
 	_chair2 setDir random 180;
-	_cFire1	= createVehicle ["Campfire_burning_F", _missionPos, [], 2, "None"];
 
 	{ _x setVariable ["R3F_LOG_disabled", true, true] } forEach [_box1, _box2];
 
@@ -95,7 +93,7 @@ _drop_item = {
 _failedExec =
 {
 	// Mission failed
-	{ deleteVehicle _x } forEach [_box1, _box2, _tent1, _chair1, _chair2, _cFire1];
+	{ deleteVehicle _x } forEach [_box1, _box2, _tent1, _chair1, _chair2];
 };
 
 _successExec =
@@ -107,11 +105,11 @@ _successExec =
 	{
 		private["_item"];
 		_item = selectRandom [["lsd", "Land_WaterPurificationTablets_F"],["marijuana", "Land_VitaminBottle_F"],["cocaine","Land_PowderedMilk_F"],["heroin", "Land_PainKillers_F"],["water","Land_BottlePlastic_V2_F"],["cannedfood", "Land_BakedBeans_F"]];
-		[_item, _townInvasionDrugPos] call _drop_item;
+		[_item, _lastPos] call _drop_item;
 	};
 
 	_successHintMessage = format ["Nice work!<br/><br/><t color='%1'>%2</t><br/>is a safe place again.<br/>Their belongings and loot are now yours to take.", moneyMissionColor, _townName];
-	{ deleteVehicle _x } forEach [_tent1, _chair1, _chair2, _cFire1];
+	{ deleteVehicle _x } forEach [_tent1, _chair1, _chair2];
 };
 
 _this call moneyMissionProcessor;

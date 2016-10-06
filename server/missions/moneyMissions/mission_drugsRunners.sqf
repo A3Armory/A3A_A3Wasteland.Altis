@@ -140,7 +140,7 @@ _successExec =
 		[_item, _lastPos] call _drop_item;
 	};
 
-	_cashamount = selectRandom [2000,3000,5000,6500];
+	_cashamount = round(random 10000);
 	_cashpile = selectRandom [3,5];
 
 	for "_i" from 1 to _cashpile do
