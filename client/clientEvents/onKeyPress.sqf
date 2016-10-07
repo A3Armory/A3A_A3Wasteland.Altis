@@ -54,6 +54,34 @@ switch (true) do
 			["You've taken out your earplugs.", 5] call mf_notify_client;
 		};
 	};
+
+	// Emergency Eject - Del Key
+	case (_key in A3W_customKeys_eject):
+	{
+		_veh = vehicle player;
+
+		if (alive player && _veh != player) then
+		{
+			if (_veh isKindOf 'Air' && !(_veh isKindOf 'ParachuteBase')) then
+			{
+				[-9, false, true, ""] execVM "client\functions\fn_emergencyEject.sqf";
+			};
+		};
+	};
+
+	// Holster /Unholster Weapon - H Key
+	// A3 v1.58 bug, holstering handgun while crouched causes infinite anim loop
+	case (_key in A3W_customKeys_holster):
+	{
+		if (currentweapon player != "" && (stance player != 'CROUCH' || currentWeapon player != handgunWeapon player)) then
+		{
+			player action ["SwitchWeapon", player, player, 100];
+		}
+		else
+		{
+			player action ["SwitchWeapon", player, player, 0];
+		};
+	};
 };
 
 // ********** Action keys **********
@@ -67,7 +95,7 @@ if (!_handled && _key in actionKeys "GetOver") then
 
 	if (_veh == player) exitWith
 	{
-		// allow opening parachute only above 2.5m
+		// allow opening parachute only above 10m
 		if ((getPos player) select 2 > 10) then
 		{
 			true call A3W_fnc_openParachute;
