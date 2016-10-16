@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 
-#define CLEANUP_RADIUS 50
+#define CLEANUP_RADIUS 25
 
 private ["_locArray", "_locName", "_locPos"];
 
