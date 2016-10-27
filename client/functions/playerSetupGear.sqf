@@ -24,15 +24,22 @@ sleep 0.1;
 // Remove GPS
 //_player unlinkItem "ItemGPS";
 
-// Remove radio
+// Remove Radio
 //_player unlinkItem "ItemRadio";
 
 // Remove NVG
 if (hmd _player != "") then { _player unlinkItem hmd _player };
 
+// Remove FirstAidKit and Medkit *Possible fix for saved players getting FirstAidKit and Medkit at spawn until full
+_player removeItem "FirstAidKit";
+_player removeItem "Medikit";
+
+sleep 0.1;
+
 // Add NVG
 _player linkItem "NVGoggles";
 
+// Add Backpack
 _player addBackpack "B_AssaultPack_rgr";
 
 switch (true) do
@@ -46,7 +53,6 @@ switch (true) do
 		_player addWeapon "hgun_Pistol_heavy_01_F";
 		_player addMagazine "30Rnd_9x21_Mag";
 		_player addItem "Medikit";
-		_player addItem "FirstAidKit";
 		_player addItem "FirstAidKit";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
