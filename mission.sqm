@@ -8,11 +8,11 @@ class EditorData
 	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=488;
+		nextID=497;
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=7;
 	};
 	class Camera
 	{
@@ -112,7 +112,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=312;
+		items=321;
 		class Item0
 		{
 			dataType="Group";
@@ -4458,7 +4458,7 @@ class Mission
 			type="Empty";
 			colorName="ColorKhaki";
 			id=296;
-			atlOffset=7.3523617;
+			atlOffset=0.0032997131;
 		};
 		class Item137
 		{
@@ -6543,7 +6543,7 @@ class Mission
 					name="Parking6_spawn";
 					type="Empty";
 					colorName="ColorBlack";
-					angle=215.59117;
+					angle=215.59116;
 					id=481;
 				};
 				class Item12
@@ -6604,6 +6604,105 @@ class Mission
 			colorName="ColorBlack";
 			id=487;
 			atlOffset=-10.693153;
+		};
+		class Item312
+		{
+			dataType="Marker";
+			position[]={14746.5,1.8186994e+011,16720};
+			name="Occupation_1";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=488;
+			atlOffset=1.8186994e+011;
+		};
+		class Item313
+		{
+			dataType="Marker";
+			position[]={14255,0,16260};
+			name="Occupation_2";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=489;
+			atlOffset=-19.740002;
+		};
+		class Item314
+		{
+			dataType="Marker";
+			position[]={12374.5,0,15585};
+			name="Occupation_3";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=490;
+			atlOffset=-24.776632;
+		};
+		class Item315
+		{
+			dataType="Marker";
+			position[]={20940.5,0,7342};
+			name="Occupation_4";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=491;
+			atlOffset=-25.363333;
+		};
+		class Item316
+		{
+			dataType="Marker";
+			position[]={26838.5,0,24673};
+			name="Occupation_5";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=492;
+			atlOffset=-21.626669;
+		};
+		class Item317
+		{
+			dataType="Marker";
+			position[]={9319.5,0,15765.5};
+			name="Occupation_6";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=493;
+			atlOffset=-130.27129;
+		};
+		class Item318
+		{
+			dataType="Marker";
+			position[]={16569.5,0,12777.5};
+			name="Occupation_7";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=494;
+			atlOffset=-11;
+		};
+		class Item319
+		{
+			dataType="Marker";
+			position[]={12437,0,15910.5};
+			name="Occupation_8";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=495;
+			atlOffset=-20.537334;
+		};
+		class Item320
+		{
+			dataType="Marker";
+			position[]={18068.5,0,15283.5};
+			name="Occupation_9";
+			type="Empty";
+			colorName="ColorYellow";
+			angle=17.792999;
+			id=496;
+			atlOffset=-28.585972;
 		};
 	};
 };

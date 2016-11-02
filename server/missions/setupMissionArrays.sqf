@@ -30,7 +30,6 @@ SideMissions =
 	["mission_Outpost", 1],
 	["mission_Truck", 0.5],
 	["mission_GeoCache", 0.1],
-	["mission_Sniper", 0.5],
 	["mission_HostageRescue", 1]
 ];
 
@@ -41,6 +40,12 @@ MoneyMissions =
 	["mission_drugsRunners", 1],
 	["mission_Roadblock", 0.5],
 	["mission_TownInvasion", 1]
+];
+
+OccupationMissions =
+[
+	["mission_Occupation", 1],
+	["mission_Sniper", 1]
 ];
 
 missionType_water =
@@ -56,6 +61,7 @@ ForestMissionMarkers = (allMapMarkers select {["ForestMission_", _x] call fn_sta
 SunkenMissionMarkers = (allMapMarkers select {["SunkenMission_", _x] call fn_startsWith}) apply {[_x, false]};
 RoadblockMissionMarkers = (allMapMarkers select {["Roadblock_", _x] call fn_startsWith}) apply {[_x, false]};
 SniperMissionMarkers = (allMapMarkers select {["Sniper_", _x] call fn_startsWith}) apply {[_x, false]};
+OccupationMissionMarkers = (allMapMarkers select {["Occupation_", _x] call fn_startsWith}) apply {[_x, false]};
 
 /*if !(ForestMissionMarkers isEqualTo []) then
 {
@@ -76,3 +82,4 @@ MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTrea
 { _x set [2, false] } forEach MainMissions;
 { _x set [2, false] } forEach SideMissions;
 { _x set [2, false] } forEach MoneyMissions;
+{ _x set [2, false] } forEach OccupationMissions;
