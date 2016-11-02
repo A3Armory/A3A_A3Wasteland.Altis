@@ -45,7 +45,7 @@ MoneyMissions =
 OccupationMissions =
 [
 	["mission_Occupation", 1],
-	["mission_Sniper", 1]
+	["mission_Sniper", 0.5]
 ];
 
 missionType_water =
