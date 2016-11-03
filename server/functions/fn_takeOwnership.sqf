@@ -17,6 +17,8 @@ if (!isServer) exitWith
 	_this remoteExecCall ["A3W_fnc_takeOwnership", 2];
 };
 
+_veh setVariable ["A3W_purchasedStoreObject", true];
+_veh setVariable ["A3W_purchasedVehicle", true, true];
 _veh setVariable ["ownerUID", getPlayerUID _player, true];
 _veh setVariable ["ownerName", name _player, true];
 [_veh, 1] call A3W_fnc_setLockState; // Unlock
