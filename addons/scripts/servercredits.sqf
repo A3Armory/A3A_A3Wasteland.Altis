@@ -10,7 +10,7 @@
  
 //	========== SCRIPT CONFIG ============
 	
-_onScreenTime = 10; 		//how long one role should stay on screen. Use value from 0 to 10 where 0 is almost instant transition to next role 
+_onScreenTime = 10; //how long one role should stay on screen. Use value from 0 to 10 where 0 is almost instant transition to next role 
 //NOTE: Above value is not in seconds!
  
 //	==== HOW TO CUSTOMIZE THE CREDITS ===
@@ -25,12 +25,12 @@ _onScreenTime = 10; 		//how long one role should stay on screen. Use value from 
 //	The numbers and letters between the 2 '' is the HTML color code for a certain yellow.
 //	If you want to change the color of the text, search on google for HTML color codes and pick the one your like.
 //	Then, replace the existing color code for the code you would like to use instead. Don't forget the # in front of it.
-//	HTML Color Codes Examples:	
+//	HTML Color Codes Examples:
 //	#FFFFFF (white)
-//	#000000 (black)	No idea why you would want black, but whatever
+//	#000000 (black) No idea why you would want black, but whatever
 //	#C80000 (red)
 //	#009FCF (light-blue)
-//	#31C300 (Razer Green)			
+//	#31C300 (Razer Green)
 //	#FF8501 (orange)
 //	===========================================
  
@@ -41,7 +41,7 @@ sleep 60; //Wait in seconds before the credits start after player IS ingame
  
 _role1 = "Welcome to";
 _role1names = ["A3Armory - A3Wasteland Altis"];
-_role2 = "Server restarts every @";
+_role2 = "Server restarts @";
 _role2names = ["5, 10, 15, 20, 24 EST"];
 _role3 = "Player stats, and support @";
 _role3names = ["A3Armory.com"];
