@@ -13,7 +13,7 @@ private ["_nbUnits", "_vehicleClass", "_vehicle"];
 
 _setupVars =
 {
-	_missionType = "Supply Truck";
+	_missionType = "Resupply Truck";
 	_locationsArray = MissionSpawnMarkers;
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
@@ -24,18 +24,9 @@ _setupObjects =
 
 	_vehicleClass =
 	[
-		"B_Truck_01_covered_F",
-		"B_Truck_01_fuel_F",
-		"B_Truck_01_medical_F",
-		"B_Truck_01_Repair_F",
-		"O_Truck_03_covered_F",
-		"O_Truck_03_fuel_F",
-		"O_Truck_03_medical_F",
-		"O_Truck_03_repair_F",
-		"I_Truck_02_covered_F",
-		"I_Truck_02_fuel_F",
-		"I_Truck_02_medical_F",
-		"I_Truck_02_box_F"
+		"I_Truck_02_ammo_F",
+		"O_Truck_03_ammo_F",
+		"B_Truck_01_ammo_F"
 	] call BIS_fnc_selectRandom;
 
 	// Class, Position, Fuel, Ammo, Damage, Special
@@ -66,7 +57,7 @@ _successExec =
 	// Mission completed
 	[_vehicle, 1] call A3W_fnc_setLockState; // Unlock
 
-	_successHintMessage = "The truck has been captured. Well done.";
+	_successHintMessage = "The resupply truck has been captured. Well done.";
 };
 
 _this call sideMissionProcessor;
