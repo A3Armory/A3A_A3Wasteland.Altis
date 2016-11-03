@@ -14,7 +14,7 @@
 
 disableSerialization;
 
-private ["_dialog","_playerListBox","_spectateButton","_switch","_index","_modSelect","_playerData","_target","_check","_spectating","_camadm","_rnum","_warnText","_targetUID","_playerName"];
+private ["_dialog","_playerListBox","_spectateButton","_switch","_index","_modSelect","_playerData","_target","_check","_spectating","_camadm","_rnum","_warnText","_targetUID","_playerName","_halojump"];
 _uid = getPlayerUID player;
 if (_uid call isAdmin) then
 {
@@ -32,7 +32,7 @@ if (_uid call isAdmin) then
 		{
 			_target = _x;
 		};
-	} forEach allPlayers;
+	} forEach allPlayers - entities "HeadlessClient_F";
 
 	if (isNil "_target" || {isNull _target}) exitWith{};
 
@@ -105,27 +105,21 @@ if (_uid call isAdmin) then
 			}forEach playableUnits;
 			["PlayerMgmt_RemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
-		case 6: //Remove All Weapons
+		case 6: //Force HALO Jump
 		{
-			/*_targetUID = getPlayerUID _target;
-			{
-				if(getPlayerUID _x == _targetUID) exitWith
-				{
-					removeAllWeapons _x;
-				};
-			}forEach playableUnits;*/
-			["This option has been disabled due to having never worked at all in the first place."] spawn BIS_fnc_guiMessage;
+			_halojump = [(getPosASL _target select 0), (getPosASL _target select 1), (getPosASL _target select 2) + 1200]; 
+			_target setposATL _halojump;
+			["PlayerMgmt_ForceHALOJump", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
-		case 7: //Check Player Gear
+		case 7: //Move To Me
 		{
-			/*_targetUID = getPlayerUID _target;
-			{
-				if(getPlayerUID _x == _targetUID) exitWith
-				{
-					createGearDialog [_x, "RscDisplayInventory"];
-				};
-			}forEach playableUnits;*/
-			["This option has been disabled due to having never worked at all in the first place."] spawn BIS_fnc_guiMessage;
+			vehicle _target setPos (position player);
+			["PlayerMgmt_MoveToMe", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+		};
+		case 8: //Move To Them
+		{
+			vehicle player setPos (position _target);
+			["PlayerMgmt_MoveToThem", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
 	};
 };

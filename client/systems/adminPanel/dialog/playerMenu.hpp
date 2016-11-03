@@ -238,27 +238,38 @@ class PlayersMenu
 			h = 0.04 * SZ_SCALE_ABS;
 		};
 
-		/*class RemoveAllWeaponsButton: w_RscButton
+		class ForceHALOJumpButton: w_RscButton
 		{
 			idc = -1;
-			text = "Remove Weapons";
+			text = "Force HALO Jump";
 			onButtonClick = "[6] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.3705 * (4/3) * SZ_SCALE_ABS + safezoneX;
 			y = 0.748 * SZ_SCALE_ABS + safezoneY;
 			w = 0.105 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
-		};*/
+		};
 
-		/*class CheckPlayerGearButton: w_RscButton
+		class MoveToMeButton: w_RscButton
 		{
 			idc = -1;
-			text = "Gear";
+			text = "Move To Me";
 			onButtonClick = "[7] execVM 'client\systems\adminPanel\playerSelect.sqf'";
 			x = 0.482 * (4/3) * SZ_SCALE_ABS + safezoneX;
 			y = 0.748 * SZ_SCALE_ABS + safezoneY;
-			w = 0.05 * (4/3) * SZ_SCALE_ABS;
+			w = 0.105 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
-		};*/
+		};
+
+		class MoveToThemButton: w_RscButton
+		{
+			idc = -1;
+			text = "Move To Them";
+			onButtonClick = "[8] execVM 'client\systems\adminPanel\playerSelect.sqf'";
+			x = 0.482 * (4/3) * SZ_SCALE_ABS + safezoneX;
+			y = 0.70 * SZ_SCALE_ABS + safezoneY;
+			w = 0.105 * (4/3) * SZ_SCALE_ABS;
+			h = 0.04 * SZ_SCALE_ABS;
+		};
 
 		class WarnButton: w_RscButton
 		{
@@ -270,17 +281,6 @@ class PlayersMenu
 			w = 0.05 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
 		};
-
-		/*class DonationButton: w_RscButton
-		{
-			idc = -1;
-			text = "Donation";
-			onButtonClick = "[8] execVM 'client\systems\adminPanel\playerSelect.sqf'";
-			x = 0.655 * (4/3) * SZ_SCALE_ABS + safezoneX;
-			y = 0.70  * safezoneH + safezoneY;
-			w = 0.05 * (4/3) * SZ_SCALE_ABS;
-			h = 0.04 * SZ_SCALE_ABS;
-		};*/
 	};
 };
 
