@@ -27,7 +27,7 @@ A3W_maxMoney = 1000000;            // Maximum amount of money that will save on 
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 60;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
-A3W_headshotNoRevive = 1;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
+//A3W_headshotNoRevive = 0;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
 A3W_customDeathMessages = 1;       // If difficulty option deathMessages=0, display custom messages related to causes of death, as defined in fn_deathMessage.sqf (0 = no, 1 = yes)
 A3W_healthTime = 7*60;             // Seconds till death once starving or dehydrated
 A3W_hungerTime = 170*60;           // Seconds till starving

@@ -10,7 +10,7 @@ params ["_player", ["_corpse",objNull]];
 
 if (_player == player) exitWith {};
 
-if (["A3W_headshotNoRevive"] call isConfigOn) then
+/*if (["A3W_headshotNoRevive"] call isConfigOn) then
 {
 	if (isNil "FAR_fnc_headshotHitPartEH") exitWith {};
 
@@ -24,4 +24,4 @@ if (["A3W_headshotNoRevive"] call isConfigOn) then
 	{
 		_player setVariable ["FAR_headshotHitPartEH", _player addEventHandler ["HitPart", FAR_fnc_headshotHitPartEH]];
 	};
-};
+};*/

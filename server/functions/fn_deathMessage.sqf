@@ -69,11 +69,11 @@ else
 	// FOR CONSISTENT USER EXPERIENCE, MESSAGES SHOULD BE LOWERCASE, INVARIABLE, AND EXPLICIT (NO PUNS OR EUPHEMISMS), JUST LIKE DEFAULT ARMA MESSAGES
 	private _message = switch (_cause) do
 	{
-		case "headshot": // enemy player headshot with A3W_headshotNoRevive = 1;
+		/*case "headshot": // enemy player headshot with A3W_headshotNoRevive = 1;
 		{
 			if (_killer != "") then { format ["%1 headshot %2", _killer, _victim] }
 			else                    { format ["%1 was headshot", _victim] } // not supposed to happen, but just in case
-		};
+		};*/
 
 		case "slay": // finished off by enemy while bleeding
 		{

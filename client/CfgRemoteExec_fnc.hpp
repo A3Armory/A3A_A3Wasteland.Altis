@@ -36,7 +36,7 @@ class A3W_fnc_takeOwnership { allowedTargets = 2; };
 class A3W_fnc_titleTextMessage {};
 class A3W_fnc_towingHelper {};
 class A3W_fnc_updateSpawnTimestamp { allowedTargets = 2; };
-class FAR_fnc_headshotHitPartEH {};
+//class FAR_fnc_headshotHitPartEH {};
 class FAR_fnc_public_EH {};
 class mf_remote_refuel {};
 class mf_remote_repair {};
