@@ -50,7 +50,7 @@ if (_success) then {
 	// Spawn 2m in front of the player
 	_beacon = createVehicle [MF_ITEMS_SPAWN_BEACON_DEPLOYED_TYPE, [player, [0,2,0]] call relativePos, [], 0, "CAN_COLLIDE"];
 	_beacon setDir (getDir player + 270);
-	_beacon setVariable ["allowDamage", true, true];
+	//_beacon setVariable ["allowDamage", true, true];
 	_beacon setVariable ["a3w_spawnBeacon", true, true];
 	_beacon setVariable ["R3F_LOG_disabled", true];
 	_beacon setVariable ["side", playerSide, true];
