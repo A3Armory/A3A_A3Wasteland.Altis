@@ -242,8 +242,17 @@ R3F_LOG_CFG_objets_transportables =
 
 R3F_LOG_CFG_objets_deplacables =
 [
+	"B_supplyCrate_F",
+	"Box_NATO_Wps_F",
+	"Box_NATO_WpsSpecial_F",
+	"Box_East_Wps_F",
+	"Box_East_WpsSpecial_F",
+	"Box_IND_Wps_F",
+	"Box_IND_WpsSpecial_F",
+	"Box_FIA_Support_F",
+	"Box_FIA_Wps_F",
+	"Box_FIA_Ammo_F",
 	"StaticWeapon",
-	"ReammoBox_F",
 	"Kart_01_Base_F",
 	"Quadbike_01_base_F",
 	"Rubber_duck_base_F",

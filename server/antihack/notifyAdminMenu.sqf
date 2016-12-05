@@ -24,7 +24,7 @@ switch (toLower _action) do
 			_message = format ["[NOTICE] %1 used the admin menu to obtain $%2", name player, _value];
 		};
 	};
-	case "godmode":
+	case "godMode":
 	{
 		if (_value == "On") then
 		{
@@ -39,7 +39,7 @@ switch (toLower _action) do
 		{ _value set [_forEachIndex, round _x] } forEach _value;
 		_message = format ["[NOTICE] %1 used the admin menu to teleport.", name player];
 	};
-  	case "teleport2":
+  	case "teleportNoAnnounce":
 	{
 		_value resize 2;
 		{ _value set [_forEachIndex, round _x] } forEach _value;

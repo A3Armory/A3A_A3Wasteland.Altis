@@ -20,7 +20,10 @@ if ([_uid, 1] call isAdmin) then {
 
 	_panelOptions = ["Player Management",
 					"Show Server FPS",
-					"Map Markers Log"
+					"Map Markers Log",
+					"Delete Cursor Target",
+					"Repair Cursor Target",
+					"Unlock Base Objects"
 	];
 
 	{

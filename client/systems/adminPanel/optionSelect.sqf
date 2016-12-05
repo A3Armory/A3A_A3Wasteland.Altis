@@ -10,7 +10,7 @@
 #define adminMenu_option 50001
 disableSerialization;
 
-private ["_panelType","_displayAdmin","_displayDebug","_adminSelect","_debugSelect","_money"];
+private ["_panelType","_displayAdmin","_displayDebug","_adminSelect","_debugSelect","_money","_vehType"];
 _uid = getPlayerUID player;
 if (_uid call isAdmin) then
 {
@@ -41,39 +41,65 @@ if (_uid call isAdmin) then
 					closeDialog 0;
 					createDialog "MarkerLog";
 				};
-				case 3: //Debug Menu
+				case 3: //Delete cursor target
+				{
+					closeDialog 0;
+					_vehType = typeOf cursorObject;
+					_x = cursorTarget;
+					deleteVehicle _x;
+					systemChat format["Deleted %1", _vehType];
+					titleText [format["Object Removed!"],"PLAIN DOWN"]; titleFadeOut 4;
+					if (!isNil "notifyAdminMenu") then { ["deleteCursorTarget", _vehType] call notifyAdminMenu };
+				};
+				case 4: //Repair cursor target
+				{
+					closeDialog 0;
+					_vehType = typeOf cursorObject;
+					_x = cursorTarget;
+					_x setfuel 1;
+					_x setdamage 0;
+					systemChat format["Repaired %1", _vehType];
+					titleText [format["Object Repaired!"],"PLAIN DOWN"]; titleFadeOut 4;
+					if (!isNil "notifyAdminMenu") then { ["repairCursorTarget", _vehType] call notifyAdminMenu };
+				};
+				case 5: //Unlock Objects
+				{
+					closeDialog 0;
+					execVM "client\systems\adminPanel\unLock.sqf";
+				};
+				case 6: //Debug Menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadDebugMenu.sqf";
 				};
-				case 4: //Full Vehicle Management
+				case 7: //Full Vehicle Management
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\vehicleManagement.sqf";
 				};
-				case 5: //Access Vehicle Store
+				case 8: //Access Vehicle Store
 				{
 					closeDialog 0;
 					[] call loadVehicleStore;
 				};
-				case 6: //Object search menu
+				case 9: //Object search menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadObjectSearch.sqf";
 				};
-				case 7: //Teleport
+				case 10: //Teleport
 				{
 					closeDialog 0;
 					["A3W_teleport", "onMapSingleClick",
 					{
 						vehicle player setPos _pos;
-						if (!isNil "notifyAdminMenu") then { ["teleport2", _pos] call notifyAdminMenu };
+						if (!isNil "notifyAdminMenu") then { ["teleportNoAnnounce", _pos] call notifyAdminMenu };
 						["A3W_teleport", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 						true
 					}] call BIS_fnc_addStackedEventHandler;
 					hint "Click on map to teleport";
 				};
-				case 8: //// toggle God mode
+				case 11: //// toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleGodMode2.sqf";
 				};
