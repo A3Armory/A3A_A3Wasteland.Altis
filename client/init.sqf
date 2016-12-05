@@ -85,10 +85,10 @@ if (["A3W_playerSaving"] call isConfigOn) then
 	{
 		scriptName "savePlayerLoop";
 
-		// Save player every 60s
+		// Save player every 5m
 		while {true} do
 		{
-			sleep 60;
+			sleep 300;
 			call fn_savePlayerData;
 		};
 	});
