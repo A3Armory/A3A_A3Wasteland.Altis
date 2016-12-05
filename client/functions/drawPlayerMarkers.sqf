@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
 
 disableSerialization;
 
-if (isNil "showPlayerNames") then { showPlayerNames = false };
+if (isNil "showPlayerNames") then { showPlayerNames = true };
 
 A3W_mapDraw_arrIcons = [];
 A3W_mapDraw_arrLines = [];
