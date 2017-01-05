@@ -28,10 +28,10 @@ if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") < 1) then
 	_vehicle disableTIEquipment true;
 };
 
-if (_vehicle isKindOf "UAV_01_base_F") then
+/*if (_vehicle isKindOf "UAV_01_base_F") then
 {
 	_vehicle disableTIEquipment true; // disable thermal
-};
+};*/
 
 _vehicle setUnloadInCombat [false, false]; // Try to prevent AI from getting out of vehicles while in combat (not sure if this actually works...)
 
