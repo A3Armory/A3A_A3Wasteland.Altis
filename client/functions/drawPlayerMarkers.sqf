@@ -10,6 +10,7 @@ if (!hasInterface) exitWith {};
 #define IS_FRIENDLY_PLAYER(UNIT) (isPlayer UNIT && IS_FRIENDLY_VEHICLE(UNIT))
 #define DEFAULT_ICON_POS(UNIT) (UNIT modelToWorld (UNIT selectionPosition "spine3"))
 #define MISSION_AI_FAR_DISTANCE 75
+#define IS_IN_GROUP(UNIT) (isPlayer UNIT && group UNIT == group player)
 
 disableSerialization;
 
@@ -98,7 +99,7 @@ A3W_mapDraw_thread = [] spawn
 				_uav = _x;
 				_uavOwner = (uavControl _uav) select 0;
 
-				if (IS_FRIENDLY_PLAYER(_uavOwner) || {isNull _uavOwner && IS_FRIENDLY_VEHICLE(_uav)}) then
+				if (IS_IN_GROUP(_uavOwner)) then
 				{
 					_icon = getText (configFile >> "CfgVehicles" >> typeOf _uav >> "icon");
 					if (_icon == "") then { _icon = "iconMan" };
@@ -119,7 +120,7 @@ A3W_mapDraw_thread = [] spawn
 			{
 				_newUnit = _x getVariable ["newRespawnedUnit", objNull];
 
-				if (IS_FRIENDLY_PLAYER(_x) || (_newUnit getVariable ["playerSpawning", false] && IS_FRIENDLY_PLAYER(_newUnit))) then
+				if (IS_IN_GROUP(_x) || (_newUnit getVariable ["playerSpawning", false] && IS_IN_GROUP(_newUnit))) then
 				{
 					//_veh = vehicle _x;
 					//_pos = if (_mapIconsEnabled) then { DEFAULT_ICON_POS(_veh) } else { getPosASLVisual _x };
@@ -129,7 +130,7 @@ A3W_mapDraw_thread = [] spawn
 			} forEach _allDeadMen;
 
 			{
-				if (IS_FRIENDLY_PLAYER(_x) && !(_x getVariable ["playerSpawning", false])) then
+				if (IS_IN_GROUP(_x) && !(_x getVariable ["playerSpawning", false])) then
 				{
 					_veh = vehicle _x;
 
@@ -221,3 +222,10 @@ _mapCtrl = _display displayCtrl 101;
 
 if (!isNil "A3W_mapDraw_gpsMapEH") then { _mapCtrl ctrlRemoveEventHandler ["Draw", A3W_mapDraw_gpsMapEH] };
 A3W_mapDraw_gpsMapEH = _mapCtrl ctrlAddEventHandler ["Draw", A3W_mapDraw_eventCode];
+ 
+// UAV
+waitUntil {_display = findDisplay 160; !isNull _display};
+_mapCtrl = _display displayCtrl 51;
+ 
+if (!isNil "A3W_mapDraw_uavMapEH") then { _mapCtrl ctrlRemoveEventHandler ["Draw", A3W_mapDraw_uavMapEH] };
+A3W_mapDraw_uavMapEH = _mapCtrl ctrlAddEventHandler ["Draw", A3W_mapDraw_eventCode];
