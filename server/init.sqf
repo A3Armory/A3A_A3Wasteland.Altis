@@ -33,6 +33,8 @@ if (isServer) then
 
 		_veh = objectParent _unit;
 
+		(format ["Player %1 went to lobby", _name]) remoteExecCall ["systemChat", 0];
+
 		// force unlock vehicle if not owned by player OR if somebody else is still inside
 		if (alive _veh && (_veh getVariable ["ownerUID","0"] != _uid || {{alive _x} count (crew _veh - [_unit]) > 0})) then
 		{
