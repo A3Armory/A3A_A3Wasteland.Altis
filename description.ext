@@ -89,6 +89,12 @@ class CfgDebriefing
 		subtitle = "You are being team balanced.";
 		description = "The side you are trying to join has too many players. Please choose another side.";
 	};
+	class ReservedSlots
+	{
+		title = "Reserved slot";
+		subtitle = "Please come back later";
+		description = "All available players slots are taken. The top 3 donors each month receive access.";
+	};
 };
 
 class RscTitles

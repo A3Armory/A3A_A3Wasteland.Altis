@@ -26,7 +26,14 @@ _findUIDinArray =
 		{
 			switch (_adminType) do
 			{
-				_adminList = call serverDonors;
+				case 1:
+				{
+					_adminList = call serverDonors;
+				};
+				case 2:
+				{
+					_adminList = call topServerDonors;
+				};
 			};
 		};
 	};

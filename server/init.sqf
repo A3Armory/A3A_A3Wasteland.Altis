@@ -178,7 +178,9 @@ if (isServer) then
 		"A3W_thirstTime",
 		"A3W_fastMovementLog",
 		"A3W_fastMovementLogDist",
-		"A3W_fastMovementLoopTime"
+		"A3W_fastMovementLoopTime",
+		"A3W_reservedSlots",
+		"A3W_maxPlayers"
 	];
 
 	addMissionEventHandler ["PlayerConnected", fn_onPlayerConnected];

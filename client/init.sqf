@@ -217,3 +217,38 @@ if (["A3W_fastMovementLog"] call isConfigOn) then
 		};
 	};
 };
+
+// Reserved slots
+if (hasInterface && {["A3W_reservedSlots"] call isConfigOn}) then
+{
+	private ["_maxPlayers", "_noReserve", "_playerCount", "_reservedSlots", "_uid"];
+
+	_maxPlayers = ["A3W_maxPlayers", 50] call getPublicVar;
+	_reservedSlots = ["A3W_reservedSlots", 1] call getPublicVar;
+
+	waitUntil {!isNull player};
+	waitUntil {(vehicle player) == player};
+	waitUntil {(getPlayerUID player) != ""};
+
+	_playerCount = count playableUnits;
+	_noReserve = _maxPlayers - _reservedSlots;
+	_uid = getPlayerUID player;
+
+	if (_uid call isAdmin || {[_uid, topServerDonors] call isDonor}) then
+	{
+		_noReserve = _noReserve + 1;
+		if (_noReserve > _maxPlayers) then
+		{
+			_noReserve = _maxPlayers;
+		};
+	};
+
+	if (_playerCount > _noReserve && !(_uid call isAdmin || {[_uid, topServerDonors] call isDonor})) then
+	{
+		["ReservedSlots",false,1] call BIS_fnc_endMission;
+	}
+	else 
+	{
+		cutText ["You are using a reserved slot", "PLAIN DOWN", 1];
+	};
+};
