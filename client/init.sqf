@@ -183,3 +183,37 @@ inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 		_x setVariable ["groupOnly", true, true];
 	};
 } forEach pvar_spawn_beacons;
+
+// Fast movement log
+if (["A3W_fastMovementLog"] call isConfigOn) then
+{
+	0 spawn
+	{
+		private ["_distCheck", "_loopTime", "_newPos", "_oldPos", "_spawnPos"];
+		_distCheck = ["A3W_fastMovementLogDist", 1000] call getPublicVar;
+		_loopTime = ["A3W_fastMovementLoopTime", 1] call getPublicVar;
+		_oldPos = nil;
+		_spawnPos = getMarkerPos "respawn_guerrila";
+
+		while {true} do
+		{
+			_newPos = getPosATL player;
+
+			if (!isNil "_oldPos" && {_newPos distance2D _oldPos > _distCheck}) then
+			{
+				if (_spawnPos distance2D _newPos > 50 && !(player getVariable ["playerSpawning", true])) then
+				{
+					publicVariableServer format["FML|Name:%1|Vehicle:%2", name player, typeof vehicle player];
+					publicVariableServer format["FML|Speed:%1|OldPos:%2", round speed vehicle player, _oldPos];
+					publicVariableServer format["FML|NewPos:%1", _newPos];
+				};
+			};
+
+			_oldPos = _newPos;
+
+			if (player getVariable ["playerSpawning", true]) then {_oldPos = nil};
+
+			uiSleep _loopTime;
+		};
+	};
+};

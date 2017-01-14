@@ -175,7 +175,10 @@ if (isServer) then
 		"A3W_maxMoney",
 		"A3W_healthTime",
 		"A3W_hungerTime",
-		"A3W_thirstTime"
+		"A3W_thirstTime",
+		"A3W_fastMovementLog",
+		"A3W_fastMovementLogDist",
+		"A3W_fastMovementLoopTime"
 	];
 
 	addMissionEventHandler ["PlayerConnected", fn_onPlayerConnected];

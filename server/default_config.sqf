@@ -42,6 +42,9 @@ A3W_maxSpawnBeacons = 2;            // Maxmimum number of spawn beacons (0 = dis
 // Antihack settings
 A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
 A3W_antiHackMinRecoil = 1.0;       // Mininum recoil coefficient enforced by the antihack (recommended values: default = 1.0, TMR Mod = 0.5, VTS Weapon Resting = 0.25) (minimum: 0.02)
+A3W_fastMovementLog = 1;           // Enable fast movement check (0 = no, 1 = yes)
+A3W_fastMovementLogDist = 1000;     // Number of meters in loop before logged
+A3W_fastMovementLoopTime = 1;      // Number of seconds before loop check
 
 // Store settings
 A3W_showGunStoreStatus = 1;        // Show enemy and friendly presence at gunstores on map (0 = no, 1 = yes)
