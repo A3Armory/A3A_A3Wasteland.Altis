@@ -127,6 +127,19 @@ if (FAR_EnableDeathMessages && (round difficultyOption "deathMessages" > 0 || ["
 			if (!isNull _killer && {(isPlayer _killer || FAR_Debugging) && _killer != _victim}) then
 			{
 				_msgArr append [toArray name _killer, [_killer, _victim] call A3W_fnc_isFriendly];
+				
+				_roadkill = 
+				(
+					!(vehicle _killer isEqualTo _killer) &&          //killer is in vehicle
+					{(driver vehicle _killer) isEqualTo _killer} &&  //killer was driver of vehicle
+					{(_victim distance _killer)<10}  &&   //killer is nearby (avoids bug with heli, ...)
+					(vehicle _victim != vehicle _killer)       //killed player and killer not in same vehicle
+				);
+
+				if (_roadkill) then
+				{
+				    _msgArr append [_roadkill];  //append Roadkill flag if roadkill = true
+				};
 			};
 
 			[_victim, _msgArr] spawn
