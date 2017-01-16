@@ -85,8 +85,8 @@ class CfgDebriefing
 	};
 	class TeamBalance
 	{
-		title = "You can't do that!";
-		subtitle = "You are being team balanced.";
+		title = "Team balance";
+		subtitle = "You are being team balanced";
 		description = "The side you are trying to join has too many players. Please choose another side.";
 	};
 	class ReservedSlots
