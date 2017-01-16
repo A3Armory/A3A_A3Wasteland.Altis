@@ -24,13 +24,11 @@ respawnDialogActive = false;
 groupManagmentActive = false;
 pvar_PlayerTeamKiller = [];
 doCancelAction = false;
+spawnBeaconDetectorInProgress = false;
 
 //Initialization Variables
 playerCompiledScripts = false;
 playerSetupComplete = false;
-
-//AJ Beacondetector
-BeaconScanInProgress = false;
 
 waitUntil {!isNull player && time > 0};
 
