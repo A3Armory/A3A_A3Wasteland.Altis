@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf"
 
-private ["_nbUnits", "_camonet", "_hostage", "_obj1", "_obj2", "_obj3", "_chair", "_randomBox", "_randomBox2", "_box1", "_box2"];
+private ["_baseToDelete", "_nbUnits", "_camonet", "_hostage", "_obj1", "_obj2", "_obj3", "_chair", "_randomBox", "_randomBox2", "_box1", "_box2"];
 
 _setupVars =
 {
@@ -22,7 +22,12 @@ _setupObjects =
 
 	//delete existing base parts and vehicles at location
 	_baseToDelete = nearestObjects [_missionPos, ["ALL"], 25] select {_x getVariable ["ownerUID", ""] == ""};
-	{ deleteVehicle _x } forEach _baseToDelete;
+	{
+		if (count crew _x == 0) then
+		{
+			deleteVehicle _x; 
+		};
+	} forEach _baseToDelete;
 
 	_camonet = createVehicle ["Land_Shed_06_F", [_missionPos select 0, _missionPos select 1], [], 0, "CAN COLLIDE"];
 	_camonet allowdamage false;

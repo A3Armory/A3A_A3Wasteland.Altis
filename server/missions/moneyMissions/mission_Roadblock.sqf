@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private [ "_box1", "_barGate", "_bunker1", "_bunker2", "_obj1", "_obj2", "_drop_item", "_drugpile", "_cashamount", "_cashpile", "_cash"];
+private ["_baseToDelete", "_box1", "_barGate", "_bunker1", "_bunker2", "_obj1", "_obj2", "_drop_item", "_drugpile", "_cashamount", "_cashpile", "_cash"];
 
 _setupVars =
 {
@@ -22,7 +22,12 @@ _setupObjects =
 
 	//delete existing base parts and vehicles at location
 	_baseToDelete = nearestObjects [_missionPos, ["ALL"], 25] select {_x getVariable ["ownerUID", ""] == ""};
-	{ deleteVehicle _x } forEach _baseToDelete;
+	{
+		if (count crew _x == 0) then
+		{
+			deleteVehicle _x; 
+		};
+	} forEach _baseToDelete;
 
 	_bargate = createVehicle ["Land_BarGate_F", _missionPos, [], 0, "NONE"];
 	_bargate setDir _markerDir;

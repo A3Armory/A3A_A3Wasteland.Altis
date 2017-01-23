@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_nbUnits", "_outpost", "_objects"];
+private ["_baseToDelete", "_nbUnits", "_outpost", "_objects"];
 
 _setupVars =
 {
@@ -21,6 +21,15 @@ _setupVars =
 _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
+
+	//delete existing base parts and vehicles at location
+	_baseToDelete = nearestObjects [_missionPos, ["ALL"], 25] select {_x getVariable ["ownerUID", ""] == ""};
+	{
+		if (count crew _x == 0) then
+		{
+			deleteVehicle _x; 
+		};
+	} forEach _baseToDelete;
 
 	_outpost = (call compile preprocessFileLineNumbers "server\missions\outposts\outpostsList.sqf") call BIS_fnc_selectRandom;
 	_objects = [_outpost, _missionPos, 0] call createOutpost;
