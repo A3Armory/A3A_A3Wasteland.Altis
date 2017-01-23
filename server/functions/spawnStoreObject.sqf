@@ -133,7 +133,9 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_object setVariable ["ownerUID", getPlayerUID _player, true];
 			_object setVariable ["ownerName", name _player, true];
 
-			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
+			private _isUAV = (round getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0);
+
+			if (_isUAV) then
 			{
 				createVehicleCrew _object;
 
