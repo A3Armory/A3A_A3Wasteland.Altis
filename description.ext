@@ -93,7 +93,7 @@ class CfgDebriefing
 	{
 		title = "Reserved slot";
 		subtitle = "Please come back later";
-		description = "All available players slots are taken. The top 3 donors each month receive access.";
+		description = "All available players slots are taken.";
 	};
 };
 
