@@ -161,21 +161,24 @@ switch (true) do
 			["mortar_82mm", [0]]
 		];
 	};
-	case (_class isKindOf "B_T_UAV_03_F"):
+	case (_class isKindOf "UAV_03_base_F"):
 	{
 		_mags =
 		[
-			["240Rnd_CMFlare_Chaff_Magazine", [-1]],
+			["120Rnd_CMFlare_Chaff_Magazine", [-1]],
+			["1000Rnd_65x39_Belt", [0]],
+			["24Rnd_missiles", [0]],
 			["2Rnd_LG_scalpel", [0]],
-			["2Rnd_LG_scalpel", [0]],
-			["12Rnd_missiles", [0]],
+			["2Rnd_AAA_missiles", [0]],
 			["Laserbatteries", [0]]
 		];
 		_weapons =
 		[
 			["CMFlareLauncher", [-1]],
-			["missiles_SCALPEL", [0]],
+			["LMG_M200", [0]],
 			["missiles_DAR", [0]],
+			["missiles_SCALPEL", [0]],
+			["missiles_ASRAAM", [0]],
 			["Laserdesignator_mounted", [0]]
 		];
 	};
