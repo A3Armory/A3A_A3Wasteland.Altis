@@ -110,7 +110,7 @@ switch (true) do
 	{
 		_vehicle animate ["HideServices", 0];
 	};
-	case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"] > 0):
+	/*case ({_class isKindOf _x} count ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"] > 0):
 	{
 		// Add flares to poor MH-9's
 		_vehicle addWeaponTurret ["CMFlareLauncher", [-1]];
@@ -126,7 +126,7 @@ switch (true) do
 		{
 			_vehicle addMagazineTurret ["300Rnd_20mm_shells", [-1]];
 		};
-	};
+	};*/
 };
 
 _weapons = getArray (configFile >> "CfgVehicles" >> _class >> "weapons");

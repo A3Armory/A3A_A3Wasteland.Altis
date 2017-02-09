@@ -50,7 +50,7 @@ switch (true) do
 			["1000Rnd_Gatling_30mm_Plane_CAS_01_F", [-1]],
 			["2Rnd_Missile_AA_04_F", [-1]],
 			["4Rnd_Bomb_04_F", [-1]],
-			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+			["120Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
@@ -69,7 +69,7 @@ switch (true) do
 			["20Rnd_Rocket_03_HE_F", [-1]],
 			["2Rnd_Missile_AA_03_F", [-1]],
 			["2Rnd_Bomb_03_F", [-1]],
-			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+			["120Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
@@ -104,12 +104,65 @@ switch (true) do
 		[
 			["2000Rnd_65x39_Belt_Tracer_Green_Splash", [-1]],
 			["12Rnd_missiles", [-1]],
-			["168Rnd_CMFlare_Chaff_Magazine", [-1]]
+			["2Rnd_AAA_missiles", [-1]],
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
 			["LMG_Minigun_heli", [-1]],
 			["missiles_DAR", [-1]],
+			["missiles_ASRAAM", [-1]],
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "O_Heli_Light_02_v2_F"):
+	{
+		_mags =
+		[
+			["2000Rnd_65x39_Belt_Tracer_Green_Splash", [-1]],
+			["12Rnd_missiles", [-1]],
+			["2Rnd_AAA_missiles", [-1]],
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["LMG_Minigun_heli", [-1]],
+			["missiles_DAR", [-1]],
+			["missiles_ASRAAM", [-1]],
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "B_Heli_Light_01_armed_F"):
+	{
+		_mags =
+		[
+			["5000Rnd_762x51_Belt", [-1]],
+			["24Rnd_missiles", [-1]],
+			["2Rnd_AAA_missiles", [-1]],
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["M134_minigun", [-1]],
+			["missiles_DAR", [-1]],
+			["missiles_ASRAAM", [-1]],
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "I_Heli_light_03_F"):
+	{
+		_mags =
+		[
+			["5000Rnd_762x51_Yellow_Belt", [-1]],
+			["24Rnd_missiles", [-1]],
+			["2Rnd_AAA_missiles", [-1]],
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["M134_minigun", [-1]],
+			["missiles_DAR", [-1]],
+			["missiles_ASRAAM", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
 	};
@@ -117,7 +170,7 @@ switch (true) do
 	{
 		_mags =
 		[
-			["240Rnd_CMFlare_Chaff_Magazine", [-1]],
+			["120Rnd_CMFlare_Chaff_Magazine", [-1]],
 			["1000Rnd_20mm_shells", [0]],
 			["12Rnd_PG_missiles", [0]],
 			["4Rnd_AAA_missiles", [0]]
@@ -134,7 +187,7 @@ switch (true) do
 	{
 		_mags =
 		[
-			["192Rnd_CMFlare_Chaff_Magazine", [-1]],
+			["120Rnd_CMFlare_Chaff_Magazine", [-1]],
 			["250Rnd_30mm_HE_shells", [0]],
 			["250Rnd_30mm_APDS_shells", [0]],
 			["6Rnd_LG_scalpel", [0]],
@@ -180,6 +233,61 @@ switch (true) do
 			["missiles_SCALPEL", [0]],
 			["missiles_ASRAAM", [0]],
 			["Laserdesignator_mounted", [0]]
+		];
+	};
+	case (_class isKindOf "O_Heli_Light_02_unarmed_F"):
+	{
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "I_Heli_light_03_unarmed_F"):
+	{
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "I_Heli_Transport_02_F"):
+	{
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "C_Heli_Light_01_civil_F"):
+	{
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]]
+		];
+	};
+	case (_class isKindOf "B_Heli_Light_01_F"):
+	{
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]]
 		];
 	};
 };
