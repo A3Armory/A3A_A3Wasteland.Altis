@@ -142,7 +142,7 @@ diag_log format ["Apoc's Airdrop Assistance - Object at %1", position _object]; 
 //Wait until the heli completes the drop waypoint, then move on to dropping the cargo and all of that jazz
 
 While {true} do {
-	sleep 0.1;
+	sleep 1;
 	if (currentWaypoint _grp >= 2) exitWith {}; //Completed Drop Waypoint
 };
 // Let's handle the money after this tricky spot - This way players won't be charged for non-delivered goods!
@@ -184,7 +184,7 @@ playSound3D ["a3\sounds_f\sfx\radio\ambient_radio22.wss",_player,false,getPosASL
 			if(!alive _heli || !canMove _heli)exitWith{};
 			sleep 5;
 		};
-		waitUntil{([_heli, _dropSpot] call BIS_fnc_distance2D)>(_heliDistance * .5)};
+		waitUntil{sleep 5; ([_heli, _dropSpot] call BIS_fnc_distance2D)>(_heliDistance * .5)};
 		{ deleteVehicle _x; } forEach units _grp;
 		deleteVehicle _heli;
 	};
@@ -203,7 +203,7 @@ playSound3D ["a3\sounds_f\sfx\radio\ambient_radio22.wss",_player,false,getPosASL
 		};
 	};
 
-WaitUntil {(((position _object) select 2) < (_flyHeight-20))};
+WaitUntil {sleep 1; (((position _object) select 2) < (_flyHeight-20))};
 		_heli fire "CMFlareLauncher";
 		_objectPosDrop = position _object;
 		_para = createVehicle ["B_Parachute_02_F", _objectPosDrop, [], 0, ""];
@@ -216,7 +216,7 @@ WaitUntil {(((position _object) select 2) < (_flyHeight-20))};
 
 		if (_type == "vehicle") then {_object allowDamage true;}; //Turn on damage for vehicles once they're in the 'chute. Could move this until they hit the ground. Admins choice.
 
-WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
+WaitUntil {sleep 1; ((((position _object) select 2) < 10) || (isNil "_para"))};
 		detach _object;
 		_smoke2= "SmokeShellYellow" createVehicle getPos _object;
 		//_smoke2 attachto [_object,[0,0,-0.5]];
