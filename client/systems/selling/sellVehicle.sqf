@@ -52,7 +52,7 @@ storeSellingHandle = _this spawn
 		[format [' The "%1" is further away than %2m from the store.', _objname, VEHICLE_MAX_SELLING_DISTANCE], "Error"] call  BIS_fnc_guiMessage;
 	};
 
-	if (_vehicle getVariable ["ownerUID",""] != getPlayerUID player) exitWith
+	if (_vehicle getVariable ["ownerUID",""] != getPlayerUID player && _vehicle getVariable ["ownerUID",""] != "") exitWith
 	{
 		playSound "FD_CP_Not_Clear_F";
 		[format [' The "%1" is not owned by you.', _objname], "Error"] call  BIS_fnc_guiMessage;
