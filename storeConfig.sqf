@@ -168,9 +168,9 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 staticGunsArray = compileFinal str
 [
 	// ["Vehicle Ammo Crate", "Box_NATO_AmmoVeh_F", 2500],
-	["Static Titan AT 4Rnd", "B_static_AT_F", 3000], // Static launchers only have 4 ammo, hence the low price
-	["Static Titan AT 4Rnd", "O_static_AT_F", 3000],
-	["Static Titan AT 4Rnd", "I_static_AT_F", 3000],
+	["Static Titan AT 4Rnd", "B_static_AT_F", 5000], // Static launchers only have 4 ammo, hence the low price
+	["Static Titan AT 4Rnd", "O_static_AT_F", 5000],
+	["Static Titan AT 4Rnd", "I_static_AT_F", 5000],
 	["Static Titan AA 4Rnd", "B_static_AA_F", 5000],
 	["Static Titan AA 4Rnd", "O_static_AA_F", 5000],
 	["Static Titan AA 4Rnd", "I_static_AA_F", 5000],
@@ -942,7 +942,6 @@ helicoptersArray = compileFinal str
 	["Mi-290 Taru (Fuel)", "O_Heli_Transport_04_fuel_F", 8500, "vehicle"],
 	["Mi-290 Taru (Bench)", "O_Heli_Transport_04_bench_F", 9000, "vehicle"],
 	["Mi-290 Taru (Transport)", "O_Heli_Transport_04_covered_F", 9500, "vehicle"],
-	["CH-67 Huron (Black)", "B_Heli_Transport_03_unarmed_F", 10000, "vehicle"], // CH-47
 	["Mi-290 Taru (Medical)", "O_Heli_Transport_04_medevac_F",12500, "vehicle"],
 	["Mi-290 Taru (Repair)", "O_Heli_Transport_04_repair_F", 15000, "vehicle"],
 
@@ -954,9 +953,9 @@ helicoptersArray = compileFinal str
 	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 35000, "vehicle"], // Armed Ka-60 with orca paintjob
 	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 35000, "vehicle"], // Armed Ka-60
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"], // Armed AW159
-	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 62500, "vehicle"], // RAH-66 with gunner
-	["Mi-48 Kajman", "O_Heli_Attack_02_F", 65000, "vehicle"], // Mi-28 with gunner
-	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 65000, "vehicle"]
+	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 75000, "vehicle"], // RAH-66 with gunner
+	["Mi-48 Kajman", "O_Heli_Attack_02_F", 75000, "vehicle"], // Mi-28 with gunner
+	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 75000, "vehicle"]
 ];
 
 planesArray = compileFinal str
