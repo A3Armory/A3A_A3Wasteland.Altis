@@ -170,6 +170,7 @@ storePurchaseHandle = _this spawn
 		else
 		{
 			vehicleStore_lastPurchaseTime = diag_tickTime;
+			vehicleStore_lastSellTime = diag_tickTime;
 
 			player setVariable ["cmoney", _playerMoney - _price, true];
 			_playerMoneyText ctrlSetText format ["Cash: $%1", [player getVariable ["cmoney", 0]] call fn_numbersText];
