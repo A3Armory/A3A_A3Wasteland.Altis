@@ -132,6 +132,7 @@ else
 				if (vehicle player != player) then
 				{
 					player globalChat STR_R3F_LOG_ne_pas_monter_dans_vehicule;
+					moveOut player;
 					player action ["eject", vehicle player];
 					sleep 1;
 				}

@@ -49,7 +49,8 @@ _objet addEventHandler ["GetIn",
 
 	if (_unit == player && _seat == "DRIVER" && (!isNull _towedBy || alive _movedBy)) then
 	{
-		player action ["Eject", _veh];
+		moveOut player;
+		player action ["eject", _veh];
 		player globalChat STR_R3F_LOG_transport_en_cours;
 	};
 }];
