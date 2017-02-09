@@ -102,7 +102,7 @@ if (!isNil "_deadBodyBuried") exitWith
 	["Dead body is already successfully buried!", 5] call mf_notify_client;
 };
 
-_durationStatic = (_deadBody getVariable ["buryDeadBodyDuration",nil]);
+/*_durationStatic = (_deadBody getVariable ["buryDeadBodyDuration",nil]);
 if (!isNil "_durationStatic") then
 {
 	_duration = _durationStatic;
@@ -110,7 +110,7 @@ if (!isNil "_durationStatic") then
 else
 {
 	_deadBody setVariable ["buryDeadBodyDuration",_duration,true];
-};
+};*/
 
 _playerCMoney = player getVariable ["cmoney",0];
 uiSleep 0.1;
