@@ -8,7 +8,7 @@
 #define REARM_TIME_SLICE 5
 #define REPAIR_TIME_SLICE 1
 #define REFUEL_TIME_SLICE 1
-#define PRICE_RELATIONSHIP 4 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP
+#define PRICE_RELATIONSHIP 3 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP
 #define RESUPPLY_TIMEOUT 30
 
 // Check if mutex lock is active.
@@ -156,11 +156,9 @@ _resupplyThread = [_vehicle, _unit] spawn
 	{
 		if (_isStaticWep) then
 		{
-			_text = format ["%1\n%2", "Resupply sequence started", "Please get out of the static weapon."];
-			titleText [_text, "PLAIN DOWN", 0.5];
-			sleep 10;
-
-			call _checkAbortConditions;
+			_text = format ["Resupply unavailable for %1. Resupply sequence aborted.", _vehName];
+			[_text, 10] call mf_notify_client;
+			breakTo "resupplyTruckThread";
 		};
 
 		call _checkPlayerMoney;
