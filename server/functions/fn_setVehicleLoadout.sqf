@@ -290,6 +290,17 @@ switch (true) do
 			["CMFlareLauncher", [-1]]
 		];
 	};
+	case (_class isKindOf "C_Plane_Civil_01_F"):
+	{
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]]
+		];
+	};
 };
 
 if (isNil "_mags" && isNil "_weapons" && isNil "_customCode") exitWith {};
