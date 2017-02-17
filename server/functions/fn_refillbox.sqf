@@ -76,7 +76,7 @@ switch (_boxType) do
 			// Item type, Item class(es), # of items, # of magazines per weapon
 			["wep", ["srifle_LRR_F", "srifle_GM6_F"], RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(4,6)],
 			["wep", ["srifle_EBR_F", "srifle_DMR_01_F"], RANDOM_BETWEEN(1,3), RANDOM_BETWEEN(4,6)],
-			["wep", ["Binocular", "Rangefinder"], RANDOM_BETWEEN(1,3)],
+			["wep", "Rangefinder", RANDOM_BETWEEN(1,3)],
 			["wep", "Laserdesignator_02", RANDOM_BETWEEN(0,1)],
 			["itm", "optic_DMS", RANDOM_BETWEEN(1,3)]
 		];

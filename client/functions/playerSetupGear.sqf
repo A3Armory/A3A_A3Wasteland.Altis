@@ -21,20 +21,18 @@ if (_goggles != "") then { _player addGoggles _goggles };
 
 sleep 0.1;
 
-// Remove GPS
-//_player unlinkItem "ItemGPS";
+// Add GPS
+_player linkItem "ItemGPS";
 
 // Remove Radio
-//_player unlinkItem "ItemRadio";
+_player unlinkItem "ItemRadio";
 
 // Remove NVG
 if (hmd _player != "") then { _player unlinkItem hmd _player };
 
 // Remove FirstAidKit and Medkit *Possible fix for saved players getting FirstAidKit and Medkit at spawn until full
-_player removeItem "FirstAidKit";
-_player removeItem "Medikit";
-
-sleep 0.1;
+_player removeItems "FirstAidKit";
+_player removeItems "Medikit";
 
 // Add NVG
 _player linkItem "NVGoggles";
@@ -46,47 +44,53 @@ switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
+		_player addWeapon "Binocular";
 		_player addMagazine "30Rnd_9x21_Mag";
 		_player addWeapon "SMG_02_F";
 		_player addPrimaryWeaponItem "acc_flashlight";
-		_player addMagazine "11Rnd_45ACP_Mag";
-		_player addWeapon "hgun_Pistol_heavy_01_F";
-		_player addMagazine "30Rnd_9x21_Mag";
+		_player addMagazine "9Rnd_45ACP_Mag";
+		_player addWeapon "hgun_ACPC2_F";
+		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addItem "Medikit";
 		_player addItem "FirstAidKit";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
-		_player addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
+		_player addWeapon "Binocular";
+		_player addMagazine ["30Rnd_556x45_Stanag_Tracer_Yellow", 20];
 		_player addMagazine "UGL_FlareWhite_F";
-		_player addWeapon "arifle_TRG21_GL_F";
+		_player addWeapon "arifle_Mk20_GL_plain_F";
 		_player addPrimaryWeaponItem "acc_flashlight";
-		_player addMagazine "16Rnd_9x21_Mag";
-		_player addWeapon "hgun_P07_F";
+		_player addMagazine "9Rnd_45ACP_Mag";
+		_player addWeapon "hgun_ACPC2_F";
+		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addItem "MineDetector";
 		_player addItem "Toolkit";
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
-		_player addWeapon "Rangefinder";
-		_player addMagazine "10Rnd_762x54_Mag";
+		_player addWeapon "Binocular";
+		_player addMagazine ["10Rnd_762x54_Mag", 8];
 		_player addWeapon "srifle_DMR_01_F";
 		_player addPrimaryWeaponItem "optic_MRCO";
 		_player addPrimaryWeaponItem "acc_pointer_IR";
 		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addWeapon "hgun_ACPC2_F";
 		_player addWeaponItem ["hgun_ACPC2_F", "muzzle_snds_acp"];
-		_player addItem "MiniGrenade";
+		_player addMagazine "9Rnd_45ACP_Mag";
 	};
 	case (["_diver_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
 		_player addMagazine "20Rnd_556x45_UW_mag";
 		_player addWeapon "arifle_SDAR_F";
+		_player addMagazine "20Rnd_556x45_UW_mag";
+		_player addMagazine ["20Rnd_556x45_UW_mag", 10];
 		_player addMagazine "11Rnd_45ACP_Mag";
 		_player addWeapon "hgun_Pistol_heavy_01_F";
+		_player addMagazine "11Rnd_45ACP_Mag";
 		_player addWeaponItem ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp"];
-		_player addItem "MiniGrenade";
+		_player addItem "HandGrenade";
 	};
 };
 

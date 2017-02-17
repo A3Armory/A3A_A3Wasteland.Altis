@@ -31,7 +31,7 @@ switch (true) do
 		clearWeaponCargoGlobal _obj;
 		clearItemCargoGlobal _obj;
 
-		_obj addMagazineCargoGlobal ["16Rnd_9x21_Mag", 4];
+		_obj addMagazineCargoGlobal ["UGL_FlareWhite_F", 4];
 		_obj addMagazineCargoGlobal ["11Rnd_45ACP_Mag", 4];
 		_obj addMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Yellow", 4];
 		_obj addMagazineCargoGlobal ["10Rnd_762x54_Mag", 4];
@@ -40,7 +40,7 @@ switch (true) do
 		//_obj addMagazineCargoGlobal ["Laserbatteries", 1];
 		//_obj addWeaponCargoGlobal ["Laserdesignator", 1];
 		_obj addWeaponCargoGlobal ["Rangefinder", 2];
-		_obj addWeaponCargoGlobal ["Binocular", 5];
+		_obj addItemCargoGlobal ["MineDetector", 2];
 		_obj addItemCargoGlobal ["FirstAidKit", 10];
 		_obj addItemCargoGlobal ["HandGrenade", 5];
 		_obj addItemCargoGlobal ["Medikit", 4];
