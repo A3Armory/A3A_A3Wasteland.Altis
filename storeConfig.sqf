@@ -151,16 +151,16 @@ launcherArray = compileFinal str
 	["RPG-42 Alamut", "launch_RPG32_F", 1500],
 	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 1500, "noDLC"],
 	["PCML", "launch_NLAW_F", 2500],
-	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 4000],
-	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 4000],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 4000],
-	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 4000, "noDLC"],
-	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 4000, "noDLC"],
-	["Titan MPRL AA (Sand)", "launch_Titan_F", 4000],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 4000],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 4000],
-	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 4000, "noDLC"],
-	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 4000, "noDLC"]
+	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 3500],
+	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 3500],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 3500],
+	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 3500, "noDLC"],
+	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 3500, "noDLC"],
+	["Titan MPRL AA (Sand)", "launch_Titan_F", 3500],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 3500],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 3500],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 3500, "noDLC"],
+	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 3500, "noDLC"]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -171,9 +171,9 @@ staticGunsArray = compileFinal str
 	["Static Titan AT 4Rnd", "B_static_AT_F", 8500], // Static launchers only have 4 ammo, hence the low price
 	["Static Titan AT 4Rnd", "O_static_AT_F", 8500],
 	["Static Titan AT 4Rnd", "I_static_AT_F", 8500],
-	["Static Titan AA 4Rnd", "B_static_AA_F", 7500],
-	["Static Titan AA 4Rnd", "O_static_AA_F", 7500],
-	["Static Titan AA 4Rnd", "I_static_AA_F", 7500],
+	["Static Titan AA 4Rnd", "B_static_AA_F", 6000],
+	["Static Titan AA 4Rnd", "O_static_AA_F", 6000],
+	["Static Titan AA 4Rnd", "I_static_AA_F", 6000],
 	["Mk30 HMG .50 Low tripod", "B_HMG_01_F", 4500],
 	["Mk30 HMG .50 Low tripod", "O_HMG_01_F", 4500],
 	["Mk30 HMG .50 Low tripod", "I_HMG_01_F", 4500],
@@ -964,8 +964,8 @@ planesArray = compileFinal str
 
 	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 30000, "vehicle"],
 	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 65000, "vehicle"],
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 85000, "vehicle"],
-	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 82000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 95000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 85000, "vehicle"],
 
 	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 18000, "vehicle"],
 	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 80000, "vehicle"],

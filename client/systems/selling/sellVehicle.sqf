@@ -28,7 +28,7 @@ if (!isNil "vehicleStore_lastSellTime") then
 
 storeSellingHandle = _this spawn
 {
-	#define CHOPSHOP_PRICE_RELATIONSHIP 2
+	#define CHOPSHOP_PRICE_RELATIONSHIP 3
 	#define VEHICLE_MAX_SELLING_DISTANCE 50
 
 	private ["_vehicle", "_type", "_price", "_confirmMsg", "_text"];

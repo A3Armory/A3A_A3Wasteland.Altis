@@ -56,6 +56,7 @@ staticWeaponsList =
 staticHeliList =
 [
 	"C_Heli_Light_01_civil_F",
+	"C_Heli_Light_01_civil_F",
 	"B_Heli_Light_01_F",
 	"O_Heli_Light_02_unarmed_F",
 	"I_Heli_light_03_unarmed_F"
@@ -77,12 +78,9 @@ vehicleWeapons =
 [
 	["SMG_01_F", "SMG_05_F", "hgun_PDW2000_F"],
 	["arifle_SDAR_F", "arifle_Mk20C_plain_F", "arifle_TRG20_F"],
-	["arifle_Katiba_C_F", "arifle_MXC_F", "arifle_SPAR_01_blk_F"],
-	["arifle_CTAR_blk_F", "arifle_AKS_F", "arifle_MX_GL_F"],
-	["arifle_MXM_F", "srifle_DMR_01_F", "srifle_EBR_F"],
-	["srifle_DMR_07_blk_F", "arifle_SPAR_03_blk_F", "srifle_DMR_06_olive_F"],
-	["arifle_MX_SW_F", "LMG_Mk200_F", "LMG_Zafir_F", "LMG_03_F"],
-	["launch_RPG7_F", "launch_NLAW_F", "launch_Titan_F"]
+	["arifle_MXC_F", "arifle_AKS_F", "arifle_AKM_F"],
+	["arifle_SPAR_02_khk_F", "LMG_03_F"],
+	["launch_RPG7_F", "launch_RPG32_F", "launch_NLAW_F"]
 ];
 
 vehicleAddition =
@@ -97,6 +95,11 @@ vehicleAddition =
 	"muzzle_snds_B", // 7.62mm
 	"muzzle_snds_338_black", // .338
 	"muzzle_snds_93mmg", // 9.3mm
+	"V_TacVest_blk",
+	"V_TacVestIR_blk",
+	"V_Press_F",
+	"H_HelmetIA",
+	"H_HelmetB",
 	"optic_Arco",
 	"optic_SOS",
 	"optic_LRPS",

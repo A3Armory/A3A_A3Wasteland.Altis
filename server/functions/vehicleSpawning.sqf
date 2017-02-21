@@ -23,7 +23,7 @@ _createRandomVehicle =
 		[A3W_smallVehicles, 0.30],
 		[civilianVehicles, 0.40],
 		[lightMilitaryVehicles, 0.15],
-		[mediumMilitaryVehicles, 0.15]
+		[mediumMilitaryVehicles, 0.05]
 	] call fn_selectRandomWeightedPairs call fn_selectRandomNested;
 
 	if (_vehicleType isKindOf "Quadbike_01_base_F") then {
