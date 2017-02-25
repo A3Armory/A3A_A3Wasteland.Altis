@@ -8,8 +8,6 @@ params ["_objectSavingOn", "_vehicleSavingOn", "_mineSavingOn"];
 
 #include "oSaveSetup.sqf"
 
-_isHC = !isNil "A3W_hcObjSaving_isClient";
-
 // the profileNamespace A3W_objectIDs and A3W_vehicleIDs thing is if the HC crashes and is restarted during the server session, then the ID arrays can be restored
 
 if (_isHC) then
