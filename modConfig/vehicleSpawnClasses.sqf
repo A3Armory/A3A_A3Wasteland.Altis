@@ -95,6 +95,7 @@ vehicleAddition =
 	"muzzle_snds_B", // 7.62mm
 	"muzzle_snds_338_black", // .338
 	"muzzle_snds_93mmg", // 9.3mm
+	"Titan_AA",
 	"V_TacVest_blk",
 	"V_TacVestIR_blk",
 	"V_Press_F",

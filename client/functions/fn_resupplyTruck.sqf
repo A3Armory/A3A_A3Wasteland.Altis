@@ -9,6 +9,7 @@
 #define REPAIR_TIME_SLICE 1
 #define REFUEL_TIME_SLICE 1
 #define PRICE_RELATIONSHIP 3 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP
+#define PRICE_RELATIONSHIP_HIGH 2 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP_HIGH
 #define RESUPPLY_TIMEOUT 30
 
 // Check if mutex lock is active.
@@ -35,6 +36,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 	_vehName = getText (_vehCfg >> "displayName");
 	_isUAV = (round getNumber (_vehCfg >> "isUav") >= 1);
 	_isStaticWep = _vehClass isKindOf "StaticWeapon";
+	_isHighPrice = ["B_MBT_01_cannon_F","B_MBT_01_TUSK_F","O_MBT_02_cannon_F","I_MBT_03_cannon_F","B_Heli_Attack_01_F","O_Heli_Attack_02_F","B_T_UAV_03_F","B_T_VTOL_01_armed_F","O_T_VTOL_02_infantry_F","B_UAV_02_F","O_UAV_02_F","I_UAV_02_F","O_T_UAV_04_CAS_F","I_Plane_Fighter_03_CAS_F","B_Plane_CAS_01_F","O_Plane_CAS_02_F"];
 
 	scopeName "resupplyTruckThread";
 
@@ -44,7 +46,15 @@ _resupplyThread = [_vehicle, _unit] spawn
 		if (_vehClass == _x select 1) exitWith
 		{
 			_price = _x select 2;
-			_price = round (_price / PRICE_RELATIONSHIP);
+
+			if (_vehicle in _isHighPrice) then
+			{
+				_price = round (_price / PRICE_RELATIONSHIP_HIGH);
+			}
+			else
+			{
+				_price = round (_price / PRICE_RELATIONSHIP);
+			};
 		};
 	} forEach (call allVehStoreVehicles + call staticGunsArray);
 

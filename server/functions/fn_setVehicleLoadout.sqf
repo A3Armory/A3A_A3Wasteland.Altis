@@ -80,7 +80,7 @@ switch (true) do
 			["CMFlareLauncher", [-1]]
 		];
 	};
-	case (_class isKindOf "I_Plane_Fighter_03_CAS_F"):
+	/*case (_class isKindOf "I_Plane_Fighter_03_CAS_F"):
 	{
 		_mags =
 		[
@@ -97,7 +97,7 @@ switch (true) do
 			["GBU12BombLauncher", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
-	};
+	};*/
 	case (_class isKindOf "O_Heli_Light_02_F"):
 	{
 		_mags =

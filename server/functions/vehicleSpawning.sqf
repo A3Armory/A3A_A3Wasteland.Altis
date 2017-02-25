@@ -22,7 +22,7 @@ _createRandomVehicle =
 	[
 		[A3W_smallVehicles, 0.30],
 		[civilianVehicles, 0.40],
-		[lightMilitaryVehicles, 0.15],
+		[lightMilitaryVehicles, 0.25],
 		[mediumMilitaryVehicles, 0.05]
 	] call fn_selectRandomWeightedPairs call fn_selectRandomNested;
 
