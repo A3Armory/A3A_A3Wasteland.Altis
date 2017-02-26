@@ -69,8 +69,7 @@ storeSellingHandle = _this spawn
 	if (!isNil "_price") then
 	{
 		// Add total sell value to confirm message
-		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, _price];
-		//_confirmMsg = _confirmMsg + format ["<br/>1 x %1", _objName];
+		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, [_price] call fn_numbersText];
 
 		// Display confirm message
 		if ([parseText _confirmMsg, "Confirm", "Sell", true] call BIS_fnc_guiMessage) then
