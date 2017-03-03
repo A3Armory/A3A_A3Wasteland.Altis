@@ -31,7 +31,7 @@ storeSellingHandle = _this spawn
 	#define CHOPSHOP_PRICE_RELATIONSHIP 3
 	#define VEHICLE_MAX_SELLING_DISTANCE 50
 
-	private ["_vehicle", "_type", "_price", "_confirmMsg", "_text"];
+	private ["_vehicle", "_type", "_price", "_confirmMsg", "_text", "_sellPrice"];
 
 	_storeNPC = _this select 0;
 	_vehicle = objectFromNetId (player getVariable ["lastVehicleRidden", ""]);
@@ -61,15 +61,16 @@ storeSellingHandle = _this spawn
 	{
 		if (_type == _x select 1) then
 		{
-			_price = _x select 2;
-			_price = _price / CHOPSHOP_PRICE_RELATIONSHIP;
+			_sellPrice = _x select 2;
+			_sellPrice = _sellPrice / CHOPSHOP_PRICE_RELATIONSHIP;
+			_price = round (_sellPrice);
 		};
 	} forEach (call allVehStoreVehicles);
 
 	if (!isNil "_price") then
 	{
 		// Add total sell value to confirm message
-		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, [_price] call fn_numbersText];
+		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, _price];
 
 		// Display confirm message
 		if ([parseText _confirmMsg, "Confirm", "Sell", true] call BIS_fnc_guiMessage) then
