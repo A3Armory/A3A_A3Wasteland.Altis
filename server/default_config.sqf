@@ -14,7 +14,7 @@ A3W_uavControl = "group";          // Restrict connection to UAVs based on owner
 A3W_disableUavFeed = 0;            // Force disable UAV PIP feed to prevent thermal camera abuse (0 = no, 1 = yes)
 A3W_disableBuiltInThermal = 0;     // Display a black screen if the player tries to use thermal vision built-in a handheld weapon like Titan launcher (0 = no, 1 = yes)
 A3W_teamBalance = 50;              // Max percentage of players allowed on Opfor/Blufor from total server population (0 = off) Bluefor/opfor can only exceed this limit if both grow in similar size.
-A3W_reservedSlots = 5;             // Number of reserved slots available (0 = off)
+A3W_reservedSlots = 3;             // Number of reserved slots available (0 = off)
 A3W_maxPlayers = 72;               // Server slot limit. Needed for reserved slots to work
 
 // Time settings
@@ -24,7 +24,7 @@ A3W_timeMultiplierNight = 4.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
-A3W_startingMoney = 4200;          // Amount of money that players start with
+A3W_startingMoney = 2500;          // Amount of money that players start with
 A3W_maxMoney = 1000000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission

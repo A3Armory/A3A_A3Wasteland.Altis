@@ -104,14 +104,14 @@ switch (true) do
 		[
 			["2000Rnd_65x39_Belt_Tracer_Green_Splash", [-1]],
 			["12Rnd_missiles", [-1]],
-			["2Rnd_AAA_missiles", [-1]],
+			//["2Rnd_AAA_missiles", [-1]],
 			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
 			["LMG_Minigun_heli", [-1]],
 			["missiles_DAR", [-1]],
-			["missiles_ASRAAM", [-1]],
+			//["missiles_ASRAAM", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
 	};
@@ -121,14 +121,14 @@ switch (true) do
 		[
 			["2000Rnd_65x39_Belt_Tracer_Green_Splash", [-1]],
 			["12Rnd_missiles", [-1]],
-			["2Rnd_AAA_missiles", [-1]],
+			//["2Rnd_AAA_missiles", [-1]],
 			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
 			["LMG_Minigun_heli", [-1]],
 			["missiles_DAR", [-1]],
-			["missiles_ASRAAM", [-1]],
+			//["missiles_ASRAAM", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
 	};
@@ -138,14 +138,14 @@ switch (true) do
 		[
 			["5000Rnd_762x51_Belt", [-1]],
 			["24Rnd_missiles", [-1]],
-			["2Rnd_AAA_missiles", [-1]],
+			//["2Rnd_AAA_missiles", [-1]],
 			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
 			["M134_minigun", [-1]],
 			["missiles_DAR", [-1]],
-			["missiles_ASRAAM", [-1]],
+			//["missiles_ASRAAM", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
 	};
@@ -155,14 +155,14 @@ switch (true) do
 		[
 			["5000Rnd_762x51_Yellow_Belt", [-1]],
 			["24Rnd_missiles", [-1]],
-			["2Rnd_AAA_missiles", [-1]],
+			//["2Rnd_AAA_missiles", [-1]],
 			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
 			["M134_minigun", [-1]],
 			["missiles_DAR", [-1]],
-			["missiles_ASRAAM", [-1]],
+			//["missiles_ASRAAM", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
 	};
@@ -272,7 +272,7 @@ switch (true) do
 	{
 		_mags =
 		[
-			["240Rnd_CMFlare_Chaff_Magazine", [-1]]
+			["120Rnd_CMFlare_Chaff_Magazine", [-1]]
 		];
 		_weapons =
 		[
