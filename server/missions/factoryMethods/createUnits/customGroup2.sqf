@@ -40,9 +40,6 @@ for "_i" from 1 to _nbUnits do
 	removeHeadgear _unit;
 	removeGoggles _unit;
 
-	_unit addVest "V_PlateCarrier1_rgr";
-	_unit addItem "FirstAidKit";
-
 	switch (true) do
 	{
 		// Grenadier every 3 units
@@ -51,6 +48,7 @@ for "_i" from 1 to _nbUnits do
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addWeapon "arifle_MX_GL_F";
+			_unit addVest "V_BandollierB_oli";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
@@ -59,13 +57,13 @@ for "_i" from 1 to _nbUnits do
 		// RPG every 7 units, starting from second one
 		case ((_i + 5) % 7 == 0):
 		{
-			_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-			_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-			_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-			_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-			_unit addWeapon "arifle_Katiba_F";
-			_unit addPrimaryWeaponItem "optic_Arco";
-			_unit addBackpack "B_Carryall_oli";
+			_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+			_unit addWeapon "arifle_MX_F";
+			_unit addPrimaryWeaponItem "optic_Aco";
+			_unit addVest "V_BandollierB_oli";
+			_unit addBackpack "B_Kitbag_sgg";
+			_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+			_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 			_unit addMagazine "NLAW_F";
 			_unit addWeapon "launch_NLAW_F";
 			_unit addMagazine "NLAW_F";
@@ -75,18 +73,14 @@ for "_i" from 1 to _nbUnits do
 		{
 			if (_unit == leader _group) then
 			{
-				_unit addBackpack "B_AssaultPack_rgr";
-				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
-				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
-				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
 				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
 				_unit addWeapon "SMG_01_F";
 				_unit addPrimaryWeaponItem "optic_Holosight_smg";
 				_unit addPrimaryWeaponItem "muzzle_snds_acp";
-				_unit addItem "ItemGps";
-				_unit assignItem "ItemGps";
-				_unit addItem "ItemCompass";
-				_unit assignItem "ItemCompass";
+				_unit addBackpack "B_AssaultPack_rgr";
+				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
+				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
+				_unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
 				_unit setRank "SERGEANT";
 			}
 			else
@@ -94,6 +88,7 @@ for "_i" from 1 to _nbUnits do
 				_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
 				_unit addWeapon "arifle_TRG20_F";
 				_unit addPrimaryWeaponItem "optic_Holosight";
+				_unit addVest "V_BandollierB_oli";
 				_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
 				_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
 				_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Red";

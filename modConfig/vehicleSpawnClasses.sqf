@@ -95,32 +95,17 @@ vehicleAddition =
 	"muzzle_snds_B", // 7.62mm
 	"muzzle_snds_338_black", // .338
 	"muzzle_snds_93mmg", // 9.3mm
-	"Titan_AA",
-	"V_TacVest_blk",
-	"V_TacVestIR_blk",
-	"V_Press_F",
-	"H_HelmetIA",
-	"H_HelmetB",
-	"optic_Arco",
-	"optic_SOS",
-	"optic_LRPS",
-	"optic_Hamr",
-	"optic_DMS",
-	"optic_Aco",
-	"optic_ACO_grn",
-	"optic_aco_smg",
-	"optic_Holosight",
-	"optic_Holosight_smg",
-	"acc_pointer_IR",
-	"Medikit",
-	"FirstAidKit",
-	"ToolKit"
+	["V_TacVest_blk", "V_TacVestIR_blk", "V_Press_F", "H_HelmetIA", "H_HelmetB"],
+	["optic_Arco", "optic_SOS", "optic_LRPS"],
+	["optic_Hamr", "optic_DMS", "optic_Aco", "optic_ACO_grn"],
+	["optic_aco_smg", "optic_Holosight", "optic_Holosight_smg"],
+	"acc_pointer_IR"
 ];
 
 vehicleAddition2 =
 [
+	"Titan_AA",
 	"Chemlight_yellow",
-	"SmokeShellPurple",
-	"SmokeShellYellow",
-	"SmokeShellOrange"
+	["SmokeShellPurple", "SmokeShellYellow", "SmokeShellOrange"],
+	["Medikit", "FirstAidKit", "ToolKit"]
 ];

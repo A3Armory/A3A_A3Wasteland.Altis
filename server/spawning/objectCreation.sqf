@@ -37,14 +37,8 @@ switch (true) do
 		_obj addMagazineCargoGlobal ["10Rnd_762x54_Mag", 4];
 		_obj addMagazineCargoGlobal ["9Rnd_45ACP_Mag", 4];
 		_obj addMagazineCargoGlobal ["20Rnd_556x45_UW_mag", 4];
-		//_obj addMagazineCargoGlobal ["Laserbatteries", 1];
-		//_obj addWeaponCargoGlobal ["Laserdesignator", 1];
-		_obj addWeaponCargoGlobal ["Rangefinder", 2];
-		_obj addItemCargoGlobal ["MineDetector", 2];
-		_obj addItemCargoGlobal ["FirstAidKit", 10];
+		_obj addItemCargoGlobal ["FirstAidKit", 5];
 		_obj addItemCargoGlobal ["HandGrenade", 5];
-		_obj addItemCargoGlobal ["Medikit", 4];
-		_obj addItemCargoGlobal ["ToolKit", 2];
 	};
 	default
 	{

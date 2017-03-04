@@ -1,184 +1,233 @@
-//	@file Version: 1.0
-//	@file Name: smallGroup.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy, AgentRev
-//	@file Created: 08/12/2012 21:58
-//	@file Args:
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Name: sniperGroup.sqf
+//	@file Author: AgentRev, micovery
 
 if (!isServer) exitWith {};
 
-private ["_group","_pos","_leader","_man2","_man3","_man4","_man5","_man6"];
+private ["_group", "_pos", "_nbUnits", "_unitTypes", "_uPos", "_unit"];
 
 _group = _this select 0;
 _pos = _this select 1;
+_nbUnits = param [2, 7, [0]];
+_radius = param [3, 10, [0]];
 
-// Sniper
-_leader = _group createUnit ["C_man_polo_1_F", [(_pos select 0) + 10, _pos select 1, 0], [], 1, "Form"];
-removeAllWeapons _leader;
-removeAllAssignedItems _leader;
-removeUniform _leader;
-removeVest _leader;
-removeBackpack _leader;
-removeHeadgear _leader;
-removeGoggles _leader;
-_leader addUniform "U_I_Ghilliesuit";
-_leader addVest "V_PlateCarrierIA1_dgtl";
-_leader addMagazine "5Rnd_127x108_APDS_Mag";
-_leader addWeapon "srifle_GM6_F";
-_leader addPrimaryWeaponItem "optic_NVS";
-_leader addMagazine "5Rnd_127x108_APDS_Mag";
-_leader addMagazine "5Rnd_127x108_APDS_Mag";
-_leader addMagazine "HandGrenade";
+_unitTypes =
+[
+	"C_man_polo_1_F", "C_man_polo_1_F_euro", "C_man_polo_1_F_afro", "C_man_polo_1_F_asia",
+	"C_man_polo_2_F", "C_man_polo_2_F_euro", "C_man_polo_2_F_afro", "C_man_polo_2_F_asia",
+	"C_man_polo_3_F", "C_man_polo_3_F_euro", "C_man_polo_3_F_afro", "C_man_polo_3_F_asia",
+	"C_man_polo_4_F", "C_man_polo_4_F_euro", "C_man_polo_4_F_afro", "C_man_polo_4_F_asia",
+	"C_man_polo_5_F", "C_man_polo_5_F_euro", "C_man_polo_5_F_afro", "C_man_polo_5_F_asia",
+	"C_man_polo_6_F", "C_man_polo_6_F_euro", "C_man_polo_6_F_afro", "C_man_polo_6_F_asia"
+];
 
-// Sniper
-_man2 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 1, 0], [], 1, "Form"];
-removeAllWeapons _man2;
-removeAllAssignedItems _man2;
-removeUniform _man2;
-removeVest _man2;
-removeBackpack _man2;
-removeHeadgear _man2;
-removeGoggles _man2;
-_man2 addUniform "U_I_Ghilliesuit";
-_man2 addVest "V_PlateCarrierIA1_dgtl";
-_man2 addMagazine "5Rnd_127x108_APDS_Mag";
-_man2 addWeapon "srifle_GM6_F";
-_man2 addPrimaryWeaponItem "optic_LRPS";
-_man2 addMagazine "5Rnd_127x108_APDS_Mag";
-_man2 addMagazine "5Rnd_127x108_APDS_Mag";
-_man2 addMagazine "HandGrenade";
+grenadier_loadout =  {
+  private["_unit"];
+  _unit = _this;
+  _unit addUniform "U_I_Ghilliesuit";
+  _unit addMagazine "1Rnd_HE_Grenade_shell";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
+  _unit addWeapon "arifle_MX_GL_Black_F";
+  _unit addPrimaryWeaponItem "optic_Arco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
+  _unit addMagazine "1Rnd_HE_Grenade_shell";
+  _unit addMagazine "1Rnd_HE_Grenade_shell";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
 
-// Sniper
-_man3 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 1, 0], [], 1, "Form"];
-removeAllWeapons _man3;
-removeAllAssignedItems _man3;
-removeUniform _man3;
-removeVest _man3;
-removeBackpack _man3;
-removeHeadgear _man3;
-removeGoggles _man3;
-_man3 addUniform "U_I_Ghilliesuit";
-_man3 addVest "V_PlateCarrierIA1_dgtl";
-_man3 addMagazine "5Rnd_127x108_APDS_Mag";
-_man3 addWeapon "srifle_GM6_F";
-_man3 addPrimaryWeaponItem "optic_LRPS";
-_man3 addMagazine "5Rnd_127x108_APDS_Mag";
-_man3 addMagazine "5Rnd_127x108_APDS_Mag";
-_man3 addMagazine "HandGrenade";
+spotter_loadout = {
+  private["_unit"];
+  _unit = _this;
+  _unit addUniform "U_I_Ghilliesuit";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "20Rnd_762x51_Mag";
+  _unit addWeapon "srifle_EBR_F";
+  _unit addPrimaryWeaponItem "optic_SOS";
+  _unit addMagazine "20Rnd_762x51_Mag";
+  _unit addMagazine "20Rnd_762x51_Mag";
+  _unit addMagazine "HandGrenade";
+  _unit addItem "Rangefinder";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
 
-// Spotter
-_man4 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
-removeAllWeapons _man4;
-removeAllAssignedItems _man4;
-removeUniform _man4;
-removeVest _man4;
-removeBackpack _man4;
-removeHeadgear _man4;
-removeGoggles _man4;
-_man4 addUniform "U_I_Ghilliesuit";
-_man4 addVest "V_PlateCarrierIA1_dgtl";
-_man4 addMagazine "20Rnd_762x51_Mag";
-_man4 addWeapon "srifle_EBR_F";
-_man4 addPrimaryWeaponItem "optic_SOS";
-_man4 addMagazine "20Rnd_762x51_Mag";
-_man4 addMagazine "20Rnd_762x51_Mag";
-_man4 addMagazine "HandGrenade";
-_man4 addItem "Rangefinder";
+sniper_loadout = {
+  private["_unit"];
+  _unit = _this;
+  _unit addUniform "U_I_Ghilliesuit";
+  _unit addMagazine "5Rnd_127x108_APDS_Mag";
+  _unit addWeapon "srifle_GM6_F";
+  _unit addPrimaryWeaponItem "optic_NVS";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "5Rnd_127x108_APDS_Mag";
+  _unit addMagazine "5Rnd_127x108_APDS_Mag";
+  _unit addMagazine "HandGrenade";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
 
-// Spotter
-_man5 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
-removeAllWeapons _man5;
-removeAllAssignedItems _man5;
-removeUniform _man5;
-removeVest _man5;
-removeBackpack _man5;
-removeHeadgear _man5;
-removeGoggles _man5;
-_man5 addUniform "U_I_Ghilliesuit";
-_man5 addVest "V_PlateCarrierIA1_dgtl";
-_man5 addMagazine "20Rnd_762x51_Mag";
-_man5 addWeapon "srifle_EBR_F";
-_man5 addPrimaryWeaponItem "optic_Arco";
-_man5 addMagazine "20Rnd_762x51_Mag";
-_man5 addMagazine "20Rnd_762x51_Mag";
-_man5 addMagazine "HandGrenade";
-_man5 addItem "Rangefinder";
+sniper2_loadout = {
+  private["_unit"];
+  _unit = _this;
+  _unit addUniform "U_I_GhillieSuit";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
+  _unit addWeapon "arifle_MXM_Black_F";
+  _unit addPrimaryWeaponItem "optic_LRPS";
+  _unit addPrimaryWeaponItem "acc_pointer_IR";
+  _unit addPrimaryWeaponItem "muzzle_snds_H";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
+  _unit addMagazine "HandGrenade";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
 
-// Spotter
-_man6 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
-removeAllWeapons _man6;
-removeAllAssignedItems _man6;
-removeUniform _man6;
-removeVest _man6;
-removeBackpack _man6;
-removeHeadgear _man6;
-removeGoggles _man6;
-_man6 addUniform "U_I_Ghilliesuit";
-_man6 addVest "V_PlateCarrierIA1_dgtl";
-_man6 addMagazine "20Rnd_762x51_Mag";
-_man6 addWeapon "srifle_EBR_F";
-_man6 addPrimaryWeaponItem "optic_SOS";
-_man6 addMagazine "20Rnd_762x51_Mag";
-_man6 addMagazine "20Rnd_762x51_Mag";
-_man6 addMagazine "HandGrenade";
-_man6 addItem "Rangefinder";
+aa_loadout = {
+  private["_unit"];
+  _unit = _this;
+  _unit addUniform "U_I_GhillieSuit";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addWeapon "arifle_MX_F";
+  _unit addPrimaryWeaponItem "optic_Aco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "Titan_AA";
+  _unit addWeapon "launch_Titan_F";
+  _unit addMagazine "Titan_AA";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
 
-//AT Defender
-_man7 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
-removeAllWeapons _man7;
-removeAllAssignedItems _man7;
-removeUniform _man7;
-removeVest _man7;
-removeBackpack _man7;
-removeHeadgear _man7;
-removeGoggles _man7;
-_man7 addUniform "U_I_Ghilliesuit";
-_man7 addVest "V_HarnessOSpec_brn";
-_man7 addBackpack "B_Carryall_oli";
-_man7 addMagazine "10Rnd_762x54_Mag";
-_man7 addWeapon "srifle_DMR_01_F";
-_man7 addPrimaryWeaponItem "optic_Holosight";
-_man7 addMagazine "10Rnd_762x54_Mag";
-_man7 addMagazine "10Rnd_762x54_Mag";
-_man7 addMagazine "RPG32_F";
-_man7 addWeapon "launch_RPG32_F";
-_man7 addMagazine "RPG32_F";
-_man7 addMagazine "RPG32_F";
-_man7 addMagazine "RPG32_F";
-_man7 addMagazine "HandGrenade";
-_man7 selectWeapon "launch_RPG32_F";
+at_loadout = {
+  private["_unit"];
+  _unit = _this;
 
-//AA Defender
-_man8 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
-removeAllWeapons _man8;
-removeAllAssignedItems _man8;
-removeUniform _man8;
-removeVest _man8;
-removeBackpack _man8;
-removeHeadgear _man8;
-removeGoggles _man8;
-_man8 addUniform "U_I_Ghilliesuit";
-_man8 addVest "V_HarnessOSpec_brn";
-_man8 addBackpack "B_Carryall_oli";
-_man8 addMagazine "10Rnd_762x54_Mag";
-_man8 addWeapon "srifle_DMR_01_F";
-_man8 addPrimaryWeaponItem "optic_DMS";
-_man8 addMagazine "10Rnd_762x54_Mag";
-_man8 addMagazine "10Rnd_762x54_Mag";
-_man8 addMagazine "Titan_AA";
-_man8 addWeapon "launch_I_Titan_F";
-_man8 addMagazine "Titan_AA";
-_man8 addMagazine "Titan_AA";
-_man8 addMagazine "HandGrenade";
-_man8 selectWeapon "launch_I_Titan_F";
+  _unit addUniform "U_I_GhillieSuit";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addWeapon "arifle_MX_F";
+  _unit addPrimaryWeaponItem "optic_Aco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "NLAW_F";
+  _unit addWeapon "launch_NLAW_F";
+  _unit addMagazine "NLAW_F";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
 
-_leader = leader _group;
+leader_loadout = {
+  private["_unit"];
+  _unit = _this;
 
+  _unit addUniform "U_I_GhillieSuit";
+  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+  _unit addWeapon "arifle_Katiba_F";
+  _unit addPrimaryWeaponItem "optic_Arco";
+  _unit addPrimaryWeaponItem "acc_pointer_IR";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+  _unit addMagazine "NLAW_F";
+  _unit addWeapon "launch_NLAW_F";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
+
+rifleman_loadout = {
+  private["_unit"];
+  _unit = _this;
+
+  _unit addUniform "U_I_GhillieSuit";
+  _unit addMagazine "20Rnd_762x51_Mag";
+  _unit addWeapon "srifle_EBR_F";
+  _unit addPrimaryWeaponItem "optic_Aco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "20Rnd_762x51_Mag";
+  _unit addMagazine "20Rnd_762x51_Mag";
+  _unit addItem "NVGoggles";
+  _unit assignItem "NVGoggles";
+};
+
+weighted_list =
+[
+  [1, sniper_loadout],
+  [1.2, sniper2_loadout],
+  [0.5, aa_loadout],
+  [0.5, at_loadout],
+  [0.8, spotter_loadout],
+  [0.7, rifleman_loadout],
+  [0.6, grenadier_loadout]
+];
+
+get_weighted_loadout = {
+  private["_items"];
+  _items = weighted_list;
+
+  //calculate the total weight
+  private["_totalSum", "_weight"];
+  _totalSum = 0;
+  {
+    _weight = _x select 0;
+    _totalSum = _weight + _totalSum;
+  } forEach _items;
+
+  //pick at random from the distribution
+  private["_index", "_i", "_item", "_sum"];
+  _index = random _totalSum;
+  _sum = 0;
+  _i = 0;
+
+  while {_sum < _index} do {
+    _item = _items select _i;
+    _weight = _item select 0;
+    _sum = _sum + _weight;
+    _i = _i + 1;
+  };
+
+  ((_items select (_i - 1)) select 1)
+};
+
+for "_i" from 1 to _nbUnits do
 {
-	_x spawn refillPrimaryAmmo;
-	_x call setMissionSkill;
-	_x addRating 9999999;
-	_x addEventHandler ["Killed", server_playerDied];
-} forEach units _group;
+  _uPos = _pos vectorAdd ([[random _radius, 0, 0], random 360] call BIS_fnc_rotateVector2D);
+  _unit = _group createUnit [_unitTypes call BIS_fnc_selectRandom, _uPos, [], 0, "Form"];
+  _unit setPosATL _uPos;
+
+  removeAllWeapons _unit;
+  removeAllAssignedItems _unit;
+  removeUniform _unit;
+  removeVest _unit;
+  removeBackpack _unit;
+  removeHeadgear _unit;
+  removeGoggles _unit;
+
+  if (_unit == leader _group) then {
+    _unit call leader_loadout;
+    _unit setRank "SERGEANT";
+  }
+  else {
+    private["_loadout"];
+    _loadout = call get_weighted_loadout;
+    _unit call _loadout;
+  };
+
+  _unit addRating 1e11;
+  _unit spawn addMilCap;
+  _unit spawn refillPrimaryAmmo;
+  _unit call setMissionSkill;
+  _unit addEventHandler ["Killed", server_playerDied];
+};
 
 [_pos] call addDefensiveMines;
 

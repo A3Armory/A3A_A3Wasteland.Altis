@@ -27,7 +27,7 @@ _objList = [];
 if (_baseBuilding) then { _objList append objectList };
 if (_essentials) then { _objList append essentialsList };
 
-_sradius = if (!_baseBuilding && _essentials) then { 75 } else { 15 };
+_sradius = if (!_baseBuilding && _essentials) then { 100 } else { 40 };
 
 _createRandomObject =
 {

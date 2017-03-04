@@ -30,6 +30,7 @@ grenadier_loadout =  {
   _unit addMagazine "1Rnd_HE_Grenade_shell";
   _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addWeapon "arifle_MX_GL_F";
+  _unit addVest "V_BandollierB_oli";
   _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addMagazine "1Rnd_HE_Grenade_shell";
@@ -43,12 +44,12 @@ support_loadout = {
   _unit = _this;
 
   _unit addUniform "U_IG_Guerilla1_1";
-  _unit addBackpack "B_Carryall_oli";
-  _unit addMagazine "200Rnd_65x39_cased_Box";
   _unit addMagazine "200Rnd_65x39_cased_Box";
   _unit addWeapon "LMG_Mk200_F";
   _unit addPrimaryWeaponItem "optic_MRCO";
-  _unit addUniform "U_IG_Guerilla1_1";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "200Rnd_65x39_cased_Box";
   _unit addMagazine "200Rnd_65x39_cased_Box";
   _unit addItem "FirstAidKit";
   _unit addItem "NVGoggles";
@@ -60,22 +61,15 @@ sniper_loadout = {
   _unit = _this;
 
   _unit addUniform "U_I_GhillieSuit";
-  _unit addBackpack "B_AssaultPack_rgr";
-  _unit addMagazine "30Rnd_65x39_caseless_mag";
-  _unit addMagazine "30Rnd_65x39_caseless_mag";
-  _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addWeapon "arifle_MXM_F";
   _unit addPrimaryWeaponItem "optic_Hamr";
   _unit addPrimaryWeaponItem "acc_pointer_IR";
   _unit addPrimaryWeaponItem "muzzle_snds_H";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addMagazine "30Rnd_65x39_caseless_mag";
   _unit addItem "Rangefinder";
-  _unit assignItem "Rangefinder";
-  _unit addItem "ItemGps";
-  _unit assignItem "ItemGps";
-  _unit addItem "ItemCompass";
-  _unit assignItem "ItemCompass";
   _unit addItem "NVGoggles";
   _unit assignItem "NVGoggles";
 };
@@ -85,14 +79,13 @@ aa_loadout = {
   _unit = _this;
 
   _unit addUniform "U_IG_Guerilla1_1";
-  _unit addMagazine "30Rnd_9x21_Mag";
-  _unit addMagazine "30Rnd_9x21_Mag";
-  _unit addMagazine "30Rnd_9x21_Mag";
-  _unit addMagazine "30Rnd_9x21_Mag";
-  _unit addWeapon "SMG_02_F";
-  _unit addPrimaryWeaponItem "optic_Arco";
-  _unit addPrimaryWeaponItem "acc_pointer_IR";
-  _unit addBackpack "B_Carryall_oli";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addWeapon "arifle_MX_F";
+  _unit addPrimaryWeaponItem "optic_Aco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
   _unit addMagazine "Titan_AA";
   _unit addWeapon "launch_Titan_F";
   _unit addMagazine "Titan_AA";
@@ -105,17 +98,15 @@ at_loadout = {
   _unit = _this;
 
   _unit addUniform "U_IG_Guerilla2_1";
-  _unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
-  _unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
-  _unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
-  _unit addMagazine "30Rnd_45ACP_Mag_SMG_01";
-  _unit addWeapon "SMG_01_F";
-  _unit addPrimaryWeaponItem "optic_Holosight_smg";
-  _unit addPrimaryWeaponItem "muzzle_snds_acp";
-  _unit addBackpack "B_Carryall_oli";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addWeapon "arifle_MX_F";
+  _unit addPrimaryWeaponItem "optic_Aco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
   _unit addMagazine "NLAW_F";
   _unit addWeapon "launch_NLAW_F";
-  _unit addMagazine "NLAW_F";
   _unit addMagazine "NLAW_F";
   _unit addItem "NVGoggles";
   _unit assignItem "NVGoggles";
@@ -127,20 +118,15 @@ leader_loadout = {
 
   _unit addUniform "U_IG_leader";
   _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
-  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
   _unit addWeapon "arifle_Katiba_F";
   _unit addPrimaryWeaponItem "optic_Arco";
   _unit addPrimaryWeaponItem "acc_pointer_IR";
-  _unit addBackpack "B_Carryall_oli";
+  _unit addVest "V_BandollierB_oli";
+  _unit addBackpack "B_Kitbag_sgg";
+  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
   _unit addMagazine "NLAW_F";
   _unit addWeapon "launch_NLAW_F";
-  _unit addMagazine "NLAW_F";
-  _unit addItem "ItemGps";
-  _unit assignItem "ItemGps";
-  _unit addItem "ItemCompass";
-  _unit assignItem "ItemCompass";
   _unit addItem "NVGoggles";
   _unit assignItem "NVGoggles";
 };
@@ -151,11 +137,11 @@ rifleman_loadout = {
 
   _unit addUniform "U_IG_Guerilla2_3";
   _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-  _unit addBackpack "B_AssaultPack_rgr";
-  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
   _unit addWeapon "arifle_MX_F";
   _unit addPrimaryWeaponItem "optic_Aco";
+  _unit addVest "V_BandollierB_oli";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+  _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
   _unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
   _unit addPrimaryWeaponItem "acc_flashlight";
   _unit enablegunlights "forceOn";
@@ -165,10 +151,10 @@ weighted_list =
 [
   [0.5, sniper_loadout],
   [1, aa_loadout],
-  [1.3, at_loadout],
-  [1.1, support_loadout],
-  [0.8, rifleman_loadout],
-  [1, grenadier_loadout]
+  [1.1, at_loadout],
+  [0.8, support_loadout],
+  [0.9, rifleman_loadout],
+  [0.7, grenadier_loadout]
 ];
 
 get_weighted_loadout = {
@@ -212,9 +198,6 @@ for "_i" from 1 to _nbUnits do
   removeBackpack _unit;
   removeHeadgear _unit;
   removeGoggles _unit;
-
-  _unit addVest "V_PlateCarrier1_rgr";
-  _unit addItem "FirstAidKit";
 
   if (_unit == leader _group) then {
     _unit call leader_loadout;

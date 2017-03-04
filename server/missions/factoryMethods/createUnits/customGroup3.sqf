@@ -1,7 +1,7 @@
 // ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
-//	@file Name: customGroup.sqf
+//	@file Name: customGroup3.sqf
 //	@file Author: AgentRev
 
 if (!isServer) exitWith {};
@@ -45,16 +45,14 @@ for "_i" from 1 to _nbUnits do
 		// AT every 5 units
 		case (_i % 5 == 0):
 		{
-			_unit addBackpack "B_Carryall_oli";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addWeapon "arifle_MXM_Black_F";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addPrimaryWeaponItem "optic_Hamr";
+			_unit addBackpack "B_Kitbag_sgg";
+			_unit addMagazine "30Rnd_65x39_caseless_mag";
+			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "NLAW_F";
 			_unit addWeapon "launch_NLAW_F";
-			_unit addMagazine "NLAW_F";
 			_unit addMagazine "NLAW_F";
 			_unit selectWeapon "launch_NLAW_F";
 		};
@@ -63,24 +61,21 @@ for "_i" from 1 to _nbUnits do
 		{
 			_unit addMagazine "7Rnd_408_Mag";
 			_unit addWeapon "srifle_LRR_F";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addMagazine "7Rnd_408_Mag";
 			_unit addPrimaryWeaponItem "optic_LRPS";
+			_unit addMagazine "7Rnd_408_Mag";
+			_unit addMagazine "7Rnd_408_Mag";
 		};
 		// AA every 7 units
 		case (_i % 7 == 0):
 		{
-			_unit addBackpack "B_Carryall_oli";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addWeapon "arifle_MXM_Black_F";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addPrimaryWeaponItem "optic_Hamr";
+			_unit addBackpack "B_Kitbag_sgg";
+			_unit addMagazine "30Rnd_65x39_caseless_mag";
+			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "Titan_AA";
 			_unit addWeapon "launch_I_Titan_F";
-			_unit addMagazine "Titan_AA";
 			_unit addMagazine "Titan_AA";
 			_unit selectWeapon "launch_I_Titan_F";
 		};
@@ -91,22 +86,22 @@ for "_i" from 1 to _nbUnits do
 			{
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addWeapon "arifle_MXM_Black_F";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addPrimaryWeaponItem "optic_Hamr";
+				_unit addMagazine "30Rnd_65x39_caseless_mag";
+				_unit addMagazine "30Rnd_65x39_caseless_mag";
+				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addMagazine "HandGrenade";
 				_unit setRank "SERGEANT";
 			}
 			else
 			{
+				_unit addMagazine "1Rnd_HE_Grenade_shell";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addWeapon "arifle_MXM_Black_F";
+				_unit addWeapon "arifle_MX_GL_Black_F";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addPrimaryWeaponItem "optic_Hamr";
-				_unit addMagazine "HandGrenade";
+				_unit addMagazine "1Rnd_HE_Grenade_shell";
+				_unit addMagazine "1Rnd_HE_Grenade_shell";
 			};
 		};
 	};
