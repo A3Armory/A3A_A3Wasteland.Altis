@@ -25,27 +25,22 @@ SideMissions =
 	["mission_HostileHelicopter", 0.1],
 	["mission_MiniConvoy", 1],
 	["mission_SunkenSupplies", 0.1],
-	//["mission_AirWreck", 1.5],
-	//["mission_WepCache", 1.5],
+	["mission_AirWreck", 1],
 	["mission_Outpost", 1],
 	["mission_Truck", 0.5],
 	["mission_GeoCache", 0.1],
-	["mission_HostageRescue", 1]
+	["mission_HostageRescue", 1],
+	["mission_Occupation", 0.5],
+	["mission_Sniper", 0.5]
 ];
 
 MoneyMissions =
 [
-	["mission_MoneyShipment", 1],
-	["mission_SunkenTreasure", 1],
-	["mission_drugsRunners", 1],
+	["mission_MoneyShipment", 0.8],
+	["mission_SunkenTreasure", 0.2],
+	["mission_drugsRunners", 0.5],
 	["mission_Roadblock", 0.5],
 	["mission_TownInvasion", 1]
-];
-
-OccupationMissions =
-[
-	["mission_Occupation", 1],
-	["mission_Sniper", 0.5]
 ];
 
 missionType_water =
@@ -57,7 +52,7 @@ missionType_water =
 ];
 
 MissionSpawnMarkers = (allMapMarkers select {["Mission_", _x] call fn_startsWith}) apply {[_x, false]};
-ForestMissionMarkers = (allMapMarkers select {["ForestMission_", _x] call fn_startsWith}) apply {[_x, false]};
+//ForestMissionMarkers = (allMapMarkers select {["ForestMission_", _x] call fn_startsWith}) apply {[_x, false]};
 SunkenMissionMarkers = (allMapMarkers select {["SunkenMission_", _x] call fn_startsWith}) apply {[_x, false]};
 RoadblockMissionMarkers = (allMapMarkers select {["Roadblock_", _x] call fn_startsWith}) apply {[_x, false]};
 SniperMissionMarkers = (allMapMarkers select {["Sniper_", _x] call fn_startsWith}) apply {[_x, false]};
@@ -67,8 +62,9 @@ OccupationMissionMarkers = (allMapMarkers select {["Occupation_", _x] call fn_st
 {
 	SideMissions append
 	[
-		["mission_AirWreck", 3],
-		["mission_WepCache", 3]
+	["mission_AirWreck", 3],
+	["mission_Occupation", 2],
+	["mission_Sniper", 1]
 	];
 };*/
 
@@ -82,4 +78,3 @@ MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTrea
 { _x set [2, false] } forEach MainMissions;
 { _x set [2, false] } forEach SideMissions;
 { _x set [2, false] } forEach MoneyMissions;
-{ _x set [2, false] } forEach OccupationMissions;

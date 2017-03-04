@@ -12,7 +12,7 @@ private ["_baseToDelete", "_nbUnits", "_camonet", "_hostage", "_obj1", "_obj2", 
 _setupVars =
 {
 	_missionType = "Rescue Arms Dealer";
-	_locationsArray = [ForestMissionMarkers, MissionSpawnMarkers] select (ForestMissionMarkers isEqualTo []);
+	_locationsArray = MissionSpawnMarkers;
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
 

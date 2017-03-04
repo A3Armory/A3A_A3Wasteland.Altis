@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_box1", "_box2", "_randomBox", "_randomBox2"];
+private ["_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_box", "_randomBox", "_randomCase"];
 
 _setupVars =
 {
@@ -114,7 +114,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh2 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["A <t color='%2'>%1</t> transporting 2 weapon crates is being escorted. Stop the convoy!", _vehicleName, sideMissionColor];
+	_missionHintText = format ["A <t color='%2'>%1</t> transporting weapons is being escorted. Stop the convoy!", _vehicleName, sideMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -130,19 +130,15 @@ _failedExec = nil;
 _successExec =
 {
 	// Mission completed
-	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
-	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
-	_box1 = createVehicle ["Box_NATO_Wps_F", _lastPos, [], 2, "None"];
-	_box1 setDir random 360;
-	[_box1, _randomBox] call fn_refillbox;
+	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles","mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
+	_randomCase = selectRandom ["Box_NATO_WpsSpecial_F","Box_East_WpsSpecial_F","Box_NATO_Wps_F","Box_East_Wps_F"];
+	_box = createVehicle [_randomCase, _lastPos, [], 2, "None"];
+	_box setDir random 360;
+	[_box, _randomBox] call fn_refillbox;
 
-	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
-	_box2 setDir random 360;
-	[_box2, _randomBox2] call fn_refillbox;
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box];
 
-	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];	
-	
-	_successHintMessage = "The convoy has been stopped. The weapon crates and vehicles are now yours to take.";
+	_successHintMessage = "The convoy has been stopped. Their gear is now yours to take.";
 };
 
 _this call sideMissionProcessor;
