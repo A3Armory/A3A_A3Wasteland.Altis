@@ -85,27 +85,22 @@ vehicleWeapons =
 
 vehicleAddition =
 [
-	"muzzle_snds_L", // 9mm
-	"muzzle_snds_acp", // .45 ACP
-	"muzzle_snds_M", // 5.56mm
-	"muzzle_snds_58_blk_F", // 5.8mm
-	"muzzle_snds_H", // 6.5mm
-	"muzzle_snds_H_MG", // 6.5mm LMG
-	"muzzle_snds_65_TI_blk_F", // Type 115
-	"muzzle_snds_B", // 7.62mm
-	"muzzle_snds_338_black", // .338
-	"muzzle_snds_93mmg", // 9.3mm
-	["V_TacVest_blk", "V_TacVestIR_blk", "V_Press_F", "H_HelmetIA", "H_HelmetB"],
+	["muzzle_snds_L", "muzzle_snds_acp"],
+	["muzzle_snds_M", "muzzle_snds_58_blk_F", "muzzle_snds_H", "muzzle_snds_H_MG"],
+	["muzzle_snds_65_TI_blk_F", "muzzle_snds_B", "muzzle_snds_338_black", "muzzle_snds_93mmg"],
+	["V_TacVest_blk", "V_TacVestIR_blk", "V_Press_F"],
+	["H_HelmetIA", "H_HelmetB"],
 	["optic_Arco", "optic_SOS", "optic_LRPS"],
 	["optic_Hamr", "optic_DMS", "optic_Aco", "optic_ACO_grn"],
-	["optic_aco_smg", "optic_Holosight", "optic_Holosight_smg"],
-	"acc_pointer_IR"
+	["optic_aco_smg", "optic_Holosight", "optic_Holosight_smg", "acc_pointer_IR"],
+	["Medikit", "FirstAidKit", "ToolKit", "MineDetector"]
 ];
 
 vehicleAddition2 =
 [
 	"Titan_AA",
-	"Chemlight_yellow",
-	["SmokeShellPurple", "SmokeShellYellow", "SmokeShellOrange"],
-	["Medikit", "FirstAidKit", "ToolKit"]
+	["3Rnd_UGL_FlareYellow_F", "3Rnd_UGL_FlareWhite_F"],
+	["1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell", "1Rnd_Smoke_Grenade_shell"],
+	["7Rnd_408_Mag", "5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag", "10Rnd_127x54_Mag", "10Rnd_50BW_Mag_F"],
+	["30Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "10Rnd_338_Mag", "130Rnd_338_Mag", "10Rnd_93x64_DMR_05_Mag", "150Rnd_93x64_Mag"]
 ];
