@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10;
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={5820.7886,227.48895,20109.779};
-		dir[]={-0.9503454,-0.3030673,0.070988432};
-		up[]={-0.30234373,0.95292801,0.02258357};
-		aside[]={0.074490614,1.5080604e-006,0.99724442};
+		pos[]={5798.7344,225.80264,20103.375};
+		dir[]={0.73303783,-0.054846734,-0.67798948};
+		up[]={0.040267736,0.99849117,-0.037243608};
+		aside[]={-0.67901117,8.4983185e-008,-0.73414314};
 	};
 };
 binarizationWanted=0;
@@ -3942,7 +3942,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=724;
 			type="Land_Cargo_Patrol_V1_F";
@@ -3961,7 +3960,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=725;
 			type="Land_Cargo_Patrol_V1_F";
@@ -3980,7 +3978,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=726;
 			type="Land_Cargo_Patrol_V1_F";
@@ -3999,7 +3996,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=727;
 			type="Land_Cargo_Patrol_V1_F";
@@ -4055,7 +4051,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=730;
 			type="Land_Slum_House02_F";
@@ -4073,7 +4068,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=731;
 			type="Land_Slum_House02_F";
@@ -4091,7 +4085,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=733;
 			type="Land_Slum_House03_F";
@@ -4110,7 +4103,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=734;
 			type="Land_Slum_House03_F";
@@ -4127,7 +4119,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=735;
 			type="Land_Slum_House03_F";
@@ -4146,7 +4137,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=736;
 			type="Land_Slum_House01_F";
@@ -4165,7 +4155,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=737;
 			type="Land_Slum_House01_F";
@@ -4184,7 +4173,6 @@ class Mission
 			class Attributes
 			{
 				init="[this, true] call A3W_fnc_setupMissionObject";
-				createAsSimpleObject=1;
 			};
 			id=738;
 			type="Land_Slum_House01_F";
@@ -6769,7 +6757,7 @@ class Mission
 					name="Parking6_spawn";
 					type="Empty";
 					colorName="ColorBlack";
-					angle=215.59108;
+					angle=215.59106;
 					id=988;
 					atlOffset=-3.8146973e-006;
 				};
