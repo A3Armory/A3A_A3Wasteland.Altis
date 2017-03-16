@@ -30,7 +30,7 @@ _progressbar =  _display displayCtrl 10101;
 _struct_text = _display displayCtrl 10102;
 waitUntil {
 	private ["_progress", "_result", "_text"];
-	if (animationState player != _animation) then { [player, _animation] call switchMoveGlobal };
+	//if (animationState player != _animation) then { [player, _animation] call switchMoveGlobal };
 	if not a3w_actions_mutex then {
 		_failed = true;
 		["Action Cancelled", DURATION_FAILED] call a3w_actions_notify;
