@@ -1294,7 +1294,7 @@ customPlayerItems = compileFinal str
 
 donatorItems = compileFinal str
 [
-/*"H_HelmetB_black",
+"H_HelmetB_black",
 "H_HelmetB_camo",
 "H_HelmetSpecB_blk",
 "H_HelmetSpecB_snakeskin",
@@ -1467,7 +1467,7 @@ donatorItems = compileFinal str
 "G_Squares",
 "G_Tactical_Clear",
 "G_Tactical_Black",
-"G_Spectacles_Tinted"*/
+"G_Spectacles_Tinted"
 ];
 
 //Put all gun, ammo, or general item classes in this list if you only want them only accessible through missions (this list will not add these items to mission crates, do that manually)
