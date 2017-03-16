@@ -50,5 +50,5 @@ if (_success) then {
 	publicVariable "pvar_spawn_beacons";
 	deleteVehicle _beacon;
 	[MF_ITEMS_SPAWN_BEACON, 1] call mf_inventory_add;
-	["You have successfully stolen the Spawn Beacon",5] call mf_notify_client;
+	["You have successfully stolen a Spawn Beacon",5] call mf_notify_client;
 };

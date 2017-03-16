@@ -14,8 +14,8 @@
 MF_ITEMS_SPAWN_BEACON_PATH = _this;
 MF_ITEMS_SPAWN_BEACON = "spawnbeacon";
 MF_ITEMS_SPAWN_BEACON_DEPLOYED_TYPE = "Land_Sleeping_bag_folded_F";
-MF_ITEMS_SPAWN_BEACON_STEAL_DURATION = 60;
-MF_ITEMS_SPAWN_BEACON_DURATION = 30;
+MF_ITEMS_SPAWN_BEACON_STEAL_DURATION = 30;
+MF_ITEMS_SPAWN_BEACON_DURATION = 15;
 _deploy = build("deploy.sqf");
 _icon = "client\icons\spawnbeacon.paa";
 [MF_ITEMS_SPAWN_BEACON, "Spawn Beacon", _deploy, "Land_Sleeping_bag_folded_F", _icon, 1] call mf_inventory_create;
