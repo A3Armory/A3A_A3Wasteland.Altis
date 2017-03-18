@@ -98,6 +98,7 @@ vehicleAddition =
 
 vehicleAddition2 =
 [
+	"DemoCharge_Remote_Mag",
 	"Titan_AA",
 	["3Rnd_UGL_FlareYellow_F", "3Rnd_UGL_FlareWhite_F"],
 	["1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell", "1Rnd_Smoke_Grenade_shell"],
