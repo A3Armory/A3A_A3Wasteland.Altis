@@ -45,7 +45,7 @@ switch (true) do
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
-		_player addMagazine "30Rnd_9x21_Mag";
+		_player addMagazine ["30Rnd_9x21_Mag", 25];
 		_player addWeapon "SMG_02_F";
 		_player addPrimaryWeaponItem "acc_flashlight";
 		_player addMagazine "9Rnd_45ACP_Mag";
@@ -70,7 +70,7 @@ switch (true) do
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
-		_player addMagazine ["10Rnd_762x54_Mag", 8];
+		_player addMagazine ["10Rnd_762x54_Mag", 6];
 		_player addWeapon "srifle_DMR_01_F";
 		_player addPrimaryWeaponItem "optic_MRCO";
 		_player addPrimaryWeaponItem "acc_pointer_IR";
@@ -84,7 +84,6 @@ switch (true) do
 		_player addWeapon "Binocular";
 		_player addMagazine "20Rnd_556x45_UW_mag";
 		_player addWeapon "arifle_SDAR_F";
-		_player addMagazine "20Rnd_556x45_UW_mag";
 		_player addMagazine ["20Rnd_556x45_UW_mag", 10];
 		_player addMagazine "11Rnd_45ACP_Mag";
 		_player addWeapon "hgun_Pistol_heavy_01_F";
