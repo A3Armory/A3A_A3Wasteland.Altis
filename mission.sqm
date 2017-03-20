@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=0.5;
@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=14;
 	};
 	class Camera
 	{
-		pos[]={5798.7344,225.80264,20103.375};
-		dir[]={0.73303783,-0.054846734,-0.67798948};
-		up[]={0.040267736,0.99849117,-0.037243608};
-		aside[]={-0.67901117,8.4983185e-008,-0.73414314};
+		pos[]={11534,44.722664,9409};
+		dir[]={0.9502399,-0.1929083,-0.24464311};
+		up[]={0.18681946,0.9812178,-0.048097923};
+		aside[]={-0.24932697,2.5512418e-007,-0.96843237};
 	};
 };
 binarizationWanted=0;
@@ -44,42 +44,42 @@ class AddonsMetaData
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item5
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -3609,7 +3609,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3578.8682,26.270664,10781.252};
+						position[]={3579,26.3659,10781.55};
 					};
 					side="Civilian";
 					flags=7;
@@ -3620,14 +3620,12 @@ class Mission
 					};
 					id=704;
 					type="C_man_1_1_F";
-					atlOffset=-0.0041236877;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=703;
-			atlOffset=-0.0041236877;
 		};
 		class Item50
 		{
@@ -3891,7 +3889,7 @@ class Mission
 			};
 			id=721;
 			type="Land_u_House_Small_02_V1_F";
-			atlOffset=0.019363403;
+			atlOffset=0.029586792;
 		};
 		class Item63
 		{
@@ -3910,7 +3908,7 @@ class Mission
 			};
 			id=722;
 			type="Land_u_House_Small_02_V1_F";
-			atlOffset=0.021453857;
+			atlOffset=0.031677246;
 		};
 		class Item64
 		{
@@ -4932,7 +4930,7 @@ class Mission
 			type="Empty";
 			colorName="ColorKhaki";
 			id=812;
-			atlOffset=6.3279724;
+			atlOffset=6.3680115;
 		};
 		class Item153
 		{
@@ -6834,8 +6832,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5816.5,225.38339,20111.5};
-				angles[]={0,4.8294544,0};
+				position[]={5880.5,227.89546,20105.5};
+				angles[]={0,0.72107315,0};
 			};
 			side="Empty";
 			flags=4;
