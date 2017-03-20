@@ -1356,6 +1356,7 @@ donatorItems = compileFinal str
 "H_Shemag_olive_hs",
 "H_ShemagOpen_tan",
 "H_ShemagOpen_khk",
+"H_RacingHelmet_1_black_F",
 "H_RacingHelmet_1_blue_F",
 "H_RacingHelmet_1_green_F",
 "H_RacingHelmet_1_yellow_F",
