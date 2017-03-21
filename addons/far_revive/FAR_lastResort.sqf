@@ -4,14 +4,10 @@
 //	@file Name: FAR_lastResort.sqf
 //	@file Author: AgentRev
 
-private ["_randomSound"];
-
-_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "predator.ogg"];
-
 if !(player getVariable ["performingDuty", false]) then
 {
-	// biggest to smallest
-	_availableBombs = (magazines player) arrayIntersect ["SatchelCharge_Remote_Mag", "IEDUrbanBig_Remote_Mag", "IEDLandBig_Remote_Mag", "DemoCharge_Remote_Mag", "IEDUrbanSmall_Remote_Mag", "IEDLandSmall_Remote_Mag"];
+	_availableBombs = (magazines player) arrayIntersect ["SatchelCharge_Remote_Mag", "IEDUrbanBig_Remote_Mag", "IEDLandBig_Remote_Mag", "DemoCharge_Remote_Mag", "IEDUrbanSmall_Remote_Mag", "IEDLandSmall_Remote_Mag"]; // biggest to smallest
+	_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "predator.ogg"];
 
 	if !(_availableBombs isEqualTo []) then
 	{
@@ -23,12 +19,16 @@ if !(player getVariable ["performingDuty", false]) then
 			titleText [format ["ERROR: invalid class '%1'", _mineType], "PLAIN", 0.5];
 		};
 
-		if (["Perform your duty?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
+		if (["Detonate explosive charge?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
 		{
 			player setVariable ["performingDuty", true];
 
 			player removeMagazine _magType;
-			playSound3D [call currMissionDir + "client\sounds\" + _randomSound, player, false, getPosASL player, 1, 1, 500];
+
+			if ((getPlayerUID player) call isdonor) then
+			{
+				playSound3D [call currMissionDir + "client\sounds\" + _randomSound, player, false, getPosASL player, 1, 1, 500];
+			};
 
 			sleep 1.5;
 
@@ -60,6 +60,6 @@ if !(player getVariable ["performingDuty", false]) then
 	}
 	else
 	{
-		titleText ["Get an explosive charge next time, my child.", "PLAIN", 0.5];
+		titleText ["You need an explosive charge next time.", "PLAIN", 0.5];
 	};
 };
