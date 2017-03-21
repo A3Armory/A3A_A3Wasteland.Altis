@@ -46,13 +46,13 @@ _setupObjects =
 	_hostage disableAI "anim";
 
 	_obj1 = createVehicle ["I_GMG_01_high_F", _missionPos,[], 10,"None"]; 
-	_obj1 setPosATL [(_missionPos select 0) - 2, (_missionPos select 1) + 2, _missionPos select 2];
+	_obj1 setPosATL [(_missionPos select 0) - 6, (_missionPos select 1) + 6, _missionPos select 2];
 
 	_obj2 = createVehicle ["I_HMG_01_high_F", _missionPos,[], 10,"None"]; 
-	_obj2 setPosATL [(_missionPos select 0) - 2, (_missionPos select 1) - 2, _missionPos select 2];
+	_obj2 setPosATL [(_missionPos select 0) - 6, (_missionPos select 1) - 6, _missionPos select 2];
 
 	_obj3 = createVehicle ["I_HMG_01_high_F", _missionPos,[], 10,"None"]; 
-	_obj3 setPosATL [(_missionPos select 0) + 2, (_missionPos select 1) - 2, _missionPos select 2];
+	_obj3 setPosATL [(_missionPos select 0) + 6, (_missionPos select 1) - 6, _missionPos select 2];
 
 	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
 	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
