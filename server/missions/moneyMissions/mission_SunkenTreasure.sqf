@@ -33,6 +33,7 @@ _setupObjects =
 	{
 		_cash = createVehicle ["Land_Money_F", _missionPos, [], 0, "None"];
 		_cash setVariable ["owner", "mission", true];
+		_cash setVariable ["persistent", true, true];
 		//_cashPos = getPosATL _cash;
 		//_cashPos set [2, getTerrainHeightASL _cashPos + 1];
 		//_cash setPos _cashPos;
@@ -80,6 +81,7 @@ _successExec =
 	{
 		_x setVariable ["cmoney", 6500, true];
 		_x setVariable ["owner", "world", true];
+		_x setVariable ["persistent", false, true];
 	} forEach _cashObjects;
 
 	_successHintMessage = "The treasure has been captured, well done.";

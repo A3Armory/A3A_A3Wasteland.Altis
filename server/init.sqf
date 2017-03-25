@@ -570,3 +570,6 @@ if !(["A3W_hcObjCleanup"] call isConfigOn) then
 	// Start clean-up loop
 	execVM "server\WastelandServClean.sqf";
 };
+
+// Extra clean-up addon
+[] execVM "addons\repetitive_cleanup\repetitive_cleanup.sqf";

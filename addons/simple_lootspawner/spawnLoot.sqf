@@ -15,6 +15,7 @@ if(isServer) then
 	_holder= createVehicle ["groundweaponholder",[_pos0,_pos1,(getposATL _BARREL select 2)], [], 0, "can_Collide"];
 	deletevehicle _BARREL;
 	_type= floor (random 5);
+	_holder setVariable ["persistent", true, true];
 
 	if (_showLoot) then
 	{
