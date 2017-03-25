@@ -60,7 +60,7 @@ if (_success) then {
 	_beacon setVariable ["ownerName", name player, true];
 	_beacon setVariable ["ownerUID", _uid, true];
 	_beacon setVariable ["packing", false, true];
-	_beacon setVariable ["groupOnly", true, true];
+	_beacon setVariable ["groupOnly", (playerSide == INDEPENDENT), true];
 	/*{
 		if (_x getVariable ["ownerUID",""] == _uid) then {
 			pvar_spawn_beacons = pvar_spawn_beacons - [_x];
