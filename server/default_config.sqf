@@ -16,6 +16,7 @@ A3W_disableBuiltInThermal = 0;     // Display a black screen if the player tries
 A3W_teamBalance = 50;              // Max percentage of players allowed on Opfor/Blufor from total server population (0 = off) Bluefor/opfor can only exceed this limit if both grow in similar size.
 A3W_reservedSlots = 1;             // Number of reserved slots available (0 = off)
 A3W_maxPlayers = 72;               // Server slot limit. Needed for reserved slots to work
+A3W_repetitiveCleanup = 1;         // Enable clean-up addon (0 = off, 1 = on)
 
 // Time settings
 A3W_startHour = 15;                // In-game hour at mission start (0 to 23) - time is saved and restored between server restarts if A3W_timeSaving = 1

@@ -572,4 +572,7 @@ if !(["A3W_hcObjCleanup"] call isConfigOn) then
 };
 
 // Extra clean-up addon
-[] execVM "addons\repetitive_cleanup\repetitive_cleanup.sqf";
+if (["A3W_repetitiveCleanup"] call isConfigOn) then
+{
+	[] execVM "addons\repetitive_cleanup\repetitive_cleanup.sqf";
+};
