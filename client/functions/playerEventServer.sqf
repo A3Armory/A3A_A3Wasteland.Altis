@@ -38,7 +38,7 @@ switch (toLower _type) do
 			};
 
 			playSound "defaultNotification";
-			call mf_items_warchest_refresh;
+			//call mf_items_warchest_refresh;
 			call mf_items_cratemoney_refresh;
 			true call mf_items_atm_refresh;
 		}

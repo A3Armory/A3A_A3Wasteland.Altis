@@ -173,7 +173,7 @@ _setupObjects =
 
 	_vehDeterminer = if ("AEIMO" find (_vehicleName select [0,1]) != -1) then { "An" } else { "A" };
 
-	_missionHintText = format ["%1 <t color='%3'>%2</t> has been immobilized. Go get it for your team!", _vehDeterminer, _vehicleName, mainMissionColor];
+	_missionHintText = format ["%1 %2 has been immobilized. Go get it for your team!", _vehDeterminer, _vehicleName];
 };
 
 _waitUntilMarkerPos = nil;
