@@ -8,18 +8,18 @@ class EditorData
 	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=999;
+		nextID=1001;
 	};
 	class LayerIndexProvider
 	{
-		nextID=14;
+		nextID=19;
 	};
 	class Camera
 	{
-		pos[]={11534,44.722664,9409};
-		dir[]={0.9502399,-0.1929083,-0.24464311};
-		up[]={0.18681946,0.9812178,-0.048097923};
-		aside[]={-0.24932697,2.5512418e-007,-0.96843237};
+		pos[]={16809.832,48.062664,12815.762};
+		dir[]={-0.92791295,-0.32686442,-0.17931287};
+		up[]={-0.32093322,0.94506764,-0.062018283};
+		aside[]={-0.18973464,-2.8665818e-007,0.98184335};
 	};
 };
 binarizationWanted=0;
@@ -32,13 +32,14 @@ addons[]=
 	"A3_Structures_F_Mil_Cargo",
 	"A3_Structures_F_System",
 	"A3_Structures_F_Households_Slum",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Structures_F_EPA_Mil_Scrapyard"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -78,6 +79,13 @@ class AddonsMetaData
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -6633,7 +6641,7 @@ class Mission
 			name="VanillaLayer";
 			class Entities
 			{
-				items=16;
+				items=17;
 				class Item0
 				{
 					dataType="Marker";
@@ -6799,9 +6807,27 @@ class Mission
 					angle=200.78293;
 					id=992;
 				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16805.918,21.605654,12815.935};
+						angles[]={0,3.3972483,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="[this] call A3W_fnc_setupMissionObject; this setVariable ['is_storage', true]; this setVariable ['persistent', true]";
+					};
+					id=1000;
+					type="Land_PaperBox_open_full_F";
+					atlOffset=0.18700027;
+				};
 			};
 			id=976;
-			atlOffset=-51.881287;
+			atlOffset=61.447193;
 		};
 		class Item317
 		{
