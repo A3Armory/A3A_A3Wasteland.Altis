@@ -996,6 +996,9 @@ boatsArray = compileFinal str
 	["Motorboat", "C_Boat_Civil_01_F", 3000, "boat", "SKIPSAVE"],
 	["Motorboat Rescue", "C_Boat_Civil_01_rescue_F", 3900, "boat", "SKIPSAVE"],
 	["Motorboat Police", "C_Boat_Civil_01_police_F", 4100, "boat", "SKIPSAVE"],
+
+	["RHIB", "I_C_Boat_Transport_02_F", 4250, "boat"],
+
 	["Speedboat HMG (CSAT)", "O_Boat_Armed_01_hmg_F", 7500, "boat"],
 	["Speedboat Minigun (NATO)", "B_Boat_Armed_01_minigun_F", 7000, "boat"],
 	["Speedboat Minigun (AAF)", "I_Boat_Armed_01_minigun_F", 7000, "boat"],
@@ -1196,6 +1199,12 @@ colorsArray = compileFinal str
 		"Hatchback_01_base_F",
 		[
 			["Rusty (Hatchback)", [[0, _wreckDir + "civilcar_extwreck_co.paa"]]]
+		]
+	],
+	[ // RHIB paintjob
+		"Boat_Transport_02_base_F",
+		[
+			["Civilian (RHIB)", ["Civilian"]]
 		]
 	],
 	[ // Prowler paintjobs
