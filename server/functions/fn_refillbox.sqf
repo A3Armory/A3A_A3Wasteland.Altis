@@ -23,7 +23,7 @@ _box setVariable ["allowDamage", false, true];
 _box setVariable ["A3W_inventoryLockR3F", true, true];
 
 // Clear pre-existing cargo first
-//clearBackpackCargoGlobal _box;
+clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 clearWeaponCargoGlobal _box;
 clearItemCargoGlobal _box;
@@ -160,6 +160,20 @@ switch (_boxType) do
 			["wep", ["arifle_SPAR_03_blk_F", "arifle_SPAR_03_khk_F", "arifle_SPAR_03_snd_F"], RANDOM_BETWEEN(0,1), RANDOM_BETWEEN(1,2)],
 			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], RANDOM_BETWEEN(2,4)],
 			["itm", ["optic_Arco_ghex_F", "optic_ERCO_snd_F", "optic_SOS_khk_F"], RANDOM_BETWEEN(2,3)]
+		];
+	};
+	case "mission_Supplies":
+	{
+		_boxItems =
+		[
+			// Item type, Item class(es), # of items, # of magazines per weapon
+			["mag", "11Rnd_45ACP_Mag", 4],
+			["mag", "30Rnd_556x45_Stanag_Tracer_Yellow", 4],
+			["mag", "10Rnd_762x54_Mag", 4],
+			["mag", "9Rnd_45ACP_Mag", 4],
+			["mag", "20Rnd_556x45_UW_mag", 4],
+			["itm", "FirstAidKit", 5],
+			["itm", "HandGrenade", 5]
 		];
 	};
 };

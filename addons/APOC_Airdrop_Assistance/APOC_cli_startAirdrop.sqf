@@ -16,7 +16,7 @@ switch (_type) do {
 	case "vehicle": {_selectionArray = APOC_AA_VehOptions};
 	case "supply": {_selectionArray = APOC_AA_SupOptions};
 	case "picnic": {_selectionArray = APOC_AA_SupOptions};
-	default {_selectionArray = APOC_AA_VehOptions; diag_log "AAA - Default Array Selected - Something broke";};
+	default {_selectionArray = APOC_AA_VehOptions; diag_log "Apoc's Airdrop Assistance - Default Array Selected - Something broke";};
 };
 _selectionName = (_selectionArray select _selectionNumber) select 0;
 _price = (_selectionArray select _selectionNumber) select 2;
@@ -51,7 +51,7 @@ if ([parseText _confirmMsg, "Confirm", "DROP!", true] call BIS_fnc_guiMessage) t
 	_heliDirection = random 360;
 	[[_type,_selectionNumber,_player,_heliDirection],"APOC_srv_startAirdrop",false,false,false] call BIS_fnc_MP;
 
-	diag_log format ["AAA - Last Used Time: %1; CoolDown Set At: %2; Current Time: %3", _lastUsedTime, APOC_AA_coolDownTime, serverUpTime];
+	diag_log format ["Apoc's Airdrop Assistance - Last Used Time: %1; CoolDown Set At: %2; Current Time: %3", _lastUsedTime, APOC_AA_coolDownTime, serverUpTime];
 	playSound3D ["a3\sounds_f\sfx\radio\ambient_radio17.wss",player,false,getPosASL player,1,1,25];
 	sleep 1;
 	hint format ["Inbound Airdrop %2 Heading: %1 ETA: 40s",ceil _heliDirection,_selectionName];
