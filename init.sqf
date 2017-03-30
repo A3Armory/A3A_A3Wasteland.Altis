@@ -28,9 +28,6 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 
-//disable TAW grass Option 'None'
-tawvd_disablenone = true;
-
 /*CHVD_allowNoGrass = false;
 CHVD_allowTerrain = false; // terrain option has been disabled out from the menu due to terrible code, this variable has currently no effect
 CHVD_maxView = 3000; // Set maximum view distance (default: 12000)

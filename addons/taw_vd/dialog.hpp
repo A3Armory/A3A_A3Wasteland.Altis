@@ -299,7 +299,7 @@ class TAW_VD
 		class VDinCar : TAWVD_RscText
 		{
 			idc = -1;
-			text = "On Land:";
+			text = "Land:";
 			
 			x = 0.32; y = 0.305;
 			w = 0.275; h = 0.04;
@@ -308,7 +308,7 @@ class TAW_VD
 		class VDinAir : TAWVD_RscText
 		{
 			idc = -1;
-			text = "In Air:";
+			text = "Air:";
 			
 			x = 0.32; y = 0.355;
 			w = 0.275; h = 0.04;
@@ -450,17 +450,6 @@ class TAW_VD
 			y = 0.656;
 		};
 		
-		/*class VD_terr_none : TAWVD_activeText
-		{
-			idc = -1;
-			text = "None";
-			action = "['none'] call TAWVD_fnc_onTerrainChange;";
-			sizeEx = 0.04;
-			
-			x = 0.38; y = 0.50;
-			w = 0.275; h = 0.04;
-		};*/
-		
 		class VD_terr_low : TAWVD_activeText
 		{
 			idc = -1;
@@ -468,7 +457,7 @@ class TAW_VD
 			action = "['low'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
-			x = 0.37; y = 0.50;
+			x = 0.35; y = 0.50;
 			w = 0.275; h = 0.04;
 		};
 		
@@ -479,7 +468,7 @@ class TAW_VD
 			action = "['norm'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
-			x = 0.50; y = 0.50;
+			x = 0.46; y = 0.50;
 			w = 0.275; h = 0.04;
 		};
 		
@@ -490,7 +479,18 @@ class TAW_VD
 			action = "['high'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
-			x = 0.67; y = 0.50;
+			x = 0.58; y = 0.50;
+			w = 0.275; h = 0.04;
+		};
+		
+		class VD_terr_max : TAWVD_activeText
+		{
+			idc = -1;
+			text = "Max";
+			action = "['max'] call TAWVD_fnc_onTerrainChange;";
+			sizeEx = 0.04;
+			
+			x = 0.69; y = 0.50;
 			w = 0.275; h = 0.04;
 		};
 
