@@ -71,8 +71,6 @@ staticPlaneList =
 	"C_Plane_Civil_01_F"
 ];
 
-A3W_planeSpawnOdds = 0.25; // 0.0 to 1.0
-
 //Random Weapon List - Change this to what you want to spawn in cars.
 vehicleWeapons =
 [

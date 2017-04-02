@@ -15,7 +15,7 @@ _counter = 0;
 {
 	if (["planeSpawn_", _x] call fn_startsWith) then
 	{
-		if (random 1 > (1 - (["A3W_planeSpawnOdds", 0.25] call getPublicVar))) then
+		if (random 1 > (1 - (["A3W_planeSpawnOdds", 0.50] call getPublicVar))) then // 50% chance spawning
 		{
 			_noBuzzard = ["_noBuzzard", _x] call fn_findString != -1;
 			[markerPos _x, markerDir _x, _noBuzzard] call planeCreation;

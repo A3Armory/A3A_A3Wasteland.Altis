@@ -18,7 +18,7 @@ _count = 0;
 
 	if (["heliSpawn_", _marker] call fn_startsWith) then
 	{
-		if (!(_marker in currentStaticHelis) && {random 1 < 0.75}) then // 75% chance spawning
+		if (!(_marker in currentStaticHelis) && {random 1 > (1 - (["A3W_heliSpawnOdds", 0.50] call getPublicVar))}) then // 50% chance spawning
 		{
 			_position = markerPos _marker;
 			[0, _position] call staticHeliCreation;
