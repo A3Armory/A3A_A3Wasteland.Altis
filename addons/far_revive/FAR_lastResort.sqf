@@ -7,7 +7,7 @@
 if !(player getVariable ["performingDuty", false]) then
 {
 	_availableBombs = (magazines player) arrayIntersect ["SatchelCharge_Remote_Mag", "IEDUrbanBig_Remote_Mag", "IEDLandBig_Remote_Mag", "DemoCharge_Remote_Mag", "IEDUrbanSmall_Remote_Mag", "IEDLandSmall_Remote_Mag"]; // biggest to smallest
-	_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "R2D2.ogg", "scarface.ogg", "sloth.ogg", "trombone.ogg", "predator.ogg"];
+	_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "scarface.ogg", "sloth.ogg", "predator.ogg", "akbar.ogg", "bomb.ogg", "fired.ogg", "ilovechina.ogg", "mexicanpeople.ogg", "pussy.ogg"];
 
 	if !(_availableBombs isEqualTo []) then
 	{
