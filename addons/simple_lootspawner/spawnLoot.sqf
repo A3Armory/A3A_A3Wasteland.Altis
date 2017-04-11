@@ -11,11 +11,12 @@ if(isServer) then
 	_showLoot= (_this select 1);
 
 	_BARREL= createVehicle ["Land_BarrelEmpty_F",[_pos0,_pos1,_pos2+0.3], [], 0, "can_Collide"];
-	sleep 0.5;
+	sleep 1;
 	_holder= createVehicle ["groundweaponholder",[_pos0,_pos1,(getposATL _BARREL select 2)], [], 0, "can_Collide"];
 	deletevehicle _BARREL;
 	_type= floor (random 5);
 	_holder setVariable ["persistent", true, true];
+	_holder enableDynamicSimulation true;
 
 	if (_showLoot) then
 	{
@@ -25,7 +26,7 @@ if(isServer) then
 		_debug setMarkerType "hd_dot";
 		_debug setMarkerColor "ColorRed";
 		_txt=format ["%1",_type];
-		_debug setMarkerText _txt;	
+		_debug setMarkerText _txt;
 	};
 
 // Spawn Weapon
@@ -35,7 +36,7 @@ if(isServer) then
 		_magazines= getArray (configFile / "CfgWeapons" / _weapon / "magazines");
 		_magazineClass= _magazines call bis_fnc_selectRandom; 
 		_holder addWeaponCargoGlobal [_weapon, 1];
-		_holder addMagazineCargoGlobal [_magazineClass, 2];
+		_holder addMagazineCargoGlobal [_magazineClass, 1];
 	};
 
 // Spawn Magazines
