@@ -234,18 +234,17 @@ if (hasInterface && {["A3W_reservedSlots"] call isConfigOn}) then
 	if (_uid call isAdmin || {[_uid, topServerDonors] call isDonor}) then
 	{
 		_noReserve = _noReserve + 1;
+
 		if (_noReserve > _maxPlayers) then
 		{
 			_noReserve = _maxPlayers;
 		};
+
+		cutText ["You are using a reserved slot", "PLAIN DOWN", 1];
 	};
 
 	if (_playerCount > _noReserve && !(_uid call isAdmin || {[_uid, topServerDonors] call isDonor})) then
 	{
 		["ReservedSlots",false,1] call BIS_fnc_endMission;
-	}
-	else 
-	{
-		cutText ["You are using a reserved slot", "PLAIN DOWN", 1];
 	};
 };
