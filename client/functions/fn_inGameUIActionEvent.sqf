@@ -112,6 +112,21 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 				player setAnimSpeedCoef 1;
 			};
 		};
+
+		case (_action == "UseContainerMagazine"):
+		{
+			_minDist = ["A3W_remoteBombStoreRadius", 100] call getPublicVar;
+			if (_minDist <= 0) exitWith {};
+
+			_nearbyStores = entities "CAManBase" select {_x getVariable ["storeNPC_setupComplete", false] && {player distance _x < _minDist}};
+
+			if !(_nearbyStores isEqualTo []) exitWith
+			{
+				playSound "FD_CP_Not_Clear_F";
+				[format ["You are not allowed to activate placed explosives within %1m of a store.", _minDist], 5] call mf_notify_client;
+				_handled = true;
+			};
+		};
 	};
 };
 
