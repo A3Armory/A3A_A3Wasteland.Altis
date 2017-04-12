@@ -30,16 +30,16 @@ SideMissions =
 	["mission_Truck", 0.5],
 	["mission_GeoCache", 0.1],
 	["mission_HostageRescue", 1],
-	["mission_Occupation", 0.5],
-	["mission_Sniper", 0.5]
+	["mission_Occupation", 0.7],
+	["mission_Sniper", 0.7]
 ];
 
 MoneyMissions =
 [
-	["mission_MoneyShipment", 0.8],
+	["mission_MoneyShipment", 0.6],
 	["mission_SunkenTreasure", 0.2],
 	["mission_drugsRunners", 0.5],
-	["mission_Roadblock", 0.5],
+	["mission_Roadblock", 0.6],
 	["mission_TownInvasion", 1]
 ];
 

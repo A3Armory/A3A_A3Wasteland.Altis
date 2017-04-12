@@ -47,7 +47,7 @@ if (!isPlayer _unit && _unit getVariable ["AI_MoneyDrop", false]) then
 	_item = createVehicle [_itemtype select 1, getpos _unit, [], 5, "None"];
 	_item setPos ([getPos _unit, 1, 3, 0, 0, 2000, 0] call BIS_fnc_findSafePos);
 	_item setDir random 360;
-	_cash = round(random 6500);
+	_cash = round(random 7500);
 	_item setVariable ["cmoney", _cash, true];
 	_item setVariable ["owner", "world", true];
 };
