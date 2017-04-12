@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=19;
+		nextID=21;
 	};
 	class Camera
 	{
-		pos[]={16809.832,48.062664,12815.762};
-		dir[]={-0.92791295,-0.32686442,-0.17931287};
-		up[]={-0.32093322,0.94506764,-0.062018283};
-		aside[]={-0.18973464,-2.8665818e-007,0.98184335};
+		pos[]={8485.1025,286.24188,14366.743};
+		dir[]={-0.59242374,-0.23778577,0.76982194};
+		up[]={-0.14514829,0.97126538,0.18861134};
+		aside[]={0.79255199,5.7245779e-007,0.60991961};
 	};
 };
 binarizationWanted=0;
@@ -6890,11 +6890,12 @@ class Mission
 		class Item321
 		{
 			dataType="Marker";
-			position[]={7940,266.14664,14603.5};
+			position[]={8485.5,266,14366.5};
 			name="Sniper_13";
 			type="Empty";
 			colorName="ColorCIV";
 			id=997;
+			atlOffset=190.88858;
 		};
 		class Item322
 		{
