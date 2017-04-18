@@ -213,8 +213,10 @@ WaitUntil {sleep 1; ((((position _object) select 2) < 10) || (isNil "_para"))};
 
 	if (_type == "vehicle") then 
 	{
-		uiSleep 5;
-		_object allowDamage true;
+        if(isTouchingGround _object) then {
+            uiSleep 5;
+            _object allowDamage true;
+        }
 	};
 
 	if (_type == "picnic") then
