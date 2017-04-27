@@ -64,7 +64,7 @@ GVAR(deleteClassesConfig) = [
 	[M* 15*60, ["WeaponHolder","GroundWeaponHolder","WeaponHolderSimulated","Land_Money_F","Land_WaterPurificationTablets_F","Land_VitaminBottle_F","Land_PowderedMilk_F","Land_PainKillers_F","Land_Suitcase_F","Land_BakedBeans_F","Land_BottlePlastic_V2_F","Land_CanisterFuel_F","Land_CanisterOil_F","Land_Ground_sheet_folded_OPFOR_F","Chemlight_blue","Chemlight_green","Chemlight_red","Chemlight_yellow"]]
 ];
 
-GVAR(resetTimeIfPlayerIsWithin) = 100; // how far away from object player needs to be so it can delete
+GVAR(resetTimeIfPlayerIsWithin) = 40; // how far away from object player needs to be so it can delete
 
 //==================================================================================//
 //=============================== CNFIGURATION end =================================//
