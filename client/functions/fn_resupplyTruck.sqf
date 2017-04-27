@@ -36,7 +36,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 	_vehName = getText (_vehCfg >> "displayName");
 	_isUAV = (round getNumber (_vehCfg >> "isUav") >= 1);
 	_isStaticWep = _vehClass isKindOf "StaticWeapon";
-	_isHighPrice = ["B_MBT_01_cannon_F","B_MBT_01_TUSK_F","O_MBT_02_cannon_F","I_MBT_03_cannon_F","B_Heli_Attack_01_F","O_Heli_Attack_02_F","B_T_UAV_03_F","B_T_VTOL_01_armed_F","O_T_VTOL_02_infantry_F","B_UAV_02_F","O_UAV_02_F","I_UAV_02_F","O_T_UAV_04_CAS_F","I_Plane_Fighter_03_CAS_F","B_Plane_CAS_01_F","O_Plane_CAS_02_F"];
+	_isHighPrice = ["B_MBT_01_cannon_F","B_MBT_01_TUSK_F","O_MBT_02_cannon_F","I_MBT_03_cannon_F","B_Heli_Attack_01_F","O_Heli_Attack_02_F","B_T_UAV_03_F","B_T_VTOL_01_armed_F","O_T_VTOL_02_infantry_F","B_UAV_02_F","O_UAV_02_F","I_UAV_02_F","O_T_UAV_04_CAS_F","I_Plane_Fighter_03_CAS_F","B_Plane_CAS_01_F","O_Plane_CAS_02_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","O_UGV_01_rcws_F"];
 
 	scopeName "resupplyTruckThread";
 

@@ -21,7 +21,7 @@ _setupVars =
 	_missionPos = markerPos (_locArray select 0);
 	_buildingRadius = _locArray select 1;
 	_townName = _locArray select 2;
-	_cashamount = round(random 50000);
+	_cashamount = round(random 100000);
 
 	//randomize amount of units
 	_nbUnits = _nbUnits + round(random (_nbUnits*0.5));

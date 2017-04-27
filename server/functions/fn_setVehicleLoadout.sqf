@@ -59,12 +59,15 @@ switch (true) do
 			["Bomb_04_Plane_CAS_01_F", [-1]],
 			["CMFlareLauncher", [-1]]
 		];
+		_customCode =
+		{
+			_veh setMagazineTurretAmmo ["1000Rnd_Gatling_30mm_Plane_CAS_01_F", 675, [-1]];
+		};
 	};
 	case (_class isKindOf "O_Plane_CAS_02_F"):
 	{
 		_mags =
 		[
-			["500Rnd_Cannon_30mm_Plane_CAS_02_F", [-1]],
 			["500Rnd_Cannon_30mm_Plane_CAS_02_F", [-1]],
 			["20Rnd_Rocket_03_HE_F", [-1]],
 			["2Rnd_Missile_AA_03_F", [-1]],

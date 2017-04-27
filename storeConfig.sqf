@@ -890,11 +890,11 @@ landArray = compileFinal str
 	["Zamak Repair", "I_Truck_02_box_F", 12000, "vehicle"],
 
 	["UGV Stomper (NATO)", "B_UGV_01_F", 12500, "vehicle"],
-	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 25000, "vehicle"],
+	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 40000, "vehicle"],
 	["UGV Stomper (AAF)", "I_UGV_01_F", 12500, "vehicle"],
-	["UGV Stomper RCWS (AAF)", "I_UGV_01_rcws_F", 25000, "vehicle"],
+	["UGV Stomper RCWS (AAF)", "I_UGV_01_rcws_F", 40000, "vehicle"],
 	["UGV Saif (CSAT)", "O_UGV_01_F", 12500, "vehicle"],
-	["UGV Saif RCWS (CSAT)", "O_UGV_01_rcws_F", 25000, "vehicle"]
+	["UGV Saif RCWS (CSAT)", "O_UGV_01_rcws_F", 40000, "vehicle"]
 ];
 
 armoredArray = compileFinal str
@@ -962,7 +962,7 @@ helicoptersArray = compileFinal str
 	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 90000, "vehicle"], // RAH-66 with gunner
 	["Mi-48 Kajman", "O_Heli_Attack_02_F", 90000, "vehicle"], // Mi-28 with gunner
 
-	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 65000, "vehicle"]
+	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 75000, "vehicle"]
 ];
 
 planesArray = compileFinal str
@@ -971,21 +971,21 @@ planesArray = compileFinal str
 
 	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 32000, "vehicle"],
 	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 72000, "vehicle"],
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 120000, "vehicle"],
-	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 115000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 140000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 135000, "vehicle"],
 
 	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 20000, "vehicle"],
 	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 90000, "vehicle"],
 	["Y-32 Xi'an", "O_T_VTOL_02_infantry_F", 90000, "vehicle"],
 
-	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 40000, "vehicle"],
-	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 25000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
-	["K40 Ababil-3 Missile UAV", "O_UAV_02_F", 40000, "vehicle"],
-	["K40 Ababil-3 Bomber UAV", "O_UAV_02_CAS_F", 25000, "vehicle"],
-	["K40 Ababil-3 Missile UAV", "I_UAV_02_F", 40000, "vehicle"],
-	["K40 Ababil-3 Bomber UAV", "I_UAV_02_CAS_F", 25000, "vehicle"],
+	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 55000, "vehicle"],
+	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 45000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
+	["K40 Ababil-3 Missile UAV", "O_UAV_02_F", 55000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV", "O_UAV_02_CAS_F", 45000, "vehicle"],
+	["K40 Ababil-3 Missile UAV", "I_UAV_02_F", 55000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV", "I_UAV_02_CAS_F", 45000, "vehicle"],
 
-	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 40000, "vehicle"]
+	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 55000, "vehicle"]
 ];
 
 boatsArray = compileFinal str

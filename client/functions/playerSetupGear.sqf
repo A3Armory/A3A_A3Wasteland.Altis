@@ -45,46 +45,53 @@ switch (true) do
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
-		_player addMagazine ["30Rnd_9x21_Mag", 25];
+		_player addMagazine "30Rnd_9x21_Mag";
 		_player addWeapon "SMG_02_F";
+		_player addMagazine "30Rnd_9x21_Mag";
 		_player addPrimaryWeaponItem "acc_flashlight";
 		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addWeapon "hgun_ACPC2_F";
 		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addItem "Medikit";
 		_player addItem "FirstAidKit";
+		_player addItem "SmokeShell";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
-		_player addMagazine ["30Rnd_556x45_Stanag_Tracer_Yellow", 20];
+		_player addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
 		_player addMagazine "UGL_FlareWhite_F";
 		_player addWeapon "arifle_Mk20_GL_plain_F";
+		_player addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
 		_player addPrimaryWeaponItem "acc_flashlight";
 		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addWeapon "hgun_ACPC2_F";
 		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addItem "MineDetector";
 		_player addItem "Toolkit";
+		_player addItem "SmokeShell";
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
-		_player addMagazine ["10Rnd_762x54_Mag", 6];
+		_player addMagazine "10Rnd_762x54_Mag";
 		_player addWeapon "srifle_DMR_01_F";
+		_player addMagazine ["10Rnd_762x54_Mag", 5];
 		_player addPrimaryWeaponItem "optic_MRCO";
 		_player addPrimaryWeaponItem "acc_pointer_IR";
 		_player addMagazine "9Rnd_45ACP_Mag";
 		_player addWeapon "hgun_ACPC2_F";
 		_player addWeaponItem ["hgun_ACPC2_F", "muzzle_snds_acp"];
 		_player addMagazine "9Rnd_45ACP_Mag";
+		_player addItem "MiniGrenade";
 	};
 	case (["_diver_", typeOf _player] call fn_findString != -1):
 	{
 		_player addWeapon "Binocular";
 		_player addMagazine "20Rnd_556x45_UW_mag";
 		_player addWeapon "arifle_SDAR_F";
-		_player addMagazine ["20Rnd_556x45_UW_mag", 10];
+		_player addMagazine "20Rnd_556x45_UW_mag";
+		_player addMagazine "20Rnd_556x45_UW_mag";
 		_player addMagazine "11Rnd_45ACP_Mag";
 		_player addWeapon "hgun_Pistol_heavy_01_F";
 		_player addMagazine "11Rnd_45ACP_Mag";

@@ -43,6 +43,5 @@ _soldier spawn addMilCap;
 _soldier call setMissionSkillConvoy;
 
 _soldier addEventHandler ["Killed", server_playerDied];
-_soldier setVariable ["AI_MoneyDrop", true, true];
 
 _soldier
