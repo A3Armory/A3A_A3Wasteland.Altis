@@ -167,14 +167,17 @@ switch (_boxType) do
 		_boxItems =
 		[
 			// Item type, Item class(es), # of items, # of magazines per weapon
+			["mag", "20Rnd_556x45_UW_mag", 4],
 			["mag", "30Rnd_45ACP_MAG_SMG_01", 4],
-			["mag", "11Rnd_45ACP_Mag", 4],
 			["mag", "30Rnd_556x45_Stanag_Tracer_Yellow", 4],
 			["mag", "10Rnd_762x54_Mag", 4],
 			["mag", "9Rnd_45ACP_Mag", 4],
-			["mag", "20Rnd_556x45_UW_mag", 4],
+			["mag", "11Rnd_45ACP_Mag", 4],
+			["itm", "HandGrenade", 5],
 			["itm", "FirstAidKit", 5],
-			["itm", "HandGrenade", 5]
+			["itm", "Medikit", 1],
+			["itm", "Toolkit", 1],
+			["itm", "MineDetector", 1]
 		];
 	};
 };
