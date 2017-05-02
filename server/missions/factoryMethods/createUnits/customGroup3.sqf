@@ -51,9 +51,19 @@ for "_i" from 1 to _nbUnits do
 			_unit addBackpack "B_Kitbag_sgg";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addWeapon "Titan_AT";
-			_unit addMagazine "launch_Titan_short_F";
-			_unit selectWeapon "launch_Titan_short_F";
+
+			if (random 1 < 0.50) then
+			{
+				_unit addMagazine "Titan_AT";
+				_unit addWeapon "launch_Titan_short_F";
+				_unit selectWeapon "launch_Titan_short_F";
+			}
+			else
+			{
+				_unit addMagazine "NLAW_F";
+				_unit addWeapon "launch_NLAW_F";
+				_unit selectWeapon "launch_NLAW_F";
+			};
 		};
 		// Sniper every 6 units
 		case (_i % 6 == 0):
