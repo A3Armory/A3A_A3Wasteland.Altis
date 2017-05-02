@@ -181,7 +181,22 @@ class RespawnSelectionDialog
 			w = SwitchTeamButton_W;
 		};
 
-		/*class RspnPreloadChk: w_RscCheckBox
+		class HaloSpawnButton: RspnButton
+ 		{
+ 			idc = Halo_Spawn_Button;
+ 			onButtonClick = "";
+ 			text = "Random Halo Jump";
+ 			default = true;
+ 			
+ 			#define HalosSpawnButton_W (0.2 * X_SCALE)
+ 			#define HalosSpawnButton_X RspnLine_X 
+ 
+ 			x = HalosSpawnButton_X;
+ 			y = RspnRandomButton_Y;
+ 			w = HalosSpawnButton_W;
+ 		}; 
+
+ 		/*class RspnPreloadChk: w_RscCheckBox
 		{
 			idc = respawn_Preload_Checkbox;
 

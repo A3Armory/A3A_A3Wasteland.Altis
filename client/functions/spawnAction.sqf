@@ -54,6 +54,7 @@ spawnActionHandle = (_this select 1) spawn
 	{
 		case 1: { _data call spawnInTown };
 		case 2: { _data call spawnOnBeacon };
+		case 3: { _data call HalospawnRandom };
 		default { _data call spawnRandom };
 	};
 

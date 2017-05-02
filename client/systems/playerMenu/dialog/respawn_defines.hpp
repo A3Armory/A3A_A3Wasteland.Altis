@@ -19,6 +19,7 @@
 // #define respawn_PlayersInTown_Text4 3412
 #define respawn_Random_Button 3413
 #define Switch_Team_Button 3414
+#define Halo_Spawn_Button 3415
 // #define respawn_LoadTowns_Button 3414
 // #define respawn_LoadBeacons_Button 3415
 #define respawn_Preload_Checkbox 3416
