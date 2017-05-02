@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf"
 
-private ["_geoPos", "_geoCache", "_randomBox", "_randomCase", "_box", "_para"];
+private ["_geoPos", "_geoCache", "_randomBox", "_box", "_para"];
 
 _setupVars =
 {
@@ -44,9 +44,8 @@ _successExec =
 	{ deleteVehicle _x } forEach [_GeoCache];
 	
 	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles","mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
-	_randomCase = selectRandom ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
 	
-	_box = createVehicle [_randomCase,[(_geoPos select 0), (_geoPos select 1),200],[], 0, "NONE"];
+	_box = createVehicle ["B_supplyCrate_F",[(_geoPos select 0), (_geoPos select 1),200],[], 0, "NONE"];
 	_box setDir random 360;
 	[_box, _randomBox] call fn_refillbox;
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box];
