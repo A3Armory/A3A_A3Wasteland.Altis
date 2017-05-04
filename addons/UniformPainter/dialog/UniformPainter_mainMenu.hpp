@@ -47,7 +47,7 @@ class Paint_Menu
 		class Paint_Menu_Title2:w_RscText
 		{
 			idc=-1;
-			text="$ 500 per paint job (Doesn't work on all uniforms)";
+			text="$ 100 per paint job (Doesn't work on all uniforms)";
 			x=0.30;
 			y=0.116;
 			w=0.31;

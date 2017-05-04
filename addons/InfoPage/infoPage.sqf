@@ -8,7 +8,7 @@
 sleep 20;   //delay before message is displayed after logging in
 	
 _text = "
-<t align='center'><t shadow= 1 shadowColor='#000000'><t size='1.5'><t color='#ff0000'>A3Armory A3Wasteland</t>
+<t align='center'><t shadow= 1 shadowColor='#000000'><t size='1.2'><t color='#ff0000'>A3Armory A3Wasteland</t>
 <br />
 <br />
 <t align='center'><t size='1.2'><t shadow= 1 shadowColor='#000000'>Keyboard Shortcuts</t><br />
@@ -20,6 +20,7 @@ _text = "
 <t align='left'><img size='2' shadow = 0 image='addons\InfoPage\img\del.paa'/></t><t align='left'><t size='1'><t shadow= 1 shadowColor='#000000'> Emergency Eject</t><br />
 <br />
 <t align='center'><t size='1.2'><t shadow= 1 shadowColor='#0000ff'>Have fun and respect other players. Team killing or exploiting glitches will get you banned</t><br />
+<t align='center'><img size='8' shadow = 0 image='modConfig\A3A.paa'/></t>
 <br />";
 
 hint parseText format ["<t align='center'>Welcome %2 to</t><br />%1",_text, name player];
