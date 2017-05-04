@@ -13,4 +13,4 @@
 #define distance_text 2009
 #define uptime_text 2010
 #define groupButton 2011
-
+#define bmoney_text 2012

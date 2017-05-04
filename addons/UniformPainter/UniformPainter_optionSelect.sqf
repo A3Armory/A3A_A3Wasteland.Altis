@@ -35,7 +35,7 @@ storePurchaseHandle = player spawn
 		_textureDir = "client\images\vehicleTextures";
 		_paint = _this select 1;
 
-		_price = 500;
+		_price = 100;
 		_playerMoney = player getVariable "cmoney";
 
 		if (_price > _playerMoney) exitWith

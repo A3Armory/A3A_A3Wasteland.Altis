@@ -18,82 +18,92 @@ class playerSettings {
 			colorBackground[] = {0,0,0,0.6};
 
 			moving = true;
-			x = 0.0; y = 0.1;
-			w = .745; h = 0.65;
+			x = 0.0125;
+			y = 0.04;
+			w = 0.9625;
+			h = 0.92;
 		};
 
-		class TopBar: IGUIBack
-		{
+		class TopBar: IGUIBack {
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
 			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
-			x = 0;
-			y = 0.1;
-			w = 0.745;
-			h = 0.05;
+			x = 0.0125;
+			y = 0.04;
+			w = 0.9625;
+			h = 0.08;
 		};
 
 		class MainTitle : w_RscText {
 			idc = -1;
-			text = "Player Inventory";
+			text = "Player Menu";
 			sizeEx = 0.04;
 			shadow = 2;
-			x = 0.260; y = 0.1;
-			w = 0.3; h = 0.05;
+			x = 0.4125;
+			y = 0.04;
+			w = 0.25;
+			h = 0.06;
 		};
 
-		class waterIcon : w_RscPicture {
+		class moneyIcon : w_RscText {
 			idc = -1;
-			text = "client\icons\water.paa";
-			x = 0.022; y = 0.2;
-			w = 0.04 / (4/3); h = 0.04;
+			text = "Cash:";
+			sizeEx = 0.04;
+			x = 0.025;
+			y = 0.14;
+			w = 0.1;
+			h = 0.06;
 		};
 
-		class foodIcon : w_RscPicture {
+		class serverLogo : w_RscPicture {
 			idc = -1;
-			text = "client\icons\food.paa";
-			x = 0.022; y = 0.26;
-			w = 0.04 / (4/3); h = 0.04;
-		};
-
-		class moneyIcon : w_RscPicture {
-			idc = -1;
-			text = "client\icons\money.paa";
-			x = 0.022; y = 0.32;
-			w = 0.04 / (4/3); h = 0.04;
-		};
-
-		class waterText : w_RscText {
-			idc = water_text;
-			text = "";
-			sizeEx = 0.03;
-			x = 0.06; y = 0.193;
-			w = 0.3; h = 0.05;
-		};
-
-		class foodText : w_RscText {
-			idc = food_text;
-			sizeEx = 0.03;
-			text = "";
-			x = 0.06; y = 0.254;
-			w = 0.3; h = 0.05;
+			text = "modConfig\A3A.paa";
+			x = 0.35;
+			y = 0.16;
+			w = 0.2625;
+			h = 0.31;
 		};
 
 		class moneyText : w_RscText {
 			idc = money_text;
 			text = "";
 			sizeEx = 0.03;
-			x = 0.06; y = 0.313;
-			w = 0.3; h = 0.05;
+			x = 0.1375;
+			y = 0.14;
+			w = 0.1625;
+			h = 0.06;
 		};
 
-		class uptimeText : w_RscText {
-			idc = uptime_text;
+		class bmoney: w_RscText {
+			idc = -1;
+			text = "Bank:";
+			sizeEx = 0.04;
+			x = 0.025;
+			y = 0.22;
+			w = 0.1;
+			h = 0.06;
+		};
+
+		class bmoneyText: RscText {
+			idc = bmoney_text;
 			text = "";
-			sizeEx = 0.030;
-			x = 0.52; y = 0.69;
-			w = 0.225; h = 0.03;
+			sizeEx = 0.03;
+			x = 0.1375;
+			y = 0.22;
+			w = 0.1625;
+			h = 0.06;
+		};
+
+		class cspText: w_RscText {
+			idc = -1;
+			text = "Community Support Perks";
+			sizeEx = 0.04;
+			shadow = 2;
+			x = 0.6375;
+			y = 0.14;
+			w = 0.2875;
+			h = 0.06;
 		};
 	};
 
@@ -101,86 +111,128 @@ class playerSettings {
 
 		class itemList : w_Rsclist {
 			idc = item_list;
-			x = 0.49; y = 0.185;
-			w = 0.235; h = 0.325;
+			x = 0.025;
+			y = 0.32;
+			w = 0.275;
+			h = 0.42;
 		};
 
 		class DropButton : w_RscButton {
 			idc = -1;
 			text = "Drop";
 			onButtonClick = "[1] execVM 'client\systems\playerMenu\itemfnc.sqf'";
-			x = 0.610; y = 0.525;
-			w = 0.116; h = 0.033 * safezoneH;
+			x = 0.175;
+			y = 0.76;
+			w = 0.125;
+			h = 0.06;
 		};
 
 		class UseButton : w_RscButton {
 			idc = -1;
 			text = "Use";
 			onButtonClick = "[0] execVM 'client\systems\playerMenu\itemfnc.sqf'";
-			x = 0.489; y = 0.525;
-			w = 0.116; h = 0.033 * safezoneH;
+			x = 0.025;
+			y = 0.76;
+			w = 0.125;
+			h = 0.06;
 		};
 
 		class moneyInput: w_RscCombo {
 			idc = money_value;
-			x = 0.610; y = 0.618;
-			w = .116; h = .030;
+			x = 0.2;
+			y = 0.86;
+			w = 0.1375;
+			h = 0.06;
 		};
 
 		class DropcButton : w_RscButton {
 			idc = -1;
 			text = "Drop";
 			onButtonClick = "[] execVM 'client\systems\playerMenu\dropMoney.sqf'";
-			x = 0.489; y = 0.60;
-			w = 0.116; h = 0.033 * safezoneH;
+			x = 0.025;
+			y = 0.86;
+			w = 0.1625;
+			h = 0.06;
 		};
 
 		class CloseButton : w_RscButton {
 			idc = close_button;
 			text = "Close";
 			onButtonClick = "[] execVM 'client\systems\playerMenu\closePlayerMenu.sqf'";
-			x = 0.02; y = 0.66;
-			w = 0.125; h = 0.033 * safezoneH;
+			x = 0.35;
+			y = 0.74;
+			w = 0.2625;
+			h = 0.08;
 		};
 
 		class GroupsButton : w_RscButton {
 			idc = groupButton;
 			text = "Group Management";
 			onButtonClick = "[] execVM 'client\systems\groups\loadGroupManagement.sqf'";
-			x = 0.158; y = 0.66;
-			w = 0.225; h = 0.033 * safezoneH;
+			x = 0.65;
+			y = 0.74;
+			w = 0.2625;
+			h = 0.08;
 		};
 
 		class btnDistanceFar : w_RscButton {
 			idc = -1;
+			text = "View Distance";
+			onButtonClick = "[] spawn TAWVD_fnc_openTAWVD;";
+			x = 0.65;
+			y = 0.64;
+			w = 0.2625;
+			h = 0.08;
+		};
+
+		class btnDistanceCustom : w_RscButton {
+			idc = -1;
 			text = "Messages";
 			onButtonClick = "[] execVM 'addons\JTS_PM\JTS_PM.sqf'";
-			x = 0.02; y = 0.57;
-			w = 0.125; h = 0.033 * safezoneH;
+			x = 0.35;
+			y = 0.64;
+			w = 0.2625;
+			h = 0.08;
 		};
 
 		class TOParmaInfoButton : w_RscButton {
 			idc = -1;
 			text = "A3Armory Info";
 			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
-			x = 0.228; y = 0.254;
-			w = 0.225; h = 0.033 * safezoneH;
+			x = 0.65;
+			y = 0.54;
+			w = 0.2625;
+			h = 0.08;
 		};
 
-		class airdrop : w_RscButton {
+		class uniformpaint: w_RscButton {
+			idc = -1;
+			text = "Paint Uniform";
+			action = "closeDialog 0;[] execVM 'addons\UniformPainter\UniformPainter_Menu.sqf'";
+			x = 0.65;
+			y = 0.22;
+			w = 0.2625;
+			h = 0.08;
+		};
+
+		class vehrepaint: w_RscButton {
+			idc = -1;
+			text = "Paint Vehicle";
+			action = "closeDialog 0;[] execVM 'addons\VehiclePainter\VehiclePainter_Check.sqf'";
+			x = 0.65;
+			y = 0.34;
+			w = 0.2625;
+			h = 0.08;
+		};
+
+		class airdrop: w_RscButton {
 			idc = -1;
 			text = "Airdrop Menu";
-			onButtonClick = "[] execVM 'addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf'";
-			x = 0.02; y = 0.48;
-			w = 0.362; h = 0.033 * safezoneH;
-		};
-
-		class vdistance : w_RscButton {
-			idc = -1;
-			text = "View Distance";
-			onButtonClick = "[] spawn TAWVD_fnc_openTAWVD;";
-			x = 0.158; y = 0.57;
-			w = 0.225; h = 0.033 * safezoneH;
+			action = "closeDialog 0;[] execVM 'addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf'";
+			x = 0.35;
+			y = 0.54;
+			w = 0.2625;
+			h = 0.08;
 		};
 	};
 };
