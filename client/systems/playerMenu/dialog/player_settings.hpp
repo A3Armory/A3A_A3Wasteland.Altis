@@ -62,7 +62,7 @@ class playerSettings {
 			x = 0.35;
 			y = 0.16;
 			w = 0.2625;
-			h = 0.31;
+			h = 0.36;
 		};
 
 		class moneyText : w_RscText {
