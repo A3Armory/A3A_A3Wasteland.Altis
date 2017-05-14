@@ -113,7 +113,7 @@ drug_marijuana_effects = { _this spawn {
   _ps1 setDropInterval 0.35;
   
   playMusic ["defcon", 0]; 
-  enableEnvironment  false;
+  enableEnvironment [false, false];
   
   _player enableFatigue true;
   private["_timeout"];
@@ -134,7 +134,7 @@ drug_marijuana_effects = { _this spawn {
   
   _player setFatigue 0;
   _player enableFatigue false;
-  enableEnvironment true;
+  enableEnvironment [false, true];
   playMusic "";
   deleteVehicle _shell;
   ppEffectDestroy _effect1;
