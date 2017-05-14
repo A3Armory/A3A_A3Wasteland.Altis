@@ -59,8 +59,8 @@ _role4names = ["TS.A3Armory.com"];
 	_onScreenTime + (((count _memberNames) - 1) * 0.5);
 	[
 		_finalText,
-		[safezoneX + safezoneW - 0.8,0.50], //DEFAULT: 0.5,0.35
-		[safezoneY + safezoneH - 0.8,0.7], //DEFAULT: 0.8,0.7
+		[safezoneX + safezoneW - 0.6,0.50], //DEFAULT: 0.5,0.35
+		[safezoneY + safezoneH - 0.6,0.7], //DEFAULT: 0.8,0.7
 		_onScreenTime,
 		0.5
 	] spawn BIS_fnc_dynamicText;
