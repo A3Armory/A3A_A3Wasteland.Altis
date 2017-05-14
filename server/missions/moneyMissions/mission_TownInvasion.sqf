@@ -9,7 +9,7 @@ if (!isServer) exitwith {};
 
 #include "moneyMissionDefines.sqf"
 
-private ["_nbUnits", "_box1", "_box2", "_townName", "_missionPos", "_cashamount", "_buildingRadius", "_putOnRoof", "_fillEvenly", "_tent1", "_chair1", "_chair2", "_randomBox", "_randomBox2"];
+private ["_nbUnits", "_box1", "_box2", "_townName", "_missionPos", "_cashbox1", "_cashbox2", "_buildingRadius", "_putOnRoof", "_fillEvenly", "_tent1", "_chair1", "_chair2", "_randomBox", "_randomBox2"];
 
 _setupVars =
 {
@@ -21,7 +21,6 @@ _setupVars =
 	_missionPos = markerPos (_locArray select 0);
 	_buildingRadius = _locArray select 1;
 	_townName = _locArray select 2;
-	_cashamount = round(random 100000);
 
 	//randomize amount of units
 	_nbUnits = _nbUnits + round(random (_nbUnits*0.5));
@@ -38,14 +37,16 @@ _setupObjects =
 	// spawn some crates in the middle of town (Town marker position)
 	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
 	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
+	_cashbox1 = round(random 75000);
+	_cashbox2 = round(random 75000);
 	_box1 = createVehicle ["Box_NATO_Wps_F", _missionPos, [], 2, "None"];
 	_box1 setDir random 360;
-	_box1 setVariable ["cmoney", _cashamount, true];
+	_box1 setVariable ["cmoney", _cashbox1, true];
 	[_box1, _randomBox] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _missionPos, [], 2, "None"];
 	_box2 setDir random 360;
-	_box2 setVariable ["cmoney", _cashamount, true];
+	_box2 setVariable ["cmoney", _cashbox2, true];
 	[_box2, _randomBox2] call fn_refillbox;
 
 	// create some atmosphere around the crates 8)

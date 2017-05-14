@@ -131,7 +131,7 @@ _drop_item =
 _successExec =
 {
 	// Mission completed
-	_drugpile = selectRandom [2,4,6];
+	_drugpile = selectRandom [2,3,4];
 
 	for "_i" from 1 to _drugpile do
 	{
@@ -140,8 +140,8 @@ _successExec =
 		[_item, _lastPos] call _drop_item;
 	};
 
-	_cashamount = round(random 20000);
-	_cashpile = selectRandom [2,4];
+	_cashamount = round(random 12500);
+	_cashpile = selectRandom [2,3,4];
 
 	for "_i" from 1 to _cashpile do
 	{
