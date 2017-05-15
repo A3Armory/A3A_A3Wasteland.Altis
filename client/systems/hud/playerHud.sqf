@@ -331,9 +331,9 @@ while {true} do
 	};
 
 	// override no-grass exploits
-	if (getTerrainGrid != 10) then
+	if (getTerrainGrid > 12.5) then
 	{
-		setTerrainGrid 10;
+		setTerrainGrid 12.5;
 	};
 
 	enableEnvironment [false, true];
