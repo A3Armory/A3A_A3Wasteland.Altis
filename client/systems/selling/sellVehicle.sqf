@@ -31,7 +31,7 @@ storeSellingHandle = _this spawn
 	#define CHOPSHOP_PRICE_RELATIONSHIP 3
 	#define VEHICLE_MAX_SELLING_DISTANCE 50
 
-	private ["_vehicle", "_type", "_price", "_confirmMsg", "_text", "_sellPrice"];
+	private ["_vehicle", "_type", "_price", "_confirmMsg", "_text"];
 
 	_storeNPC = _this select 0;
 	_vehicle = objectFromNetId (player getVariable ["lastVehicleRidden", ""]);
@@ -53,24 +53,25 @@ storeSellingHandle = _this spawn
 	};
 
 	if (_vehicle getVariable ["ownerUID",""] != getPlayerUID player && _vehicle getVariable ["ownerUID",""] != "") exitWith
-	{
-		playSound "FD_CP_Not_Clear_F";
-		[format [' The "%1" is not owned by you.', _objname], "Error"] call  BIS_fnc_guiMessage;
-	};
+    {
+    	playSound "FD_CP_Not_Clear_F";
+    	[format [' The "%1" is not owned by you.', _objname], "Error"] call  BIS_fnc_guiMessage;
+    };
+
+	private _variant = _vehicle getVariable ["A3W_vehicleVariant", ""];
+	if (_variant != "") then { _variant = "variant_" + _variant };
 
 	{
-		if (_type == _x select 1) then
+		if (_type == _x select 1 && (_variant == "" || {_variant in _x})) exitWith
 		{
-			_sellPrice = _x select 2;
-			_sellPrice = _sellPrice / CHOPSHOP_PRICE_RELATIONSHIP;
-			_price = round (_sellPrice);
+			_price = (ceil (((_x select 2) / CHOPSHOP_PRICE_RELATIONSHIP) / 5)) * 5;
 		};
 	} forEach (call allVehStoreVehicles);
 
 	if (!isNil "_price") then
 	{
 		// Add total sell value to confirm message
-		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, _price];
+		_confirmMsg = format ["Selling the %1 will give you $%2<br/>", _objName, [_price] call fn_numbersText];
 
 		// Display confirm message
 		if ([parseText _confirmMsg, "Confirm", "Sell", true] call BIS_fnc_guiMessage) then

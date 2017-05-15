@@ -127,8 +127,8 @@ if (FAR_EnableDeathMessages && (round difficultyOption "deathMessages" > 0 || ["
 			if (!isNull _killer && {(isPlayer _killer || FAR_Debugging) && _killer != _victim}) then
 			{
 				_msgArr append [toArray name _killer, [_killer, _victim] call A3W_fnc_isFriendly];
-				
-				_roadkill = 
+
+				_roadkill =
 				(
 					!(vehicle _killer isEqualTo _killer) &&          //killer is in vehicle
 					{(driver vehicle _killer) isEqualTo _killer} &&  //killer was driver of vehicle
