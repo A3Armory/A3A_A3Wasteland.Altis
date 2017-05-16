@@ -336,6 +336,12 @@ while {true} do
 		setTerrainGrid 12.5;
 	};
 
+	// fix for disappearing chat
+    if (!shownChat && isNull findDisplay 49) then
+    {
+    	showChat true;
+    };
+
 	enableEnvironment [false, true];
 	uiSleep 1;
 };

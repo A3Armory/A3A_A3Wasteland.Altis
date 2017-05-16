@@ -655,13 +655,13 @@ vestArray = compileFinal str
 	["Tactical Vest (Police)", "V_TacVest_blk_POLICE", 500, "vest"],
 	["Raven Night Vest", "V_TacVestIR_blk", 700, "vest"],
 	["Press Vest", "V_Press_F", 200, "vest"],
-	["Deck Crew Vest (Yellow)", "B_Deck_Crew_Vest_01", 200, "vest"],
-	["Deck Crew Vest (Blue)", "B_Deck_Crew_Vest_02", 200, "vest"],
-	["Deck Crew Vest (Green)", "B_Deck_Crew_Vest_03", 200, "vest"],
-	["Deck Crew Vest (Red)", "B_Deck_Crew_Vest_04", 200, "vest"],
-	["Deck Crew Vest (White)", "B_Deck_Crew_Vest_05", 200, "vest"],
-	["Deck Crew Vest (Brown)", "B_Deck_Crew_Vest_06", 200, "vest"],
-	["Deck Crew Vest (Violet)", "B_Deck_Crew_Vest_07", 200, "vest"]
+	["Deck Crew Vest (Blue)", "V_DeckCrew_blue_F", 200, "vest", "noDLC"],
+	["Deck Crew Vest (Green)", "V_DeckCrew_green_F", 200, "vest", "noDLC"],
+	["Deck Crew Vest (Yellow)", "V_DeckCrew_yellow_F", 200, "vest", "noDLC"],
+	["Deck Crew Vest (Red)", "V_DeckCrew_red_F", 200, "vest", "noDLC"],
+	["Deck Crew Vest (Brown)", "V_DeckCrew_brown_F", 200, "vest", "noDLC"],
+	["Deck Crew Vest (Violet)", "V_DeckCrew_violet_F", 200, "vest", "noDLC"],
+	["Deck Crew Vest (White)", "V_DeckCrew_white_F", 200, "vest", "noDLC"]
 ];
 
 backpackArray = compileFinal str
