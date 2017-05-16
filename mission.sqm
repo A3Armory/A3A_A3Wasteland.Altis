@@ -100,7 +100,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="A3Wasteland Altis v1.3b";
+		briefingName="A3Wasteland Altis v1.3c";
 		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
