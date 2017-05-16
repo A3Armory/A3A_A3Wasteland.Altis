@@ -980,9 +980,9 @@ planesArray = compileFinal str
 	["A-143 Buzzard AA", "I_Plane_Fighter_03_dynamicLoadout_F", 47000, "vehicle", "variant_buzzardAA"],
 	["A-143 Buzzard CAS", "I_Plane_Fighter_03_dynamicLoadout_F", 72000, "vehicle", "variant_buzzardCAS"],
 
-	["A-149 Gryphon", "I_Plane_Fighter_04_F", 140000, "vehicle"],
+	["A-149 Gryphon", "I_Plane_Fighter_04_F", 120000, "vehicle"],
 
-	["F/A-181 Black Wasp (Gun-Only)", "B_Plane_Fighter_01_Stealth_F", 45000, "vehicle"], // no missiles or bombs
+	["F/A-181 Black Wasp (Gun-Only)", "B_Plane_Fighter_01_Stealth_F", 50000, "vehicle"], // no missiles or bombs
 	["F/A-181 Black Wasp", "B_Plane_Fighter_01_F", 150000, "vehicle"],
 
 	["To-201 Shikra (Gun-Only)", "O_Plane_Fighter_02_Stealth_F", 45000, "vehicle"], // no missiles or bombs
@@ -1005,7 +1005,7 @@ planesArray = compileFinal str
 
 	["KH-3A Fenghuang Missile UAV", "O_T_UAV_04_CAS_F", 55000, "vehicle"],
 
-	["UCAV Sentinel Missile", "B_UAV_05_F", 120000, "vehicle", "variant_sentinelMissile"],
+	["UCAV Sentinel Missile", "B_UAV_05_F", 110000, "vehicle", "variant_sentinelMissile"],
 	["UCAV Sentinel Bomber", "B_UAV_05_F", 90000, "vehicle", "variant_sentinelBomber"]
 ];
 
