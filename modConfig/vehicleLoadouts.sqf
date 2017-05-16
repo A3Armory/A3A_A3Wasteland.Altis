@@ -162,8 +162,8 @@ switch (true) do
 		_pylons = ["PylonRack_3Rnd_LG_scalpel","PylonRack_3Rnd_LG_scalpel"];
 		_customCode =
 		{
-			_veh setAmmoOnPylon [1, 2]; // right wing
-			_veh setAmmoOnPylon [2, 2]; // left wing
+			_veh setAmmoOnPylon [1, 1]; // right wing
+			_veh setAmmoOnPylon [2, 1]; // left wing
 		};
 	};
 
@@ -175,13 +175,13 @@ switch (true) do
 	};
 
 	// KH-3A Fenghuang UAV
-	/*case (_class isKindOf "O_T_UAV_04_CAS_F"):
+	case (_class isKindOf "O_T_UAV_04_CAS_F"):
 	{
 		_customCode =
 		{
 			_veh setMagazineTurretAmmo ["4Rnd_LG_Jian", 2, [0]];
 		};
-	};*/
+	};
 
 	// UCAV Sentinel Missile
 	case (_class isKindOf "B_UAV_05_F" && _variant == "sentinelMissile"):
