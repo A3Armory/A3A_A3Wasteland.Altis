@@ -40,7 +40,7 @@ A3W_thirstTime = 120*60;           // Seconds till dehydrated
 A3W_townSpawnCooldown = 15*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
 A3W_spawnBeaconCooldown = 15*60;    // Number of seconds to wait between each use of a specific spawn beacon (0 = disabled)
 A3W_spawnBeaconSpawnHeight = 1250;  // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
-A3W_maxSpawnBeacons = 2;            // Maxmimum number of spawn beacons (0 = disabled)
+A3W_maxSpawnBeacons = 1;            // Maxmimum number of spawn beacons (0 = disabled)
 
 // Antihack settings
 A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
