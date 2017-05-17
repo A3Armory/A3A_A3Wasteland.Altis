@@ -33,8 +33,8 @@ A3W_bleedingTime = 60;             // Time in seconds for which to allow revive 
 //A3W_headshotNoRevive = 0;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
 A3W_customDeathMessages = 1;       // If difficulty option deathMessages=0, display custom messages related to causes of death, as defined in fn_deathMessage.sqf (0 = no, 1 = yes)
 A3W_healthTime = 7*60;             // Seconds till death once starving or dehydrated
-A3W_hungerTime = 135*60;           // Seconds till starving
-A3W_thirstTime = 120*60;           // Seconds till dehydrated
+A3W_hungerTime = 125*60;           // Seconds till starving
+A3W_thirstTime = 110*60;           // Seconds till dehydrated
 
 // Spawn settings
 A3W_townSpawnCooldown = 15*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
@@ -55,7 +55,7 @@ A3W_gunStoreIntruderWarning = 1;   // Warn players in gunstore areas of enemy in
 A3W_remoteBombStoreRadius = 100;   // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
 A3W_poiObjLockDistance = 100;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
 A3W_vehiclePurchaseCooldown = 120; // Number of seconds to wait before allowing someone to purchase another vehicle, don't bother setting it too high because it can be bypassed by rejoining
-A3W_lockVehicles = ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F", "Truck_01_base_F", "Truck_02_base_F", "Truck_03_base_F", "Wheeled_APC_F", "Tank_F", "Helicopter_Base_F", "Plane", "UGV_01_base_F", "LSV_01_base_F", "LSV_02_base_F"];		// List of class names for vehicles that should be automatically locked and saved when bought
+//A3W_lockVehicles = ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F", "Truck_01_base_F", "Truck_02_base_F", "Truck_03_base_F", "Wheeled_APC_F", "Tank_F", "Helicopter_Base_F", "Plane", "UGV_01_base_F", "LSV_01_base_F", "LSV_02_base_F"];		// List of class names for vehicles that should be automatically locked and saved when bought
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
@@ -155,14 +155,14 @@ A3W_essentialsSpawning = 1;        // If serverSpawning = 1, spawn essential ite
 /*A3W_buildingLootWeapons = 0;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
 A3W_buildingLootSupplies = 0;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
 A3W_buildingLootChances = 0;*/       // Chance percentage that loot will spawn at each spot in a building (0 to 100)
-A3W_vehicleLoot = 1;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
+A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 A3W_simpleLoot = 1;                // Spawn loot in all buildings (0 = no, 1 = yes)
 
 // Territory settings
-A3W_territoryCaptureTime = 2*60;   // Time in seconds needed to capture a territory
+A3W_territoryCaptureTime = 3*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
 A3W_payrollInterval = 30*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 500;           // Amount of money rewarded per territory on each payroll
+A3W_payrollAmount = 750;           // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
