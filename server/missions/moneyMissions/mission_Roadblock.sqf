@@ -83,7 +83,7 @@ _successExec =
 	{ deleteVehicle _x } forEach [_obj1, _obj2, _barGate, _bunker1, _bunker2];
 	{ _x setVariable ["allowDamage", true, true] } forEach [_obj1, _obj2, _barGate, _bunker1, _bunker2];
 
-	_drugpile = selectRandom [4,8];
+	_drugpile = selectRandom [2,3,4];
 
 	for "_i" from 1 to _drugpile do
 	{
@@ -92,8 +92,8 @@ _successExec =
 		[_item, _lastPos] call _drop_item;
 	};
 
-	_cashamount = round(random 45000);
-	_cashpile = selectRandom [3,4,5];
+	_cashamount = round(random 30000);
+	_cashpile = selectRandom [2,3,4];
 
 	for "_i" from 1 to _cashpile do
 	{
