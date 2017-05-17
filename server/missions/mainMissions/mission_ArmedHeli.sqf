@@ -9,24 +9,25 @@
 if (!isServer) exitwith {};
 #include "mainMissionDefines.sqf";
 
-private ["_vehicleClass", "_nbUnits"];
+private ["_vehicleClass", "_nbUnits", "_variant"];
 
 _setupVars =
 {
-	_vehicleClass =
+	_vehicleClass = selectRandom
 	[
+		["B_Heli_Light_01_dynamicLoadout_F", "pawneeNormal"],
 		"B_Heli_Transport_01_F",
-		"B_Heli_Transport_03_F",
-		"O_Heli_Light_02_v2_F",
-		"I_Heli_light_03_F",
-		"B_Heli_Light_01_armed_F",
-		"B_Heli_Attack_01_F",
-		"B_Heli_Transport_01_F",
-		"B_Heli_Transport_03_F",
-		"O_Heli_Light_02_v2_F",
-		"I_Heli_light_03_F",
-		"B_Heli_Light_01_armed_F"
-	] call BIS_fnc_selectRandom;
+		"B_Heli_Attack_01_dynamicLoadout_F",
+		["O_Heli_Light_02_dynamicLoadout_F", "orcaDAGR"],
+		"O_Heli_Attack_02_dynamicLoadout_F",
+		"I_Heli_light_03_dynamicLoadout_F"
+	];
+
+	if (_vehicleClass isEqualType []) then
+	{
+		_variant = _vehicleClass param [1,"",[""]];
+		_vehicleClass = _vehicleClass select 0;
+	};
 
 	_missionType = "Armed Helicopter";
 	_locationsArray = MissionSpawnMarkers;
