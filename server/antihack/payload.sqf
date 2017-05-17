@@ -271,8 +271,8 @@ while { true } do
 
 					_cheatFlag = ["hack variable", _x];
 				};
-				sleep 0.01;
-			} forEach [];
+				sleep 1;
+			} forEach ["testing","testing1","testing2","testing3"];
 		};
 
 		if (isNil "_cheatFlag" && isNil "_memAnomaly") then
