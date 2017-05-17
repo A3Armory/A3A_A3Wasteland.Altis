@@ -37,8 +37,8 @@ _setupObjects =
 	// spawn some crates in the middle of town (Town marker position)
 	_randomBox = selectRandom ["mission_USLaunchers","mission_Main_A3snipers","mission_Uniform","mission_DLCLMGs","mission_ApexRifles"];
 	_randomBox2 = selectRandom ["mission_USSpecial","mission_HVSniper","mission_DLCRifles","mission_HVLaunchers"];
-	_cashbox1 = round(random 75000);
-	_cashbox2 = round(random 75000);
+	_cashbox1 = round(random 50000);
+	_cashbox2 = round(random 50000);
 	_box1 = createVehicle ["Box_NATO_Wps_F", _missionPos, [], 2, "None"];
 	_box1 setDir random 360;
 	_box1 setVariable ["cmoney", _cashbox1, true];
