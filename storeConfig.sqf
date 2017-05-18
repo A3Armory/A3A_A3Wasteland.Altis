@@ -734,9 +734,9 @@ genItemArray = compileFinal str
 	["Compact NVG (Urban)", "O_NVGoggles_urb_F", 500, "nvg"],
 	["Binoculars", "Binocular", 300, "binoc"],
 	["Rangefinder", "Rangefinder", 750, "binoc"],
-	["Laser Designator (Sand)", "Laserdesignator", 2000, "binoc", "noDLC"], // Increase price to 2500 if A3W_disableBuiltInThermal = 0
-	["Laser Designator (Hex)", "Laserdesignator_02", 2000, "binoc", "noDLC"],
-	["Laser Designator (Olive)", "Laserdesignator_03", 2000, "binoc", "noDLC"],
+	["Laser Designator (Sand)", "Laserdesignator", 5000, "binoc", "noDLC"], // Increase price to 2500 if A3W_disableBuiltInThermal = 0
+	["Laser Designator (Hex)", "Laserdesignator_02", 5000, "binoc", "noDLC"],
+	["Laser Designator (Olive)", "Laserdesignator_03", 5000, "binoc", "noDLC"],
 	["IR Grenade", "B_IR_Grenade", 100, "mag", "WEST"],
 	["IR Grenade", "O_IR_Grenade", 100, "mag", "EAST"],
 	["IR Grenade", "I_IR_Grenade", 100, "mag", "GUER"],
