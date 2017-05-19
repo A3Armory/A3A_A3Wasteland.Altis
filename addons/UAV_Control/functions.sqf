@@ -49,6 +49,11 @@ while {true} do
 	{
 		_uav call fn_forceSaveVehicle;
 
+		if !({_uav isKindOf _x} count ["StaticWeapon", "UAV_01_base_F"] > 0) then
+		{
+			player setVariable ["lastVehicleRidden", netId _uav];
+		};
+
 		/*if (group _currUav != group player) then
 		{
 			(crew _currUav) joinSilent group player;
