@@ -49,10 +49,10 @@ switch (true) do
 	case (_plane getVariable ["A3W_vehicleVariant", ""] == "buzzardAA"):
 	{
 		_plane setAmmoOnPylon [1, 1]; // AA
-		_plane setAmmoOnPylon [2, round random 2]; // GAA (50% chance)
+		_plane setAmmoOnPylon [2, floor random 2]; // GAA (50% chance)
 		_plane setAmmoOnPylon [3, 0]; // GAA
 		_plane setAmmoOnPylon [5, 0]; // GAA
-		_plane setAmmoOnPylon [6, round random 2]; // GAA (50% chance)
+		_plane setAmmoOnPylon [6, floor random 2]; // GAA (50% chance)
 		_plane setAmmoOnPylon [7, 1]; // AA
 	};
 };
