@@ -331,9 +331,9 @@ while {true} do
 	};
 
 	// override no-grass exploits
-	if (getTerrainGrid > 12.5) then
+	if (getTerrainGrid > 9.375) then
 	{
-		setTerrainGrid 12.5;
+		setTerrainGrid 9.375;
 	};
 
 	// fix for disappearing chat
