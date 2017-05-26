@@ -9,7 +9,6 @@
 #define REPAIR_TIME_SLICE 1
 #define REFUEL_TIME_SLICE 1
 #define PRICE_RELATIONSHIP 3 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP
-#define PRICE_RELATIONSHIP_HIGH 2 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP_HIGH
 #define RESUPPLY_TIMEOUT 30
 
 // Check if mutex lock is active.
@@ -36,7 +35,6 @@ _resupplyThread = [_vehicle, _unit] spawn
 	_vehName = getText (_vehCfg >> "displayName");
 	_isUAV = (round getNumber (_vehCfg >> "isUav") >= 1);
 	_isStaticWep = _vehClass isKindOf "StaticWeapon";
-	_isHighPrice = ["B_MBT_01_cannon_F","B_MBT_01_TUSK_F","O_MBT_02_cannon_F","I_MBT_03_cannon_F","B_Heli_Attack_01_dynamicLoadout_F","O_Heli_Attack_02_dynamicLoadout_F","B_T_UAV_03_F","I_Plane_Fighter_03_dynamicLoadout_F","I_Plane_Fighter_04_F","B_Plane_Fighter_01_Stealth_F","B_Plane_Fighter_01_F","O_Plane_Fighter_02_Stealth_F","O_Plane_Fighter_02_F","B_Plane_CAS_01_dynamicLoadout_F","O_Plane_CAS_02_dynamicLoadout_F","B_T_VTOL_01_armed_F","O_T_VTOL_02_infantry_dynamicLoadout_F","B_UAV_02_dynamicLoadout_F","O_UAV_02_dynamicLoadout_F","I_UAV_02_dynamicLoadout_F","O_T_UAV_04_CAS_F","B_UAV_05_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","O_UGV_01_rcws_F"];
 
 	scopeName "resupplyTruckThread";
 
@@ -49,15 +47,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 		if (_vehClass == _x select 1 && (_variant == "" || {_variant in _x})) exitWith
 		{
 			_price = _x select 2;
-
-			if ({_vehicle isKindOf _x} count _isHighPrice > 0) then
-			{
-				_price = round (_price / PRICE_RELATIONSHIP_HIGH);
-			}
-			else
-			{
-				_price = round (_price / PRICE_RELATIONSHIP);
-			};
+			_price = round (_price / PRICE_RELATIONSHIP);
 		};
 	} forEach (call allVehStoreVehicles + call staticGunsArray);
 
