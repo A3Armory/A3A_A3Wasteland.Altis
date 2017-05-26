@@ -27,7 +27,7 @@ _plane setDamage 0;
 
 if (_planeType isKindOf "Plane_Fighter_03_dynamicLoadout_base_F") then
 {
-	_plane setVariable ["A3W_vehicleVariant", "buzzardCAS"];
+	_plane setVariable ["A3W_vehicleVariant", "buzzardAA"];
 };
 
 [_plane] call vehicleSetup;
@@ -46,14 +46,14 @@ switch (true) do
 	{
 		_plane setMagazineTurretAmmo ["4Rnd_Missile_AGM_01_F", 0, [-1]];
 	};*/
-	case (_plane getVariable ["A3W_vehicleVariant", ""] == "buzzardCAS"):
+	case (_plane getVariable ["A3W_vehicleVariant", ""] == "buzzardAA"):
 	{
-		_plane setAmmoOnPylon [1, 0]; // scalpel
-		_plane setAmmoOnPylon [2, 0]; // AA
-		_plane setAmmoOnPylon [3, round random 2]; // bomb (50% chance)
-		_plane setAmmoOnPylon [5, round random 2]; // bomb (50% chance)
-		_plane setAmmoOnPylon [6, 0]; // AA
-		_plane setAmmoOnPylon [7, 0]; // scalpel
+		_plane setAmmoOnPylon [1, 1]; // AA
+		_plane setAmmoOnPylon [2, round random 2]; // GAA (50% chance)
+		_plane setAmmoOnPylon [3, 0]; // GAA
+		_plane setAmmoOnPylon [5, 0]; // GAA
+		_plane setAmmoOnPylon [6, round random 2]; // GAA (50% chance)
+		_plane setAmmoOnPylon [7, 1]; // AA
 	};
 };
 
