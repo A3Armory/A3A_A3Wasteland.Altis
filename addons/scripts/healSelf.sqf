@@ -4,10 +4,17 @@
 //@file Created: 22/9/2014
 //@file Description: Heal yourself with a First Aid Kit
 
-#define DURATION 25
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
 #define ERR_CANCELLED "First Aid Cancelled!"
-private ["_checks", "_success"];
+private ["_checks","_duration","_success"];
+
+if !("Medikit" in (items player)) then {
+	_duration = 25;
+}
+else
+{
+	_duration = 10;
+};
 
 _checks = {
     private ["_progress","_failed", "_text"];
@@ -25,10 +32,14 @@ _checks = {
     [_failed, _text];
 };
 
-_success = [DURATION, ANIMATION, _checks, []] call a3w_actions_start;
+_success = [_duration, ANIMATION, _checks, []] call a3w_actions_start;
 
 if (_success) then {
-	player removeItem "FirstAidKit";	
+
+	if !("Medikit" in (items player)) then {
+		player removeItem "FirstAidKit";
+	};
+
 	player setDamage 0;
 	["First Aid Completed!", 5] call mf_notify_client;
 };
