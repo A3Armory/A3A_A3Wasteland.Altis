@@ -211,4 +211,18 @@ switch (true) do
 			["Laserdesignator_mounted", [0]]
 		];
 	};
+
+	case (_class isKindOf "Mortar_01_base_F"):
+	{
+		_mags =
+		[
+			["8Rnd_82mm_Mo_shells", [0]],
+			["8Rnd_82mm_Mo_Flare_white", [0]],
+			["8Rnd_82mm_Mo_LG", [0]]
+		];
+		_weapons =
+		[
+			["mortar_82mm", [0]]
+		];
+	};
 };
