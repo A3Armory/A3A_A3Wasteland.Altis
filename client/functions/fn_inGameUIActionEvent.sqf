@@ -16,6 +16,7 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 		case (_action == "UseMagazine" || _action == "UseContainerMagazine"): // placed explosive
 		{
 			_minDist = ["A3W_remoteBombStoreRadius", 100] call getPublicVar;
+			_minATMDist = ["A3W_remoteBombATMRadius", 20] call getPublicVar;
 			if (_minDist <= 0) exitWith {};
 
 			_nearbyStores = entities "CAManBase" select {_x getVariable ["storeNPC_setupComplete", false] && {player distance _x < _minDist}};
@@ -53,6 +54,15 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 				[format ["You are not allowed to place explosives within %1m of a storage location.", _minDist], 5] call mf_notify_client;
 				_handled = true;
 			};
+
+			_nearbyATM = nearestObjects [player, ["Land_Atm_01_F", "Land_Atm_02_F"], _minATMDist];
+
+			if !(_nearbyATM isEqualTo []) exitWith
+			{
+				playSound "FD_CP_Not_Clear_F";
+				[format ["You are not allowed to place explosives within %1m of a ATM location.", _minATMDist], 5] call mf_notify_client;
+				_handled = true;
+			};		
 		};
 
 		// now done via enableWeaponDisassembly in vehicleSetup.sqf
