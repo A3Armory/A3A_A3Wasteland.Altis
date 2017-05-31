@@ -157,16 +157,16 @@ launcherArray = compileFinal str
 	["RPG-42 Alamut", "launch_RPG32_F", 750],
 	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 750, "noDLC"],
 	["PCML", "launch_NLAW_F", 1000],
-	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 2750],
-	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 2750],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 2750],
-	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 2750, "noDLC"],
-	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 2750, "noDLC"],
-	["Titan MPRL AA (Sand)", "launch_Titan_F", 2750],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 2750],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 2750],
-	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 2750, "noDLC"],
-	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 2750, "noDLC"]
+	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 5600],
+	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 5600],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 5600],
+	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 5600, "noDLC"],
+	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 5600, "noDLC"],
+	["Titan MPRL AA (Sand)", "launch_Titan_F", 5200],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 5200],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 5200],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 5200, "noDLC"],
+	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 5200, "noDLC"]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -174,12 +174,12 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 staticGunsArray = compileFinal str
 [
 	// ["Vehicle Ammo Crate", "Box_NATO_AmmoVeh_F", 2500],
-	["Static Titan AT 4Rnd", "B_static_AT_F", 6750], // Static launchers only have 4 ammo, hence the low price
-	["Static Titan AT 4Rnd", "O_static_AT_F", 6750],
-	["Static Titan AT 4Rnd", "I_static_AT_F", 6750],
-	["Static Titan AA 4Rnd", "B_static_AA_F", 4750],
-	["Static Titan AA 4Rnd", "O_static_AA_F", 4750],
-	["Static Titan AA 4Rnd", "I_static_AA_F", 4750],
+	["Static Titan AT 4Rnd", "B_static_AT_F", 8500], // Static launchers only have 4 ammo, hence the low price
+	["Static Titan AT 4Rnd", "O_static_AT_F", 8500],
+	["Static Titan AT 4Rnd", "I_static_AT_F", 8500],
+	["Static Titan AA 4Rnd", "B_static_AA_F", 7400],
+	["Static Titan AA 4Rnd", "O_static_AA_F", 7400],
+	["Static Titan AA 4Rnd", "I_static_AA_F", 7400],
 	["Mk30 HMG .50 Low tripod", "B_HMG_01_F", 3500],
 	["Mk30 HMG .50 Low tripod", "O_HMG_01_F", 3500],
 	["Mk30 HMG .50 Low tripod", "I_HMG_01_F", 3500],
@@ -286,9 +286,9 @@ ammoArray = compileFinal str
 	["RPG-42 Anti-Tank Rocket", "RPG32_F", 300],              // Direct damage: high      | Splash damage: low    | Guidance: none
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 250],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	["PCML Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
-	["Titan Anti-Tank Missile", "Titan_AT", 500],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan Anti-Personnel Missile", "Titan_AP", 450],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
-	["Titan Anti-Air Missile", "Titan_AA", 500],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
+	["Titan Anti-Tank Missile", "Titan_AT", 600],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
+	["Titan Anti-Personnel Missile", "Titan_AP", 550],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	["Titan Anti-Air Missile", "Titan_AA", 550],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 100],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 300],
 	["40mm Smoke Round (White)", "1Rnd_Smoke_Grenade_shell", 75],
@@ -971,7 +971,7 @@ helicoptersArray = compileFinal str
 	["AH-99 Blackfoot", "B_Heli_Attack_01_dynamicLoadout_F", 150000, "vehicle"], // RAH-66 with gunner
 	["Mi-48 Kajman", "O_Heli_Attack_02_dynamicLoadout_F", 150000, "vehicle"], // Mi-28 with gunner
 
-	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 160000, "vehicle"] // Do NOT use "B_T_UAV_03_dynamicLoadout_F" (doesn't support ASRAAM pylons)
+	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 150000, "vehicle"] // Do NOT use "B_T_UAV_03_dynamicLoadout_F" (doesn't support ASRAAM pylons)
 ];
 
 planesArray = compileFinal str
@@ -996,18 +996,18 @@ planesArray = compileFinal str
 	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 150000, "vehicle"],
 	["Y-32 Xi'an", "O_T_VTOL_02_infantry_dynamicLoadout_F", 150000, "vehicle"],
 
-	["MQ4A Greyhawk Missile UAV", "B_UAV_02_dynamicLoadout_F", 85000, "vehicle", "variant_greyhawkMissile"],
-	["K40 Ababil-3 Missile UAV", "O_UAV_02_dynamicLoadout_F", 85000, "vehicle", "variant_greyhawkMissile"],
-	["K40 Ababil-3 Missile UAV", "I_UAV_02_dynamicLoadout_F", 85000, "vehicle", "variant_greyhawkMissile"],
+	["MQ4A Greyhawk Missile UAV", "B_UAV_02_dynamicLoadout_F", 90000, "vehicle", "variant_greyhawkMissile"],
+	["K40 Ababil-3 Missile UAV", "O_UAV_02_dynamicLoadout_F", 90000, "vehicle", "variant_greyhawkMissile"],
+	["K40 Ababil-3 Missile UAV", "I_UAV_02_dynamicLoadout_F", 90000, "vehicle", "variant_greyhawkMissile"],
 
-	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_dynamicLoadout_F", 60000, "vehicle", "variant_greyhawkBomber"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
-	["K40 Ababil-3 Bomber UAV", "O_UAV_02_dynamicLoadout_F", 60000, "vehicle", "variant_greyhawkBomber"],
-	["K40 Ababil-3 Bomber UAV", "I_UAV_02_dynamicLoadout_F", 60000, "vehicle", "variant_greyhawkBomber"],
+	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_dynamicLoadout_F", 65000, "vehicle", "variant_greyhawkBomber"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
+	["K40 Ababil-3 Bomber UAV", "O_UAV_02_dynamicLoadout_F", 65000, "vehicle", "variant_greyhawkBomber"],
+	["K40 Ababil-3 Bomber UAV", "I_UAV_02_dynamicLoadout_F", 65000, "vehicle", "variant_greyhawkBomber"],
 
-	["KH-3A Fenghuang Missile UAV", "O_T_UAV_04_CAS_F", 85000, "vehicle"],
+	["KH-3A Fenghuang Missile UAV", "O_T_UAV_04_CAS_F", 90000, "vehicle"],
 
-	["UCAV Sentinel Missile", "B_UAV_05_F", 165000, "vehicle", "variant_sentinelMissile"],
-	["UCAV Sentinel Bomber", "B_UAV_05_F", 80000, "vehicle", "variant_sentinelBomber"]
+	["UCAV Sentinel Missile", "B_UAV_05_F", 175000, "vehicle", "variant_sentinelMissile"],
+	["UCAV Sentinel Bomber", "B_UAV_05_F", 85000, "vehicle", "variant_sentinelBomber"]
 ];
 
 boatsArray = compileFinal str
