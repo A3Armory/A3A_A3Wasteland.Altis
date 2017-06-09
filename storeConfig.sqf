@@ -174,9 +174,9 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 staticGunsArray = compileFinal str
 [
 	// ["Vehicle Ammo Crate", "Box_NATO_AmmoVeh_F", 2500],
-	["Static Titan AT 4Rnd", "B_static_AT_F", 8500], // Static launchers only have 4 ammo, hence the low price
-	["Static Titan AT 4Rnd", "O_static_AT_F", 8500],
-	["Static Titan AT 4Rnd", "I_static_AT_F", 8500],
+	["Static Titan AT 4Rnd", "B_static_AT_F", 13500], // Static launchers only have 4 ammo, hence the low price
+	["Static Titan AT 4Rnd", "O_static_AT_F", 13500],
+	["Static Titan AT 4Rnd", "I_static_AT_F", 13500],
 	["Static Titan AA 4Rnd", "B_static_AA_F", 7400],
 	["Static Titan AA 4Rnd", "O_static_AA_F", 7400],
 	["Static Titan AA 4Rnd", "I_static_AA_F", 7400],
@@ -286,8 +286,8 @@ ammoArray = compileFinal str
 	["RPG-42 Anti-Tank Rocket", "RPG32_F", 300],              // Direct damage: high      | Splash damage: low    | Guidance: none
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 250],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	["PCML Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
-	["Titan Anti-Tank Missile", "Titan_AT", 600],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan Anti-Personnel Missile", "Titan_AP", 550],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	["Titan Anti-Tank Missile", "Titan_AT", 5600],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
+	["Titan Anti-Personnel Missile", "Titan_AP", 1550],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA", 550],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 100],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 300],
@@ -984,10 +984,10 @@ planesArray = compileFinal str
 	["A-149 Gryphon", "I_Plane_Fighter_04_F", 150000, "vehicle"],
 
 	["F/A-181 Black Wasp (Gun-Only)", "B_Plane_Fighter_01_Stealth_F", 150000, "vehicle"], // no missiles or bombs
-	["F/A-181 Black Wasp", "B_Plane_Fighter_01_F", 240000, "vehicle"],
+	["F/A-181 Black Wasp", "B_Plane_Fighter_01_F", 230000, "vehicle"],
 
 	["To-201 Shikra (Gun-Only)", "O_Plane_Fighter_02_Stealth_F", 150000, "vehicle"], // no missiles or bombs
-	["To-201 Shikra", "O_Plane_Fighter_02_F", 240000, "vehicle"],
+	["To-201 Shikra", "O_Plane_Fighter_02_F", 230000, "vehicle"],
 
 	["A-164 Wipeout CAS", "B_Plane_CAS_01_dynamicLoadout_F", 230000, "vehicle"],
 	["To-199 Neophron CAS", "O_Plane_CAS_02_dynamicLoadout_F", 225000, "vehicle"],
