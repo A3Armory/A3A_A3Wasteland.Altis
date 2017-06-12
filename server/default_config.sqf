@@ -25,7 +25,7 @@ A3W_timeMultiplierNight = 4.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
-A3W_startingMoney = 3500;          // Amount of money that players start with
+A3W_startingMoney = 5000;          // Amount of money that players start with
 A3W_maxMoney = 1500000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
@@ -161,8 +161,8 @@ A3W_simpleLoot = 1;                // Spawn loot in all buildings (0 = no, 1 = y
 // Territory settings
 A3W_territoryCaptureTime = 2*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
-A3W_payrollInterval = 20*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 750;           // Amount of money rewarded per territory on each payroll
+A3W_payrollInterval = 10*60;       // Delay in seconds between each payroll
+A3W_payrollAmount = 2500;           // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
