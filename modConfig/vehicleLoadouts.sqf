@@ -50,7 +50,11 @@ switch (true) do
 	// Y-32 Xi'an
 	case ({_class isKindOf _x} count ["VTOL_02_infantry_dynamicLoadout_base_F", "VTOL_02_vehicle_dynamicLoadout_base_F"] > 0):
 	{
-		_pylons = ["PylonRack_1Rnd_Missile_AGM_01_F","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_1Rnd_Missile_AGM_01_F"];
+		switch (_variant) do
+		{
+			case "amrmedXian": { _pylons = ["PylonRack_1Rnd_Missile_AGM_01_F","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_1Rnd_Missile_AGM_01_F"] };
+			default            { _pylons = ["","","",""] };
+		};
 	};
 
 	// A-143 Buzzard
@@ -160,12 +164,7 @@ switch (true) do
 			case "greyhawkBomber": { _pylons = ["PylonMissile_1Rnd_Bomb_04_F","PylonMissile_1Rnd_Bomb_04_F"] };
 			default
 			{
-				_pylons = ["PylonRack_3Rnd_LG_scalpel","PylonRack_3Rnd_LG_scalpel"];
-				_customCode =
-				{
-					_veh setAmmoOnPylon [1, 1]; // right wing
-					_veh setAmmoOnPylon [2, 1]; // left wing
-				};
+				_pylons = ["PylonRack_1Rnd_LG_scalpel","PylonRack_1Rnd_LG_scalpel"];
 			};
 		};
 	};
