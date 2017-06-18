@@ -19,9 +19,9 @@ A3W_maxPlayers = 72;               // Server slot limit. Needed for reserved slo
 A3W_repetitiveCleanup = 1;         // Enable clean-up addon (0 = off, 1 = on)
 
 // Time settings
-A3W_startHour = 15;                // In-game hour at mission start (0 to 23) - time is saved and restored between server restarts if A3W_timeSaving = 1
+A3W_startHour = 12;                // In-game hour at mission start (0 to 23) - time is saved and restored between server restarts if A3W_timeSaving = 1
 A3W_timeMultiplierDay = 1.0;       // Sets the speed of time between 5 AM and 8 PM (for example, 6.0 means 6 hours in-game will pass in 1 real hour)
-A3W_timeMultiplierNight = 4.0;     // Sets the speed of time between 8 PM and 5 AM
+A3W_timeMultiplierNight = 7.0;     // Sets the speed of time between 8 PM and 5 AM
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
@@ -29,7 +29,7 @@ A3W_startingMoney = 5000;          // Amount of money that players start with
 A3W_maxMoney = 1500000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
-A3W_bleedingTime = 60;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
+A3W_bleedingTime = 120;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
 //A3W_headshotNoRevive = 0;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
 A3W_customDeathMessages = 1;       // If difficulty option deathMessages=0, display custom messages related to causes of death, as defined in fn_deathMessage.sqf (0 = no, 1 = yes)
 A3W_healthTime = 7*60;             // Seconds till death once starving or dehydrated
@@ -52,15 +52,15 @@ A3W_fastMovementLoopTime = 1;      // Number of seconds before loop check
 // Store settings
 A3W_showGunStoreStatus = 1;        // Show enemy and friendly presence at gunstores on map (0 = no, 1 = yes)
 A3W_gunStoreIntruderWarning = 1;   // Warn players in gunstore areas of enemy intruders (0 = no, 1 = yes)
-A3W_remoteBombStoreRadius = 150;   // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
-A3W_poiObjLockDistance = 100;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
+A3W_remoteBombStoreRadius = 160;   // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
+A3W_poiObjLockDistance = 60;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
 A3W_vehiclePurchaseCooldown = 60; // Number of seconds to wait before allowing someone to purchase another vehicle, don't bother setting it too high because it can be bypassed by rejoining
 //A3W_lockVehicles = ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F", "Truck_01_base_F", "Truck_02_base_F", "Truck_03_base_F", "Wheeled_APC_F", "Tank_F", "Helicopter_Base_F", "Plane", "UGV_01_base_F", "LSV_01_base_F", "LSV_02_base_F"];		// List of class names for vehicles that should be automatically locked and saved when bought
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
 A3W_atmMaxBalance = 650000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
-A3W_atmTransferFee = 5;            // Fee in percent charged to players for money transfers to other players (0 to 50)
+A3W_atmTransferFee = 20;            // Fee in percent charged to players for money transfers to other players (0 to 50)
 A3W_atmTransferAllTeams = 0;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
 A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the mission editor (0 = all ATMs from towns & editor allowed, 1 = ATMs from editor only) Note: Stratis has no town ATMs, only editor ones.
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
@@ -83,8 +83,8 @@ A3W_savingMethod = "extDB";        // Method used for saving data ("profile", "i
 A3W_playerSaving = 1;              // Save player data like position, health, inventory, etc. (0 = no, 1 = yes)
 A3W_moneySaving = 1;               // If playerSaving = 1, save player money amount (0 = no, 1 = yes)
 A3W_playerStatsGlobal = 1;         // If playerSaving = 1 and savingMethod = "extDB", players' stats on the scoreboard will be their all-time global values from all servers of your database (0 = no, 1 = yes)
-A3W_timeSaving = 0;                // Save and restore in-game clock time between server restarts (0 = no, 1 = yes)
-A3W_weatherSaving = 0;             // Save and restore weather settings between server restarts (0 = no, 1 = yes)
+A3W_timeSaving = 1;                // Save and restore in-game clock time between server restarts (0 = no, 1 = yes)
+A3W_weatherSaving = 1;             // Save and restore weather settings between server restarts (0 = no, 1 = yes)
 A3W_combatAbortDelay = 60;         // If playerSaving = 1, delay in seconds for which to disable abort and respawn buttons after firing or being shot (0 = none)
 A3W_vehicleSaving = 1;             // Save purchased and captured vehicles between server restarts (0 = no, 1 = yes)
 A3W_missionVehicleSaving = 0;      // Autosaving behavior for convoy/patrol/shipment _vehicles, until a player force-saves or acquires ownership (0 = off, 1 = on)
@@ -162,7 +162,7 @@ A3W_simpleLoot = 1;                // Spawn loot in all buildings (0 = no, 1 = y
 A3W_territoryCaptureTime = 2*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
 A3W_payrollInterval = 10*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 2500;           // Amount of money rewarded per territory on each payroll
+A3W_payrollAmount = 1750;           // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
