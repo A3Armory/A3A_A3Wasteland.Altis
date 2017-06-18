@@ -22,7 +22,8 @@ MainMissions =
 
 SideMissions =
 [
-	["mission_HostileHelicopter", 0.1],
+	["mission_HostileHelicopter", 0.3],
+	["mission_HostileJet", 0.5],
 	["mission_MiniConvoy", 1],
 	["mission_SunkenSupplies", 0.1],
 	["mission_AirWreck", 1],
@@ -72,7 +73,7 @@ LandConvoyPaths = (call compile preprocessFileLineNumbers "mapConfig\convoys\lan
 CoastalConvoyPaths = (call compile preprocessFileLineNumbers "mapConfig\convoys\coastalConvoysList.sqf") apply {[_x, false]};
 
 MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
-SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
+SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter", "mission_HostileJet"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
 MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTreasure"]]]] call removeDisabledMissions;
 
 { _x set [2, false] } forEach MainMissions;
