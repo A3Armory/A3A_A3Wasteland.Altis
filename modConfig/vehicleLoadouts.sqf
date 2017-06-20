@@ -53,7 +53,17 @@ switch (true) do
 		switch (_variant) do
 		{
 			case "amrmedXian": { _pylons = ["PylonRack_1Rnd_Missile_AGM_01_F","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_1Rnd_Missile_AGM_01_F"] };
-			default            { _pylons = ["","","",""] };
+			default
+			{
+				_mags =
+				[
+					["Laserbatteries", [0]]
+				];
+				_weapons =
+				[
+					["Laserdesignator_mounted", [0]]
+				];
+			};
 		};
 	};
 
@@ -172,10 +182,18 @@ switch (true) do
 	// KH-3A Fenghuang UAV
 	case (_class isKindOf "O_T_UAV_04_CAS_F"):
 	{
-		_customCode =
-		{
-			_veh setMagazineTurretAmmo ["4Rnd_LG_Jian", 2, [0]];
-		};
+		_mags =
+		[
+			["240Rnd_CMFlare_Chaff_Magazine", [-1]],
+			["2Rnd_LG_scalpel", [0]],
+			["Laserbatteries", [0]]
+		];
+		_weapons =
+		[
+			["CMFlareLauncher", [-1]],
+			["missiles_SCALPEL", [0]],
+			["Laserdesignator_mounted", [0]]
+		];
 	};
 
 	// UCAV Sentinel
