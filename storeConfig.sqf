@@ -924,22 +924,22 @@ armoredArray = compileFinal str
 	["Strider HMG", "I_MRAP_03_hmg_F", 39000, "vehicle"],
 	["Strider GMG", "I_MRAP_03_gmg_F", 46000, "vehicle"],
 	["MSE-3 Marid", "O_APC_Wheeled_02_rcws_F", 75000, "vehicle"],
-	["AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F", 77000, "vehicle"],
-	["AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F", 81000, "vehicle"]
+	["AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F", 85000, "vehicle"],
+	["AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F", 95000, "vehicle"]
 ];
 
 tanksArray = compileFinal str
 [
-	["CRV-6e Bobcat (Resupply)", "B_APC_Tracked_01_CRV_F", 87500, "vehicle"],
-	["IFV-6c Panther", "B_APC_Tracked_01_rcws_F", 87000, "vehicle"],
-	["FV-720 Mora", "I_APC_tracked_03_cannon_F", 90000, "vehicle"],
-	["BTR-K Kamysh", "O_APC_Tracked_02_cannon_F", 95000, "vehicle"],
+	["CRV-6e Bobcat (Resupply)", "B_APC_Tracked_01_CRV_F", 85000, "vehicle"],
+	["IFV-6c Panther", "B_APC_Tracked_01_rcws_F", 90000, "vehicle"],
+	["FV-720 Mora", "I_APC_tracked_03_cannon_F", 105000, "vehicle"],
+	["BTR-K Kamysh", "O_APC_Tracked_02_cannon_F", 100000, "vehicle"],
 	["IFV-6a Cheetah AA", "B_APC_Tracked_01_AA_F", 97000, "vehicle"],
 	["ZSU-39 Tigris AA", "O_APC_Tracked_02_AA_F", 97000, "vehicle"],
-	["M2A1 Slammer", "B_MBT_01_cannon_F", 135000, "vehicle"],
-	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 140000, "vehicle"], // Commander gun variant
-	["T-100 Varsuk", "O_MBT_02_cannon_F", 140000, "vehicle"],
-	["MBT-52 Kuma", "I_MBT_03_cannon_F", 145000, "vehicle"]
+	["M2A1 Slammer", "B_MBT_01_cannon_F", 120000, "vehicle"],
+	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 145000, "vehicle"], // Commander gun variant
+	["T-100 Varsuk", "O_MBT_02_cannon_F", 130000, "vehicle"],
+	["MBT-52 Kuma", "I_MBT_03_cannon_F", 155000, "vehicle"]
 ];
 
 helicoptersArray = compileFinal str

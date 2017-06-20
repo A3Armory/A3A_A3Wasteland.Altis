@@ -11,7 +11,7 @@ APOC_AA_VehOptions =
 ["Strider", "I_MRAP_03_F", 8250, "vehicle"],
 ["Strider HMG", "I_MRAP_03_hmg_F", 42500, "vehicle"],
 ["Strider GMG", "I_MRAP_03_gmg_F", 49500, "vehicle"],
-["CRV-6e Bobcat (Resupply)", "B_APC_Tracked_01_CRV_F", 101000, "vehicle"]
+["CRV-6e Bobcat (Resupply)", "B_APC_Tracked_01_CRV_F", 88500, "vehicle"]
 ];
 
 APOC_AA_SupOptions =
