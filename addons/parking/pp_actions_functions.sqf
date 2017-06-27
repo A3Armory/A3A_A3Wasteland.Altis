@@ -128,7 +128,7 @@ pp_create_terminals = {
 
     diag_log format["Creating parking terminal at %1 (Grid %2)", _marker, mapGridPosition _pos];
 
-  } foreach (allMapMarkers select {_x select [0,7] == "Parking" && _x find "_" == -1}) //(call pp_get_all_cities);
+  } foreach (allMapMarkers select {markerType _x == "Empty" && _x select [0,7] == "Parking" && _x find "_" == -1}) //(call pp_get_all_cities);
 };
 
 pp_get_near_vehicles = {
