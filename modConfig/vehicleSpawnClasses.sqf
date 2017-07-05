@@ -72,18 +72,19 @@ staticPlaneList =
 //Random Weapon List - Change this to what you want to spawn in cars.
 vehicleWeapons =
 [
-	["SMG_02_F", "SMG_05_F", "hgun_PDW2000_F"],
-	["arifle_SDAR_F", "arifle_Mk20C_plain_F", "arifle_TRG20_F"],
-	["arifle_MXC_F", "arifle_AKS_F", "arifle_AKM_F"],
-	["arifle_SPAR_02_khk_F", "LMG_03_F"],
+	["hgun_PDW2000_F", "SMG_05_F", "SMG_02_F", "SMG_01_F"],
+	["arifle_Mk20C_plain_F", "arifle_TRG20_F", "arifle_Katiba_C_F", "arifle_MXC_F"],
+	["arifle_Mk20_GL_plain_F", "arifle_TRG21_GL_F", "arifle_Katiba_GL_F", "arifle_MX_GL_F"],
+	["arifle_SPAR_01_blk_F", "arifle_CTAR_blk_F", "arifle_ARX_blk_F", "arifle_AK12_F"],
+	["arifle_MXM_F", "srifle_DMR_01_F", "srifle_EBR_F"],
 	["launch_RPG7_F", "launch_RPG32_F", "launch_NLAW_F"]
 ];
 
 vehicleAddition =
 [
-	["muzzle_snds_L", "muzzle_snds_acp"],
-	["muzzle_snds_M", "muzzle_snds_58_blk_F", "muzzle_snds_H", "muzzle_snds_H_MG"],
-	["muzzle_snds_65_TI_blk_F", "muzzle_snds_B", "muzzle_snds_338_black", "muzzle_snds_93mmg"],
+	["muzzle_snds_acp", "muzzle_snds_M", "muzzle_snds_58_blk_F"],
+	["muzzle_snds_H", "muzzle_snds_H_MG", "muzzle_snds_B"],
+	["muzzle_snds_65_TI_blk_F", "muzzle_snds_338_black", "muzzle_snds_93mmg"],
 	["V_TacVest_blk", "V_TacVestIR_blk", "V_Press_F"],
 	["H_HelmetIA", "H_HelmetB"],
 	["optic_Arco", "optic_SOS", "optic_LRPS"],
@@ -94,10 +95,9 @@ vehicleAddition =
 
 vehicleAddition2 =
 [
-	"DemoCharge_Remote_Mag",
-	"Titan_AA",
-	["3Rnd_UGL_FlareYellow_F", "3Rnd_UGL_FlareWhite_F"],
-	["1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell", "1Rnd_Smoke_Grenade_shell"],
-	["7Rnd_408_Mag", "5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag", "10Rnd_127x54_Mag", "10Rnd_50BW_Mag_F"],
-	["30Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "10Rnd_338_Mag", "130Rnd_338_Mag", "10Rnd_93x64_DMR_05_Mag", "150Rnd_93x64_Mag"]
+	["MiniGrenade", "HandGrenade", "APERSTripMine_Wire_Mag", "DemoCharge_Remote_Mag"],
+	"SmokeShell",
+	"SmokeShellPurple",
+	"SmokeShellYellow",
+	"SmokeShellOrange"
 ];
