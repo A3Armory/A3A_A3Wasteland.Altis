@@ -25,7 +25,7 @@ A3W_timeMultiplierNight = 7.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
-A3W_startingMoney = 5000;          // Amount of money that players start with
+A3W_startingMoney = 3500;          // Amount of money that players start with
 A3W_maxMoney = 1500000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
@@ -143,7 +143,7 @@ A3W_vehicleSpawning = 1;           // If serverSpawning = 1, spawn vehicles in t
 A3W_vehicleQuantity = 180;         // Approximate number of land vehicles to be spawned in towns
 A3W_planeSpawnOdds = 0.50;         // 50% chance spawning
 A3W_heliSpawnOdds = 0.50;         // 50% chance spawning
-A3W_boatSpawnOdds = 0.50;         // 50% chance spawning
+A3W_boatSpawnOdds = 0.25;         // 25% chance spawning
 A3W_boatSpawning = 1;              // If serverSpawning = 1, spawn boats at marked areas near coasts (0 = no, 1 = yes)
 A3W_heliSpawning = 1;              // If serverSpawning = 1, spawn helicopters in some towns and airfields (0 = no, 1 = yes)
 A3W_planeSpawning = 1;             // If serverSpawning = 1, spawn planes at some airfields (0 = no, 1 = yes)
@@ -155,14 +155,14 @@ A3W_essentialsSpawning = 1;        // If serverSpawning = 1, spawn essential ite
 /*A3W_buildingLootWeapons = 0;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
 A3W_buildingLootSupplies = 0;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
 A3W_buildingLootChances = 0;*/       // Chance percentage that loot will spawn at each spot in a building (0 to 100)
-A3W_vehicleLoot = 3;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
+A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 A3W_simpleLoot = 1;                // Spawn loot in all buildings (0 = no, 1 = yes)
 
 // Territory settings
 A3W_territoryCaptureTime = 2*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
-A3W_payrollInterval = 10*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 1750;           // Amount of money rewarded per territory on each payroll
+A3W_payrollInterval = 20*60;       // Delay in seconds between each payroll
+A3W_payrollAmount = 3000;          // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
