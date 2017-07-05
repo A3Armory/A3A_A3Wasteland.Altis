@@ -135,7 +135,7 @@ pp_get_near_vehicles = {
   ARGVX4(0,_player,objNull,[]);
 
   def(_vehicles);
-  _vehicles = (nearestObjects [_player, ["LandVehicle","Air","Ship"], 50]) select {!(_x getVariable ["A3W_lockpickDisabled",false])};
+  _vehicles = (nearestObjects [_player, ["LandVehicle","Air","Ship"], 50]) select {_x getVariable ["ownerUID",""] == getPlayerUID _player};
 
   init(_filtered,[]);
   def(_uid);
