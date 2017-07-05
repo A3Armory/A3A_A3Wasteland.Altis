@@ -157,16 +157,16 @@ launcherArray = compileFinal str
 	["RPG-42 Alamut", "launch_RPG32_F", 750],
 	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 750, "noDLC"],
 	["PCML", "launch_NLAW_F", 1000],
-	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 5600],
-	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 5600],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 5600],
-	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 5600, "noDLC"],
-	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 5600, "noDLC"],
-	["Titan MPRL AA (Sand)", "launch_Titan_F", 5200],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 5200],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 5200],
-	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 5200, "noDLC"],
-	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 5200, "noDLC"]
+	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 7500],
+	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 7500],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 7500],
+	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 7500, "noDLC"],
+	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 7500, "noDLC"],
+	["Titan MPRL AA (Sand)", "launch_Titan_F", 6500],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 6500],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 6500],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 6500, "noDLC"],
+	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 6500, "noDLC"]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -174,12 +174,12 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 staticGunsArray = compileFinal str
 [
 	// ["Vehicle Ammo Crate", "Box_NATO_AmmoVeh_F", 2500],
-	["Static Titan AT 4Rnd", "B_static_AT_F", 15600], // Static launchers only have 4 ammo, hence the low price
-	["Static Titan AT 4Rnd", "O_static_AT_F", 15600],
-	["Static Titan AT 4Rnd", "I_static_AT_F", 15600],
-	["Static Titan AA 4Rnd", "B_static_AA_F", 7400],
-	["Static Titan AA 4Rnd", "O_static_AA_F", 7400],
-	["Static Titan AA 4Rnd", "I_static_AA_F", 7400],
+	["Static Titan AT 4Rnd", "B_static_AT_F", 17500], // Static launchers only have 4 ammo, hence the low price
+	["Static Titan AT 4Rnd", "O_static_AT_F", 17500],
+	["Static Titan AT 4Rnd", "I_static_AT_F", 17500],
+	["Static Titan AA 4Rnd", "B_static_AA_F", 8700],
+	["Static Titan AA 4Rnd", "O_static_AA_F", 8700],
+	["Static Titan AA 4Rnd", "I_static_AA_F", 8700],
 	["Mk30 HMG .50 Low tripod", "B_HMG_01_F", 3500],
 	["Mk30 HMG .50 Low tripod", "O_HMG_01_F", 3500],
 	["Mk30 HMG .50 Low tripod", "I_HMG_01_F", 3500],
@@ -703,10 +703,10 @@ backpackArray = compileFinal str
 	["Carryall (Urban)", "B_Carryall_oucamo", 1280, "backpack"],
 	["Carryall (G Hex)", "B_Carryall_ghex_F", 1280, "backpack", "noDLC"],
 
-	["Bergen (Digital)", "B_Bergen_dgtl_F", 3500, "backpack", "noDLC"],
-	["Bergen (Hex)", "B_Bergen_hex_F", 3500, "backpack", "noDLC"],
-	["Bergen (MTP)", "B_Bergen_mcamo_F", 3500, "backpack", "noDLC"],
-	["Bergen (Tropic)", "B_Bergen_tna_F", 3500, "backpack", "noDLC"]
+	["Bergen (Digital)", "B_Bergen_dgtl_F", 5000, "backpack", "noDLC"],
+	["Bergen (Hex)", "B_Bergen_hex_F", 5000, "backpack", "noDLC"],
+	["Bergen (MTP)", "B_Bergen_mcamo_F", 5000, "backpack", "noDLC"],
+	["Bergen (Tropic)", "B_Bergen_tna_F", 5000, "backpack", "noDLC"]
 ];
 
 genItemArray = compileFinal str
@@ -714,9 +714,9 @@ genItemArray = compileFinal str
 	["UAV Terminal (NATO)", "B_UavTerminal", 1250, "gps"],
 	["UAV Terminal (CSAT)", "O_UavTerminal", 1250, "gps"],
 	["UAV Terminal (AAF)", "I_UavTerminal", 1250, "gps"],
-	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 20000, "backpack"],
-	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 20000, "backpack"],
-	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 20000, "backpack"],
+	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 30000, "backpack"],
+	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 30000, "backpack"],
+	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 30000, "backpack"],
 	["Remote Designator (Sand)", "B_Static_Designator_01_weapon_F", 15000, "backpack"],
 	["Remote Designator (Hex)", "O_Static_Designator_02_weapon_F", 15000, "backpack"],
 	["GPS", "ItemGPS", 200, "gps"],
@@ -967,9 +967,9 @@ helicoptersArray = compileFinal str
 	["AH-9 Pawnee", "B_Heli_Light_01_dynamicLoadout_F", 66500, "vehicle", "variant_pawneeNormal"], // Armed AH-6
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_dynamicLoadout_F", 67500, "vehicle"], // Armed AW159
 	["PO-30 Orca (DAR)", "O_Heli_Light_02_dynamicLoadout_F", 66500, "vehicle", "variant_orcaDAR"], // Armed Ka-60
-	["PO-30 Orca (DAGR)", "O_Heli_Light_02_dynamicLoadout_F", 95000, "vehicle", "variant_orcaDAGR"], // Armed Ka-60, add "HIDDEN" if you don't want it, but don't remove the line!
-	["AH-99 Blackfoot", "B_Heli_Attack_01_dynamicLoadout_F", 150000, "vehicle"], // RAH-66 with gunner
-	["Mi-48 Kajman", "O_Heli_Attack_02_dynamicLoadout_F", 150000, "vehicle"], // Mi-28 with gunner
+	["PO-30 Orca (DAGR)", "O_Heli_Light_02_dynamicLoadout_F", 100000, "vehicle", "variant_orcaDAGR"], // Armed Ka-60, add "HIDDEN" if you don't want it, but don't remove the line!
+	["AH-99 Blackfoot", "B_Heli_Attack_01_dynamicLoadout_F", 165000, "vehicle"], // RAH-66 with gunner
+	["Mi-48 Kajman", "O_Heli_Attack_02_dynamicLoadout_F", 165000, "vehicle"], // Mi-28 with gunner
 
 	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 150000, "vehicle"] // Do NOT use "B_T_UAV_03_dynamicLoadout_F" (doesn't support ASRAAM pylons)
 ];
