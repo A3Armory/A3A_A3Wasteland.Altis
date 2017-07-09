@@ -97,7 +97,7 @@ vehicleAddition2 =
 [
 	["MiniGrenade", "HandGrenade", "APERSTripMine_Wire_Mag", "DemoCharge_Remote_Mag"],
 	"SmokeShell",
-	"SmokeShellPurple",
-	"SmokeShellYellow",
-	"SmokeShellOrange"
+	"30Rnd_556x45_Stanag",
+	"30Rnd_65x39_caseless_mag",
+	"30Rnd_762x39_Mag_F"
 ];
