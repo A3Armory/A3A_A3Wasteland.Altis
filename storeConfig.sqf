@@ -994,8 +994,8 @@ planesArray = compileFinal str
 
 	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 24000, "vehicle"],
 	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 150000, "vehicle"],
-	["Y-32 Xi'an (Infantry)", "O_T_VTOL_02_infantry_dynamicLoadout_F", 24000, "vehicle", "variant_unamrmedXian"],
-	["Y-32 Xi'an (Gunship)", "O_T_VTOL_02_infantry_dynamicLoadout_F", 150000, "vehicle", "variant_amrmedXian"],
+	["Y-32 Xi'an (Infantry)", "O_T_VTOL_02_infantry_dynamicLoadout_F", 24000, "vehicle", "variant_unarmedXian"],
+	["Y-32 Xi'an (Gunship)", "O_T_VTOL_02_infantry_dynamicLoadout_F", 150000, "vehicle", "variant_armedXian"],
 
 	["MQ4A Greyhawk Missile UAV", "B_UAV_02_dynamicLoadout_F", 90000, "vehicle", "variant_greyhawkMissile"],
 	["K40 Ababil-3 Missile UAV", "O_UAV_02_dynamicLoadout_F", 90000, "vehicle", "variant_greyhawkMissile"],

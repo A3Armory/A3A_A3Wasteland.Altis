@@ -52,15 +52,17 @@ switch (true) do
 	{
 		switch (_variant) do
 		{
-			case "amrmedXian": { _pylons = ["PylonRack_1Rnd_Missile_AGM_01_F","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_1Rnd_Missile_AGM_01_F"] };
+			case "armedXian": { _pylons = ["PylonRack_1Rnd_Missile_AGM_01_F","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_19Rnd_Rocket_Skyfire","PylonRack_1Rnd_Missile_AGM_01_F"] };
 			default
 			{
 				_mags =
 				[
+					["168Rnd_CMFlare_Chaff_Magazine", [-1]],
 					["Laserbatteries", [0]]
 				];
 				_weapons =
 				[
+					["CMFlareLauncher", [-1]],
 					["Laserdesignator_mounted", [0]]
 				];
 			};
