@@ -11,6 +11,7 @@
 #define ERR_MOVED "Somebody moved the vehicle."
 #define ERR_TOWED "Somebody towed or lifted the vehicle."
 #define ERR_OWNED "The vehicle is already yours."
+#define ERR_SPAWNED "The vehicle is not a mission spawn."
 #define ERR_LOCKED "The vehicle is locked."
 #define ERR_CREW "Somebody is inside the vehicle."
 #define ERR_CONNECTED "Somebody is connected to the UAV."
@@ -32,6 +33,7 @@ switch (true) do
 	case (vehicle player != player): { _text = CONCAT(ERR_FAILED, ERR_IN_VEHICLE) };
 	case (!alive _vehicle): { _text = CONCAT(ERR_FAILED, ERR_DESTROYED) };
 	case (_vehicle getVariable ["ownerUID","0"] isEqualTo getPlayerUID player && {!unitIsUAV _vehicle || side _vehicle == side group player}): { _text = CONCAT(ERR_FAILED, ERR_OWNED) };
+	case (isNil {_vehicle getVariable "A3W_missionVehicle"}): { _text = CONCAT(ERR_FAILED, ERR_SPAWNED) };
 	case (locked _vehicle > 1): { _text = CONCAT(ERR_FAILED, ERR_LOCKED) };
 	case ({alive _x && getText (configFile >> "CfgVehicles" >> typeOf _x >> "simulation") != "UAVPilot"} count crew _vehicle > 0): { _text = CONCAT(ERR_FAILED, ERR_CREW) };
 	case (!isNull ((uavControl _vehicle) select 0)): { _text = CONCAT(ERR_FAILED, ERR_CONNECTED) };
