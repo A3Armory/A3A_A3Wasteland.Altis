@@ -8,7 +8,9 @@
 #define X_safezone 
 #define RscHTML_sizeEx_H1 (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)
 #define RscHTML_sizeEx_H2 (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)
-#define RscHTML_sizeEx_P (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)
+#define RscHTML_sizeEx_P (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)
+#define RscHTML_sizeEx_P_2 (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.1)
+
 class TOParmaInfoD
 {
 	idd = TOParmaInfo_dialog; 
@@ -44,8 +46,7 @@ class TOParmaInfoD
 			idc = TOParmaInfo_Server_Info;
 			type = CT_STRUCTURED_TEXT;
 			size = 0.040;
-			text = "A3Armory Server";
-			x = "18 * (((safezoneW / safezoneH) min 1.2) / 40)";
+			x = "20 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
@@ -58,7 +59,6 @@ class TOParmaInfoD
 			idc = TOParmaInfo_General_Info_BG;
 			type = CT_STRUCTURED_TEXT;
 			size = 0.030;
-			text = "Website: A3Armory.com Forums: a3armory.com/forums Discord: discord.a3armory.com";
 			x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "1.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "30 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -91,33 +91,32 @@ class TOParmaInfoD
 		{
 			idc = TOParmaInfo_Content_A3W;
 			type = CT_STRUCTURED_TEXT;
-			size = 0.028;
+			size = 0.031;
 			x = "15.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "2.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "14.9 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "7.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.2};
-			text = "Welcome";
 		};
-		class TAStatsTiTleBackground: RscText
+		class TANewsTiTleBackground: RscText
 		{
-			idc = TOParmaInfo_Stats_Title_BG;
-			text = "A3Armory.com Links";
+			idc = TOParmaInfo_News_Title_BG;
+			text = "Click on links for more information:";
 			x = "15.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "9.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "14.9 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorBackground[] = {0.51,0.99,0.41,0.3};
 		};
-		class TANewsBackground: RscText
+		class TARulestwoBackground: RscText
 		{
-			idc = TOParmaInfo_News_BG;
+			idc = TOParmaInfo_Rulestwo_BG;
 			x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "9.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "10.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			colorBackground[] = {0,0,0,0.4};
+			colorBackground[] = {0.98,0.16,0.03,0.2};
 		};
 		class TARulesText: RscHTML
 		{	
@@ -148,9 +147,9 @@ class TOParmaInfoD
 			w = "14 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "7.4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
-		class TANewsText: RscHTML
+		class TARulestwoText: RscHTML
 		{	
-			idc = TOParmaInfo_Content_News;
+			idc = TOParmaInfo_Content_Rulestwo;
 			type = 9;
 			shadow = 0;
 			class H1
@@ -177,9 +176,9 @@ class TOParmaInfoD
 			w = "14 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "10.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
-		class TAStatsText: RscHTML
+		class TANewsText: RscHTML
 		{	
-			idc = TOParmaInfo_Content_Stats;
+			idc = TOParmaInfo_Content_News;
 			type = 9;
 			shadow = 0;
 			class H1
@@ -195,7 +194,7 @@ class TOParmaInfoD
 				};
 			class P: H1
 			{
-					sizeEx = RscHTML_sizeEx_P;
+					sizeEx = RscHTML_sizeEx_P_2;
 					fontBold = "PuristaLight";
 				};
 			colorBold[] = {0.6,0.6,0.6,1};

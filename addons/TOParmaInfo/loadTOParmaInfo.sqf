@@ -1,61 +1,44 @@
 // ******************************************************************************************
-// * This project is licensed under the GNU Affero GPL v3. Copyright Â© 2015 A3Wasteland.com *
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2015 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Name: loadTOParmaInfo.sqf
 //	@file Author: Lodac
 
 #include "dialog\TOParmaInfo_defines.hpp"
 
-
-//private ["_display", "_map", "_mission", "_player", "_newsOnline", "_newsOffline", "_ctrlHTML", "_htmlLoaded"];
-
 disableSerialization;
-
-_uid = getPlayerUID player;
 
 createDialog "TOParmaInfoD";
 
 _display = (findDisplay TOParmaInfo_dialog);
 
 _serverInfoText = _display displayCtrl TOParmaInfo_Server_Info;
-_serverInfoString = format ["<t color='#A0FFFF'>A3Armory A3Wasteland Altis</t>"];
+_serverInfoString = format ["<t color='#A0FFFFFF'>A3Armory A3Wasteland %1</t>", worldName];
 _serverInfoText ctrlSetStructuredText parseText _serverInfoString;
 
 _generalInfoText = _display displayCtrl TOParmaInfo_General_Info_BG;
-_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.a3armory.com/'>A3Armory</a></t> Forums: <t color='#0091CD'><a href='http://a3armory.com/forum/'>A3Armory Forum</a></t> Discord: discord.a3armory.com";
+_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.a3armory.com/'>A3Armory.com</a></t> Forum: <t color='#0091CD'><a href='http://www.a3armory.com/forum/'>A3Armory.com/forum</a></t>";
 _generalInfoText ctrlSetStructuredText parseText _generalInfoString;
 
-
-_rulesOnline = "addons\TOParmaInfo\rules.html";
-_rulesOffline = "addons\TOParmaInfo\rules.html";
-_newsOnline = "addons\TOParmaInfo\news.html";
-_newsOffline = "addons\TOParmaInfo\news.html";
-_statsOnline = "addons\TOParmaInfo\stats.html";
-_statsOffline = "addons\TOParmaInfo\stats.html";
-
+_rules = "addons\TOParmaInfo\rules.html";
+_rulestwo = "addons\TOParmaInfo\rulestwo.html";
+_news = "addons\TOParmaInfo\news.html";
 
 //Load the correct HTML into the control
+//Rules
 _ctrlHTML = _display displayCtrl TOParmaInfo_Content_Rules;
-_ctrlHTML htmlLoad _rulesOnline;
+_ctrlHTML htmlLoad _rules;
 _htmlLoaded = ctrlHTMLLoaded _ctrlHTML;
-if (!_htmlLoaded) then 
-{
-	_ctrlHTML htmlLoad _rulesOffline;
-};
+
+//rulestwo
+_ctrlHTML = _display displayCtrl TOParmaInfo_Content_Rulestwo;
+_ctrlHTML htmlLoad _rulestwo;
+_htmlLoaded = ctrlHTMLLoaded _ctrlHTML;
+
+//News
 _ctrlHTML = _display displayCtrl TOParmaInfo_Content_News;
-_ctrlHTML htmlLoad _newsOnline;
+_ctrlHTML htmlLoad _news;
 _htmlLoaded = ctrlHTMLLoaded _ctrlHTML;
-if (!_htmlLoaded) then 
-{
-	_ctrlHTML htmlLoad _newsOffline;
-};
-_ctrlHTML = _display displayCtrl TOParmaInfo_Content_Stats;
-_ctrlHTML htmlLoad _statsOnline;
-_htmlLoaded = ctrlHTMLLoaded _ctrlHTML;
-if (!_htmlLoaded) then 
-{
-	_ctrlHTML htmlLoad _statsOffline;
-};
 
 _control = _display displayCtrl TOParmaInfo_Content_A3W;
 private ["_teamrules", "_teamicon", "_teamcol"];
