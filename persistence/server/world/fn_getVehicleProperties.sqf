@@ -43,6 +43,13 @@ switch (true) do
 	};
 };
 
+// Save vPin by LouD
+{ _variables pushBack [_x select 0, _veh getVariable _x] } forEach
+[
+	["vPin", false],
+	["password", ""]
+];
+
 private _variant = _veh getVariable ["A3W_vehicleVariant", ""];
 
 if (_variant != "") then

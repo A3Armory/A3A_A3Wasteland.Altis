@@ -109,6 +109,9 @@
 		<Key ID="STR_WL_ShopDescriptions_Heroin">
 			<English>A highly addictive analgesic drug derived from morphine, often used illicitly as a narcotic producing euphoria.</English>
 		</Key>
+		<Key ID="STR_WL_ShopDescriptions_Pinlock">
+			<English>This is a non removable device that is one time use only, used to add a pincode to an owned vehicle. Any one with the pincode can also lock and unlock your vehicle!</English>
+		</Key>
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">
