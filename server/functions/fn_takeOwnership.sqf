@@ -21,6 +21,7 @@ _veh setVariable ["A3W_purchasedStoreObject", true];
 _veh setVariable ["A3W_purchasedVehicle", true, true];
 _veh setVariable ["ownerUID", getPlayerUID _player, true];
 _veh setVariable ["ownerName", name _player, true];
+_veh setVariable ["A3W_missionVehicle", nil, true];
 [_veh, 1] call A3W_fnc_setLockState; // Unlock
 
 if (_veh getVariable ["A3W_skipAutoSave", false]) then

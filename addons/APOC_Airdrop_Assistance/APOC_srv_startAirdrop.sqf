@@ -86,7 +86,7 @@ _object = switch (_type) do
 		_object setVariable ["ownerUID", getPlayerUID _player, true];
 		_object setVariable ["ownerName", name _player, true];
 		_object setVariable ["A3W_purchasedVehicle", true, true];
-		_object setVariable ["A3W_skipAutoSave", true, true];
+		//_object setVariable ["A3W_skipAutoSave", true, true];
 		[_object, false] call vehicleSetup;
 		_object attachTo [_heli, [0,0,-5]];
 		_object

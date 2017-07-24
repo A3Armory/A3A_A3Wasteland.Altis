@@ -5,7 +5,7 @@
 //	@file Author: MercyfulFate, AgentRev
 //	@file Description: Acquire the nearest vehicle
 
-#define DURATION 60
+#define DURATION 30
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
 
 private _vehicle = ["LandVehicle", "Air", "Ship"] call mf_nearest_vehicle;
