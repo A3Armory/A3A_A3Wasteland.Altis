@@ -9,12 +9,13 @@
 #define TITLE_PRICE_RELATIONSHIP 10
 #define VEHICLE_MAX_DISTANCE 100
 
-private ["_vehicle", "_type", "_price", "_confirmMsg", "_text"];
+private ["_vehicle", "_type", "_price", "_playerMoney", "_confirmMsg", "_text"];
 
 _storeNPC = _this select 0;
 _vehicle = objectFromNetId (player getVariable ["lastVehicleRidden", ""]);
 _type = typeOf _vehicle;
 _price = 1000;
+_playerMoney = player getVariable ["cmoney", 0];
 _objClass = typeOf _vehicle;
 _objName = getText (configFile >> "CfgVehicles" >> _objClass >> "displayName");
 
@@ -52,6 +53,12 @@ if (_variant != "") then { _variant = "variant_" + _variant };
 	};
 } forEach (call allVehStoreVehicles);
 
+if (_price > _playerMoney) exitWith
+{
+	playSound "FD_CP_Not_Clear_F";
+	[format [' You need $%1 for the %2 title.', [_price - _playerMoney] call fn_numbersText, _objname], "Error"] call  BIS_fnc_guiMessage;
+};
+
 if (!isNil "_price") then
 {
 	// Add total title value to confirm message
@@ -83,6 +90,6 @@ if (!isNil "_price") then
 }
 else
 {
-	hint parseText "<t color='#FFFF00'>An unknown error occurred.</t><br/>Vehicle sale cancelled.";
+	hint parseText "<t color='#FFFF00'>An unknown error occurred.</t><br/>Vehicle title sale cancelled.";
 	playSound "FD_CP_Not_Clear_F";
 };
