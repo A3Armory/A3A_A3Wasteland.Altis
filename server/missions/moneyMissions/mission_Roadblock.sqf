@@ -92,7 +92,7 @@ _successExec =
 		[_item, _lastPos] call _drop_item;
 	};
 
-	_cashamount = floor(random 50000);
+	_cashamount = floor(random 30000);
 	_cashpile = selectRandom [2,3,4];
 
 	for "_i" from 1 to _cashpile do
