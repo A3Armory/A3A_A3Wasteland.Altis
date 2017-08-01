@@ -979,9 +979,9 @@ planesArray = compileFinal str
 	["Caesar BTT", "C_Plane_Civil_01_F", 3250, "vehicle"],
 
 	["A-143 Buzzard AA", "I_Plane_Fighter_03_dynamicLoadout_F", 95000, "vehicle", "variant_buzzardAA"],
-	["A-143 Buzzard CAS", "I_Plane_Fighter_03_dynamicLoadout_F", 145000, "vehicle", "variant_buzzardCAS"],
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_dynamicLoadout_F", 160000, "vehicle", "variant_buzzardCAS"],
 
-	["A-149 Gryphon", "I_Plane_Fighter_04_F", 150000, "vehicle"],
+	["A-149 Gryphon", "I_Plane_Fighter_04_F", 165000, "vehicle"],
 
 	["F/A-181 Black Wasp (Gun-Only)", "B_Plane_Fighter_01_Stealth_F", 150000, "vehicle"], // no missiles or bombs
 	["F/A-181 Black Wasp", "B_Plane_Fighter_01_F", 230000, "vehicle"],
@@ -989,8 +989,8 @@ planesArray = compileFinal str
 	["To-201 Shikra (Gun-Only)", "O_Plane_Fighter_02_Stealth_F", 150000, "vehicle"], // no missiles or bombs
 	["To-201 Shikra", "O_Plane_Fighter_02_F", 230000, "vehicle"],
 
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_dynamicLoadout_F", 230000, "vehicle"],
-	["To-199 Neophron CAS", "O_Plane_CAS_02_dynamicLoadout_F", 225000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_dynamicLoadout_F", 300000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_dynamicLoadout_F", 290000, "vehicle"],
 
 	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 24000, "vehicle"],
 	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 150000, "vehicle"],

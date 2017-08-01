@@ -25,7 +25,7 @@ A3W_timeMultiplierNight = 7.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
-A3W_startingMoney = 7500;          // Amount of money that players start with
+A3W_startingMoney = 5000;          // Amount of money that players start with
 A3W_maxMoney = 4000000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
@@ -103,7 +103,7 @@ A3W_mineLifetime = 2*24;           // Maximum lifetime in hours for saved mines 
 A3W_privateStorage = 1;            // Enable persistent private storage locations across the map (0 = no, 1 = yes)
 A3W_privateParking = 1;            // If vehicleSaving = 1 and savingMethod = "extDB" or "sock", enable persistent private parking locations across the map (0 = no, 1 = yes)
 A3W_privateParkingLimit = 4;       // Maximum amount of vehicles allowed in private parking (0 = no limit)
-A3W_privateParkingCost = 3500;     // Cost to retrieve an individual vehicle from private parking
+A3W_privateParkingCost = 5000;     // Cost to retrieve an individual vehicle from private parking
 A3W_vehicleLocking = 1;            // Enable vehicle locking and lockpicking (0 = no, 1 = yes)
 
 // iniDB settings
@@ -162,7 +162,7 @@ A3W_simpleLoot = 1;                // Spawn loot in all buildings (0 = no, 1 = y
 A3W_territoryCaptureTime = 2*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
 A3W_payrollInterval = 20*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 5000;          // Amount of money rewarded per territory on each payroll
+A3W_payrollAmount = 4500;          // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
