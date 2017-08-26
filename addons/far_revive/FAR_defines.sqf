@@ -28,7 +28,7 @@
 #define FAR_cutTextLayer 7890
 
 // Damage multiplier applied to units when inconscious
-#define FAR_DamageMultiplier 0.1
+#define FAR_DamageMultiplier 0.08
 
 // Functions
 #define UNCONSCIOUS(UNIT) (UNIT getVariable ["FAR_isUnconscious", 0] == 1)
