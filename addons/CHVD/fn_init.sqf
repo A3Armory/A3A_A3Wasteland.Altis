@@ -6,7 +6,6 @@
 
 	//Wait for mission init, in case there are variables defined some place else
 	waitUntil {time > 0};
-	CHVD_allowTerrain = false; // disabled because too many issues
 
 	//Define variables, load from profileNamespace
 	if (isNil "CHVD_allowNoGrass") then { CHVD_allowNoGrass = true };
@@ -26,7 +25,7 @@
 	CHVD_carObj = (profileNamespace getVariable ["CHVD_carObj", viewDistance]) min CHVD_maxObj max 0;
 	CHVD_airObj = (profileNamespace getVariable ["CHVD_airObj", viewDistance]) min CHVD_maxObj max 0;
 
-	/*if (CHVD_allowTerrain) then
+	if (CHVD_allowTerrain) then
 	{
 		CHVD_footTerrain = profileNamespace getVariable ["CHVD_footTerrain", getTerrainGrid];
 		CHVD_carTerrain = profileNamespace getVariable ["CHVD_carTerrain", getTerrainGrid];
@@ -34,17 +33,17 @@
 
 		if (!CHVD_allowNoGrass) then
 		{
-			CHVD_footTerrain = CHVD_footTerrain min 48.99 max 3.125;
-			CHVD_carTerrain = CHVD_carTerrain min 48.99 max 3.125;
-			CHVD_airTerrain = CHVD_airTerrain min 48.99 max 3.125;
+			CHVD_footTerrain = CHVD_footTerrain min 10 max 3.125;
+			CHVD_carTerrain = CHVD_carTerrain min 10 max 3.125;
+			CHVD_airTerrain = CHVD_airTerrain min 10 max 3.125;
 		};
 	}
 	else
-	{*/
+	{
 		CHVD_footTerrain = getTerrainGrid;
 		CHVD_carTerrain = getTerrainGrid;
 		CHVD_airTerrain = getTerrainGrid;
-	//};
+	};
 
 	CHVD_targetView = CHVD_footObj;
 	CHVD_targetObj = CHVD_footObj;
