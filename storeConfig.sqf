@@ -983,10 +983,10 @@ planesArray = compileFinal str
 
 	["A-149 Gryphon", "I_Plane_Fighter_04_F", 165000, "vehicle"],
 
-	["F/A-181 Black Wasp (Gun-Only)", "B_Plane_Fighter_01_Stealth_F", 150000, "vehicle"], // no missiles or bombs
-	["F/A-181 Black Wasp", "B_Plane_Fighter_01_F", 230000, "vehicle"],
+	["F/A-181 Black Wasp (Gun-Only)", "B_Plane_Fighter_01_Stealth_F", 70000, "vehicle"], // no missiles or bombs
+	["F/A-181 Black Wasp", "B_Plane_Fighter_01_F", 215000, "vehicle"],
 
-	["To-201 Shikra (Gun-Only)", "O_Plane_Fighter_02_Stealth_F", 150000, "vehicle"], // no missiles or bombs
+	["To-201 Shikra (Gun-Only)", "O_Plane_Fighter_02_Stealth_F", 80000, "vehicle"], // no missiles or bombs
 	["To-201 Shikra", "O_Plane_Fighter_02_F", 230000, "vehicle"],
 
 	["A-164 Wipeout CAS", "B_Plane_CAS_01_dynamicLoadout_F", 300000, "vehicle"],
