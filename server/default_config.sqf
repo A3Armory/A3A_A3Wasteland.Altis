@@ -26,7 +26,7 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
 A3W_startingMoney = 5000;          // Amount of money that players start with
-A3W_maxMoney = 4000000;            // Maximum amount of money that will save on players and crates
+A3W_maxMoney = 1000000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 70;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
@@ -59,15 +59,15 @@ A3W_vehiclePurchaseCooldown = 60; // Number of seconds to wait before allowing s
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
-A3W_atmMaxBalance = 2000000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
+A3W_atmMaxBalance = 500000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
 A3W_atmTransferFee = 20;            // Fee in percent charged to players for money transfers to other players (0 to 50)
 A3W_atmTransferAllTeams = 0;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
 A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the mission editor (0 = all ATMs from towns & editor allowed, 1 = ATMs from editor only) Note: Stratis has no town ATMs, only editor ones.
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
 A3W_atmRemoveIfDisabled = 0;       // Remove all ATMs from map if A3W_atmEnabled is set to 0 (0 = no, 1 = yes)
 
-A3W_bountyMax = 1400000;            // Maximum amount of money that can be set as a bounty on someone
-A3W_bountyMinStart = 50000;        // Minimum amount of money to start a bounty on someone
+A3W_bountyMax = 350000;            // Maximum amount of money that can be set as a bounty on someone
+A3W_bountyMinStart = 25000;        // Minimum amount of money to start a bounty on someone
 A3W_bountyRewardPerc = 70;         // Percentage of cost that goes to bounty reward
 A3W_bountyLifetime = 4*24;         // Maximum lifetime in hours for bounty kills to store in DB (storing bounty kills is to prevent from forming groups with someone you collected bounty on)
 
