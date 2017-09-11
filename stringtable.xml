@@ -40,7 +40,7 @@
 	</Package>
 	<Package name="WelcomeMessage">
 		<Key ID="STR_WL_WelcomeToWasteland">
-			<English>&lt;t color='#FF8000' size='2.5' &gt;A3Wasteland Altis v1.3c &lt;/t&gt;</English>
+			<English>&lt;t color='#FF8000' size='2.5' &gt;A3Wasteland Altis v1.4 &lt;/t&gt;</English>
 		</Key>
 		<Key ID="STR_WL_YouAreInTeam">
 			<English>&lt;t color='#FFFFFF' size='1' &gt;* You are on &lt;img size="1" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;* Attacking or stealing from %4 players is &lt;t color="#FF1111"&gt;FORBIDDEN!&lt;/t&gt;&lt;br/&gt;* &lt;t color="#FF1111"&gt;NO SPAM IN CHAT!&lt;/t&gt;&lt;br/&gt;</English>

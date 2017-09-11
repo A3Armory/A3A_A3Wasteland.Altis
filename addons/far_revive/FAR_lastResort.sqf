@@ -9,7 +9,7 @@ if !(player getVariable ["performingDuty", false]) then
 	_availableBombs = (magazines player) arrayIntersect ["SatchelCharge_Remote_Mag", "IEDUrbanBig_Remote_Mag", "IEDLandBig_Remote_Mag", "DemoCharge_Remote_Mag", "IEDUrbanSmall_Remote_Mag", "IEDLandSmall_Remote_Mag"]; // biggest to smallest
 	_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "scarface.ogg", "sloth.ogg", "predator.ogg", "akbar.ogg", "bomb.ogg", "fired.ogg", "ilovechina.ogg", "mexicanpeople.ogg", "pussy.ogg"];
 	_nonSupSound = selectRandom ["johncena.ogg"];
-	
+
 	if !(_availableBombs isEqualTo []) then
 	{
 		_magType = _availableBombs select 0;
@@ -20,7 +20,7 @@ if !(player getVariable ["performingDuty", false]) then
 			titleText [format ["ERROR: invalid class '%1'", _mineType], "PLAIN", 0.5];
 		};
 
-		if (["Detonate explosive charge?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
+		if (["Detonate explosive charge?", "", true, true] call BIS_fnc_guiMessage) then
 		{
 			player setVariable ["performingDuty", true];
 

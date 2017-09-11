@@ -8,8 +8,8 @@
 	waitUntil {time > 0};
 
 	//Define variables, load from profileNamespace
-	if (isNil "CHVD_allowNoGrass") then { CHVD_allowNoGrass = true };
-	if (isNil "CHVD_allowTerrain") then { CHVD_allowTerrain = true };
+	CHVD_allowNoGrass = false; // deprecated // if (isNil "CHVD_allowNoGrass") then { CHVD_allowNoGrass = false };
+	if (isNil "CHVD_allowTerrain") then { CHVD_allowTerrain = false };
 	if (isNil "CHVD_maxView") then { CHVD_maxView = 12000 };
 	if (isNil "CHVD_maxObj") then { CHVD_maxObj = 12000};
 

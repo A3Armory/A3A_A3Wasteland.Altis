@@ -130,7 +130,7 @@ A3W_mapDraw_thread = [] spawn
 			} forEach _allDeadMen;
 
 			{
-				if (IS_IN_GROUP(_x) && !(_x getVariable ["playerSpawning", false])) then
+				if (alive _x && IS_IN_GROUP(_x) && !(_x getVariable ["playerSpawning", false])) then
 				{
 					_veh = vehicle _x;
 					_driver = (crew _veh) select 0;
@@ -223,10 +223,10 @@ _mapCtrl = _display displayCtrl 101;
 
 if (!isNil "A3W_mapDraw_gpsMapEH") then { _mapCtrl ctrlRemoveEventHandler ["Draw", A3W_mapDraw_gpsMapEH] };
 A3W_mapDraw_gpsMapEH = _mapCtrl ctrlAddEventHandler ["Draw", A3W_mapDraw_eventCode];
- 
+
 // UAV
 waitUntil {_display = findDisplay 160; !isNull _display};
 _mapCtrl = _display displayCtrl 51;
- 
+
 if (!isNil "A3W_mapDraw_uavMapEH") then { _mapCtrl ctrlRemoveEventHandler ["Draw", A3W_mapDraw_uavMapEH] };
 A3W_mapDraw_uavMapEH = _mapCtrl ctrlAddEventHandler ["Draw", A3W_mapDraw_eventCode];

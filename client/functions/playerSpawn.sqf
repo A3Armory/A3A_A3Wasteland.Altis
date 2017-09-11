@@ -15,7 +15,7 @@ if (!isNil "pvar_teamKillList" && {playerSide in [BLUFOR,OPFOR]}) then
 	if ([pvar_teamKillList, getPlayerUID player, 0] call fn_getFromPairs >= 1) exitWith
 	{
 		player allowDamage false;
-		[player, "AinjPpneMstpSnonWrflDnon"] call switchMoveGlobal;
+		player setUnconscious true;
 		9999 cutText ["", "BLACK", 0.01];
 		0 fadeSound 0;
 
@@ -36,7 +36,7 @@ if (!isNil "pvar_teamSwitchList" && playerSide in [BLUFOR,OPFOR,INDEPENDENT]) th
 	if (_prevSide != playerSide) exitWith
 	{
 		player allowDamage false;
-		[player, "AinjPpneMstpSnonWrflDnon"] call switchMoveGlobal;
+		player setUnconscious true;
 		9999 cutText ["", "BLACK", 0.01];
 		0 fadeSound 0;
 
