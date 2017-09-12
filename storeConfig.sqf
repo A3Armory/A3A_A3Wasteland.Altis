@@ -1025,7 +1025,7 @@ planesArray = compileFinal str
 	["K40 Ababil-3 Cluster UAV", "I_UAV_02_dynamicLoadout_F", 70000, "vehicle", "variant_greyhawkCluster"],
 
 	["UCAV Sentinel Missile", "B_UAV_05_F", 175000, "vehicle", "variant_sentinelMissile"],
-	["UCAV Sentinel Bomber", "B_UAV_05_F", 85000, "vehicle", "variant_sentinelBomber"]
+	["UCAV Sentinel Bomber", "B_UAV_05_F", 85000, "vehicle", "variant_sentinelBomber"],
 	["UCAV Sentinel Cluster", "B_UAV_05_F", 90000, "vehicle", "variant_sentinelCluster"]
 ];
 
