@@ -1583,7 +1583,8 @@ missionOnlyItems = compileFinal str
 "Laserdesignator_03",
 "optic_tws",
 "optic_tws_mg",
-"optic_Nightstalker"
+"optic_Nightstalker",
+"C_IDAP_UAV_06_antimine_backpack_F"
 ];
 
 call compile preprocessFileLineNumbers "mapConfig\storeOwners.sqf";

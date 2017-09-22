@@ -106,7 +106,7 @@ switch (_boxType) do
 			["itm", "B_UavTerminal", 1],
 			["itm", "O_UavTerminal", 1],
 			["itm", "I_UavTerminal", 1],
-			["bac", ["B_UAV_01_backpack_F", "O_UAV_01_backpack_F", "I_UAV_01_backpack_F"], RANDOM_BETWEEN(0,1)]
+			["bac", ["B_UAV_01_backpack_F", "O_UAV_01_backpack_F", "I_UAV_01_backpack_F", "C_IDAP_UAV_06_antimine_backpack_F"], RANDOM_BETWEEN(0,1)]
 		];
 	};
 	case "mission_DLCRifles":

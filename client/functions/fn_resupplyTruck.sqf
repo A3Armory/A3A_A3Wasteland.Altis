@@ -36,7 +36,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 	_vehName = getText (_vehCfg >> "displayName");
 	_isUAV = (round getNumber (_vehCfg >> "isUav") >= 1);
 	_isStaticWep = _vehClass isKindOf "StaticWeapon";
-	_isHighPrice = ["B_UAV_02_dynamicLoadout_F","O_UAV_02_dynamicLoadout_F","I_UAV_02_dynamicLoadout_F","O_T_UAV_04_CAS_F","B_T_UAV_03_F","B_UAV_05_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","O_UGV_01_rcws_F"];
+	_isHighPrice = ["C_IDAP_UAV_06_antimine_F","B_UAV_02_dynamicLoadout_F","O_UAV_02_dynamicLoadout_F","I_UAV_02_dynamicLoadout_F","O_T_UAV_04_CAS_F","B_T_UAV_03_F","B_UAV_05_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","O_UGV_01_rcws_F"];
 
 	scopeName "resupplyTruckThread";
 
