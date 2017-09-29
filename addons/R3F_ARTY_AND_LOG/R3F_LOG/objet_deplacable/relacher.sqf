@@ -11,7 +11,7 @@ if (R3F_LOG_mutex_local_verrou) then
 }
 else
 {
-	if (surfaceIsWater position player) exitWith {
+	if (surfaceIsWater getPosASL R3F_LOG_joueur_deplace_objet && ({R3F_LOG_joueur_deplace_objet isKindOf _x} count ["ReammoBox_F","AllVehicles"] == 0 || {R3F_LOG_joueur_deplace_objet isKindOf _x} count ["StaticMGWeapon","StaticGrenadeLauncher","StaticMortar"] > 0)) exitWith {
 		["You can only place objects on terra firma", 5] call mf_notify_client;
 		R3F_LOG_mutex_local_verrou = false;
 	};
