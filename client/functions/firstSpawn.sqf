@@ -80,6 +80,8 @@ player addEventHandler ["WeaponAssembled",
 
 		_playerSide = side group _player;
 
+		_obj disableTIEquipment true;
+
 		if (side _obj != _playerSide) then
 		{
 			(crew _obj) joinSilent createGroup _playerSide;

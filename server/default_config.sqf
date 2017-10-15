@@ -12,7 +12,7 @@ A3W_teamPlayersMap = 1;            // Show all friendly players on the map at al
 //A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communication whenever broadcasting voice on global, unless being admin (0 = no, 1 = yes)
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
 A3W_disableUavFeed = 0;            // Force disable UAV PIP feed to prevent thermal camera abuse (0 = no, 1 = yes)
-A3W_disableBuiltInThermal = 0;     // Display a black screen if the player tries to use thermal vision built-in a handheld weapon like Titan launcher (0 = no, 1 = yes)
+A3W_disableBuiltInThermal = 1;     // Display a black screen if the player tries to use thermal vision built-in a handheld weapon like Titan launcher (0 = no, 1 = yes)
 A3W_teamBalance = 50;              // Max percentage of players allowed on Opfor/Blufor from total server population (0 = off) Bluefor/opfor can only exceed this limit if both grow in similar size.
 A3W_reservedSlots = 0;             // Number of reserved slots available (0 = off)
 A3W_maxPlayers = 72;               // Server slot limit. Needed for reserved slots to work
@@ -26,7 +26,7 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
 A3W_startingMoney = 5000;          // Amount of money that players start with
-A3W_maxMoney = 1000000;            // Maximum amount of money that will save on players and crates
+A3W_maxMoney = 2000000;            // Maximum amount of money that will save on players and crates
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 70;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
@@ -59,14 +59,14 @@ A3W_vehiclePurchaseCooldown = 60; // Number of seconds to wait before allowing s
 
 // ATM settings
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
-A3W_atmMaxBalance = 500000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
+A3W_atmMaxBalance = 1000000;        // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
 A3W_atmTransferFee = 20;            // Fee in percent charged to players for money transfers to other players (0 to 50)
 A3W_atmTransferAllTeams = 0;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
 A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the mission editor (0 = all ATMs from towns & editor allowed, 1 = ATMs from editor only) Note: Stratis has no town ATMs, only editor ones.
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
 A3W_atmRemoveIfDisabled = 0;       // Remove all ATMs from map if A3W_atmEnabled is set to 0 (0 = no, 1 = yes)
 
-A3W_bountyMax = 350000;            // Maximum amount of money that can be set as a bounty on someone
+A3W_bountyMax = 700000;            // Maximum amount of money that can be set as a bounty on someone
 A3W_bountyMinStart = 25000;        // Minimum amount of money to start a bounty on someone
 A3W_bountyRewardPerc = 70;         // Percentage of cost that goes to bounty reward
 A3W_bountyLifetime = 4*24;         // Maximum lifetime in hours for bounty kills to store in DB (storing bounty kills is to prevent from forming groups with someone you collected bounty on)
@@ -102,8 +102,8 @@ A3W_mineSaving = 1;                // Save placed mines between server restarts 
 A3W_mineLifetime = 2*24;           // Maximum lifetime in hours for saved mines across server restarts (0 = no time limit)
 A3W_privateStorage = 1;            // Enable persistent private storage locations across the map (0 = no, 1 = yes)
 A3W_privateParking = 1;            // If vehicleSaving = 1 and savingMethod = "extDB" or "sock", enable persistent private parking locations across the map (0 = no, 1 = yes)
-A3W_privateParkingLimit = 2;       // Maximum amount of vehicles allowed in private parking (0 = no limit)
-A3W_privateParkingCost = 10000;     // Cost to retrieve an individual vehicle from private parking
+A3W_privateParkingLimit = 3;       // Maximum amount of vehicles allowed in private parking (0 = no limit)
+A3W_privateParkingCost = 6500;     // Cost to retrieve an individual vehicle from private parking
 A3W_vehicleLocking = 1;            // Enable vehicle locking and lockpicking (0 = no, 1 = yes)
 
 // iniDB settings
@@ -162,7 +162,7 @@ A3W_simpleLoot = 1;                // Spawn loot in all buildings (0 = no, 1 = y
 A3W_territoryCaptureTime = 2*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
 A3W_payrollInterval = 20*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 4500;          // Amount of money rewarded per territory on each payroll
+A3W_payrollAmount = 2500;          // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
@@ -176,5 +176,5 @@ A3W_mainMissionDelay = 5*60;       // Time in seconds between Main Missions
 A3W_mainMissionTimeout = 50*60;    // Time in seconds that a Main Mission will run for, unless completed
 A3W_sideMissionDelay = 5*60;       // Time in seconds between Side Missions
 A3W_sideMissionTimeout = 40*60;    // Time in seconds that a Side Mission will run for, unless completed
-A3W_moneyMissionDelay = 5*60;     // Time in seconds between Money Missions
+A3W_moneyMissionDelay = 10*60;     // Time in seconds between Money Missions
 A3W_moneyMissionTimeout = 60*60;   // Time in seconds that a Money Mission will run for, unless completed
