@@ -744,9 +744,9 @@ genItemArray = compileFinal str
 	["Laser Designator (Sand)", "Laserdesignator", 1000, "binoc", "noDLC"], // Increase price to 2500 if A3W_disableBuiltInThermal = 0
 	["Laser Designator (Hex)", "Laserdesignator_02", 1000, "binoc", "noDLC"],
 	["Laser Designator (Olive)", "Laserdesignator_03", 1000, "binoc", "noDLC"],
-	["IR Grenade", "B_IR_Grenade", 100, "mag", "WEST"],
-	["IR Grenade", "O_IR_Grenade", 100, "mag", "EAST"],
-	["IR Grenade", "I_IR_Grenade", 100, "mag", "GUER"],
+	["IR Designator Grenade", "B_IR_Grenade", 100, "mag", "WEST"],
+	["IR Designator Grenade", "O_IR_Grenade", 100, "mag", "EAST"],
+	["IR Designator Grenade", "I_IR_Grenade", 100, "mag", "GUER"],
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
 	["Chemlight (Red)", "Chemlight_red", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
@@ -1024,9 +1024,13 @@ planesArray = compileFinal str
 	["K40 Ababil-3 Bomber UAV", "O_UAV_02_dynamicLoadout_F", 65000, "vehicle", "variant_greyhawkBomber"],
 	["K40 Ababil-3 Bomber UAV", "I_UAV_02_dynamicLoadout_F", 65000, "vehicle", "variant_greyhawkBomber"],
 
-	["MQ4A Greyhawk Cluster UAV", "B_UAV_02_dynamicLoadout_F", 70000, "vehicle", "variant_greyhawkCluster"],
-	["K40 Ababil-3 Cluster UAV", "O_UAV_02_dynamicLoadout_F", 70000, "vehicle", "variant_greyhawkCluster"],
-	["K40 Ababil-3 Cluster UAV", "I_UAV_02_dynamicLoadout_F", 70000, "vehicle", "variant_greyhawkCluster"],
+	["MQ4A Greyhawk Cluster UAV", "B_UAV_02_dynamicLoadout_F", 80000, "vehicle", "variant_greyhawkCluster"],
+	["K40 Ababil-3 Cluster UAV", "O_UAV_02_dynamicLoadout_F", 80000, "vehicle", "variant_greyhawkCluster"],
+	["K40 Ababil-3 Cluster UAV", "I_UAV_02_dynamicLoadout_F", 80000, "vehicle", "variant_greyhawkCluster"],
+
+	["MQ4A Greyhawk DAGR UAV", "B_UAV_02_dynamicLoadout_F", 180000, "vehicle", "variant_greyhawkDAGR"],
+	["K40 Ababil-3 DAGR UAV", "O_UAV_02_dynamicLoadout_F", 180000, "vehicle", "variant_greyhawkDAGR"],
+	["K40 Ababil-3 DAGR UAV", "I_UAV_02_dynamicLoadout_F", 180000, "vehicle", "variant_greyhawkDAGR"],
 
 	["UCAV Sentinel Missile", "B_UAV_05_F", 175000, "vehicle", "variant_sentinelMissile"],
 	["UCAV Sentinel Bomber", "B_UAV_05_F", 85000, "vehicle", "variant_sentinelBomber"],
