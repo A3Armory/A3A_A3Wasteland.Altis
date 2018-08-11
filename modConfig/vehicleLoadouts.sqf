@@ -21,6 +21,7 @@ switch (true) do
 		switch (_variant) do
 		{
 			case "pawneeGun": { _pylons = ["",""] };
+			case "pawneeAA":  { _pylons = ["PylonMissile_1Rnd_AAA_missiles","PylonMissile_1Rnd_AAA_missiles"] };
 			default           { _pylons = ["PylonRack_12Rnd_missiles","PylonRack_12Rnd_missiles"] };
 		};
 	};
@@ -171,44 +172,56 @@ switch (true) do
 	// Greyhawk/Ababil UAVs
 	case (_class isKindOf "UAV_02_dynamicLoadout_base_F"):
 	{
+		_mags =
+		[
+			["Laserbatteries", [0]]
+		];
+		_weapons =
+		[
+			["Laserdesignator_mounted", [0]]
+		];
 		switch (_variant) do
 		{
 			case "greyhawkBomber": { _pylons = ["PylonMissile_1Rnd_Bomb_04_F","PylonMissile_1Rnd_Bomb_04_F"] };
 			case "greyhawkCluster": { _pylons = ["PylonMissile_1Rnd_BombCluster_01_F","PylonMissile_1Rnd_BombCluster_01_F"] };
-			case "greyhawkDAGR":    { _pylons = ["PylonRack_12Rnd_PG_missiles","PylonWeapon_2000Rnd_65x39_belt"] };
+			case "greyhawkDAGR": { _pylons = ["PylonRack_12Rnd_PG_missiles","PylonWeapon_300Rnd_20mm_shells"] };
 			default
 			{
 				_pylons = ["PylonRack_3Rnd_LG_scalpel","PylonRack_3Rnd_LG_scalpel"];
 				_customCode =
 				{
-					_veh setAmmoOnPylon [1, 2]; // right wing
-					_veh setAmmoOnPylon [2, 2]; // left wing
+					_veh setAmmoOnPylon [1, 2]; // left wing
+					_veh setAmmoOnPylon [2, 2]; // right wing
 				};
 			};
 		};
 	};
 
 	// KH-3A Fenghuang UAV
-	/*case (_class isKindOf "O_T_UAV_04_CAS_F"):
+	case (_class isKindOf "O_T_UAV_04_CAS_F"):
 	{
-		_customCode =
-		{
-			_veh setMagazineTurretAmmo ["4Rnd_LG_Jian", 2, [0]];
-		};
-	};*/
+		_mags =
+		[
+			["4Rnd_LG_Jian", [0]],
+			["Laserbatteries", [0]]
+		];
+		_weapons =
+		[
+			["missiles_Jian", [0]],
+			["Laserdesignator_mounted", [0]]
+		];
+	};
 
 	// UCAV Sentinel
 	case (_class isKindOf "B_UAV_05_F"):
 	{
 		_mags =
 		[
-			["120Rnd_CMFlare_Chaff_Magazine", [-1]],
 			["magazine_Fighter04_Gun20mm_AA_x250", [-1]],
 			["Laserbatteries", [0]]
 		];
 		_weapons =
 		[
-			["CMFlareLauncher", [-1]],
 			["weapon_Fighter_Gun20mm_AA", [-1]],
 			["Laserdesignator_mounted", [0]]
 		];
@@ -225,7 +238,6 @@ switch (true) do
 	{
 		_mags =
 		[
-			["120Rnd_CMFlare_Chaff_Magazine", [-1]],
 			["1000Rnd_65x39_Belt_Green", [0]],
 			["24Rnd_missiles", [0]],
 			["2Rnd_LG_scalpel", [0]],
@@ -234,7 +246,6 @@ switch (true) do
 		];
 		_weapons =
 		[
-			["CMFlareLauncher", [-1]],
 			["LMG_M200", [0]],
 			["missiles_DAR", [0]],
 			["missiles_SCALPEL", [0]],
