@@ -8,7 +8,9 @@
 #define REARM_TIME_SLICE 5
 #define REPAIR_TIME_SLICE 1
 #define REFUEL_TIME_SLICE 1
+#define PRICE_OP 60000 // any vehicle this price or over will use PRICE_RELATIONSHIP_OP
 #define PRICE_RELATIONSHIP 4 // resupply price = brand-new store price divided by PRICE_RELATIONSHIP
+#define PRICE_RELATIONSHIP_OP 1.33 // resupply price for OP vehicles = brand-new store price divided by PRICE_RELATIONSHIP_OP
 #define RESUPPLY_TIMEOUT 30
 
 // Check if mutex lock is active.
@@ -46,8 +48,22 @@ _resupplyThread = [_vehicle, _unit] spawn
 	{
 		if (_vehClass == _x select 1 && (_variant == "" || {_variant in _x})) exitWith
 		{
-			_price = _x select 2;
-			_price = round (_price / PRICE_RELATIONSHIP);
+			if (_isStaticWep) then
+			{
+				_price = _x select 2;
+			}
+			else
+			{
+				_price = _x select 2;
+				if (_price >= PRICE_OP) then
+				{
+					_price = round (_price / PRICE_RELATIONSHIP_OP);
+				}
+				else
+				{
+					_price = round (_price / PRICE_RELATIONSHIP);
+				};
+			};
 		};
 	} forEach (call allVehStoreVehicles + call staticGunsArray);
 
