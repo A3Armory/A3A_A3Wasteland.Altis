@@ -57,10 +57,17 @@ class playerSettings {
 			w = 0.04 / (4/3); h = 0.04;
 		};
 
+		class bankIcon : w_RscPicture {
+			idc = -1;
+			text = "client\icons\suatmm_logo.paa";
+			x = 0.022; y = 0.32;
+			w = 0.04 / (4/3); h = 0.04;
+		};
+
 		class moneyIcon : w_RscPicture {
 			idc = -1;
 			text = "client\icons\money.paa";
-			x = 0.022; y = 0.32;
+			x = 0.022; y = 0.38;
 			w = 0.04 / (4/3); h = 0.04;
 		};
 
@@ -80,11 +87,19 @@ class playerSettings {
 			w = 0.3; h = 0.05;
 		};
 
+		class bmoneyText : w_RscText {
+			idc = bmoney_text;
+			text = "";
+			sizeEx = 0.03;
+			x = 0.06; y = 0.312;
+			w = 0.3; h = 0.05;
+		};
+
 		class moneyText : w_RscText {
 			idc = money_text;
 			text = "";
 			sizeEx = 0.03;
-			x = 0.06; y = 0.313;
+			x = 0.06; y = 0.367;
 			w = 0.3; h = 0.05;
 		};
 
@@ -204,6 +219,14 @@ class playerSettings {
 			onButtonClick = "with missionNamespace do { [] call A3W_fnc_killFeedMenu }";
 			x = 0.158; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
+		};
+
+		class btnServerInfo : w_RscButton {
+			idc = -1;
+			text = "A3Armory Info";
+			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
+			x = 0.294; y = 0.57;
+			w = 0.174; h = 0.033 * safezoneH;
 		};
 	};
 };
