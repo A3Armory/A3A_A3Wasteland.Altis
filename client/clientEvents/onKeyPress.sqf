@@ -55,6 +55,19 @@ switch (true) do
 			["You've taken out your earplugs.", 5] call mf_notify_client;
 		};
 	};
+
+	// Holster Unholster Weapon - H Key
+	case (_key in A3W_customKeys_holster):
+	{
+		if (vehicle player == player && currentWeapon player != "" && (stance player != 'CROUCH' || currentWeapon player != handgunWeapon player)) then
+		{
+			player action ["SwitchWeapon", player, player, 100];
+		}
+		else
+		{
+			player action ["SwitchWeapon", player, player, 0];
+		};
+	};
 };
 
 // ********** Action keys **********
