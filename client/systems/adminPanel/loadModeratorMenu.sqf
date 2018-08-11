@@ -18,9 +18,14 @@ if ([_uid, 1] call isAdmin) then {
 	_displayAdmin = uiNamespace getVariable "AdminMenu";
 	_adminSelect = _displayAdmin displayCtrl adminMenu_option;
 
-	_panelOptions = ["Player Management",
-					"Vehicle Management",
-					"Map Markers Log"
+	_panelOptions =
+	[
+		"Player Management",
+		"Show Server FPS",
+		"Map Markers Log",
+		"Delete Cursor Target",
+		"Repair Cursor Target",
+		"Unlock Base Objects"
 	];
 
 	{

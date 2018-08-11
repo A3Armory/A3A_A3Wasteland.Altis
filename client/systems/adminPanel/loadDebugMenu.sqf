@@ -19,12 +19,16 @@ if (_uid call isAdmin) then
 	_displayDebug = uiNamespace getVariable "DebugMenu";
 	_debugSelect = _displayDebug displayCtrl debugMenu_option;
 
-	_panelOptions = ["Access Gun Store",
-					"Access General Store",
-					"Access Vehicle Store",
-					"Access ATM Dialog",
-					"Access Respawn Dialog",
-					"Show Server FPS"
+	_panelOptions =
+	[
+		"Teleport - Displays Use!",
+		"Money - Displays Use!",
+		"God-mode - Displays Use!",
+		"Access Gun Store",
+		"Access General Store",
+		"Access ATM Dialog",
+		"Access Respawn Dialog",
+		"Group Leader Markers"
 	];
 
 	{

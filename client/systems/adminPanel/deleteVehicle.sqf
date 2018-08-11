@@ -36,7 +36,7 @@ if (_uid call isAdmin) then
 	        } forEach crew _vehicle;
 	        deleteVehicle _vehicle;
 			player commandChat "Vehicle Deleted";
-			["VehicleMgmt_DeleteVehicle", format ["%1 (ownerUID=%2)", _vehClass, _vehOwner]] call notifyAdminMenu;
+			["vehicleMgmtDeleteVehicle", format ["%1 (ownerUID=%2)", _vehClass, _vehOwner]] call notifyAdminMenu;
 	    };
 	}forEach _allVehicles;
 

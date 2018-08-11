@@ -27,7 +27,7 @@ switch (true) do
 	case ([_uid, lowAdmins] call isAdmin):
 	{
 		execVM "client\systems\adminPanel\loadModeratorMenu.sqf";
-		hint "Welcome Low Admin";
+		hint "Welcome Admin";
 	};
 	case (serverCommandAvailable "#kick"):
 	{

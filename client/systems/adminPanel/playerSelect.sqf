@@ -14,7 +14,7 @@
 
 disableSerialization;
 
-private ["_dialog","_playerListBox","_spectateButton","_switch","_index","_modSelect","_playerData","_target","_check","_spectating","_camadm","_rnum","_warnText","_targetUID","_playerName"];
+private ["_dialog","_playerListBox","_spectateButton","_switch","_index","_modSelect","_playerData","_target","_check","_spectating","_camadm","_rnum","_warnText","_targetUID","_playerName","_halojump"];
 _uid = getPlayerUID player;
 if (_uid call isAdmin) then
 {
@@ -32,7 +32,7 @@ if (_uid call isAdmin) then
 		{
 			_target = _x;
 		};
-	} forEach allPlayers;
+	} forEach allPlayers - entities "HeadlessClient_F";
 
 	if (isNil "_target" || {isNull _target}) exitWith{};
 
@@ -48,7 +48,7 @@ if (_uid call isAdmin) then
 					if (!([player] call camera_enabled)) then
 					{
 						[] call camera_toggle;
-						["PlayerMgmt_Spectate", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+						["playerMgmtSpectate", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 					};
 
 					[player, _target] call camera_attach_to_target;
@@ -70,7 +70,7 @@ if (_uid call isAdmin) then
 			_warnText = ctrlText _warnMessage;
 			_playerName = name player;
 			[format ["Message from Admin: %1", _warnText], "A3W_fnc_titleTextMessage", _target, false] call A3W_fnc_MP;
-			["PlayerMgmt_Warn", format ["%1 (%2) - %3", name _target, getPlayerUID _target, _warnText]] call notifyAdminMenu;
+			["playerMgmtWarn", format ["%1 (%2) - %3", name _target, getPlayerUID _target, _warnText]] call notifyAdminMenu;
 		};
 		case 2: //Slay
 		{
@@ -80,53 +80,46 @@ if (_uid call isAdmin) then
 				_target setDamage 1;
 			};
 
-			["PlayerMgmt_Slay", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["playerMgmtSlay", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
 		case 3: //Unlock Team Switcher
 		{
 			pvar_teamSwitchUnlock = getPlayerUID _target;
 			publicVariableServer "pvar_teamSwitchUnlock";
-			["PlayerMgmt_UnlockTeamSwitch", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["playerMgmtUnlockTeamSwitch", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
 		case 4: //Unlock Team Killer
 		{
 			pvar_teamKillUnlock = getPlayerUID _target;
 			publicVariableServer "pvar_teamKillUnlock";
-			["PlayerMgmt_UnlockTeamKill", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+			["playerMgmtUnlockTeamKill", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
 		case 5: //Remove All Money
 		{
-			/*_targetUID = getPlayerUID _target;
+			_targetUID = getPlayerUID _target;
 			{
 				if(getPlayerUID _x == _targetUID) exitWith
 				{
 					_x setVariable["cmoney",0,true];
 				};
 			}forEach playableUnits;
-			["PlayerMgmt_RemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;*/
-			["This option has been disabled since money is now server-sided."] spawn BIS_fnc_guiMessage;
+			["playerMgmtRemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
-		case 6: //Remove All Weapons
+		case 6: //Force HALO Jump
 		{
-			/*_targetUID = getPlayerUID _target;
-			{
-				if(getPlayerUID _x == _targetUID) exitWith
-				{
-					removeAllWeapons _x;
-				};
-			}forEach playableUnits;*/
-			["This option has been disabled due to having never worked at all in the first place."] spawn BIS_fnc_guiMessage;
+			_halojump = [(getPosASL _target select 0), (getPosASL _target select 1), (getPosASL _target select 2) + 1200]; 
+			_target setposATL _halojump;
+			["playerMgmtForceHALOJump", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
-		case 7: //Check Player Gear
+		case 7: //Move To Me
 		{
-			/*_targetUID = getPlayerUID _target;
-			{
-				if(getPlayerUID _x == _targetUID) exitWith
-				{
-					createGearDialog [_x, "RscDisplayInventory"];
-				};
-			}forEach playableUnits;*/
-			["This option has been disabled due to having never worked at all in the first place."] spawn BIS_fnc_guiMessage;
+			vehicle _target setPos (position player);
+			["playerMgmtMoveToMe", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
+		};
+		case 8: //Move To Them
+		{
+			vehicle player setPos (position _target);
+			["playerMgmtMoveToThem", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
 	};
 };
