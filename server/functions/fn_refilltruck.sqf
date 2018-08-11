@@ -30,7 +30,7 @@ _truckItems =
 	//["wep", ["SMG_01_F", "SMG_02_F"], RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(3,5)],
 	["wep", ["arifle_Mk20_GL_F", "arifle_TRG21_GL_F", "arifle_Katiba_GL_F", "arifle_MX_GL_F"], RANDOM_BETWEEN(2,5), RANDOM_BETWEEN(4,5)],
 	["mag", "1Rnd_HE_Grenade_shell", RANDOM_BETWEEN(5,10)],
-	["wep", ["srifle_LRR_LRPS_F", "srifle_LRR_camo_LRPS_F", "srifle_LRR_tna_LRPS_F", "srifle_GM6_LRPS_F", "srifle_GM6_camo_LRPS_F", "srifle_GM6_ghex_LRPS_F"], RANDOM_BETWEEN(1,3), RANDOM_BETWEEN(6,12)],
+	["wep", ["srifle_LRR_F", "srifle_LRR_camo_F", "srifle_LRR_tna_F", "srifle_GM6_F", "srifle_GM6_camo_F", "srifle_GM6_ghex_F"], RANDOM_BETWEEN(1,3), RANDOM_BETWEEN(6,12)],
 	["wep",[
 		"launch_NLAW_F",
 		["launch_RPG32_F", "launch_RPG32_ghex_F"],

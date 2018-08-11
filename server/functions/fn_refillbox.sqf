@@ -68,12 +68,12 @@ switch (_boxType) do
 			["wep", "Rangefinder", RANDOM_BETWEEN(0,3)],
 			["itm", "Medikit", RANDOM_BETWEEN(1,3)],
 			["itm", "Toolkit", RANDOM_BETWEEN(1,3)],
-			["itm", ["optic_Aco", "optic_Aco_grn", "optic_MRCO", "optic_Hamr", "optic_Arco"], RANDOM_BETWEEN(2,4)],
+			["itm", ["optic_Aco", "optic_Aco_grn", "optic_MRCO", "optic_Hamr", "optic_Arco", "optic_LRPS"], RANDOM_BETWEEN(2,4)],
 			["itm", ["muzzle_snds_M", "muzzle_snds_H", "muzzle_snds_H_MG", "muzzle_snds_B", "muzzle_snds_acp", ["muzzle_snds_338_black", "muzzle_snds_338_green", "muzzle_snds_338_sand"], ["muzzle_snds_93mmg", "muzzle_snds_93mmg_tan"]], RANDOM_BETWEEN(1,5)],
 			["wep", [["MMG_02_sand_F", "MMG_02_camo_F", "MMG_02_black_F"], ["MMG_01_tan_F", "MMG_01_hex_F"]], RANDOM_BETWEEN(2,4), RANDOM_BETWEEN(2,4)],
 			["wep", ["LMG_Mk200_F", "LMG_Zafir_F"], RANDOM_BETWEEN(2,4), RANDOM_BETWEEN(2,4)],
 			["wep", ["srifle_EBR_F", "srifle_DMR_01_F"], RANDOM_BETWEEN(0,2), RANDOM_BETWEEN(4,8)],
-			["wep", ["srifle_LRR_LRPS_F", "srifle_LRR_camo_LRPS_F", "srifle_LRR_tna_LRPS_F", "srifle_GM6_LRPS_F", "srifle_GM6_camo_LRPS_F", "srifle_GM6_ghex_LRPS_F"], RANDOM_BETWEEN(0,2), RANDOM_BETWEEN(6,12)],
+			["wep", ["srifle_LRR_LRPS_F", "srifle_LRR_camo_F", "srifle_LRR_tna_F", "srifle_GM6_F", "srifle_GM6_camo_F", "srifle_GM6_ghex_F"], RANDOM_BETWEEN(0,2), RANDOM_BETWEEN(6,12)],
 			["wep", "arifle_SDAR_F", RANDOM_BETWEEN(0,2), RANDOM_BETWEEN(3,5)],
 			["wep", ["hgun_Pistol_heavy_01_F", "hgun_Pistol_heavy_01_MRD_F", "hgun_Pistol_heavy_02_F", "hgun_Pistol_heavy_02_Yorris_F"], RANDOM_BETWEEN(1,3), RANDOM_BETWEEN(4,8)],
 			["mag", "30Rnd_556x45_Stanag", RANDOM_BETWEEN(5,10)],
@@ -96,7 +96,7 @@ switch (_boxType) do
 		[
 			// Item type, Item class(es), # of items, # of magazines per weapon
 			["wep", "Rangefinder", RANDOM_BETWEEN(1,4)],
-			["wep", ["srifle_LRR_LRPS_F", "srifle_LRR_camo_LRPS_F", "srifle_LRR_tna_LRPS_F", "srifle_GM6_LRPS_F", "srifle_GM6_camo_LRPS_F", "srifle_GM6_ghex_LRPS_F"], RANDOM_BETWEEN(2,4), RANDOM_BETWEEN(6,12)],
+			["wep", ["srifle_LRR_F", "srifle_LRR_camo_F", "srifle_LRR_tna_F", "srifle_GM6_F", "srifle_GM6_camo_F", "srifle_GM6_ghex_F"], RANDOM_BETWEEN(2,4), RANDOM_BETWEEN(6,12)],
 			["wep", [
 				["srifle_DMR_02_F", "srifle_DMR_02_camo_F", "srifle_DMR_02_sniper_F"], // MAR-10
 				["srifle_DMR_03_F", "srifle_DMR_03_multicam_F", "srifle_DMR_03_khaki_F", "srifle_DMR_03_tan_F", "srifle_DMR_03_woodland_F"], // Mk-I
