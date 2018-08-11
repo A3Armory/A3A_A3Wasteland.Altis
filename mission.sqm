@@ -8,7 +8,7 @@ class EditorData
 	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=440;
+		nextID=450;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=6;
 	};
 	class Camera
 	{
@@ -133,7 +133,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=259;
+		items=269;
 		class Item0
 		{
 			dataType="Group";
@@ -5898,6 +5898,113 @@ class Mission
 			name="CustomLayer";
 			id=432;
 			atlOffset=185.97;
+		};
+		class Item259
+		{
+			dataType="Marker";
+			position[]={8724.3066,13.565552,15851.997};
+			name="Roadblock_1";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=180;
+			id=440;
+			atlOffset=-81.864349;
+		};
+		class Item260
+		{
+			dataType="Marker";
+			position[]={20561.07,27.045715,8117.4492};
+			name="Roadblock_2";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=18;
+			id=441;
+			atlOffset=-1.9073486e-006;
+		};
+		class Item261
+		{
+			dataType="Marker";
+			position[]={17420.93,7.3394165,13728.772};
+			name="Roadblock_3";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			id=442;
+			atlOffset=-2.3841858e-006;
+		};
+		class Item262
+		{
+			dataType="Marker";
+			position[]={14780.016,21.329323,17714.207};
+			name="Roadblock_4";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=122.99997;
+			id=443;
+			atlOffset=1.9073486e-006;
+		};
+		class Item263
+		{
+			dataType="Marker";
+			position[]={18568.914,40.868103,16534.154};
+			name="Roadblock_5";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=66.999962;
+			id=444;
+		};
+		class Item264
+		{
+			dataType="Marker";
+			position[]={9129.0186,89.692383,15596.45};
+			name="Roadblock_6";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=19.999992;
+			id=445;
+			atlOffset=0.00038146973;
+		};
+		class Item265
+		{
+			dataType="Marker";
+			position[]={3953.4287,49.114136,12210.31};
+			name="Roadblock_7";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=99.999985;
+			id=446;
+			atlOffset=0.0032958984;
+		};
+		class Item266
+		{
+			dataType="Marker";
+			position[]={4434.0439,270.83322,20827.891};
+			name="Roadblock_8";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=334.99985;
+			id=447;
+		};
+		class Item267
+		{
+			dataType="Marker";
+			position[]={9041.4648,18.734634,21335.74};
+			name="Roadblock_9";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=49.999992;
+			id=448;
+			atlOffset=0.0010948181;
+		};
+		class Item268
+		{
+			dataType="Marker";
+			position[]={26760.328,22.531876,23035.527};
+			name="Roadblock_10";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=36;
+			id=449;
+			atlOffset=1.9073486e-006;
 		};
 	};
 };

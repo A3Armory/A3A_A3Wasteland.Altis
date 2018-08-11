@@ -18,7 +18,8 @@ MainMissions =
 	["mission_LightArmVeh", 1],
 	["mission_ArmedHeli", 1],
 	["mission_CivHeli", 1],
-	["mission_Smugglers", 1]
+	["mission_Smugglers", 1],
+	["mission_Roadblock", 1]
 ];
 
 SideMissions =
@@ -41,6 +42,7 @@ MoneyMissions =
 MissionSpawnMarkers = (allMapMarkers select {["Mission_", _x] call fn_startsWith}) apply {[_x, false]};
 ForestMissionMarkers = (allMapMarkers select {["ForestMission_", _x] call fn_startsWith}) apply {[_x, false]};
 SunkenMissionMarkers = (allMapMarkers select {["SunkenMission_", _x] call fn_startsWith}) apply {[_x, false]};
+RoadblockMissionMarkers = (allMapMarkers select {["Roadblock_", _x] call fn_startsWith}) apply {[_x, false]};
 
 if !(ForestMissionMarkers isEqualTo []) then
 {
