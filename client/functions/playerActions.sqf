@@ -39,10 +39,55 @@ if (["A3W_vehicleLocking"] call isConfigOn) then
 	[player, ["<img image='client\icons\r3f_unlock.paa'/> Pick Lock", "addons\scripts\lockPick.sqf", [cursorTarget], 1, false, false, "", "alive cursorTarget && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 3 && {{cursorTarget isKindOf _x} count ['LandVehicle','Ship','Air'] > 0 && {locked cursorTarget == 2 && !(cursorTarget getVariable ['A3W_lockpickDisabled',false]) && cursorTarget getVariable ['ownerUID','0'] != getPlayerUID player && 'ToolKit' in items player}}"]] call fn_addManagedAction;
 };
 
-// Hehehe...
+// Karts DLC
 if !(288520 in getDLCs 1) then
 {
-	[player, ["<t color='#00FFFF'>Get in as Driver</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "cursorTarget isKindOf 'Kart_01_Base_F' && player distance cursorTarget < 3.4 && isNull driver cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Driver</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'Kart_01_Base_F' && player distance cursorTarget < 3.4 && isNull driver cursorTarget"]] call fn_addManagedAction;
+};
+
+// Helicopters DLC
+if !(304380 in getDLCs 1) then 
+{
+	[player, ["<t color='#00FFFF'>Get in as Pilot</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['Heli_Transport_03_base_F','Heli_Transport_04_base_F'] > 0 && player distance cursorTarget < 10 && isNull driver cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Copilot</t>", "client\actions\moveInTurret.sqf", [0], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['Heli_Transport_03_base_F','Heli_Transport_04_base_F'] > 0 && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [0])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Left door gunner</t>", "client\actions\moveInTurret.sqf", [1], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'Heli_Transport_03_base_F' && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [1])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Right door gunner</t>", "client\actions\moveInTurret.sqf", [2], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'Heli_Transport_03_base_F' && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [2])"]] call fn_addManagedAction;
+};
+
+// Apex DLC
+if !(395180 in getDLCs 1) then 
+{
+	[player, ["<t color='#00FFFF'>Get in as Driver</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['Offroad_02_base_F','LSV_01_base_F','LSV_02_base_F','Scooter_Transport_01_base_F','Boat_Transport_02_base_F'] > 0 && player distance cursorTarget < 6 && isNull driver cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Commander</t>", "client\actions\moveInCommanderTurret.sqf", [0], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['B_T_LSV_01_armed_F','B_T_LSV_01_AT_F'] > 0 && player distance cursorTarget < 6 && isNull (cursorTarget turretUnit [1])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Gunner</t>", "client\actions\moveInGunner.sqf", [1], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['I_C_Offroad_02_LMG_F','I_C_Offroad_02_AT_F','B_T_LSV_01_armed_F','B_T_LSV_01_AT_F','O_T_LSV_02_armed_F','O_T_LSV_02_armed_F'] > 0 && player distance cursorTarget < 6 && isNull gunner cursorTarget"]] call fn_addManagedAction;
+
+	[player, ["<t color='#00FFFF'>Get in as Pilot</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['Plane_Civil_01_base_F','VTOL_01_base_F','VTOL_02_base_F'] > 0 && player distance cursorTarget < 10 && isNull driver cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Copilot</t>", "client\actions\moveInTurret.sqf", [0], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['Plane_Civil_01_base_F','VTOL_01_base_F'] > 0 && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [0])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Gunner</t>", "client\actions\moveInGunner.sqf", [0], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'VTOL_02_base_F' && player distance cursorTarget < 10 && isNull gunner cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Passenger (Left Seat)</t>", "client\actions\moveInTurret.sqf", [1], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'B_T_VTOL_01_infantry_F' && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [1])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Passenger (Right Seat)</t>", "client\actions\moveInTurret.sqf", [2], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'B_T_VTOL_01_infantry_F' && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [2])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Left door gunner</t>", "client\actions\moveInTurret.sqf", [1], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'B_T_VTOL_01_armed_F' && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [1])"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Right door gunner</t>", "client\actions\moveInTurret.sqf", [2], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'B_T_VTOL_01_armed_F' && player distance cursorTarget < 10 && isNull (cursorTarget turretUnit [2])"]] call fn_addManagedAction;
+};
+
+// Lords of War DLC
+if !(571710 in getDLCs 1) then 
+{
+	[player, ["<t color='#00FFFF'>Get in as Driver</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && cursorTarget isKindOf 'Van_02_base_F' && player distance cursorTarget < 6 && isNull driver cursorTarget"]] call fn_addManagedAction;
+};
+
+// Jets DLC
+if !(601670 in getDLCs 1) then 
+{
+	[player, ["<t color='#00FFFF'>Get in as Pilot</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['Plane_Fighter_04_Base_F','Plane_Fighter_01_Base_F','Plane_Fighter_02_Base_F'] > 0 && player distance cursorTarget < 8 && isNull driver cursorTarget"]] call fn_addManagedAction;
+};
+
+// Tanks DLC
+if !(798390 in getDLCs 1) then 
+{
+	[player, ["<t color='#00FFFF'>Get in as Driver</t>", "client\actions\moveInDriver.sqf", [], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['AFV_Wheeled_01_base_F','LT_01_base_F','MBT_04_base_F'] > 0 && player distance cursorTarget < 7 && isNull driver cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Commander</t>", "client\actions\moveInCommander.sqf", [0], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['AFV_Wheeled_01_base_F','LT_01_base_F','MBT_04_base_F'] > 0 && player distance cursorTarget < 7 && isNull commander cursorTarget"]] call fn_addManagedAction;
+	[player, ["<t color='#00FFFF'>Get in as Gunner</t>", "client\actions\moveInGunner.sqf", [1], 6, true, true, "", "locked cursorTarget != 2 && {cursorTarget isKindOf _x} count ['AFV_Wheeled_01_base_F','MBT_04_base_F'] > 0 && player distance cursorTarget < 7 && isNull gunner cursorTarget"]] call fn_addManagedAction;
 };
 
 if (["A3W_savingMethod", "profile"] call getPublicVar == "extDB") then
