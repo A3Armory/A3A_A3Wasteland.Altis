@@ -66,7 +66,7 @@ staticHeliList =
 //Object List - Random Planes.
 staticPlaneList =
 [
-	"I_Plane_Fighter_03_dynamicLoadout_F"
+	"C_Plane_Civil_01_F"
 ];
 
 A3W_planeSpawnOdds = 0.25; // 0.0 to 1.0
@@ -102,15 +102,14 @@ vehicleAddition =
 	"acc_flashlight",
 	"acc_pointer_IR",
 	"Medikit",
-	"Medikit",
 	"FirstAidKit",
 	"ToolKit"
 ];
 
 vehicleAddition2 =
 [
-	"Chemlight_blue",
-	"Chemlight_green",
-	"Chemlight_yellow",
-	"Chemlight_red"
+	"SmokeShell",
+	"30Rnd_556x45_Stanag",
+	"30Rnd_65x39_caseless_mag",
+	"30Rnd_762x39_Mag_F"
 ];
