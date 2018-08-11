@@ -124,16 +124,11 @@ if (_uid call isAdmin) then
 					closeDialog 0;
 					true spawn client_respawnDialog;
 				};
-				case 5: //Access Proving Grounds
-				{
-					closeDialog 0;
-					createDialog "balca_debug_main";
-				};
-				case 6: //Show server FPS function
+				case 5: //Show server FPS function
 				{
 					hint format["Server FPS: %1",serverFPS];
 				};
-				case 7: //Test Function
+				case 6: //Test Function
 				{
 					_group = createGroup civilian;
 					_leader = _group createunit ["C_man_polo_1_F", getPos player, [], 0.5, "Form"];

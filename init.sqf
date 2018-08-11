@@ -91,7 +91,6 @@ if (hasInterface || isServer) then
 	[] execVM "addons\storage\functions.sqf";
 	[] execVM "addons\vactions\functions.sqf";
 	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
-	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
