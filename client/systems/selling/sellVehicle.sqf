@@ -10,7 +10,9 @@
 
 storeSellingHandle = _this spawn
 {
-	#define CHOPSHOP_PRICE_RELATIONSHIP 2
+	#define CHOPSHOP_PRICE_OP 60000 // any vehicle this price or over will use CHOPSHOP_PRICE_RELATIONSHIP_OP
+	#define CHOPSHOP_PRICE_RELATIONSHIP 2 // sell price = brand-new store price divided by CHOPSHOP_PRICE_RELATIONSHIP
+	#define CHOPSHOP_PRICE_RELATIONSHIP_OP 4 // sell price = brand-new store price divided by CHOPSHOP_PRICE_RELATIONSHIP_OP
 	#define VEHICLE_MAX_SELLING_DISTANCE 120
 
 	_storeNPC = _this select 0;
@@ -24,6 +26,7 @@ storeSellingHandle = _this spawn
 
 	_type = typeOf _vehicle;
 	_objName = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
+	_isStaticWep = _type isKindOf "StaticWeapon";
 
 	_checkValidDistance =
 	{
@@ -56,7 +59,23 @@ storeSellingHandle = _this spawn
 	{
 		if (_type == _x select 1 && (_variant == "" || {_variant in _x})) exitWith
 		{
-			_price = (ceil (((_x select 2) / CHOPSHOP_PRICE_RELATIONSHIP) / 5)) * 5;
+			_price = _x select 2;
+
+			if (_isStaticWep) then
+			{
+				_price = round (_price / 10);
+			}
+			else
+			{
+				if (_price >= CHOPSHOP_PRICE_OP) then
+				{
+					_price = round (_price / CHOPSHOP_PRICE_RELATIONSHIP_OP);
+				}
+				else
+				{
+					_price = round (_price / CHOPSHOP_PRICE_RELATIONSHIP);
+				};
+			};
 		};
 	} forEach (call allVehStoreVehicles + call staticGunsArray);
 
