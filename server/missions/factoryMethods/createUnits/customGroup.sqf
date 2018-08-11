@@ -102,4 +102,6 @@ for "_i" from 1 to _nbUnits do
 	_unit addEventHandler ["Killed", server_playerDied];
 };
 
+[_pos] call addDefensiveMines;
+
 [_group, _pos] call defendArea;

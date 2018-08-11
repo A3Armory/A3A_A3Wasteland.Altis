@@ -35,6 +35,7 @@ removeDisabledMissions = [_path, "removeDisabledMissions.sqf"] call mf_compile;
 setLocationObjects = [_path, "setLocationObjects.sqf"] call mf_compile;
 setLocationState = [_path, "setLocationState.sqf"] call mf_compile;
 setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
+addDefensiveMines = [_path, "createUnits\addDefensiveMines.sqf"] call mf_compile;
 
 //Function Compiles
 _path = "server\functions";
