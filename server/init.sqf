@@ -179,7 +179,8 @@ if (isServer) then
 		"A3W_bountyMax",
 		"A3W_bountyMinStart",
 		"A3W_bountyRewardPerc",
-		"A3W_bountyLifetime"
+		"A3W_bountyLifetime",
+		"A3W_maxMoney"
 	];
 
 	addMissionEventHandler ["PlayerConnected", fn_onPlayerConnected];
