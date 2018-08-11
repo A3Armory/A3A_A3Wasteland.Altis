@@ -4,7 +4,7 @@
 //	@file Name: getPlayerData.sqf
 //	@file Author: AgentRev
 
-private ["_player", "_saveLocation", "_data", "_hitPoints", "_hpDamage", "_pos", "_loadedMags", "_mag", "_ammo", "_loaded", "_type", "_wastelandItems"];
+private ["_player", "_saveLocation", "_data", "_hitPoints", "_hpDamage", "_pos", "_loadedMags", "_mag", "_ammo", "_loaded", "_type", "_wastelandItems", "_spawnPos"];
 _player = _this select 0;
 _saveLocation = if (count _this > 1) then { _this select 1 } else { true };
 
@@ -38,15 +38,20 @@ _hpDamage = getAllHitPointsDamage _player;
 if (_saveLocation && {isTouchingGround vehicle _player || {(getPos _player) select 2 < 0.5 || (getPosASL _player) select 2 < 0.5}}) then
 {
 	_pos = getPosATL _player;
-	{ _pos set [_forEachIndex, _x call fn_numToStr] } forEach _pos;
+	_spawnPos = getMarkerPos "respawn_guerrila";
 
-	_data pushBack ["Position", _pos];
-	_data pushBack ["Direction", getDir _player];
-
-	if (vehicle _player == player) then
+	if (_spawnPos distance2D _pos > 500) then
 	{
-		_data pushBack ["CurrentWeapon", currentWeapon player];
-		_data pushBack ["Stance", [player, ["P"]] call getMoveParams];
+		{ _pos set [_forEachIndex, _x call fn_numToStr] } forEach _pos;
+
+		_data pushBack ["Position", _pos];
+		_data pushBack ["Direction", getDir _player];
+
+		if (vehicle _player == player) then
+		{
+			_data pushBack ["CurrentWeapon", currentWeapon player];
+			_data pushBack ["Stance", [player, ["P"]] call getMoveParams];
+		};
 	};
 };
 
