@@ -8,6 +8,7 @@ if !(player getVariable ["performingDuty", false]) then
 {
 	// biggest to smallest
 	_availableBombs = (magazines player) arrayIntersect ["SatchelCharge_Remote_Mag", "IEDUrbanBig_Remote_Mag", "IEDLandBig_Remote_Mag", "DemoCharge_Remote_Mag", "IEDUrbanSmall_Remote_Mag", "IEDLandSmall_Remote_Mag"];
+	_randomSound = selectRandom ["lastresort.ogg", "johncena.ogg", "john-stamos.ogg", "price-is-right.ogg", "scarface.ogg", "sloth.ogg", "predator.ogg", "akbar.ogg", "bomb.ogg", "fired.ogg", "ilovechina.ogg", "mexicanpeople.ogg", "pussy.ogg"];
 
 	if !(_availableBombs isEqualTo []) then
 	{
@@ -24,7 +25,7 @@ if !(player getVariable ["performingDuty", false]) then
 			player setVariable ["performingDuty", true];
 
 			player removeMagazine _magType;
-			playSound3D [call currMissionDir + "client\sounds\lastresort.ogg", player, false, getPosASL player, 1, 1, 500];
+			playSound3D [call currMissionDir + "client\sounds\" + _randomSound, player, false, getPosASL player, 1, 1, 500];
 
 			sleep 1.5;
 
