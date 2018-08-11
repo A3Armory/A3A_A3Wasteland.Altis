@@ -72,6 +72,8 @@ player addEventHandler ["WeaponAssembled",
 	{
 		// ownerUID handled thru save funcs
 
+		_obj disableTIEquipment true; // Disable thermal on all unmanned vehicles
+
 		_playerSide = side group _player;
 
 		if (side _obj != _playerSide) then

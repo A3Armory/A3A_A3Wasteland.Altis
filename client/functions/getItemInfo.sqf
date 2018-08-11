@@ -119,23 +119,23 @@ if (!isNil "_itemEntry") then
 					};
 					case (["_UAV_06_antimine_backpack_", _itemType] call fn_findString != -1):
 					{
-						_description = "Remote-controlled hexacopter to bomb the shit out of 'em, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+";
+						_description = "Remote-controlled hexacopter to bomb the shit out of 'em, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+<br/><t color='#FF8000'>NO THERMAL IMAGING</t>";
 					};
 					case (_itemType isKindOf "UAV_06_medical_backpack_base_F"):
 					{
-						_description = "Remote-controlled hexacopter to revive and heal your teammates, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+";
+						_description = "Remote-controlled hexacopter to revive and heal your teammates, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+<br/><t color='#FF8000'>NO THERMAL IMAGING</t>";
 					};
 					case (_itemType isKindOf "UAV_06_backpack_base_F"):
 					{
-						_description = "Remote-controlled hexacopter to spy on your neighbors, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+";
+						_description = "Remote-controlled hexacopter to spy on your neighbors, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+<br/><t color='#FF8000'>NO THERMAL IMAGING</t>";
 					};
 					case (["_UAV_01_backpack_", _itemType] call fn_findString != -1):
 					{
-						_description = "Remote-controlled quadcopter to spy on your neighbors, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+";
+						_description = "Remote-controlled quadcopter to spy on your neighbors, pre-packaged in a backpack.<br/>UAV Terminal sold separately. Ages 8+<br/><t color='#FF8000'>NO THERMAL IMAGING</t>";
 					};
 					case (["_Static_Designator_", _itemType] call fn_findString != -1):
 					{
-						_description = "Remote-controlled laser designator.<br/>UAV Terminal sold separately.";
+						_description = "Remote-controlled laser designator.<br/>UAV Terminal sold separately.<br/><t color='#FF8000'>NO THERMAL IMAGING</t>";
 					};
 					default
 					{
@@ -230,13 +230,13 @@ if (!isNil "_itemEntry") then
 			};
 		};
 
-		if (_itemType isKindOf "UAV_06_backpack_base_F") then
+		/*if (_itemType isKindOf "UAV_06_backpack_base_F") then
 		{
 			if ({_x == "Ti"} count getArray (configFile >> "CfgVehicles" >> _itemType >> "Viewoptics" >> "visionMode") == 0) then
 			{
 				_description = format ["%1%2%3", _description, ["<br/>",""] select (_description isEqualTo ""), "<t color='#FF8000'>NO THERMAL IMAGING</t>"];
 			};
-		};
+		};*/
 	};
 };
 
