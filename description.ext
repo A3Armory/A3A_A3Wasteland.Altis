@@ -70,6 +70,7 @@ briefing = 0; // if 0, skip Continue button
 #include "addons\gui\gui.hpp"
 #include "addons\parking\list_simple_menu.hpp"
 #include "addons\CHVD\dialog.hpp"
+#include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 
 class RscTitles
 {
