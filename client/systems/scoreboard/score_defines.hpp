@@ -10,6 +10,8 @@
 
 #define scoreGUI_PList_Length 10
 
+#define scoreGUI_BountyLabel 2001
+
 #define scoreGUI_PListEntry(ID) (43100 + scoreGUI_ID_Offset(ID))
 #define scoreGUI_PListEntry_BG(ID) (scoreGUI_PListEntry(ID) + 1)
 #define scoreGUI_PListEntry_TColor(ID) (scoreGUI_PListEntry(ID) + 2)
@@ -20,6 +22,9 @@
 #define scoreGUI_PListEntry_Deaths(ID) (scoreGUI_PListEntry(ID) + 7)
 #define scoreGUI_PListEntry_Revives(ID) (scoreGUI_PListEntry(ID) + 8)
 #define scoreGUI_PListEntry_Captures(ID) (scoreGUI_PListEntry(ID) + 9)
+#define scoreGUI_PListEntry_AllKills(ID) (scoreGUI_PListEntry(ID) + 10)
+#define scoreGUI_PListEntry_AllDeaths(ID) (scoreGUI_PListEntry(ID) + 11)
+#define scoreGUI_PListEntry_KillDeath(ID) (scoreGUI_PListEntry(ID) + 12)
 
 #define scoreGUI_PRespawnTimer 49501
 #define scoreGUI_PRespawnTimerText 49502

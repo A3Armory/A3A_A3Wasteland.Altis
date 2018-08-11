@@ -138,7 +138,7 @@ if (_moneySaving) then
 	_bank = _result param [0,0];
 };
 
-if (["A3W_atmBounties"] call isConfigOn) then
+if (["A3W_bountyMax", 0] call getPublicVar > 0) then
 {
 	_bounty = _result param [1,0];
 	_bountyKills = _result param [2,[]];

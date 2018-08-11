@@ -96,6 +96,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
+	[] execVM "addons\bounty\init.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 };
 

@@ -94,6 +94,8 @@ A3W_fnc_requestPlayerData =
 				};
 			} forEach _data;
 
+			[_player] call bountyKillsExpired;
+
 			diag_log format ["pvar_requestPlayerData: %1", [owner _player, _player]];
 		}] execFSM "call.fsm";
 	};

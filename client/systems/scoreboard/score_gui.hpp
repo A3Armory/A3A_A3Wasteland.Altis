@@ -59,18 +59,20 @@ class ScoreGUI : IGUIBack
 			h = PListTopBG_H;
 		};
 
-		class PListTopText : w_RscTextCenter
+		class PListTopText : w_RscStructuredTextLeft
 		{
 			idc = -1;
 			text = "Players";
-			sizeEx = 0.06 * TEXT_SCALE;
+			size = 0.06 * TEXT_SCALE;
 
-			#define PListTopText_Y (PListBG_Y + CENTER(PListTopBG_H, PListTopBG_H))
+			#define PListTopText_W (0.1 * X_SCALE)
+			#define PListTopText_H (0.06 * TEXT_SCALE)
+			#define PListTopText_Y (PListBG_Y + ((PListTopBG_H-PListTopText_H)/2))
 
-			x = PListBG_X;
+			x = (PListBG_X + (0.0475 * X_SCALE));
 			y = PListTopText_Y;
-			w = PListBG_W;
-			h = PListTopBG_H;
+			w = PListTopText_W;
+			h = PListTopText_H;
 		};
 
 		// LIST
@@ -79,8 +81,9 @@ class ScoreGUI : IGUIBack
 		#define PListEntryText_H (0.025 * Y_SCALE)
 
 		#define PListHead_Y (PListBG_Y + PListTopBG_H + (0.0075 * X_SCALE))
-		#define PListHead_W (0.09 * X_SCALE)
+		#define PListHead_W (0.075 * X_SCALE)
 		#define PListHead_H PListHeadText_H
+		#define PListHead_X_Padding (0.058 * X_SCALE)
 		#define PListHead_textSize (0.034 * TEXT_SCALE)
 
 		#define PListEntry_W PListBG_W
@@ -92,8 +95,8 @@ class ScoreGUI : IGUIBack
 
 		// HEADER
 
-		#define PListHead_Name_W (0.35 * X_SCALE)
-		#define PListHead_Name_X (PListEntry_X + (0.0525 * X_SCALE))
+		#define PListHead_Name_W (0.29 * X_SCALE)
+		#define PListHead_Name_X (PListEntry_X + (0.0475 * X_SCALE))
 
 		class PListHead_Name : w_RscStructuredTextLeft
 		{
@@ -103,17 +106,29 @@ class ScoreGUI : IGUIBack
 
 			x = PListHead_Name_X;
 			y = PListHead_Y;
-			w = PListHead_Name_W;
+			w = (PListHead_Name_W + (0.02 * X_SCALE));
+			h = PListHead_H;
+		};
+
+		class PListHead_Bounty : w_RscStructuredTextLeft
+		{
+			idc = scoreGUI_BountyLabel;
+			text = "<t color='#ff5f4a' shadow='0'>- Bounty</t>";
+			size = PListHead_textSize;
+
+			x = (PListHead_Name_X + (0.04 * X_SCALE));
+			y = PListHead_Y;
+			w = PListHead_W;
 			h = PListHead_H;
 		};
 
 		#define PListHead_PKills_W PListHead_W
-		#define PListHead_PKills_X (PListEntry_X + (0.4 * X_SCALE))
+		#define PListHead_PKills_X (PListHead_Name_X + PListHead_Name_W)
 
 		class PListHead_PKills : w_RscStructuredText
 		{
 			idc = -1;
-			text = "<t underline='true' shadow='0'>P. kills</t>"; // Alt + 255
+			text = "<t underline='true' shadow='0'>P. kills</t>"; // Alt + 255
 			size = PListHead_textSize;
 
 			x = PListHead_PKills_X;
@@ -123,12 +138,12 @@ class ScoreGUI : IGUIBack
 		};
 
 		#define PListHead_AIKills_W PListHead_W
-		#define PListHead_AIKills_X (PListEntry_X + (0.475 * X_SCALE))
+		#define PListHead_AIKills_X (PListHead_PKills_X + PListHead_X_Padding)
 
 		class PListHead_AIKills : w_RscStructuredText
 		{
 			idc = -1;
-			text = "<t underline='true' shadow='0'>AI kills</t>"; // Alt + 255
+			text = "<t underline='true' shadow='0'>AI kills</t>"; // Alt + 255
 			size = PListHead_textSize;
 
 			x = PListHead_AIKills_X;
@@ -138,7 +153,7 @@ class ScoreGUI : IGUIBack
 		};
 
 		#define PListHead_Deaths_W PListHead_W
-		#define PListHead_Deaths_X (PListEntry_X + (0.55 * X_SCALE))
+		#define PListHead_Deaths_X (PListHead_AIKills_X + PListHead_X_Padding)
 
 		class PListHead_Deaths : w_RscStructuredText
 		{
@@ -153,7 +168,7 @@ class ScoreGUI : IGUIBack
 		};
 
 		#define PListHead_Revives_W PListHead_W
-		#define PListHead_Revives_X (PListEntry_X + (0.625 * X_SCALE))
+		#define PListHead_Revives_X (PListHead_Deaths_X + PListHead_X_Padding)
 
 		class PListHead_Revives : w_RscStructuredText
 		{
@@ -168,7 +183,7 @@ class ScoreGUI : IGUIBack
 		};
 
 		#define PListHead_Captures_W PListHead_W
-		#define PListHead_Captures_X (PListEntry_X + (0.7 * X_SCALE))
+		#define PListHead_Captures_X (PListHead_Revives_X + PListHead_X_Padding)
 
 		class PListHead_Captures : w_RscStructuredText
 		{
@@ -182,9 +197,90 @@ class ScoreGUI : IGUIBack
 			h = PListHead_H;
 		};
 
+		#define PListHead_AllKills_W PListHead_W
+		#define PListHead_AllKills_X (PListHead_Captures_X + PListHead_X_Padding)
+
+		class PListHead_AllKills : w_RscStructuredText
+		{
+			idc = -1;
+			text = "<t underline='true' shadow='0'>Kills</t>";
+			size = PListHead_textSize;
+
+			x = PListHead_AllKills_X;
+			y = PListHead_Y;
+			w = PListHead_AllKills_W;
+			h = PListHead_H;
+		};
+
+		#define PListHead_AllDeaths_W PListHead_W
+		#define PListHead_AllDeaths_X (PListHead_AllKills_X + PListHead_X_Padding)
+
+		class PListHead_AllDeaths : w_RscStructuredText
+		{
+			idc = -1;
+			text = "<t underline='true' shadow='0'>Deaths</t>";
+			size = PListHead_textSize;
+
+			x = PListHead_AllDeaths_X;
+			y = PListHead_Y;
+			w = PListHead_AllDeaths_W;
+			h = PListHead_H;
+		};
+
+		#define PListHead_KillDeath_W PListHead_W
+		#define PListHead_KillDeath_X (PListHead_AllDeaths_X + PListHead_X_Padding)
+
+		class PListHead_KillDeath : w_RscStructuredText
+		{
+			idc = -1;
+			text = "<t underline='true' shadow='0'>K/D</t>";
+			size = PListHead_textSize;
+
+			x = PListHead_KillDeath_X;
+			y = PListHead_Y;
+			w = PListHead_KillDeath_W;
+			h = PListHead_H;
+		};
+
+		// HEADER TITLES
+
+		class PListRoundTitle : w_RscStructuredText
+		{
+			idc = -1;
+			text = "Round";
+			size = PListHead_textSize;
+
+			#define PListRoundTitle_W ((PListHead_Captures_X + PListHead_Captures_W) - PListHead_PKills_X)
+			#define PListRoundTitle_H (0.025 * Y_SCALE)
+			#define PListRoundTitle_X PListHead_PKills_X
+			#define PListRoundTitle_Y (PListBG_Y + (PListTopBG_H-PListRoundTitle_H))
+
+			x = PListRoundTitle_X;
+			y = PListRoundTitle_Y;
+			w = PListRoundTitle_W;
+			h = PListRoundTitle_H;
+		};
+
+		class PListOverallTitle : w_RscStructuredText
+		{
+			idc = -1;
+			text = "Overall";
+			size = PListHead_textSize;
+
+			#define PListRoundTitle_W ((PListHead_KillDeath_X + PListHead_KillDeath_W) - PListHead_AllKills_X)
+			#define PListRoundTitle_H (0.025 * Y_SCALE)
+			#define PListRoundTitle_X PListHead_AllKills_X
+			#define PListRoundTitle_Y (PListBG_Y + (PListTopBG_H-PListRoundTitle_H))
+
+			x = PListRoundTitle_X;
+			y = PListRoundTitle_Y;
+			w = PListRoundTitle_W;
+			h = PListRoundTitle_H;
+		};
+
 		// ENTRY TEMPLATE
 
-		#define PListEntry_Rank_W (0.03 * X_SCALE)
+		#define PListEntry_Rank_W (0.025 * X_SCALE)
 		#define PListEntry_Rank_H PListEntryText_H
 
 		#define PListEntry_Name_W PListHead_Name_W
@@ -200,6 +296,9 @@ class ScoreGUI : IGUIBack
 		#define PListEntry_Deaths_W (0.06 * X_SCALE)
 		#define PListEntry_Revives_W (0.06 * X_SCALE)
 		#define PListEntry_Captures_W (0.06 * X_SCALE)
+		#define PListEntry_AllKills_W (0.06 * X_SCALE)
+		#define PListEntry_AllDeaths_W (0.06 * X_SCALE)
+		#define PListEntry_KillDeath_W (0.06 * X_SCALE)
 
 		#define TListEntryControls_X safezoneX
 
@@ -242,13 +341,12 @@ class ScoreGUI : IGUIBack
 					w = PListEntry_Rank_W; \
 					h = PListEntry_Rank_H; \
 				}; \
-				class PListEntry##PListEntry_NUM##_Name : w_RscText \
+				class PListEntry##PListEntry_NUM##_Name : w_RscStructuredTextLeft \
 				{ \
 					idc = scoreGUI_PListEntry_Name(PListEntry_NUM); \
-					text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; \
-					sizeEx = PListEntry_textSize; \
+					text = "<t shadow='0'>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</t>"; \
 					x = PListHead_Name_X - TListEntryControls_X; \
-					y = PListEntry_Name_Y; \
+					y = PListEntry_Name_Y + (0.004 * Y_SCALE)); \
 					w = PListEntry_Name_W; \
 					h = PListEntry_Name_H; \
 				}; \
@@ -300,6 +398,36 @@ class ScoreGUI : IGUIBack
 					x = (PListHead_Captures_X + CENTER(PListHead_Captures_W, PListEntry_Captures_W)) - TListEntryControls_X; \
 					y = PListEntryText2_Y; \
 					w = PListEntry_Captures_W; \
+					h = PListEntryText2_H; \
+				}; \
+				class PListEntry##PListEntry_NUM##_AllKills : w_RscTextCenter \
+				{ \
+					idc = scoreGUI_PListEntry_AllKills(PListEntry_NUM); \
+					text = "57"; \
+					sizeEx = PListEntry_textSize; \
+					x = (PListHead_AllKills_X + CENTER(PListHead_AllKills_W, PListEntry_AllKills_W)) - TListEntryControls_X; \
+					y = PListEntryText2_Y; \
+					w = PListEntry_AllKills_W; \
+					h = PListEntryText2_H; \
+				}; \
+				class PListEntry##PListEntry_NUM##_AllDeaths : w_RscTextCenter \
+				{ \
+					idc = scoreGUI_PListEntry_AllDeaths(PListEntry_NUM); \
+					text = "32"; \
+					sizeEx = PListEntry_textSize; \
+					x = (PListHead_AllDeaths_X + CENTER(PListHead_AllDeaths_W, PListEntry_AllDeaths_W)) - TListEntryControls_X; \
+					y = PListEntryText2_Y; \
+					w = PListEntry_AllDeaths_W; \
+					h = PListEntryText2_H; \
+				}; \
+				class PListEntry##PListEntry_NUM##_KillDeath : w_RscTextCenter \
+				{ \
+					idc = scoreGUI_PListEntry_KillDeath(PListEntry_NUM); \
+					text = "32"; \
+					sizeEx = PListEntry_textSize; \
+					x = (PListHead_KillDeath_X + CENTER(PListHead_KillDeath_W, PListEntry_KillDeath_W)) - TListEntryControls_X; \
+					y = PListEntryText2_Y; \
+					w = PListEntry_KillDeath_W; \
 					h = PListEntryText2_H; \
 				}; \
 			}; \
@@ -404,18 +532,20 @@ class ScoreGUI : IGUIBack
 			h = TListTopBG_H;
 		};
 
-		class TListTopText : w_RscTextCenter
+		class TListTopText : w_RscStructuredTextLeft
 		{
 			idc = -1;
 			text = "Teams";
-			sizeEx = 0.06 * TEXT_SCALE;
+			size = 0.06 * TEXT_SCALE;
 
-			#define TListTopText_Y (TListBG_Y + CENTER(TListTopBG_H, TListTopBG_H))
+			#define TListTopText_W (0.1 * X_SCALE)
+			#define TListTopText_H (0.06 * TEXT_SCALE)
+			#define TListTopText_Y (TListBG_Y + ((TListTopBG_H-TListTopText_H)/2))
 
-			x = TListBG_X;
+			x = (TListBG_X + (0.0475 * X_SCALE));
 			y = TListTopText_Y;
-			w = TListBG_W;
-			h = TListTopBG_H;
+			w = TListTopText_W;
+			h = TListTopText_H;
 		};
 
 		// LIST //
@@ -429,7 +559,7 @@ class ScoreGUI : IGUIBack
 		#define TListHead_textSize (0.034 * TEXT_SCALE)
 
 		#define TListHead_Name_W (0.37 * X_SCALE)
-		#define TListHead_Name_X (TListEntry_X + (0.05 * X_SCALE))
+		#define TListHead_Name_X (TListEntry_X + (0.0475 * X_SCALE))
 
 		#define TListEntry_W TListBG_W
 		#define TListEntry_H (0.025 * Y_SCALE)
@@ -458,7 +588,7 @@ class ScoreGUI : IGUIBack
 		class TListHead_PKills : w_RscStructuredText
 		{
 			idc = -1;
-			text = "<t underline='true' shadow='0'>P. kills</t>"; // Alt + 255
+			text = "<t underline='true' shadow='0'>P. kills</t>"; // Alt + 255
 			size = TListHead_textSize;
 
 			x = TListHead_PKills_X;
@@ -499,7 +629,7 @@ class ScoreGUI : IGUIBack
 
 		// ENTRY TEMPLATE
 
-		#define TListEntry_Rank_W (0.03 * X_SCALE)
+		#define TListEntry_Rank_W (0.025 * X_SCALE)
 		#define TListEntry_Rank_H TListEntryText_H
 
 		#define TListEntry_Name_W TListHead_Name_W
@@ -604,253 +734,5 @@ class ScoreGUI : IGUIBack
 		Create_TListEntry(3)
 		Create_TListEntry(4)
 
-
-		// BOUNTY STUFF //////////////////////////////////////////////////////////////////////////////////////////////
-
-		/*class BountyBG : IGUIBack
-		{
-			idc = -1;
-			colorBackground[] = {0, 0, 0, 0.3};
-
-			#define BountyBG_W ((0.825 * X_SCALE) - (Score_EXT_MARGIN_X / 2))
-			#define BountyBG_X (0.5 - (BountyBG_W / 2))
-			#define BountyBG_Y (TListBG_Y + TListBG_H + Score_EXT_MARGIN_Y)
-			#define BountyBG_H ((SZ_BOTTOM - Score_EXT_MARGIN_Y) - BountyBG_Y)
-
-			x = BountyBG_X;
-			y = BountyBG_Y;
-			w = BountyBG_W;
-			h = BountyBG_H;
-		};
-
-		class BountyTopBG : IGUIBack
-		{
-			idc = -1;
-			colorBackground[] = {0, 0.5, 0, 0.8};
-
-			#define BountyTopBG_H (0.05 * Y_SCALE)
-
-			x = BountyBG_X;
-			y = BountyBG_Y;
-			w = BountyBG_W;
-			h = BountyTopBG_H;
-		};
-
-		class BountyTopText : w_RscTextCenter
-		{
-			idc = -1;
-			text = "Bounty";
-			sizeEx = 0.06 * TEXT_SCALE;
-
-			#define BountyTopText_Y (BountyBG_Y + CENTER(BountyTopBG_H, BountyTopBG_H))
-
-			x = BountyBG_X;
-			y = BountyTopText_Y;
-			w = BountyBG_W;
-			h = BountyTopBG_H;
-		};
-		*/
-
-		// TEAM SCORES /////////////////////////////////////////////////
-
-		/*class TListBG : IGUIBack
-		{
-			idc = -1;
-
-			#define TListBG_W PListBG_W
-			#define TListBG_H ((PListBG_H / 2) - (Score_EXT_MARGIN_X / 2))
-			#define TListBG_X (PListBG_X + Score_EXT_MARGIN_X) // center right + margin
-			#define TListBG_Y PListBG_Y // center top
-
-			x = TListBG_X;
-			y = TListBG_Y;
-			w = TListBG_W;
-			h = TListBG_H;
-		};
-
-		class TListTopBG : IGUIBack
-		{
-			idc = -1;
-
-			#define TListTopBG_H (0.1 * Y_SCALE)
-
-			x = TListBG_X;
-			y = TListBG_Y;
-			w = TListBG_W;
-			h = TListTopBG_H;
-		};
-
-		class TListTopText : IGUIBack
-		{
-			idc = -1;
-			"Teams"
-
-			#define TListTopText_H (0.05 * Y_SCALE)
-			#define TListTopText_Y (TListBG_Y + CENTER(TListTopBG_H, TListTopText_H))
-
-			x = TListBG_X;
-			y = TListTopText_Y;
-			w = TListBG_W;
-			h = TListTopText_H;
-		};
-
-		// LIST //
-
-		#define TListHeadText_H (0.03 * Y_SCALE)
-		#define TListEntryText_H TListHeadText_H
-
-		#define TListEntry_W TListBG_W
-		#define TListEntry_H (0.05 * Y_SCALE)
-		#define TListEntry_X TListBG_X
-		#define TListEntry_Y (TListBG_Y + TListBG_H)
-		#define TListEntry_Y_offset TListEntry_H
-
-		#define TListHead_Y (TListBG_Y + TListBG_H + 0.01)
-		#define TListHead_H TListHeadText_H
-
-		#define TListHead_Name_W (0.3 * X_SCALE)
-		#define TListHead_Name_X (TListEntry_X + (0.07 * X_SCALE))
-
-		// HEADER
-
-		class TListHead_Name : w_RscText
-		{
-			idc = -1;
-			text = "Name";
-
-			x = TListHead_Name_X;
-			y = TListHead_Y;
-			w = TListHead_Name_W;
-			h = TListHead_H;
-		};
-
-		#define TListHead_PKills_W (0.02 * X_SCALE)
-		#define TListHead_PKills_X (TListEntry_X + (0.42 * X_SCALE))
-
-		class TListHead_PKills : w_RscTextCenter
-		{
-			idc = -1;
-			text = "Kills";
-
-			x = TListHead_PKills_X;
-			y = TListHead_Y;
-			w = TListHead_PKills_W;
-			h = TListHead_H;
-		};
-
-		#define TListHead_Deaths_W (0.02 * X_SCALE)
-		#define TListHead_Deaths_X (TListEntry_X + (0.43 * X_SCALE))
-
-		class TListHead_Deaths : w_RscTextCenter
-		{
-			idc = -1;
-			text = "Deaths";
-
-			x = TListHead_Deaths_X;
-			y = TListHead_Y;
-			w = TListHead_Deaths_W;
-			h = TListHead_H;
-		};
-
-		#define TListHead_Territories_W (0.02 * X_SCALE)
-		#define TListHead_Territories_X (TListEntry_X + (0.44 * X_SCALE))
-
-		class TListHead_Territories : w_RscTextCenter
-		{
-			idc = -1;
-			text = "Territories";
-
-			x = TListHead_Territories_X;
-			y = TListHead_Y;
-			w = TListHead_Territories_W;
-			h = TListHead_H;
-		};
-
-		// ENTRY 1
-
-		class TListEntry1 : IGUIBack
-		{
-			idc = -1;
-
-			#define TListTopBG_H (0.1 * Y_SCALE)
-
-			x = TListEntry_X;
-			y = TListEntry_Y + (TListEntry_Y_offset * 1);
-			w = TListEntry_W;
-			h = TListEntry_H;
-		};
-
-		#define TListEntry_Rank_W (0.02 * X_SCALE)
-		#define TListEntry_Rank_H TListEntryText_H
-		#define TListEntry_Rank_X (TListEntry_X + (0.03 * X_SCALE))
-		#define TListEntry_Rank_Y (TListEntry_Y + CENTER(TListEntry_H, TListEntry_Rank_H))
-
-		class TListEntry1_Rank : w_RscText
-		{
-			idc = 4610;
-			text = "1.";
-
-			x = TListEntry_Rank_X;
-			y = TListEntry_Rank_Y + (TListEntry_Y_offset * 0);
-			w = TListEntry_Rank_W;
-			h = TListEntry_Rank_H;
-		};
-
-		#define TListEntry_Name_W (0.3 * X_SCALE)
-		#define TListEntry_Name_H TListEntryText_H
-		#define TListEntry_Name_Y (TListEntry_Y + CENTER(TListEntry_H, TListEntry_Name_H))
-
-		class TListEntry1_Name : w_RscText
-		{
-			idc = 4611;
-
-			x = TListHead_Name_X;
-			y = TListEntry_Name_Y + (TListEntry_Y_offset * 1);
-			w = TListEntry_Name_W;
-			h = TListEntry_Name_H;
-		};
-
-		#define TListEntryText2_H TListEntry_Name_H
-		#define TListEntryText2_Y TListEntry_Name_Y
-
-		#define TListEntry_PKills_W (0.02 * X_SCALE)
-		#define TListEntry_PKills_X (TListHead_PKills_X + CENTER(TListHead_PKills_W, TListEntry_PKills_W))
-
-		class TListEntry1_Kills : w_RscTextCenter
-		{
-			idc = 4612;
-
-			x = TListEntry_PKills_X;
-			y = TListEntryText2_Y + (TListEntry_Y_offset * 1);
-			w = TListEntry_PKills_W;
-			h = TListEntryText2_H;
-		};
-
-		#define TListEntry_Deaths_W (0.02 * X_SCALE)
-		#define TListEntry_Deaths_X (TListHead_Deaths_X + CENTER(TListHead_Deaths_W, TListEntry_Deaths_W))
-
-		class TListEntry1_Deaths : w_RscTextCenter
-		{
-			idc = 4613;
-
-			x = TListEntry_Deaths_X;
-			y = TListEntryText2_Y + (TListEntry_Y_offset * 1);
-			w = TListEntry_Deaths_W;
-			h = TListEntryText2_H;
-		};
-
-		#define TListEntry_Territories_W (0.02 * X_SCALE)
-		#define TListEntry_Territories_X (TListHead_Territories_X + CENTER(TListHead_Territories_W, TListEntry_Territories_W))
-
-		class TListEntry1_Territories : w_RscTextCenter
-		{
-			idc = 4614;
-
-			x = TListEntry_Territories_X;
-			y = TListEntryText2_Y + (TListEntry_Y_offset * 1);
-			w = TListEntry_Territories_W;
-			h = TListEntryText2_H;
-		};
-		*/
 	};
 };
