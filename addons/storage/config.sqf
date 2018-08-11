@@ -9,7 +9,7 @@ ps_box_models = ["Land_PaperBox_open_full_F", "Land_Pallet_MilBoxes_F", "Land_Pa
 ps_markers_enabled = true; 
 
 //shape, type, color, size, text (for map markers, if enabled)
-ps_markers_properties = ["ICON", "mil_dot", "ColorUNKNOWN", [1,1], "Storage"];
+ps_markers_properties = ["ICON", "mil_dot", "Color4_FD_F", [1,1], "Storage"];
 
 
 //Arma 3 Storage container class (see list below)

@@ -8,8 +8,9 @@ _markers =
 [
 	["Legend:", "EmptyIcon", "ColorWhite", [1,1]],
 
-	["GS - General Store", "mil_dot", "ColorBlue", [1,1]],
-	["VS - Vehicle Store", "mil_dot", "ColorOrange", [1,1]]
+	["General Store", "mil_dot", "ColorBlue", [1,1]],
+	["Gun Store", "mil_dot", "ColorYellow", [1,1]],
+	["Vehicle Store", "mil_dot", "ColorOrange", [1,1]]
 ];
 
 
@@ -20,11 +21,11 @@ if (["A3W_privateParking"] call isConfigOn) then
 
 if (["A3W_privateStorage"] call isConfigOn) then
 {
-	_markers pushBack ["Storage", "mil_dot", "ColorUNKNOWN", [1,1]];
+	_markers pushBack ["Storage", "mil_dot", "Color4_FD_F", [1,1]];
 };
 
 _mapSize = worldSize;
-_markerSpacing = 0.025 * _mapSize;
+_markerSpacing = 0.032 * _mapSize;
 _legendMarginX = 0.035 * _mapSize;
 _legendMarginY = 0.035 * _mapSize;
 _markerX = _mapSize + _legendMarginX;
