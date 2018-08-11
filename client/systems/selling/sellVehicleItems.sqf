@@ -4,7 +4,7 @@
 //	@file Name: sellVehicleItems.sqf
 //	@file Author: AgentRev
 
-#define VEHICLE_MAX_SELLING_DISTANCE 50
+#define VEHICLE_MAX_SELLING_DISTANCE 120
 
 #include "sellIncludesStart.sqf";
 
