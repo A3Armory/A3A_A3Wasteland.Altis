@@ -42,7 +42,7 @@ _setupObjects =
 	{ _x setVariable ["allowDamage", false, true] } forEach [_obj1, _obj2, _barGate, _bunker1, _bunker2];
 
 	_aiGroup = createGroup CIVILIAN;
-	[_aiGroup,_missionPos,8,12] call createCustomGroup;
+	[_aiGroup,_missionPos,8,12] call createCustomGroup3;
 
 	_missionHintText = format ["Armed bandits have set up a <t color='%1'>Roadblock</t> and are stopping all vehicles! Stop them and retrieve any drugs and supplies!", mainMissionColor]
 };

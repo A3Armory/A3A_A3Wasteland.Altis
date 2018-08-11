@@ -2,7 +2,7 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Name: customGroup.sqf
-//	@file Author: AgentRev
+//	@file Author: AgentRev, micovery
 
 if (!isServer) exitWith {};
 
@@ -23,10 +23,183 @@ _unitTypes =
 	"C_man_polo_6_F", "C_man_polo_6_F_euro", "C_man_polo_6_F_afro", "C_man_polo_6_F_asia"
 ];
 
+aa_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_IG_Guerilla1_1";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addWeapon "arifle_MX_F";
+	_unit addPrimaryWeaponItem "optic_Aco";
+	_unit addVest "V_BandollierB_oli";
+	_unit addBackpack "B_Kitbag_sgg";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addMagazine "Titan_AA";
+	_unit addWeapon "launch_Titan_F";
+	_unit addMagazine "Titan_AA";
+	_unit addItem "NVGoggles";
+	_unit assignItem "NVGoggles";
+};
+
+at_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_IG_Guerilla2_1";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addWeapon "arifle_MX_F";
+	_unit addPrimaryWeaponItem "optic_Aco";
+	_unit addVest "V_BandollierB_oli";
+	_unit addBackpack "B_Kitbag_sgg";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addItem "NVGoggles";
+	_unit assignItem "NVGoggles";
+
+	if (random 1 < 0.50) then
+	{
+		_unit addMagazine "RPG32_F";
+		_unit addWeapon "launch_RPG32_F";
+		_unit addMagazine "RPG32_F";
+		_unit addMagazine "RPG32_F";
+	}
+	else
+	{
+		_unit addMagazine "NLAW_F";
+		_unit addWeapon "launch_NLAW_F";
+		_unit selectWeapon "launch_NLAW_F";
+	};
+};
+
+grenadier_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_IG_Guerilla1_1";
+	_unit addMagazine "1Rnd_HE_Grenade_shell";
+	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addWeapon "arifle_MX_GL_F";
+	_unit addVest "V_BandollierB_oli";
+	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addMagazine "1Rnd_HE_Grenade_shell";
+	_unit addMagazine "1Rnd_HE_Grenade_shell";
+	_unit addItem "NVGoggles";
+	_unit assignItem "NVGoggles";
+};
+
+leader_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_IG_leader";
+	_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	_unit addWeapon "arifle_Katiba_F";
+	_unit addPrimaryWeaponItem "optic_Arco";
+	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	_unit addVest "V_BandollierB_oli";
+	_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	_unit addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	_unit addItem "NVGoggles";
+	_unit assignItem "NVGoggles";
+};
+
+rifleman_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_IG_Guerilla2_3";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addWeapon "arifle_MX_F";
+	_unit addPrimaryWeaponItem "optic_Aco";
+	_unit addVest "V_BandollierB_oli";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+	_unit addPrimaryWeaponItem "acc_flashlight";
+	_unit enablegunlights "forceOn";
+};
+
+sniper_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_I_GhillieSuit";
+	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addWeapon "arifle_MXM_F";
+	_unit addPrimaryWeaponItem "optic_Hamr";
+	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	_unit addPrimaryWeaponItem "muzzle_snds_H";
+	_unit addVest "V_BandollierB_oli";
+	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addItem "Rangefinder";
+	_unit addItem "NVGoggles";
+	_unit assignItem "NVGoggles";
+};
+
+support_loadout =
+{
+	private["_unit"];
+	_unit = _this;
+	_unit addUniform "U_IG_Guerilla1_1";
+	_unit addMagazine "200Rnd_65x39_cased_Box";
+	_unit addWeapon "LMG_Mk200_F";
+	_unit addPrimaryWeaponItem "optic_MRCO";
+	_unit addVest "V_BandollierB_oli";
+	_unit addBackpack "B_Kitbag_sgg";
+	_unit addMagazine "200Rnd_65x39_cased_Box";
+	_unit addMagazine "200Rnd_65x39_cased_Box";
+	_unit addItem "FirstAidKit";
+	_unit addItem "NVGoggles";
+	_unit assignItem "NVGoggles";
+};
+
+weighted_list =
+[
+	[1, aa_loadout],
+	[1, at_loadout],
+	[0.8, grenadier_loadout],
+	[1, rifleman_loadout],
+	[0.5, sniper_loadout],
+	[0.8, support_loadout]
+];
+
+get_weighted_loadout =
+{
+	private["_items"];
+	_items = weighted_list;
+
+	//calculate the total weight
+	private["_totalSum", "_weight"];
+	_totalSum = 0;
+	{
+		_weight = _x select 0;
+		_totalSum = _weight + _totalSum;
+	} forEach _items;
+
+	//pick at random from the distribution
+	private["_index", "_i", "_item", "_sum"];
+	_index = random _totalSum;
+	_sum = 0;
+	_i = 0;
+
+	while {_sum < _index} do
+	{
+		_item = _items select _i;
+		_weight = _item select 0;
+		_sum = _sum + _weight;
+		_i = _i + 1;
+	};
+
+	((_items select (_i - 1)) select 1)
+};
+
 for "_i" from 1 to _nbUnits do
 {
 	_uPos = _pos vectorAdd ([[random _radius, 0, 0], random 360] call BIS_fnc_rotateVector2D);
-	_unit = _group createUnit [_unitTypes call BIS_fnc_selectRandom, _uPos, [], 0, "Form"];
+	_unit = _group createUnit [selectRandom _unitTypes, _uPos, [], 0, "Form"];
 	_unit setPosATL _uPos;
 
 	removeAllWeapons _unit;
@@ -37,63 +210,17 @@ for "_i" from 1 to _nbUnits do
 	removeHeadgear _unit;
 	removeGoggles _unit;
 
-	_unit addVest "V_PlateCarrier1_rgr";
-	_unit addMagazine "30Rnd_556x45_Stanag";
-	_unit addMagazine "30Rnd_556x45_Stanag";
-	_unit addMagazine "30Rnd_556x45_Stanag";
-
-	switch (true) do
+	if (_unit == leader _group) then
 	{
-		// Grenadier every 3 units, starting from #2
-		case ((_i + 4) % 3 == 0):
-		{
-			_unit addUniform "U_B_CombatUniform_mcam_vest";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addWeapon "arifle_TRG21_GL_F";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-		};
-		// PCML every 6 units, starting from #6
-		case (_i % 6 == 0):
-		{
-			_unit addUniform "U_B_CombatUniform_mcam_tshirt";
-			_unit addBackpack "B_Kitbag_mcamo";
-			_unit addWeapon "arifle_TRG20_F";
-			_unit addMagazine "NLAW_F";
-			_unit addWeapon "launch_NLAW_F";
-			_unit addMagazine "NLAW_F";
-			_unit addMagazine "NLAW_F";
-		};
-		// RPG-42 every 6 units, starting from #3
-		case ((_i + 3) % 6 == 0):
-		{
-			_unit addUniform "U_B_CombatUniform_mcam_tshirt";
-			_unit addBackpack "B_Kitbag_mcamo";
-			_unit addWeapon "arifle_TRG20_F";
-			_unit addMagazine "RPG32_F";
-			_unit addWeapon "launch_RPG32_F";
-			_unit addMagazine "RPG32_F";
-			_unit addMagazine "RPG32_F";
-		};
-		// Rifleman
-		default
-		{
-			_unit addUniform "U_B_CombatUniform_mcam";
-
-			if (_unit == leader _group) then
-			{
-				_unit addWeapon "arifle_TRG21_F";
-				_unit setRank "SERGEANT";
-			}
-			else
-			{
-				_unit addWeapon "arifle_TRG20_F";
-			};
-		};
+		_unit call leader_loadout;
+		_unit setRank "SERGEANT";
+	}
+	else
+	{
+		private["_loadout"];
+		_loadout = call get_weighted_loadout;
+		_unit call _loadout;
 	};
-
-	_unit addPrimaryWeaponItem "acc_flashlight";
-	_unit enablegunlights "forceOn";
 
 	_unit addRating 1e11;
 	_unit spawn addMilCap;
