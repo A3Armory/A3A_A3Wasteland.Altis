@@ -36,23 +36,25 @@ switch (_side) do
 		{
 			case (_isSniper):
 			{
-				if (_item == "uniform") then { _result = "U_B_Ghilliesuit" };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "uniform") then { _result = "U_B_GhillieSuit" };
+				if (_item == "vest") then { _result = "V_PlateCarrier1_rgr" };
+				if (_item == "backpack") then { _result = "B_Kitbag_mcamo" };
 			};
 			case (_isDiver):
 			{
 				if (_item == "uniform") then { _result = "U_B_Wetsuit" };
 				if (_item == "vest") then { _result = "V_RebreatherB" };
 				if (_item == "goggles") then { _result = "G_Diving" };
+				if (_item == "backpack") then { _result = "B_Bergen_blk" };
 			};
 			default
 			{
 				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam" };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "vest") then { _result = "V_PlateCarrier1_rgr" };
+				if (_item == "backpack") then { _result = "B_Kitbag_mcamo" };
+				if (_item == "headgear") then { _result = "H_MilCap_mcamo" };				
 			};
 		};
-
-		if (_item == "headgear") then { _result = "H_MilCap_mcamo" };
 	};
 	case OPFOR:
 	{
@@ -60,23 +62,25 @@ switch (_side) do
 		{
 			case (_isSniper):
 			{
-				if (_item == "uniform") then { _result = "U_O_Ghilliesuit" };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "uniform") then { _result = "U_O_GhillieSuit" };
+				if (_item == "vest") then { _result = "V_TacVest_khk" };
+				if (_item == "backpack") then { _result = "B_Kitbag_mcamo" };
 			};
 			case (_isDiver):
 			{
 				if (_item == "uniform") then { _result = "U_O_Wetsuit" };
 				if (_item == "vest") then { _result = "V_RebreatherIR" };
 				if (_item == "goggles") then { _result = "G_Diving" };
+				if (_item == "backpack") then { _result = "B_Bergen_blk" };
 			};
 			default
 			{
-				if (_item == "uniform") then { _result = "U_O_OfficerUniform_ocamo" };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "uniform") then { _result = "U_O_CombatUniform_ocamo" };
+				if (_item == "vest") then { _result = "V_TacVest_khk" };
+				if (_item == "backpack") then { _result = "B_Kitbag_mcamo" };
+				if (_item == "headgear") then { _result = "H_MilCap_ocamo" };				
 			};
 		};
-
-		if (_item == "headgear") then { _result = "H_MilCap_ocamo" };
 	};
 	default
 	{
@@ -84,23 +88,25 @@ switch (_side) do
 		{
 			case (_isSniper):
 			{
-				if (_item == "uniform") then { _result = "U_I_Ghilliesuit" };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "uniform") then { _result = "U_I_GhillieSuit" };
+				if (_item == "vest") then { _result = "V_PlateCarrierIA1_dgtl" };
+				if (_item == "backpack") then { _result = "B_Kitbag_rgr" };
 			};
 			case (_isDiver):
 			{
 				if (_item == "uniform") then { _result = "U_I_Wetsuit" };
 				if (_item == "vest") then { _result = "V_RebreatherIA" };
 				if (_item == "goggles") then { _result = "G_Diving" };
+				if (_item == "backpack") then { _result = "B_Bergen_rgr" };
 			};
 			default
 			{
 				if (_item == "uniform") then { _result = "U_I_CombatUniform" };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "vest") then { _result = "V_PlateCarrierIA1_dgtl" };
+				if (_item == "backpack") then { _result = "B_Kitbag_rgr" };
+				if (_item == "headgear") then { _result = "H_MilCap_dgtl" };				
 			};
 		};
-
-		if (_item == "headgear") then { _result = "H_MilCap_dgtl" };
 	};
 };
 

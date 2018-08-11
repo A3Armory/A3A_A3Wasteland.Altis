@@ -21,7 +21,7 @@ clearItemCargoGlobal _truck;
 // Item type, Item, # of items, # of magazines per weapon
 _truckItems =
 [
-	["wep", ["Binocular", "Rangefinder"], RANDOM_BETWEEN(0,2)],
+	["wep", "Rangefinder", RANDOM_BETWEEN(0,2)],
 	["itm", "FirstAidKit", RANDOM_BETWEEN(3,6)],
 	["itm", "Medikit", RANDOM_BETWEEN(1,3)],
 	["itm", "Toolkit", RANDOM_BETWEEN(0,1)],

@@ -20,10 +20,10 @@ _nightTime = (date select 3 >= 18 || date select 3 < 5); // spawn night items be
 if (_nightTime) then
 {
 	{ _additionArray pushBack _x} forEach ["acc_flashlight", "acc_pointer_IR"];
-	if (random 1 < 0.15) then { _car addItemCargoGlobal ["NVGoggles", 1]};
+	//if (random 1 < 0.15) then { _car addItemCargoGlobal ["NVGoggles", 1]};
 };
 
-if (random 1 < 0.45) then { _car addWeaponCargoGlobal ["Binocular", 1]};
+//if (random 1 < 0.45) then { _car addWeaponCargoGlobal ["Binocular", 1]};
 
 //Get Random Gun From randomWeapons Array.
 _weapon = vehicleWeapons call fn_selectRandomNested;

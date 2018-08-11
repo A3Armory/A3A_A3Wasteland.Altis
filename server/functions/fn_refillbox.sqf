@@ -65,7 +65,7 @@ switch (_boxType) do
 		[
 			// Item type, Item class(es), # of items, # of magazines per weapon
 			//["itm", "NVGoggles", 5],
-			["wep", ["Binocular", "Rangefinder"], RANDOM_BETWEEN(0,3)],
+			["wep", "Rangefinder", RANDOM_BETWEEN(0,3)],
 			["itm", "Medikit", RANDOM_BETWEEN(1,3)],
 			["itm", "Toolkit", RANDOM_BETWEEN(1,3)],
 			["itm", ["optic_Aco", "optic_Aco_grn", "optic_MRCO", "optic_Hamr", "optic_Arco"], RANDOM_BETWEEN(2,4)],
